@@ -1,51 +1,71 @@
-# Jekyll Theme - Mundana by WowThemes.net
+# Update 07/09/2018
 
-[Live Demo](https://wowthemesnet.github.io/mundana-theme-jekyll/) &nbsp; | &nbsp; 
-[Download](https://github.com/wowthemesnet/mundana-theme-jekyll/archive/master.zip) &nbsp; | &nbsp; 
-[Buy me a coffe](https://www.wowthemes.net/donate/) &nbsp; | &nbsp; [Documentation](https://bootstrapstarter.com/bootstrap-templates/mundana-theme-jekyll/) &nbsp; | &nbsp; 
-[WordPress version](https://www.wowthemes.net/themes/mundana-wordpress/) 
+I'm planning to refactor Leonids theme!!!
 
-![mundana jekyll theme screenshot](assets/images/screenshot.jpg)
+The goal is really simple: make documentation more intuitive and deployment simpler!!!
 
-### Documentation
+Here is the plan:
 
-[How to install & use](https://bootstrapstarter.com/bootstrap-templates/mundana-theme-jekyll/)
+| Version | Description | Date |
+| --- | --- | --- |
+| 1.1 | Jekyll version deployable with gem | 07/15/2018 |
+| 1.2 | New features: Pagination, Prev/Next post | 07/22/2018 |
+| 2.0 | Gatsby or Vuepress version (vote in Issues) | who knows... |
 
-### Contribute to Mundana repository
+As the project was and will be designed to improve your writing experience, only documentation, gem, deployment process with CI relevant PRs are acceptable in the future.
 
-1. In the top-right corner of this page, click **Fork**.
+I want you to know how much I value your support.
 
-2. Clone a copy of your fork on your local, replacing *YOUR-USERNAME* with your Github username.
+Share it to your timeline!
 
-   `git clone https://github.com/YOUR-USERNAME/mundana-theme-jekyll.git`
+# Update 05/06/2016
 
-3. **Create a branch**: 
+Important! It's better to download the gzipped files instead of forking the repo. I would really appreciate if you could give me a star. 😁
 
-   `git checkout -b <my-new-feature-or-fix>`
+This project is under MIT license, so feel free to make it your own.
 
-4. **Make necessary changes and commit those changes**:
+# Leonids Jekyll Themes
 
-   `git add .`
+**[Leonids](http://renyuanz.github.io/leonids)** is a clean Jekyll theme perfect for powering your GitHub hosted blog.
 
-   `git commit -m "new feature or fix"`
+## What is Leonids?
 
-5. **Push changes**, replacing `<add-your-branch-name>` with the name of the branch you created earlier at step #3. :
+* Responsive templates. Looking good on mobile, tablet, and desktop.
+* Simple and clear permalink structure.
+* Support for Disqus Comments.
+* Support for multi-authors.
+* **And** the Leonids (/ˈliːənɪdz/ lee-ə-nidz) are a prolific meteor shower associated with the comet [Tempel-Tuttle](https://en.wikipedia.org/wiki/55P/Tempel%E2%80%93Tuttle).
 
-   `git push origin <add-your-branch-name>`
+See a [demo](http://renyuanz.github.io/leonids/) hosted on GitHub.
 
-6. Submit your changes for review. Go to your repository on GitHub, you'll see a **Compare & pull request** button. Click on that button. Now submit the pull request.
+## Quick setup
 
-That's it! Soon I'll be merging your changes into the master branch of this project. You will get a notification email once the changes have been merged. Thank you for your contribution.
+```
+git clone https://github.com/renyuanz/leonids
+cd leonids
+jekyll server
+```
 
+Check out your awesome blog at `http://localhost:4000` and Cheers!
 
-### Copyright
+## Running with Docker
 
-Copyright (C) 2019 WowThemes.net.
+```
+docker run --rm -it --volume=$PWD:/srv/jekyll -p 4000:4000 jekyll/jekyll:pages jekyll serve --watch --force_polling
+```
 
-Theme designed and developed by [Sal](https://www.wowthemes.net), *free* under MIT license. 
+## Resume Page by [@Skn0tt](https://github.com/Skn0tt)
+Leonids features a simple resume page. It is divided up into five sections:
 
-<a href="https://www.wowthemes.net/donate/" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+* Bio (Edit \_data/index/careers.yml)
+* Education (Edit \_data/index/education.yml)
+* Skills (Edit \_data/index/skills.yml)
+* Projects (Edit \_data/index/projects.yml)
+* About (Edit \_includes/sections/about.html)
 
-### Live Demo
+You can put all your info into these files, and they will be featured on the resume page.
 
-[Live Demo](https://wowthemesnet.github.io/mundana-theme-jekyll/)
+## TODO
+
+- [ ] Redesign categories page. Ref: [dribbble: blog category section By Ilja Miskov](https://dribbble.com/shots/2274792-Blog-Category-Selection)
+- [ ] Multi languages support.
