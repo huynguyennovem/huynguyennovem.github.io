@@ -21,6 +21,8 @@ Build > Rebuild Project
 3. Check Build result in Build tab
 If there are some error by wrong import Class, go to files then re-import Class
 
+---
+
 Note: If your project use some views as: DrawerLayout, Toolbar, fix that by replace these component:
 - androidx.core.widget.DrawerLayout -> androidx.drawerlayout.widget.DrawerLayout
 - android.support.v7.widget.Toolbar -> androidx.appcompat.widget.Toolbar
