@@ -3,11 +3,11 @@
 # Site wide configuration
 ####################################
 #
-title: Leonids
-email:
-description: A simple and awesome blog theme powered by jekyll.
+title: Huy Nguyen Blog
+email: huynguyennovem@gmail.com
+description: The money come to those who hustle
 url: # the base hostname & protocol for your site
-keywords: ["blog", "jekyll"]
+keywords: ["blog", "developer", "android", "application"]
 
 #
 ###################################
