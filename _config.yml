@@ -33,10 +33,10 @@ kramdown:
 ####################################
 #
 owner:
-  name: Leonids
-  avatar: leonids-logo.png
-  job: "A jekyll theme"
-  bio: "A simple and awesome blog theme powered by jekyll."
+  name: Nguyen Quang Huy
+  avatar: avatar.jpg
+  job: "Android Developer"
+  bio: "The money come to those who hustle"
   email:
   disqus-shortname:
   twitter: #username
