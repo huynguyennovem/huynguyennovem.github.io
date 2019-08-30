@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Upgrade your Android project to AndroidX"
-date:   2015-08-18 15:07:19
+date:   2019-08-18 15:07:19
 categories: [tutorial, android]
 comments: true
 ---
