@@ -9,10 +9,10 @@ Recently, Google has released [AndroidX](https://developer.android.com/jetpack/a
 The tutorial is following by this [offical guide](https://developer.android.com/jetpack/androidx/migrate) and add some my experiences.
 
 1. In `gradle.properties` file, set `true` for these variables:
-{% highlight java %}
-android.useAndroidX=true
-android.enableJetifier=true
-{% endhighlight %}
+    ```
+    android.useAndroidX=true
+    android.enableJetifier=true
+    ```
 
 2. Clean and Rebuild project
 Build > Clean Project
@@ -23,6 +23,6 @@ If there are some error by wrong import Class, go to files then re-import Class
 
 ---
 
-Note: If your project use some views as: DrawerLayout, Toolbar, fix that by replace these component:
-- androidx.core.widget.DrawerLayout -> androidx.drawerlayout.widget.DrawerLayout
-- android.support.v7.widget.Toolbar -> androidx.appcompat.widget.Toolbar
+* Note: If your project use some views as: DrawerLayout, Toolbar, fix that by replace these component:
+    - androidx.core.widget.DrawerLayout -> androidx.drawerlayout.widget.DrawerLayout
+    - android.support.v7.widget.Toolbar -> androidx.appcompat.widget.Toolbar
