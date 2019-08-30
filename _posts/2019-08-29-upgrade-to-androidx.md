@@ -2,7 +2,7 @@
 layout: post
 title:  "Upgrade your Android project to AndroidX"
 date:   2015-08-18 15:07:19
-categories: [tutorial]
+categories: [tutorial, android]
 comments: true
 ---
 Recently, Google has released [AndroidX](https://developer.android.com/jetpack/androidx) (in Jetpack libraries). Many of component in Android project has changed. So, below is steps by steps to help you convert your old project to AndroidX.
