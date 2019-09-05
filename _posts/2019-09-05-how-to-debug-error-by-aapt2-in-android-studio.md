@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How to debug error by AAPT2 in Android Studio"
-date:   2019-09-05 09:30:00
+date:   2019-09-05 09:35:00
 categories: [tutorial, android, debug]
 comments: true
 ---
