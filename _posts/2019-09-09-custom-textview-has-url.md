@@ -152,7 +152,7 @@ This tutorial will show you how to custom a TextView which contains a url. The s
     ```
 
 End the result is:
-![CustomTextViewUrl](/static/img/customtextviewurl.png=270x480)
+<img src="/static/img/customtextviewurl.png" width="40%"/>
 
 You can checkout the full sample project from [here](https://github.com/huynguyennovem/android-template-kotlin/tree/master/CustomUrlTextView)
 
