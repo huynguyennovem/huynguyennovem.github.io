@@ -6,7 +6,7 @@ categories: [tutorial, android, kotlin]
 comments: true
 ---
 This tutorial will show you how to custom a TextView which contains a url. The source code is implemented with Kotlin.
-#####1. Create a class **`CustomUrlTextView`**:
+1. Create a class **`CustomUrlTextView`**:
     ```kotlin
     package com.template.customurltextview
     
@@ -66,7 +66,7 @@ This tutorial will show you how to custom a TextView which contains a url. The s
     - In this class, I have get all attributes in a styleable `CustomUrlTextView`. 
     - The click event was handled with `SpannableStringBuilder`. I used a interface (`OnClickLinkListener`) as a callback for passing event into a View (activity/fragment) which implemented the interface.
 
-#####2. Create a styleable **`CustomUrlTextView`**:
+2. Create a styleable **`CustomUrlTextView`**:
     - Step 1: Create `attrs.xml` in **res** folder
     - Step 2: Edit `attrs.xml` like below:
     ```kotlin
@@ -79,7 +79,7 @@ This tutorial will show you how to custom a TextView which contains a url. The s
         </resources>      
     ```
 
-#####3.  Add custom TextView into your layout:
+3.  Add custom TextView into your layout:
     ```kotlin
     <?xml version="1.0" encoding="utf-8"?>
     <RelativeLayout
@@ -118,7 +118,7 @@ This tutorial will show you how to custom a TextView which contains a url. The s
     
     </RelativeLayout>
     ```
-#####4.  Add the code into the view (activity/fragment):
+4.  Add the code into the view (activity/fragment):
     ```kotlin
     package com.template.customurltextview
     
