@@ -473,7 +473,7 @@ The idea will be: <br/>
 
 
 End the result is:
- <div id="banner">
+ <div id="banner" style="overflow: hidden; display: flex; justify-content:space-around;">
     <div class="inline-block">
         <img src="/static/img/date_picker.png" width="20%" height="20%" />
     </div>
