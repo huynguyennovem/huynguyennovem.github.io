@@ -12,6 +12,7 @@ The idea will be: <br/>
 
 1. The `caller`:
     - MainActivity.java:
+    
     ```java
     package com.template.dialogpicker;
     
@@ -44,6 +45,7 @@ The idea will be: <br/>
     }
     ```
     - activity_main.xml:
+    
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -75,6 +77,7 @@ The idea will be: <br/>
 2. Implement a DialogFragment:
     
     - DateTimePickerFragment.java:
+    
     ```java
     package com.template.dialogpicker;
     
@@ -136,6 +139,7 @@ The idea will be: <br/>
     }
     ```
     - dialog.xml:
+    
     ```xml
         <?xml version="1.0" encoding="utf-8"?>
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -164,6 +168,7 @@ The idea will be: <br/>
     ```
 
     - Note: In this layout, I used a custom ViewPager as `MyViewPager`. This ViewPager will help to make dialog do not full all screen height, only wrap dialog content.
+    
     ```java
     package com.template.dialogpicker;
     
@@ -201,10 +206,10 @@ The idea will be: <br/>
             super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         }
     }
-    
     ```
 3. Other component (ViewPager, Fragments):
     - ViewPagerAdapter.java:
+    
     ```java
     package com.template.dialogpicker;
     
@@ -268,7 +273,9 @@ The idea will be: <br/>
     }
     
     ```
+   
     - DateFragment.java:
+    
     ```java
     package com.template.dialogpicker;
     
@@ -350,6 +357,7 @@ The idea will be: <br/>
     ```
     
     - fragment_date.xml:
+    
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -369,6 +377,7 @@ The idea will be: <br/>
     ```
    
     - TimeFragment.java:
+    
     ```java
     package com.template.dialogpicker;
     
@@ -442,7 +451,9 @@ The idea will be: <br/>
     }
     
     ```
+   
     - fragment_time.xml:
+    
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
