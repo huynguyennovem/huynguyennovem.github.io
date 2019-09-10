@@ -473,14 +473,8 @@ The idea will be: <br/>
 
 
 End the result is:
- <div id="banner" style="overflow: hidden; display: flex; justify-content:space-around;">
-    <div class="inline-block">
-        <img src="/static/img/date_picker.png" width="20%" height="20%" />
-    </div>
-    <div class="inline-block">
-        <img src="/static/img/time_picker.png" width="20%" height="20%" />
-    </div>
-</div>
+<img src="/static/img/date_picker.png" width="20%" height="20%" />
+<img src="/static/img/time_picker.png" width="20%" height="20%" />
 
 You can checkout the full sample project from [here](https://github.com/huynguyennovem/android-template-java/tree/master/DialogPicker)
 
