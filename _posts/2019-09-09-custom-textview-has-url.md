@@ -2,6 +2,7 @@
 layout: post
 title:  "Custom TextView contains URL with Kotlin"
 date:   2019-09-09 11:20:00
+excerpt: "This tutorial will show you how to custom a TextView which contains a url. The source code is implemented with Kotlin."
 categories: [tutorial, android, kotlin]
 comments: true
 ---
