@@ -2,6 +2,7 @@
 layout: post
 title:  "Create Date Time picker in ViewPager"
 date:   2019-09-10 10:30:00
+excerpt: "This tutorial will show you how to create a custom Date & Time dialog inside a ViewPager. The source code is implemented with Java."
 categories: [tutorial, android, java]
 comments: true
 ---

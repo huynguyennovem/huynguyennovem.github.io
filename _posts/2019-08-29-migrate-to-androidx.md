@@ -2,6 +2,8 @@
 layout: post
 title:  "Migrate your Android project to AndroidX"
 date:   2019-08-18 15:07:19
+excerpt: "Recently, Google has released [AndroidX](https://developer.android.com/jetpack/androidx) (in Jetpack libraries). Many of component in Android project has changed. So, below is steps by steps to help you convert your old project to AndroidX.
+          The tutorial is following by this [offical guide](https://developer.android.com/jetpack/androidx/migrate) and add some my experiences."
 categories: [tutorial, android]
 comments: true
 ---

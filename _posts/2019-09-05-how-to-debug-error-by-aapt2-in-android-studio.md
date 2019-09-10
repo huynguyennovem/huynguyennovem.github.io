@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "How to debug error by AAPT2 in Android Studio"
+excerpt: "[AAPT2](https://developer.android.com/studio/command-line/aapt2) (Android Asset Packaging Tool)  is a build tool that Android Studio and Android Gradle Plugin use to compile and package your app’s resources."
 date:   2019-09-05 09:35:00
 categories: [tutorial, android, debug]
 comments: true
