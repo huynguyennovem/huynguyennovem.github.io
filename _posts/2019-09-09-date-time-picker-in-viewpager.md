@@ -7,7 +7,7 @@ comments: true
 ---
 This tutorial will show you how to create a custom Date & Time dialog inside a ViewPager. The source code is implemented with Java.
 The idea will be: <br/>
-<img src="/static/img/picker_dialog_idea.png" width="20%" height="20%" />
+<img src="/static/img/picker_dialog_idea.png" width="40%" height="40%" />
 
 
 1. The `caller`:
