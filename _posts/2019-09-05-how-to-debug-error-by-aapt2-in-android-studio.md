@@ -5,6 +5,7 @@ excerpt: "AAPT2 (Android Asset Packaging Tool)  is a build tool that Android Stu
 date:   2019-09-05 09:35:00
 categories: [tutorial, android, debug]
 comments: true
+tags: [tutorial, android, debug]
 ---
 [AAPT2](https://developer.android.com/studio/command-line/aapt2) (Android Asset Packaging Tool)  is a build tool that Android Studio and Android Gradle Plugin use to compile and package your app’s resources.
 Sometime, you may got some errors like this:
