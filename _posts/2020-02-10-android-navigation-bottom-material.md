@@ -24,11 +24,13 @@ Contributions are welcome. Feel free to submit a pull request to contribute to t
 ### Implementation
 
 1. Add material to app gradle
+
 ```
 implementation 'com.google.android.material:material:1.0.0'
 ```
-
+<br/>
 2. Update MainActivity
+
 ```java
 public class MainActivity extends AppCompatActivity {
 
@@ -127,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
+<br/>
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -164,8 +167,9 @@ public class MainActivity extends AppCompatActivity {
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
-
+<br/>
 3. Add some fragments
+
 ```java
 public class HomeFragment extends BaseFragment {
 
