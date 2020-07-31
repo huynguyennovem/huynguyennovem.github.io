@@ -6,14 +6,14 @@ excerpt: "This tutorial will guide you how to enable wireless debugging on Andro
 categories: [android 11, tutorial, android, debugging]
 comments: true
 image:
-    feature: img/wireless-debugging.png
+    feature: static/img/wireless-debugging.png
 tags: [android 11, tutorial, android, debugging, wireless]
 ---
 Debugging is simpler with wireless debugging over ADB with Android 11 devices. Follow below steps to enable this interesting feature:
 
 - Step 1: Update the SDK Platform-Tools version (at least v30.0.0)
 
-    <img src="static/img/platform-tools-v30.png" width="550" height="200" />
+    <img src="../../static/img/platform-tools-v30.png" width="550" height="200" />
     
     - Go to [Platform-tools](https://developer.android.com/studio/releases/platform-tools)
     - Select the SDK Platform-Tools corresponding to your OS
