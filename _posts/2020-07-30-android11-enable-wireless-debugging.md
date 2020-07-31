@@ -13,7 +13,7 @@ Debugging is simpler with wireless debugging over ADB with Android 11 devices. F
 
 - Step 1: Update the SDK Platform-Tools version (at least v30.0.0)
 
-    <img src="../../static/img/platform-tools-v30.png" width="550" height="200" />
+    <img src="https://huynq.gdgcloudhanoi.com/static/img/platform-tools-v30.png" width="550" height="200" />
     
     - Go to [Platform-tools](https://developer.android.com/studio/releases/platform-tools)
     - Select the SDK Platform-Tools corresponding to your OS
@@ -22,13 +22,13 @@ Debugging is simpler with wireless debugging over ADB with Android 11 devices. F
 
 - Step 3: Enable Wireless debugging on the device
 
-    <img src="static/img/device-2020-07-30-141931.png" width="200" height="400" />
+    <img src="https://huynq.gdgcloudhanoi.com/static/img/device-2020-07-30-141931.png" width="200" height="400" />
     
     - Open Settings, do search with "Wireless debugging"
     - Enable Wireless debugging
 - Step 4: Select "Pair device with pairing code"
 
-    <img src="static/img/device-2020-07-30-143116.png" width="200" height="400" />
+    <img src="https://huynq.gdgcloudhanoi.com/static/img/device-2020-07-30-143116.png" width="200" height="400" />
     
     For eg your IP:PORT is: `192.168.10.1:12345` and Pairing code is: `701434`
 - Step 5: Pair device
@@ -53,7 +53,7 @@ Debugging is simpler with wireless debugging over ADB with Android 11 devices. F
     
     For eg: `192.168.10.1:54321`
     
-    <img src="static/img/device-2020-07-30-144600.png" width="200" height="400" />
+    <img src="https://huynq.gdgcloudhanoi.com/static/img/device-2020-07-30-144600.png" width="200" height="400" />
 
     - Enter connect command:
     ```
