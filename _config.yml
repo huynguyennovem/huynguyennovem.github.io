@@ -3,7 +3,7 @@
 # Site wide configuration
 ####################################
 #
-title: huynguyennovem
+title: The good things come to those who hustle
 email: huynguyennovem@gmail.com
 description: The good things come to those who hustle
 url: # the base hostname & protocol for your site
@@ -38,7 +38,7 @@ owner:
   job: "Android Developer"
   bio: "The good things come to those who hustle"
   email:
-  disqus-shortname: huynguyennovem
+  disqus-shortname: The good things come to those who hustle
   twitter: #username
   facebook: #username
   google:
