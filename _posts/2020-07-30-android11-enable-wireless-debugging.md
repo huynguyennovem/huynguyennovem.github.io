@@ -13,7 +13,7 @@ Debugging is simpler with wireless debugging over ADB with Android 11 devices. F
 
 - Step 1: Update the SDK Platform-Tools version (at least v30.0.0)
 
-    <img src="https://huynq.gdgcloudhanoi.com/static/img/platform-tools-v30.png" width="550" height="200" />
+    <img src="https://huynq.gdgcloudhanoi.com/static/img/platform-tools-v30.png" style="width:550px;height:200px;" />
     
     - Go to [Platform-tools](https://developer.android.com/studio/releases/platform-tools)
     - Select the SDK Platform-Tools corresponding to your OS
