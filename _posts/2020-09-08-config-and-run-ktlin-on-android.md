@@ -7,7 +7,9 @@ categories: [tutorial, android, ktlin]
 comments: true
 tags: [tutorial, android, ktlin]
 ---
+
 In this guideline, I used [JLLeitschuh/ktlint-gradle](https://github.com/jlleitschuh/ktlint-gradle).
+
 - In the top-level `build.gradle` file:
 ```
 buildscript {
@@ -34,7 +36,9 @@ allprojects {
     }
 }
 ```
+
 - Open Terminal and run commands:
+
 ```
 ./gradlew ktlintFormat
 or
