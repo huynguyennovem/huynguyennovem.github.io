@@ -11,7 +11,8 @@ tags: [tutorial, android, ktlin]
 In this guideline, I used [JLLeitschuh/ktlint-gradle](https://github.com/jlleitschuh/ktlint-gradle).
 
 - In the top-level `build.gradle` file:
-```
+
+```dsl
 buildscript {
     repositories {
         google()
@@ -37,9 +38,10 @@ allprojects {
 }
 ```
 
+
 - Open Terminal and run commands:
 
-```
+```dsl
 ./gradlew ktlintFormat
 or
 ./gradlew ktlintFormat --stacktrace
@@ -49,5 +51,6 @@ or
 ./gradlew ktlintCheck --stacktrace
 
 ```
+
 
 #### Happy coding!
