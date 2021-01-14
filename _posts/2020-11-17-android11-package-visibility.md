@@ -13,9 +13,9 @@ tags: [tutorial, android, android-11]
 - How to configure:
 Add the <queries> element in your app's manifest file. Within the <queries> element, you can specify packages by name, by intent signature, or by provider authority.
 
-+ Step 1: Set `targetSdkVersion` to 30
+   - Step 1: Set `targetSdkVersion` to 30
 
-+ Step 2: Add `<queries>` tag to `AndroidManifest.xml`
+   - Step 2: Add `<queries>` tag to `AndroidManifest.xml`
 
     In this example, I will open Google Map app:
     ```xml
@@ -42,7 +42,7 @@ Add the <queries> element in your app's manifest file. Within the <queries> elem
     Let's try to build again.
 
 
-+ Step 3: Handle open app in the code:
+   - Step 3: Handle open app in the code:
 
     ```java
     Uri gmmIntentUri = Uri.parse("google.navigation:q=Taronga+Zoo,+Sydney+Australia&mode=b");
