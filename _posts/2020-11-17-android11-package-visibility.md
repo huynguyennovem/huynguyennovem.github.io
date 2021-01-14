@@ -8,11 +8,14 @@ comments: true
 tags: [tutorial, android, android-11]
 ---
 
-If your app targets Android 11 or higher, you might need to add the <queries> element in your app's manifest file. Within the <queries> element, you can specify packages by name, by intent signature, or by provider authority.
+- Scenario: Your app is targeting to Android 11, you want to query/interact with other apps (for eg: get data return, bind a service..). By default your app will return `NameNotFoundException` - regardless of whether the target app is installed. 
 
-- Step 1: Set `targetSdkVersion` to 30
+- How to configure:
+Add the <queries> element in your app's manifest file. Within the <queries> element, you can specify packages by name, by intent signature, or by provider authority.
 
-- Step 2: Add `<queries>` tag to `AndroidManifest.xml`
++ Step 1: Set `targetSdkVersion` to 30
+
++ Step 2: Add `<queries>` tag to `AndroidManifest.xml`
 
     In this example, I will open Google Map app:
     ```xml
@@ -39,7 +42,7 @@ If your app targets Android 11 or higher, you might need to add the <queries> el
     Let's try to build again.
 
 
-- Step 3: Handle open app in the code:
++ Step 3: Handle open app in the code:
 
     ```java
     Uri gmmIntentUri = Uri.parse("google.navigation:q=Taronga+Zoo,+Sydney+Australia&mode=b");
