@@ -66,10 +66,10 @@ Debugging is simpler with wireless debugging over ADB with Android 11 devices. F
 
 - (Optional) Step 8: To keep alive adb connection (sometime it may be disconnect):
 
-From terminal:
+    From terminal:
 
-```
-adb shell ping -i 2 127.0.0.1
-```
+    ```
+    adb shell ping -i 2 127.0.0.1
+    ```
 
 #### That's all steps for this. Happy debugging!
