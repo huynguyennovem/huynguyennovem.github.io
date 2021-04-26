@@ -65,7 +65,9 @@ Debugging is simpler with wireless debugging over ADB with Android 11 devices. F
 - Step 7: Return to your Android Studio to check connected device in toolbar
 
 - (Optional) Step 8: To keep alive adb connection (sometime it may be disconnect):
+
 From terminal:
+
 ```
 adb shell ping -i 2 127.0.0.1
 ```
