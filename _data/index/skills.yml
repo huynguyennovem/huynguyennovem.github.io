@@ -2,5 +2,5 @@
 
 label: Skill
 id : cs
-aspects: Motivation, GitHub, Java, Kotlin, Docker, Python, Linux, Kubernetes, Database, Android
-percentage: 100, 80, 90, 70, 70, 80, 80, 60, 60, 100
+aspects: Motivation, GitHub, Java, Kotlin, Docker, Python, Linux, Kubernetes, Database, Android, Flutter, Dart
+percentage: 100, 80, 90, 70, 70, 80, 80, 60, 60, 100, 80, 80
