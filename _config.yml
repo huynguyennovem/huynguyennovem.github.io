@@ -14,7 +14,7 @@ keywords: ["blog", "developer", "android", "application"]
 # Jekyll configuration
 ####################################
 #
-timezone:          Europe/Paris
+timezone:          Asia/Ho_Chi_Minh
 markdown:          kramdown
 highlighter:       rouge
 excerpt_separator: <!--more-->
@@ -35,7 +35,7 @@ kramdown:
 owner:
   name: Nguyen Quang Huy
   avatar: avatar.jpg
-  job: "Android Developer"
+  job: "Mobile Developer"
   bio: "The good things come to those who hustle"
   email:
   disqus-shortname: The good things come to those who hustle
@@ -48,9 +48,9 @@ owner:
     ad-client:
     ad-slot:
   bing-verify:
-  github: #username
+  github: huynguyennovem
   gitlab: #username
-  stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
+  stackoverflow: 5921933/huy-nguyen
   linkedin: #username
   skype: #username
   xing: #username
@@ -70,4 +70,5 @@ owner:
   reddit: #username
   telegram: #username
 
+remote_theme: pages-themes/leap-day
 theme: jekyll-theme-leap-day
