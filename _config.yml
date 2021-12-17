@@ -70,5 +70,5 @@ owner:
   reddit: #username
   telegram: #username
 
-remote_theme: pages-themes/leap-day
+remote_theme: pages-themes/architect
 theme: jekyll-theme-architect
