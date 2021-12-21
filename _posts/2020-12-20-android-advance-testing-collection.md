@@ -8,22 +8,22 @@ comments: true
 tags: [tutorial, android, android-testing, android-advance]
 ---
 
-1. Testing basic and concepts
-- Source: https://developer.android.com/codelabs/advanced-android-kotlin-training-testing-basics
+### **1. Testing basic and concepts**
+- Source: [https://developer.android.com/codelabs/advanced-android-kotlin-training-testing-basics](https://developer.android.com/codelabs/advanced-android-kotlin-training-testing-basics)
 
-- Local tests (test source set):
+- `Local tests` (test source set):
 These tests are run locally on your development machine's JVM and do not require an emulator or physical device. Because of this, they run fast, but their fidelity is lower, meaning they act less like they would in the real world.
 
 <img src="/static/img/test.png" width="20%" height="20%" />
 
-- Instrumented tests (androidTest source set):
+- `Instrumented tests` (androidTest source set):
 These tests run on real or emulated Android devices, so they reflect what will happen in the real world, but are also much slower.
 
 <img src="/static/img/instrumented_test.png" width="20%" height="20%" />
 
-For eg:
+- For eg:
 
-<img src="/static/img/two_test_type.png" width="20%" height="20%" />
+    <img src="/static/img/two_test_type.png" width="20%" height="20%" />
 
 - **Hamcrest** dependency:
     - Support for `human readable` testing code
@@ -167,8 +167,8 @@ For eg:
         <img src="/static/img/generate_test.png" width="20%" height="20%" />
 
 
-2. Test Doubles and Dependency Injection
-- Source: https://developer.android.com/codelabs/advanced-android-kotlin-training-testing-test-doubles
+### **2. Test Doubles and Dependency Injection**
+- Source: [https://developer.android.com/codelabs/advanced-android-kotlin-training-testing-test-doubles](https://developer.android.com/codelabs/advanced-android-kotlin-training-testing-test-doubles)
 
 - Testing Strategy:
 
