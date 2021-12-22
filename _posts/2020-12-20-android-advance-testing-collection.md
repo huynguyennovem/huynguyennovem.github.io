@@ -23,7 +23,7 @@ These tests run on real or emulated Android devices, so they reflect what will h
 
 - For eg:
 
-    <img src="/static/img/two_test_type.png" width="20%" height="20%" />
+    <img src="/static/img/two_test_type.png" width="40%" height="40%" />
 
 - **Hamcrest** dependency:
     - Support for `human readable` testing code
@@ -54,7 +54,7 @@ These tests run on real or emulated Android devices, so they reflect what will h
 
 - TDD (Test Driven Development) steps:
 
-    <img src="/static/img/TDD.png" width="20%" height="20%" />
+    <img src="/static/img/TDD.png" width="40%" height="40%" />
 
 - ViewModel test:
     - Use `AndroidX Test`: is used for both **local test** and **instrumented test**
@@ -63,7 +63,7 @@ These tests run on real or emulated Android devices, so they reflect what will h
 
     - Annotate the class with the `AndroidJunit4` test runner:
         
-        <img src="/static/img/junit4.png" width="20%" height="20%" />
+        <img src="/static/img/junit4.png" width="40%" height="40%" />
     
     - Write AndroidX Test code
 
@@ -164,7 +164,7 @@ These tests run on real or emulated Android devices, so they reflect what will h
     - To quick generate Test for class/function:
         > Right click on the class/function > Generate... > Test...
 
-        <img src="/static/img/generate_test.png" width="20%" height="20%" />
+        <img src="/static/img/generate_test.png" width="40%" height="40%" />
 
 
 ### **2. Test Doubles and Dependency Injection**
@@ -172,7 +172,7 @@ These tests run on real or emulated Android devices, so they reflect what will h
 
 - Testing Strategy:
 
-    <img src="/static/img/test_strategy.png" width="20%" height="20%" />
+    <img src="/static/img/test_strategy.png" width="50%" height="50%" />
 
     - `Unit tests`—Tests that run on a single class, usually a single method in that class
     - `Integration tests`—These test the interaction of several classes to make sure they behave as expected when used together. **Example**: Testing all the functionality of a single fragment and view model pair.
@@ -233,7 +233,7 @@ These tests run on real or emulated Android devices, so they reflect what will h
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
     ```
 
-    <img src="/static/img/espresso_explain.png" width="20%" height="20%" />
+    <img src="/static/img/espresso_explain.png" width="40%" height="40%" />
 
     ```kotlin
     // make sure that the title/description are both shown and correct
