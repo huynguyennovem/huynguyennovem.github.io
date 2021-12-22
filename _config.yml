@@ -34,7 +34,7 @@ kramdown:
 #
 owner:
   name: Nguyen Quang Huy
-  avatar: /static/img/avatar.jpg
+  avatar: avatar.jpg
   job: "Mobile Developer"
   bio: "The good things come to those who hustle"
   email:
