@@ -89,11 +89,11 @@ android {
     defaultConfig {
         ...testInstrumentationRunnerArguments clearPackageData: "true"
 }
-
+```
 
 
 ### **References**
 - https://developer.android.com/codelabs/android-basics-kotlin-write-instrumentation-tests
 - https://developer.android.com/codelabs/android-basics-kotlin-affirmations-test-lists-and-adapters
 
-#### Happy testing!
+### Happy testing!
