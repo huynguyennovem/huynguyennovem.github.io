@@ -2,14 +2,13 @@
 layout: post
 title:  "Android Advance - Testing"
 date:   2020-12-20
-excerpt: "This artical is short summary of Testing on Android Advance topics from Google Codelabs"
+excerpt: "This article is short summary of Testing on Android Advance topics from Google Codelabs"
 categories: [tutorial, android, android-testing, android-advance]
 comments: true
 tags: [tutorial, android, android-testing, android-advance]
 ---
 
 ### **1. Testing basic and concepts**
-- Source: [https://developer.android.com/codelabs/advanced-android-kotlin-training-testing-basics](https://developer.android.com/codelabs/advanced-android-kotlin-training-testing-basics)
 
 - `Local tests` (test source set):
 These tests are run locally on your development machine's JVM and do not require an emulator or physical device. Because of this, they run fast, but their fidelity is lower, meaning they act less like they would in the real world.
@@ -168,7 +167,6 @@ These tests run on real or emulated Android devices, so they reflect what will h
 
 
 ### **2. Test Doubles and Dependency Injection**
-- Source: [https://developer.android.com/codelabs/advanced-android-kotlin-training-testing-test-doubles](https://developer.android.com/codelabs/advanced-android-kotlin-training-testing-test-doubles)
 
 - Testing Strategy:
 
@@ -285,5 +283,8 @@ These tests run on real or emulated Android devices, so they reflect what will h
     }
     ```
 
+### **References**
+- [https://developer.android.com/codelabs/advanced-android-kotlin-training-testing-basics](https://developer.android.com/codelabs/advanced-android-kotlin-training-testing-basics)
+- [https://developer.android.com/codelabs/advanced-android-kotlin-training-testing-test-doubles](https://developer.android.com/codelabs/advanced-android-kotlin-training-testing-test-doubles)
 
 #### Happy testing!

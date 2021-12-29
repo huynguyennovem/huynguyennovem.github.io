@@ -2,7 +2,7 @@
 layout: post
 title:  "Android Advance - Testing concepts"
 date:   2020-12-21
-excerpt: "This artical notes some concepts on Android Testing"
+excerpt: "This article notes some concepts on Android Testing"
 categories: [tutorial, android, android-testing]
 comments: true
 tags: [tutorial, android, android-testing]
@@ -93,7 +93,7 @@ android {
 
 
 ### **References**
-- https://developer.android.com/codelabs/android-basics-kotlin-write-instrumentation-tests
-- https://developer.android.com/codelabs/android-basics-kotlin-affirmations-test-lists-and-adapters
+- [https://developer.android.com/codelabs/android-basics-kotlin-write-instrumentation-tests](https://developer.android.com/codelabs/android-basics-kotlin-write-instrumentation-tests)
+- [https://developer.android.com/codelabs/android-basics-kotlin-affirmations-test-lists-and-adapters](https://developer.android.com/codelabs/android-basics-kotlin-affirmations-test-lists-and-adapters)
 
 ### Happy testing!
