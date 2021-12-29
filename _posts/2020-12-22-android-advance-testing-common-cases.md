@@ -29,7 +29,7 @@ fun calculate_20_percent_tip() {
 
 Example: 
 
-<video width="320" height="240" controls>
+<video width="480" height="640" controls>
   <source src="/static/video/auto_fill_test.mp4" type="video/mp4">
 </video>
 
