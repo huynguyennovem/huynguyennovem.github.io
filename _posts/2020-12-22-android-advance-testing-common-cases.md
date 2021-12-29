@@ -5,7 +5,7 @@ date:   2020-12-22
 excerpt: "This artical notes some common cases on Android Testing"
 categories: [tutorial, android, android-testing]
 comments: true
-tags: [tutorial, android, android-testing
+tags: [tutorial, android, android-testing]
 ---
 
 
@@ -75,4 +75,4 @@ fun adapter_size() {
 - https://developer.android.com/codelabs/android-basics-kotlin-write-instrumentation-tests
 - https://developer.android.com/codelabs/android-basics-kotlin-affirmations-test-lists-and-adapters
 
-#### Happy testing!
+### Happy testing!

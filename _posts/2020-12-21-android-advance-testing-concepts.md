@@ -5,7 +5,7 @@ date:   2020-12-21
 excerpt: "This artical notes some concepts on Android Testing"
 categories: [tutorial, android, android-testing]
 comments: true
-tags: [tutorial, android, android-testing
+tags: [tutorial, android, android-testing]
 ---
 
 **1. @RunWith(AndroidJUnit4::class)**
