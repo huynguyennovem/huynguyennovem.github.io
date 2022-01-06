@@ -29,7 +29,7 @@ fun calculate_20_percent_tip() {
 
 Example: 
 
-<video width="480" height="640" controls>
+<video width="330" height="720" controls>
   <source src="/static/video/auto_fill_test.mp4" type="video/mp4">
 </video>
 
@@ -68,11 +68,9 @@ fun adapter_size() {
 }
 ```
 
-
-
-
 ### **References**
 - [https://developer.android.com/codelabs/android-basics-kotlin-write-instrumentation-tests](https://developer.android.com/codelabs/android-basics-kotlin-write-instrumentation-tests)
 - [https://developer.android.com/codelabs/android-basics-kotlin-affirmations-test-lists-and-adapters](https://developer.android.com/codelabs/android-basics-kotlin-affirmations-test-lists-and-adapters)
+- [https://developer.android.com/codelabs/android-adv-workmanager](https://developer.android.com/codelabs/android-adv-workmanager)
 
 ### Happy testing!
