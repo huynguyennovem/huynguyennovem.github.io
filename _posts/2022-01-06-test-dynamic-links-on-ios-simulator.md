@@ -29,13 +29,8 @@ In my case, I used `Contact` app:
 
 **Demo video**
 
-<iframe
-    width="640"
-    height="480"
-    src="https://www.youtube.com/watch?v=rwAUS0oTbOs"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen>
-</iframe>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=rwAUS0oTbOs" target="_blank">
+ <img src="http://img.youtube.com/vi/rwAUS0oTbOs/mqdefault.jpg" alt="Watch the video" width="1080" height="720" />
+</a>
 
 Thanks!
