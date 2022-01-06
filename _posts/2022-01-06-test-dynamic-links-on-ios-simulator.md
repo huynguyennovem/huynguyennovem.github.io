@@ -30,7 +30,7 @@ In my case, I used `Contact` app:
 **Demo video**
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=rwAUS0oTbOs" target="_blank">
- <img src="http://img.youtube.com/vi/rwAUS0oTbOs/mqdefault.jpg" alt="Watch the video" width="1080" height="720" />
+ <img src="http://img.youtube.com/vi/rwAUS0oTbOs/mqdefault.jpg" alt="Watch the video" width="1440" height="900" />
 </a>
 
 Thanks!
