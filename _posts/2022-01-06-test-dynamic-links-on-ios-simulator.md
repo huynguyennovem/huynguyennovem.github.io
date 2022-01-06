@@ -29,8 +29,6 @@ In my case, I used `Contact` app:
 
 **Demo video**
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=rwAUS0oTbOs" target="_blank">
- <img src="http://img.youtube.com/vi/rwAUS0oTbOs/mqdefault.jpg" alt="Watch the video" width="900" height="1440" />
-</a>
+[https://www.youtube.com/watch?v=rwAUS0oTbOs](https://www.youtube.com/watch?v=rwAUS0oTbOs)
 
 Thanks!
