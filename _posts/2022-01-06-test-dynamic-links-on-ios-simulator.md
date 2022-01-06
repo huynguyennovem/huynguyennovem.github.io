@@ -10,7 +10,9 @@ tags: [mac, ios, dynamic links, ios silumator]
 
 **1. Use openurl command**
 
-> /usr/bin/xcrun simctl openurl booted "<your_url_here>"
+```
+/usr/bin/xcrun simctl openurl booted "<your_url_here>"
+```
 
 **2. Use Share extension on Mac**
 
@@ -27,6 +29,13 @@ In my case, I used `Contact` app:
 
 **Demo video**
 
-[![How to test dynamic links on iOS Simulator](https://img.youtube.com/vi/rwAUS0oTbOs/0.jpg)](https://www.youtube.com/watch?v=rwAUS0oTbOs)
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/watch?v=rwAUS0oTbOs"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+</iframe>
 
 Thanks!
