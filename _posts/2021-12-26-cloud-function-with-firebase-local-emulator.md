@@ -15,60 +15,76 @@ Currently it supports for Realtime Database, PubSub, Auth, and HTTP callable tri
 
 - Setup:
     - Firebase CLI:
-    > npm install -g firebase-tools
-
-    Dependencies:
-        - firebase-admin version 8.0.0 or higher.
-        - firebase-functions version 3.0.0 or higher.
+    
+      `npm install -g firebase-tools`
 
     - Run emulator:
-    > firebase emulators:start
     
-    Use `--only` flag to use particular service:
-    > firebase emulators:start --only functions
+      `firebase init emulators`
+    
+      `firebase emulators:start`
+    
+      - Use `--only` flag to use particular service:
+    
+        `firebase emulators:start --only functions`
 
-### Hands-on samples
+### Hands-on samples Cloud Functions with Local Emulator
 - Resource: https://firebase.google.com/docs/functions/get-started
 
-- Init a project:
+- Init a firebase project and functions:
 
 1. `firebase login`
 2. Go to your Firebase project directory.
 3. `firebase init functions`
-4. Select JavaScript
+4. Select a language (I select JavaScript)
+
+- Init firebase emulator:
+
+1. `firebase init emulators`
+2. Select `Function Emulator` option
+3. Which port do you want to use for the functions emulator? (5001) `<Enter>`
+4. Would you like to enable the Emulator UI? (Y/n) `<Enter>`
+5.  Which port do you want to use for the Emulator UI (leave empty to use any available port)? `<Enter>`
+6. Would you like to download the emulators now? (y/N) `<Enter>`
+7. Start emulator with functions only: `firebase emulators:start --only functions`
+
+The output will be like this:
+```
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://localhost:4000                │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ localhost:5001 │ http://localhost:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: 4500
+```
+
+<img src="/static/img/firebase_local_emulator_ui.png" width="60%" height="60%" />
 
 
-- Add data:
-    - From root of project: 
-    > cd functions
-    
-    - Insert data:
-    > firebase functions:config:set animal.foot="dog" 
+- Sample functions:
 
-    or json format:
-    
-    > firebase functions:config:set foo='{"bar":"something","faz":"other"}'
+```javascript
+exports.printRequestSample = functions.https.onRequest(async (request, response) => {
+  functions.logger.info(request.body);
+});
+```
 
-    - Update:
-    > firebase functions:config:get > .runtimeconfig.json
-    
-    - Result:
-    {
-      "animal": {
-        "foot": "dog"
-      },
-      "foo": {
-        "dog": "abjcnkasmds",
-        "bar2": "abcdef",
-        "bar": "something",
-        "faz": "other"
-      }
-    }
+### Deploy functions
+- Deploy all functions:
+`firebase deploy --only functions`
 
+- Deploy only a function:
+`firebase deploy --only functions:<function_name>`
+
+  Eg: `firebase deploy --only functions:printRequestSample`
 
 
 ### Troubleshots:
 1. It looks like you're trying to access functions.config().firebase but there is no value there. You can learn more about setting up config here: https://firebase.google.com/docs/functions/local-emulator
 
-
-**(To be continued)**
