@@ -7,3 +7,4 @@ _drafts
 Gemfile.lock
 /huynguyennovem.github.io.iml
 .idea/
+.DS_Store
