@@ -41,7 +41,7 @@ tags: [flutter]
   ...
   ```
 
-  Note: After did this step, you may not run the app because some dependences version may not supported yet. This tutorial may help you: [Understand caret syntax (^) in pubspec.yaml](https://huynguyennovem.github.io/articles/2022-02/2022-02-22-flutter-understand-caret-sign-in-pubspec)
+  Note: After did this step, you may not run the app because some dependences version may not supported yet. This tutorial may help you: [Understand caret syntax (^) in pubspec.yaml](https://huynguyennovem.github.io/articles/2022-02/flutter-understand-caret-sign-in-pubspec)
 
 
 **3. Clean and pub get**
