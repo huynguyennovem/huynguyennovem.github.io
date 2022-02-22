@@ -147,6 +147,6 @@ viewModel.permissionForDelete.observe(this, { intentSender ->
 The result:
     <img src="/static/img/delete_prompt_many_item.png" width="50%" height="50%" />
 
-=> Check the gist if you're more familiar: [https://gist.github.com/huynguyennovem/f1ce43dc8a7f4944632c51478bdc624e](https://gist.github.com/huynguyennovem/f1ce43dc8a7f4944632c51478bdc624e)
+=> Check the gist if you're more familiar: [https://gist.github.com/huynguyennovem/42278c4ab3427783446518351547d93a](https://gist.github.com/huynguyennovem/42278c4ab3427783446518351547d93a)
 
 ### Happy coding!
