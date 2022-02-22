@@ -22,6 +22,7 @@ tags: [flutter]
     Engine • revision a83ed0e5e3
     Tools • Dart 2.16.1 • DevTools 2.9.2
     ```
+
 **2. Upgrade dependences**
 
   Some dependences may need to upgrade in order to be compatible with new SDK
@@ -78,7 +79,7 @@ tags: [flutter]
   
   In my case, with Mac M1 chip, these commands did not work. So, this is what I tried to:
     
-  - Open Terminal in Rosetta (Guideline: https://www.courier.com/blog/tips-and-tricks-to-setup-your-apple-m1-for-development/)
+  - Open Terminal in Rosetta (Guideline: [https://www.courier.com/blog/tips-and-tricks-to-setup-your-apple-m1-for-development/](https://www.courier.com/blog/tips-and-tricks-to-setup-your-apple-m1-for-development/))
   - In Rosetta Termial:
       ```
       cd ios

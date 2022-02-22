@@ -14,7 +14,7 @@ It indicates a range of version numbers are allowed.
 
 So once upgrading with `flutter pub upgrade` command, all dependences will fetch the latest version:
 
-```flutter pub upgrade
+```
 Resolving dependencies...
 
   _fe_analyzer_shared 22.0.0 (34.0.0 available)
@@ -37,6 +37,7 @@ Resolving dependencies...
   built_collection 5.1.1
 > built_value 8.1.4 (was 8.1.2)
 ```
+
 To prevent this, you should use the concrete version (**_without caret syntax_**). 
 
 For eg: `share_plus: 2.1.0`.
