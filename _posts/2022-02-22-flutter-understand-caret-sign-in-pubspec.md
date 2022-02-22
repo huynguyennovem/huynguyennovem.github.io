@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Understand caret syntax (^) in pubspec.yaml"
-date:   2022-02-22 10:00:00
+date:   2022-02-20 10:00:00
 excerpt: "Understand caret syntax (^) in pubspec.yaml"
 categories: [flutter]
 comments: true
