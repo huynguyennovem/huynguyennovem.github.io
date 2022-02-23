@@ -3,9 +3,9 @@ layout: post
 title:  "Android Advance - Testing common cases"
 date:   2020-12-22
 excerpt: "This article notes some common cases on Android Testing"
-categories: [tutorial, android, android-testing]
+categories: [tutorial, android, testing, advance-topic]
 comments: true
-tags: [tutorial, android, android-testing]
+tags: [tutorial, android, testing, android-advance]
 ---
 
 

@@ -3,7 +3,7 @@ layout: post
 title:  "Create a custom notification number view in Android with Kotlin"
 date:   2019-09-17 10:30:00
 excerpt: "This tutorial will show you how to create a custom notification number view in Android with Kotlin"
-categories: [tutorial, android, kotlin, customview]
+categories: [tutorial, android]
 comments: true
 tags: [tutorial, android, kotlin, customview]
 ---

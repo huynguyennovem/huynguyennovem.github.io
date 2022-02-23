@@ -5,7 +5,7 @@ date:   2019-12-01 16:00:00
 excerpt: "How to handle livedata for single event case on Android?"
 categories: [tutorial, android]
 comments: true
-tags: [tutorial, android]
+tags: [tutorial, android, kotlin]
 ---
 There is a problem with LiveData when we invoke some single event, such as: showing a toast/snackbar, show/hide view or navigate to another fragment/activity. The problem is the observer always consume the changes from LiveData and the LiveData keeps holding latest values without auto-reset.
 Below is list of solutions to handle this case, with Advantage/Disadvantage:

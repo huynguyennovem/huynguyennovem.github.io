@@ -5,7 +5,7 @@ date:   2019-12-10 16:00:00
 excerpt: "Wrap-up of Flows vs Channel in Kotlin by Roman Elizarov"
 categories: [tutorial, android]
 comments: true
-tags: [tutorial, android]
+tags: [tutorial, android, kotlin]
 ---
 
 ### 1. Flows

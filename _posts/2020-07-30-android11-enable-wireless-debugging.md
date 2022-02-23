@@ -3,11 +3,11 @@ layout: post
 title:  "Android 11 - Enable wireless debugging"
 date:   2020-07-30 14:30:00
 excerpt: "This tutorial will guide you how to enable wireless debugging on Android 11"
-categories: [android 11, tutorial, android, debugging]
+categories: [tutorial, android]
 comments: true
 image:
     feature: https://huynguyennovem.github.io/static/img/wireless-debugging.png
-tags: [android 11, tutorial, android, debugging, wireless]
+tags: [android 11, tutorial, android, debugging, wireless, tool]
 ---
 Debugging is simpler with wireless debugging over ADB with Android 11 devices. Follow below steps to enable this interesting feature:
 

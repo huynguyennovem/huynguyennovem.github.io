@@ -3,9 +3,9 @@ layout: post
 title:  "Android Advance - Testing"
 date:   2020-12-20
 excerpt: "This article is short summary of Testing on Android Advance topics from Google Codelabs"
-categories: [tutorial, android, android-testing, android-advance]
+categories: [tutorial, android, testing, advance-topic]
 comments: true
-tags: [tutorial, android, android-testing, android-advance]
+tags: [tutorial, android, testing, android-advance]
 ---
 
 ### **1. Testing basic and concepts**

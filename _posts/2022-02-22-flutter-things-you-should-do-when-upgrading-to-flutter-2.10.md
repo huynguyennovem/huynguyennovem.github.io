@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Things you should to when upgrading to new Flutter SDK"
+title:  "Things you should to do when upgrading into new Flutter SDK"
 date:   2022-02-21 10:00:00
-excerpt: "Things you should to when upgrading to new Flutter SDK"
+excerpt: "Things you should to do when upgrading into new Flutter SDK"
 categories: [flutter]
 comments: true
 tags: [flutter]

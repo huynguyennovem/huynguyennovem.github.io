@@ -3,9 +3,9 @@ layout: post
 title:  "Android 11 package visibility"
 date:   2020-11-17
 excerpt: "This tutorial will guide you how to adapt changes with package visibility in Android 11"
-categories: [tutorial, android, android-11]
+categories: [tutorial, android]
 comments: true
-tags: [tutorial, android, android-11]
+tags: [tutorial, android, android 11]
 ---
 
 - Scenario: Your app is targeting to Android 11, you want to query/interact with other apps (for eg: get data return, bind a service..). By default your app will return `NameNotFoundException` - regardless of whether the target app is installed. 

@@ -5,7 +5,7 @@ date:   2020-02-10 10:16:00
 excerpt: "BottomNavigationView with material support."
 categories: [tutorial, android]
 comments: true
-tags: [tutorial, android]
+tags: [tutorial, android, view]
 ---
 ### Introduction
 [BottomNavigationView](https://material.io/develop/android/components/bottom-navigation-view/) with material support.

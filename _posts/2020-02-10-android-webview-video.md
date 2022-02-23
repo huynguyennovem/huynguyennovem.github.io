@@ -5,7 +5,7 @@ date:   2020-02-10 12:16:00
 excerpt: "BottomNavigationView with material support."
 categories: [tutorial, android]
 comments: true
-tags: [tutorial, android]
+tags: [tutorial, android, view]
 ---
 ### Introduction
 - Play html5 video webview

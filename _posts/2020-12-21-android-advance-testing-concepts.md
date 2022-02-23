@@ -3,9 +3,9 @@ layout: post
 title:  "Android Advance - Testing concepts"
 date:   2020-12-21
 excerpt: "This article notes some concepts on Android Testing"
-categories: [tutorial, android, android-testing]
+categories: [tutorial, android, testing, advance-topic]
 comments: true
-tags: [tutorial, android, android-testing]
+tags: [tutorial, android, testing, android-advance]
 ---
 
 **1. @RunWith(AndroidJUnit4::class)**

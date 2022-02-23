@@ -3,7 +3,7 @@ layout: post
 title:  "Hands-on Firebase Cloud Functions with Local Emulator"
 date:   2021-12-26 18:00:00
 excerpt: "Get familiar with Firebase Cloud Functions on Local Emulator"
-categories: [tutorial, firebase, cloud function]
+categories: [tutorial, firebase]
 comments: true
 tags: [tutorial, firebase, cloud function]
 ---

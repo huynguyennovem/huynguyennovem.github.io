@@ -3,7 +3,7 @@ layout: post
 title:  "Configure and Run Ktlin on Android"
 date:   2020-09-08
 excerpt: "This tutorial will guide you how to configure and run Ktlin on Android"
-categories: [tutorial, android, ktlin]
+categories: [tutorial, android]
 comments: true
 tags: [tutorial, android, ktlin]
 ---

@@ -3,9 +3,9 @@ layout: post
 title:  "Mac OS  M1 chip - Pros and Cons from my exp"
 date:   2021-12-31 16:00:00
 excerpt: "Pros and Cons of Mac M1 with Android/Flutter development experiences"
-categories: [mac, m1, apple, development experiences]
+categories: [mac, m1, apple]
 comments: true
-tags: [mac, m1, apple, development experiences]
+tags: [mac, m1, apple]
 ---
 
 ### **Pros**

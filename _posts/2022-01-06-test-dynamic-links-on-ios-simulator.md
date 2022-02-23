@@ -3,9 +3,9 @@ layout: post
 title:  "How to test dynamic links on iOS simulator"
 date:   2022-01-06 22:00:00
 excerpt: "3 easy solutions to test dynamic links on iOS simulator from hands-on experience"
-categories: [mac, ios, dynamic links, ios silumator]
+categories: [tutorial, mac, ios]
 comments: true
-tags: [mac, ios, dynamic links, ios silumator]
+tags: [mac, ios, ios silumator]
 ---
 
 **1. Use openurl command**
