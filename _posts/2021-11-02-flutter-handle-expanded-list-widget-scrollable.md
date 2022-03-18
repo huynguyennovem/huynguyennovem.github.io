@@ -2,7 +2,7 @@
 layout: post
 title:  "Handle expanded list widgets that is scrollable"
 date:   2021-11-02 12:00:00
-excerpt: "How to handle typical orverflow error for expanded list widgets"
+excerpt: "How to handle typical overflow error for expanded list widgets"
 categories: [flutter]
 comments: true
 tags: [flutter]
@@ -154,5 +154,7 @@ Flexible(
 And now when the keyboard shows up, no overflow anymore :)
 
   <img src="/static/img/chat_screen_fixed.png" width="50%" height="50%" />
+
+Note: Even though may be we have a better solution for this kind of layout (using Stack instead for eg). But in this tutorial, I only focus on `Expanded list widgets scrollable`. So, just forget other things!
 
 **Happy coding!**
