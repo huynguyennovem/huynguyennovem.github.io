@@ -1,2 +1,5 @@
-# huynguyennovem.github.io
-Personal blog, based on http://jekyllthemes.org/
+- The blog is build with [MkDocs](https://www.mkdocs.org/)
+- Some regular commands:
+    - `mkdocs serve` to start the server
+    - `mkdocs build` to build the site
+    - `mkdocs gh-deploy` to deploy the site

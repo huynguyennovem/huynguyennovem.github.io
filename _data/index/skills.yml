@@ -1,6 +1,0 @@
-# skills section data
-
-label: Skill
-id : cs
-aspects: Motivation, GitHub, Java, Kotlin, Docker, Linux, Kubernetes, Database, Android, Flutter, Dart
-percentage: 100, 90, 90, 90, 70, 70, 40, 70, 90, 90, 90

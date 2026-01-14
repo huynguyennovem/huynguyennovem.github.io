@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Compiling Flutter Engine Locally - What changes after monorepo (Part IV) - Huy Nguyen Blog</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Compiling Flutter Engine Locally - What changes after monorepo (Part IV)";
+        var mkdocs_page_input_path = "posts/compiling-flutter-engine-locally-part-iv.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Huy Nguyen Blog
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Posts</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../community_activities/">Community Activities</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../projects_packages/">Projects and packages</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../contributions/">Contributions</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Huy Nguyen Blog</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Compiling Flutter Engine Locally - What changes after monorepo (Part IV)</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p>Since Flutter monorepo is now complete, there are some updates to the engine compilation process. This article will guide you through the updated steps and help troubleshoot common issues you may encounter.</p>
+<ol>
+<li>
+<h2 id="preparing">Preparing</h2>
+</li>
+</ol>
+<p>First, ensure you have all required <a href="https://github.com/flutter/flutter/blob/master/engine/src/flutter/docs/contributing/Setting-up-the-Engine-development-environment.md#getting-dependencies">dependencies</a>. Refer to <a href="https://huynq.dev/compiling-flutter-engine-locally-part-i">Part I</a> for an overview (note that it was written before the monorepo merged).</p>
+<h3 id="setting-up-gclient">Setting up <code>.gclient</code></h3>
+<ol>
+<li>
+<p>Navigate to <code>&lt;flutter SDK&gt;/engine/scripts</code>.</p>
+</li>
+<li>
+<p>Copy the standard.gclient file to the Flutter SDK root directory.</p>
+</li>
+<li>
+<p>Rename it to .gclient and place it in your Flutter SDK root. Follow the <a href="https://github.com/flutter/flutter/blob/master/engine/README.md">official guide</a> for more details.</p>
+</li>
+</ol>
+<p>Example of <code>.gclient</code> content:</p>
+<pre><code class="language-json">solutions = [
+  {
+    &quot;custom_deps&quot;: {},
+    &quot;deps_file&quot;: &quot;DEPS&quot;,
+    &quot;managed&quot;: False,
+    &quot;name&quot;: &quot;.&quot;,
+    &quot;safesync_url&quot;: &quot;&quot;,
+
+    # If you are using SSH to connect to GitHub, change the URL to:
+    # git@github.com:flutter/flutter.git
+    &quot;url&quot;: &quot;git@github.com:flutter/flutter.git&quot;,
+
+    # Uncomment the custom_vars section below if you plan to build the web engine.
+    # &quot;custom_vars&quot;: {
+    #   &quot;download_emsdk&quot;: True,
+    # },
+  },
+]
+</code></pre>
+<p>Run the following command to fetch dependencies:</p>
+<pre><code class="language-console">gclient sync -D
+</code></pre>
+<ol>
+<li>
+<h2 id="compiling-engine">Compiling engine</h2>
+<h3 id="prepare-build-files-for-device-side-executables">Prepare build files for DEVICE-side executables</h3>
+<p><code>console
+ cd engine/src
+./flutter/tools/gn --android --android-cpu arm64 --unoptimized</code></p>
+<p>If you build for ios, replace <code>--android</code> with <code>--ios</code>:</p>
+<p><code>console
+./flutter/tools/gn --ios --unoptimized</code></p>
+<h3 id="prepare-the-build-files-for-host-side-executables">Prepare the build files for HOST-side executables.</h3>
+<p><code>console
+./flutter/tools/gn --unoptimized</code></p>
+<p>You should now see the new output folders:</p>
+<p><code>console
+➜  out git:(master) ✗ pwd
+/Users/huynq/Documents/GitHub/flutter_master/engine/src/out
+➜  out git:(master) ✗ tree -L 1
+.
+├── android_debug_unopt_arm64
+└── host_debug_unopt</code></p>
+<h3 id="build-executables">Build executables</h3>
+<p>Building can take a long time, so grab a coffee or take a break!</p>
+</li>
+</ol>
+<pre><code class="language-console">➜  src git:(master) ✗ ninja -C out/host_debug_unopt
+ninja: Entering directory `out/host_debug_unopt'
+[8308/8308] ACTION //flutter/lib/snapshot:create_macos_gen_snapshots(//build/toolchain/mac:clang_x64)
+</code></pre>
+<pre><code class="language-bash">  src git:(master) ✗ ninja -C out/android_debug_unopt_arm64
+ninja: Entering directory `out/android_debug_unopt_arm64'
+[45/5875] ACTION //flutter/shell/platform/android:flutter_shell_java(//build/toolchain/android:clang_arm64)
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+[5875/5875] ACTION //flutter/shell/platform/android:flutter_jar_zip(//build/toolchain/android:clang_arm64)
+</code></pre>
+<p>If it's iOS:</p>
+<pre><code class="language-bash">ninja -C out/ios_debug_unopt
+</code></pre>
+<p>(make sure you <code>Prepare the build files</code> from the above step)</p>
+<h3 id="use-your-build-in-flutter-project">Use your build in Flutter project</h3>
+<p>Check out <a href="https://huynq.dev/compiling-flutter-engine-locally-part-i">first article</a> for details of parameters on integrating the compiled engine with your Flutter project.</p>
+<ol>
+<li>
+<h2 id="troubleshooting">Troubleshooting</h2>
+</li>
+</ol>
+<p>3.1 Using deprecated <code>ANDROID_SDK_ROOT</code></p>
+<pre><code class="language-console">➜  src git:(cc9bcdd) ninja -C out/android_debug_unopt_arm64
+ninja: Entering directory `out/android_debug_unopt_arm64'
+[78/6415] ACTION //flutter/shell/platform/android:flutter_shell_java(//build/toolchain/android:clang_arm64)
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+[6404/6415] ACTION //flutter/testing/scenario_app/android:android_lint(//build/toolchain/android:clang_arm64)
+FAILED: scenario_app/reports/lint-results.xml 
+vpython3 ../../flutter/testing/rules/run_gradle.py /Users/huynq/Documents/GitHub/flutter_beta/engine/src/flutter/testing/scenario_app/android lint --no-daemon -Pflutter_jar=/Users/huynq/Documents/GitHub/flutter_beta/engine/src/out/android_debug_unopt_arm64/flutter.jar -Pout_dir=/Users/huynq/Documents/GitHub/flutter_beta/engine/src/out/android_debug_unopt_arm64/scenario_app --project-cache-dir=/Users/huynq/Documents/GitHub/flutter_beta/engine/src/out/android_debug_unopt_arm64/scenario_app/.gradle --gradle-user-home=/Users/huynq/Documents/GitHub/flutter_beta/engine/src/out/android_debug_unopt_arm64/scenario_app/.gradle
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Could not determine the dependencies of task ':app:lintReportDebug'.
+&gt; Several environment variables and/or system properties contain different paths to the SDK.
+  Please correct and use only one way to inject the SDK location.
+
+  ANDROID_HOME: /Users/huynq/Documents/GitHub/flutter_beta/engine/src/flutter/third_party/android_tools/sdk
+  ANDROID_SDK_ROOT: /Users/huynq/Library/Android/sdk
+
+  It is recommended to use ANDROID_HOME as other methods are deprecated
+
+* Try:
+&gt; Run with --stacktrace option to get the stack trace.
+&gt; Run with --info or --debug option to get more log output.
+&gt; Run with --scan to get full insights.
+&gt; Get more help at https://help.gradle.org.
+</code></pre>
+<p>The solution is to remove <code>ANDROID_SDK_ROOT</code> from path env if you set it to Android SDK.That's it!</p>
+<p>3.2 ninja not found</p>
+<pre><code class="language-console">depot_tools/ninja.py: Could not find Ninja in the third_party of the current project, nor in your PATH.
+Please take one of the following actions to install Ninja:
+- If your project has DEPS, add a CIPD Ninja dependency to DEPS.
+- Otherwise, add Ninja to your PATH *after* depot_tools.
+</code></pre>
+<p>Thank <a href="https://github.com/jonahwilliams">jonahwilliams</a> for the <a href="https://github.com/flutter/flutter/issues/163487#issuecomment-2673643365">workaround</a>. I'm not sure how it's fixed later on (perhaps we will not need to add ninja to path on our side), but adding ninja from SDK can work around this issue:</p>
+<pre><code class="language-bash">export PATH=$HOME/flutter/engine/src/flutter/third_party/depot_tools/ninja:$PATH
+export PATH=$HOME/flutter/engine/src/flutter/third_party/ninja:$PATH
+</code></pre>
+<p>Update: This issue ([<a href="https://github.com/flutter/flutter/issues/163487">163487</a>](<a href="https://github.com/flutter/flutter/issues/163487">https://github.com/flutter/flutter/issues/163487</a>)) has been fixed, we don’t need this workaround anymore, just keep your path as is.</p>
+<p>Check out my related articles for compiling Flutter engine series:</p>
+<p><a href="https://huynq.dev/compiling-flutter-engine-locally-part-i">https://huynq.dev/compiling-flutter-engine-locally-part-i</a></p>
+<p><a href="https://huynq.dev/compiling-flutter-engine-locally-part-ii">https://huynq.dev/compiling-flutter-engine-locally-part-ii</a></p>
+<p><a href="https://huynq.dev/compiling-flutter-engine-locally-web-engine-part-iii">https://huynq.dev/compiling-flutter-engine-locally-web-engine-part-iii</a></p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,4 +1,0 @@
-- name: Android Template
-  descr: "Develope some templates which is usually used in Android projects. Be written in Java/Kotlin."
-  image: android.png
-  github: https://github.com/huynguyennovem
