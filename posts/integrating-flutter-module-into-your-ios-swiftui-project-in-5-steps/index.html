@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Integrating Flutter module into your iOS SwiftUI project in 5 steps - Huy Nguyen Blog</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Integrating Flutter module into your iOS SwiftUI project in 5 steps";
+        var mkdocs_page_input_path = "posts/integrating-flutter-module-into-your-ios-swiftui-project-in-5-steps.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Huy Nguyen Blog
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Posts</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../community_activities/">Community Activities</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../projects_packages/">Projects and packages</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../contributions/">Contributions</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Huy Nguyen Blog</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Integrating Flutter module into your iOS SwiftUI project in 5 steps</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p>In certain scenarios, undertaking the extensive task of migrating or rewriting an entire existing application using Flutter may demand a considerable amount of effort, a factor that companies usually consider before deciding to use Flutter for their projects. To support this, Flutter offers an option of integrating Flutter as a module within an existing application, a.k.a <strong>add-to-app</strong>.</p>
+<p>This article provides a comprehensive step-by-step guide to seamlessly integrate Flutter module into your iOS SwiftUI project. Furthermore, you will gain insights into establishing communication between Flutter and your existing app through the use of MethodChannel. Let's start!</p>
+<h3 id="1-create-an-ios-native-app-with-swiftui-from-xcode">1. Create an iOS native app with SwiftUI from XCode</h3>
+<p>Begin by setting up a native iOS project, which we'll name <code>iOSCounterApp</code>. In this example, let's modify the main view defined in <code>ContentView.swift</code> as follows:</p>
+<pre><code class="language-swift">import SwiftUI
+
+struct ContentView: View {
+    @State var counter = 0
+
+    var body: some View {
+        VStack {
+            Text(&quot;Counter: \(counter)&quot;).font(.largeTitle)
+            Button(action: {
+                increaseCounter()
+            }) {
+                Text(&quot;Increase counter&quot;)
+                    .font(.headline)
+                    .padding()
+                    .background(Color.yellow)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }.padding(.vertical, 8)
+
+            Button(action: {
+                //TODO: handle opening Flutter screen here
+            }) {
+                Text(&quot;Open Flutter View&quot;)
+                    .font(.headline)
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }.padding(.vertical, 10)
+        }
+
+    }
+
+    func increaseCounter() {
+        self.counter+=1
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+</code></pre>
+<p>The application class, <code>iOSCounterApp.swift</code>, can remain as is:</p>
+<pre><code class="language-swift">import SwiftUI
+
+@main
+struct iOSCounterApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+    }
+}
+</code></pre>
+<p>Run the application on an iOS device or simulator to see the following result:</p>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1710007046631/555e8358-b808-4cc2-b538-14bac5687e98.png" /></p>
+<h3 id="2-setting-up-flutter-module">2. Setting up Flutter module</h3>
+<h4 id="21-create-a-flutter-module">2.1. Create a Flutter module</h4>
+<p>Let's create it in the directory at the same level as your existing iOS project (sibling directories):</p>
+<pre><code class="language-bash">➜  iOSCounterApp pwd
+/Users/huynq/Desktop/iOSCounterApp
+
+➜  iOSCounterApp flutter create --template  module flutter_counter
+
+➜  iOSCounterApp tree -L 1                                                   
+.
+├── flutter_counter
+└── iOSCounterApp
+
+3 directories, 0 files
+</code></pre>
+<h4 id="22-exploring-flutter-module">2.2. Exploring Flutter module</h4>
+<p>Open <code>flutter_counter</code> in IDE and observe something new. Generally, a Flutter module resembles a standard Flutter project.</p>
+<ol>
+<li>In <code>pubspec.yaml</code>, scroll to the end to find a new <code>module</code> section. This section identifies the Flutter module:</li>
+</ol>
+<pre><code class="language-yaml">  module:
+    androidX: true
+    androidPackage: com.example.flutter_counter
+    iosBundleIdentifier: com.example.flutterCounter
+</code></pre>
+<ol>
+<li>Inside the hidden <code>.ios</code> directory, you'll notice a new file named <code>podhelper.rb</code>. This script manages Pod installation (Flutter engine, plugins, application) and <code>.framework</code> (Flutter.framework, App.framework).</li>
+</ol>
+<p>Whenever you add a new plugin to the Flutter module, this script will update it in your existing application.</p>
+<ol>
+<li>The location of the <code>.xcconfig</code> files is slightly different from a typical Flutter project. In a standard Flutter project, you'll find the <code>.xcconfig</code> files in the <code>ios/Flutter</code> directory:</li>
+</ol>
+<pre><code class="language-bash">➜  Flutter tree -L 1            
+.
+├── AppFrameworkInfo.plist
+├── Debug.xcconfig
+├── Flutter.podspec
+├── Generated.xcconfig
+├── Release.xcconfig
+└── flutter_export_environment.sh
+</code></pre>
+<p>However, in the Flutter module, they are located in two separate directories:</p>
+<pre><code class="language-bash">➜  .ios tree -L 2
+.
+├── Config
+│   ├── Debug.xcconfig
+│   ├── Flutter.xcconfig
+│   └── Release.xcconfig
+├── Flutter
+│   ├── AppFrameworkInfo.plist
+│   ├── FlutterPluginRegistrant
+│   ├── Generated.xcconfig
+│   ├── README.md
+│   ├── flutter_export_environment.sh
+│   └── podhelper.rb
+</code></pre>
+<h4 id="23-adding-dependencies-to-flutter-module-optional">2.3. Adding dependencies to Flutter module (optional)</h4>
+<p>You can add Flutter dependencies to module on <code>pubspec.yaml</code> file and also implement your code in the <code>lib/</code> directory. However, for now, let's keep it as the default counter app and revisit to module directory later.</p>
+<h3 id="3-embedding-the-flutter-module-to-existing-application">3. Embedding the Flutter module to existing application</h3>
+<p>First, let's create Podfile in your existing project:</p>
+<pre><code class="language-bash">➜  iOSCounterApp cd iOSCounterApp/
+➜  iOSCounterApp pod init 
+</code></pre>
+<p>Result:</p>
+<pre><code class="language-ruby"># Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'iOSCounterApp' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for iOSCounterApp
+
+end
+</code></pre>
+<p>Then, update the generated Podfile as follows:</p>
+<pre><code class="language-Ruby"># Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+flutter_application_path = '../flutter_counter'
+load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
+
+target 'iOSCounterApp' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for iOSCounterApp
+  install_all_flutter_pods(flutter_application_path)
+end
+
+post_install do |installer|
+  flutter_post_install(installer) if defined?(flutter_post_install)
+end
+</code></pre>
+<p>Run the following command:</p>
+<pre><code class="language-bash">pod install
+</code></pre>
+<p>Note: Whenever you add a new plugin to the Flutter module, you'll need to run <code>pod install</code> again in the existing project to refresh it.</p>
+<p>There is <code>.xcworkspace</code> file as the pod is installed successfully. Now, let's close the opening <code>.xcodeproj</code> and open <code>.xcworkspace</code> in XCode. You can try running the project again to make sure nothing is broken. If it goes well, you will see it is still the same as before.</p>
+<p>You'll notice a new <code>.xcworkspace</code> file, indicating that the Pod was successfully installed. Close the existing <code>.xcodeproj</code> and open the <code>.xcworkspace</code> in Xcode.</p>
+<p>Try running the project to ensure that everything works as expected. If it runs smoothly, the application should appear unchanged as the begins. Now, let's proceed to the final steps.</p>
+<h3 id="4-starting-flutter-from-existing-application">4. Starting Flutter from existing application</h3>
+<p>To initiate a Flutter view from your existing application, we'll utilize <code>FlutterEngine</code> and <code>FlutterViewController</code>. The <code>FlutterEngine</code> manages the Dart VM and Flutter runtime, while the <code>FlutterViewController</code> connects to the <code>FlutterEngine</code> and displays rendered frames.</p>
+<p>We'll initialize the <code>FlutterEngine</code> before using it, aka <code>pre-warming</code>. This approach is recommended. Okay, let's do it!</p>
+<p>First, create a <code>FlutterEngine</code> in <code>iOSCounterApp.swift</code>:</p>
+<pre><code class="language-swift">import SwiftUI
+import Flutter
+
+class FlutterDependencies: ObservableObject {
+    let flutterEngine = FlutterEngine(name: &quot;flutter-engine&quot;)
+    init() {
+        flutterEngine.run()
+        // If you added a plugin to Flutter module, you also need to register plugin to flutter engine
+        GeneratedPluginRegistrant.register(with: self.flutterEngine)
+    }
+}
+
+@main
+struct iOSCounterApp: App {
+    @StateObject var flutterDependencies = FlutterDependencies()
+
+    var body: some Scene {
+        WindowGroup {
+            ContentView().environmentObject(flutterDependencies)
+        }
+    }
+}
+</code></pre>
+<p>Next, update <code>ContentView.swift</code> as follows:</p>
+<pre><code class="language-swift">import SwiftUI
+import Flutter
+
+struct ContentView: View {
+    // Flutter dependencies are passed in an EnvironmentObject.
+    @EnvironmentObject var flutterDependencies: FlutterDependencies
+
+    @State var counter = 0
+
+    var body: some View {
+        VStack {
+            Text(&quot;Counter: \(counter)&quot;).font(.largeTitle)
+            Button(action: {
+                increaseCounter()
+            }) {
+                Text(&quot;Increase counter&quot;)
+                    .font(.headline)
+                    .padding()
+                    .background(Color.yellow)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }.padding(.vertical, 8)
+
+            Button(action: {
+                showFlutter()
+            }) {
+                Text(&quot;Open Flutter View&quot;)
+                    .font(.headline)
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }.padding(.vertical, 10)
+        }
+
+    }
+
+    func increaseCounter() {
+        self.counter+=1
+    }
+
+    func showFlutter() {
+        // Get RootViewController from window scene
+        guard
+          let windowScene = UIApplication.shared.connectedScenes
+            .first(where: { $0.activationState == .foregroundActive &amp;&amp; $0 is UIWindowScene }) as? UIWindowScene,
+          let window = windowScene.windows.first(where: \.isKeyWindow),
+          let rootViewController = window.rootViewController
+        else { return }
+
+        // Create a FlutterViewController from pre-warm FlutterEngine
+        let flutterViewController = FlutterViewController(
+          engine: flutterDependencies.flutterEngine,
+          nibName: nil,
+          bundle: nil)
+        flutterViewController.modalPresentationStyle = .overCurrentContext
+        flutterViewController.isViewOpaque = false
+
+        rootViewController.present(flutterViewController, animated: true)
+      }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+</code></pre>
+<p>Now, we need to update Flutter module code:</p>
+<pre><code class="language-dart">appBar: AppBar(
+    title: Text(widget.title),
+    actions: [
+      IconButton(
+        onPressed: () =&gt; SystemNavigator.pop(animated: true),
+        icon: const Icon(Icons.exit_to_app),
+      ),
+    ],
+),
+</code></pre>
+<p>We added a button that enables you to exit the Flutter view with <code>SystemNavigator.pop</code>. <code>SystemNavigator.pop</code> is used to request Flutter application be popped off navigation stack and return control to the platform-specific host (e.g, Android Activity or iOS ViewController). It's a well-suited API for this purpose.</p>
+<p>Now, let's return to the Xcode project with your existing app and run it.</p>
+<p>Voila! You can now open a Flutter screen and seamlessly close it.</p>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1710007202711/14d70d39-27b3-4474-97b4-34bfa2b7bbd6.gif" /></p>
+<p>However, you might have noticed that data is stored separately between the Flutter module and the existing app. If you're wondering how to synchronize or share data between these two portions (Flutter and the existing app), let's delve into the next parts to explore this further.</p>
+<h3 id="5-share-data-between-flutter-and-existing-application">5. Share data between Flutter and existing application</h3>
+<h4 id="51-existing-app-implementation">5.1. Existing app implementation</h4>
+<p>The solution is to use <a href="https://api.flutter.dev/flutter/services/MethodChannel-class.html">MethodChannel</a>. You usually see <code>FlutterMethodChannel</code> initiation in UIViewController's <code>viewDidLoad</code> (UIKit), but there is no equivalent <code>viewDidLoad</code> in SwiftUI.</p>
+<p>Here's how we address this.</p>
+<p>SwiftUI provides <code>onAppear</code> which closely resembles <code>viewDidLoad</code>. However, it has limitation, especially when your existing app has multiple views. <code>onAppear</code> triggers each time we navigate forward and back to the original view where we intend to initialize the method channel. On Android, it behaves similarly to Activity's <code>onResume</code> callback.</p>
+<p>To work around this, we will "cook" <code>onAppear</code> to "simulate" <code>viewDidLoad</code>. I'd like to acknowledge <a href="https://sarunw.com">Sarun</a> for his tutorial on this issue, available <a href="https://sarunw.com/posts/swiftui-viewdidload/">here</a>.</p>
+<p>Add the following code to <code>ContentView.swift</code>:</p>
+<pre><code class="language-swift">struct ViewDidLoadModifier: ViewModifier {
+    @State private var viewDidLoad = false
+    let action: (() -&gt; Void)?
+
+    func body(content: Content) -&gt; some View {
+        content
+            .onAppear {
+                if viewDidLoad == false {
+                    viewDidLoad = true
+                    action?()
+                }
+            }
+    }
+}
+
+extension View {
+    func onViewDidLoad(perform action: (() -&gt; Void)? = nil) -&gt; some View {
+        self.modifier(ViewDidLoadModifier(action: action))
+    }
+}
+</code></pre>
+<p>Next, apply <code>onViewDidLoad</code> to outermost view, which in this case is <code>VStack</code>:</p>
+<pre><code class="language-swift">VStack {
+    // existing code, not paste here as it's long
+}.onViewDidLoad {
+    handleMethodChannel()
+}
+</code></pre>
+<p>Now, we've effectively managed the lifecycle issue. Let's complete the remaining steps in <code>handleMethodChannel()</code>:</p>
+<pre><code class="language-swift">func handleMethodChannel() {
+    flutterMethodChannel = FlutterMethodChannel(name: &quot;flutter_channel/counter&quot;, binaryMessenger: flutterDependencies.flutterEngine.binaryMessenger)
+    flutterMethodChannel?.setMethodCallHandler({
+        (call: FlutterMethodCall, result: @escaping FlutterResult) -&gt; Void in
+        switch(call.method) {
+        case &quot;increaseCounter&quot;:
+            counter += 1
+            submitCounter()
+        case &quot;getCounter&quot;:
+            submitCounter()
+        default:
+            print(&quot;Unrecognized method: \(call.method)&quot;)
+        }
+    })
+}
+
+func submitCounter() {
+    flutterMethodChannel?.invokeMethod(&quot;submitCounter&quot;, arguments: counter)
+}
+</code></pre>
+<p>Additionally, remember to update the changed value (counter) through the method channel as well:</p>
+<pre><code class="language-swift">func increaseCounter() {
+    self.counter+=1
+    submitCounter()
+}
+</code></pre>
+<h4 id="51-flutter-module-implementation">5.1. Flutter module implementation</h4>
+<p>On Flutter side, let's declare a MethodChannel and handle all method calls:</p>
+<pre><code class="language-dart">final _methodChannel = const MethodChannel('flutter_channel/counter');
+
+@override
+void initState() {
+    super.initState();
+    _methodChannel.setMethodCallHandler((call) =&gt; _handleMethodCall(call));
+    _methodChannel.invokeMethod('getCounter');
+}
+
+_handleMethodCall(MethodCall call) {
+    if (call.method == 'submitCounter') {
+      setState(() {
+        _counter = call.arguments as int;
+      });
+    }
+}
+</code></pre>
+<p>Also, invoke <code>increaseCounter</code> method when increasing counter by tapping on FAB as well:</p>
+<pre><code class="language-dart">void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+    _methodChannel.invokeMethod&lt;void&gt;('increaseCounter');
+}
+</code></pre>
+<h4 id="final-result">Final result</h4>
+<p>Voila! Now you can seamlessly communicate between Flutter module and existing app.</p>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1710007242276/7c26c0ae-715d-4fd4-95dc-8f38572eee57.gif" /></p>
+<p>Check out the complete sample code at <a href="https://github.com/huynguyennovem/flutter-add-to-app-ios-swiftui">https://github.com/huynguyennovem/flutter-add-to-app-ios-swiftui</a></p>
+<h3 id="conclusion">Conclusion</h3>
+<p>This article has walked you through the process of integrating a Flutter module into your iOS application, allowing for seamless communication and data exchange. By incorporating Flutter's capabilities within your native iOS project, your team won't have to worry about rewriting your entire app with Flutter, streamlining development and enhancing the user experience.</p>
+<p>Stay in touch with me for updates:</p>
+<ul>
+<li>
+<p>Twitter: <a href="https://twitter.com/HuyNguyenTw">https://twitter.com/HuyNguyenTw</a></p>
+</li>
+<li>
+<p>GitHub: <a href="https://github.com/huynguyennovem">https://github.com/huynguyennovem</a></p>
+</li>
+<li>
+<p>LinkedIn: <a href="https://linkedin.com/in/huynguyennovem">https://linkedin.com/in/huynguyennovem</a></p>
+</li>
+</ul>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

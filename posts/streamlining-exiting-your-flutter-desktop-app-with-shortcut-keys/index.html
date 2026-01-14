@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Streamlining exiting your Flutter desktop app with Shortcut keys - Huy Nguyen Blog</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Streamlining exiting your Flutter desktop app with Shortcut keys";
+        var mkdocs_page_input_path = "posts/streamlining-exiting-your-flutter-desktop-app-with-shortcut-keys.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Huy Nguyen Blog
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Posts</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../community_activities/">Community Activities</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../projects_packages/">Projects and packages</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../contributions/">Contributions</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Huy Nguyen Blog</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Streamlining exiting your Flutter desktop app with Shortcut keys</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p>Flutter has emerged as a versatile framework for developing desktop applications, offering extensive support for handling keyboard events and providing a seamless user experience.</p>
+<p>In this article, we'll explore how Flutter simplifies the process of exiting desktop apps using shortcut keys. We'll delve into the solution for handling app, tackle the issue when working with the Navigator, embrace user-friendly API, and finally, demonstrate of integrating these solutions into the open-source Flutter project NetShare.</p>
+<h3 id="capture-keyboard-events">Capture keyboard events</h3>
+<p>Managing app exit through shortcut keys in a Flutter desktop app lies in utilizing the <code>RawKeyboard.instance.addListener</code> to monitor raw keyboard events. By incorporating this approach within your <code>initState()</code> method, you can effectively capture user keyboard interactions. Here's how you can set it up:</p>
+<pre><code class="language-dart">@override
+void initState() {
+  super.initState();
+
+  RawKeyboard.instance.addListener((key) {
+    // Handle the raw keyboard event here.
+  });
+}
+</code></pre>
+<p>Within the keyboard callback, you gain the ability to examine the <code>key</code> parameter, which reveals which key was either pressed or released.</p>
+<p>Moreover, for precise shortcut key detection, you can leverage the <code>key.isMetaPressed</code> and <code>key.isControlPressed</code> properties in conjunction with the <code>key.logicalKey</code> property.</p>
+<p>This allows you to identify specific key combinations like <code>Command + W</code> (on macOS) or <code>Control + W</code> (on Windows/Linux) to initiate the app's exit process:</p>
+<pre><code class="language-dart">RawKeyboard.instance.addListener((key) {
+  if (value.isMetaPressed &amp;&amp; value.logicalKey == LogicalKeyboardKey.keyW ||
+        value.isControlPressed &amp;&amp; value.logicalKey == LogicalKeyboardKey.keyW) {
+    SystemNavigator.pop();
+  }
+});
+</code></pre>
+<p>Rather than listening to keyboard events within the <code>initState()</code>, an alternative approach is to register listener within MaterialApp's builder, as below:</p>
+<pre><code class="language-dart">MaterialApp.router(
+  routerConfig: _router,
+  builder: (context, child) {
+    // Handle keyboard listener here
+    RawKeyboard.instance.addListener((RawKeyEvent value) =&gt; _handleKeyEvent(context, value));
+    return child ?? const SizedBox.shrink();
+  },
+)
+</code></pre>
+<p>Now, give the app a test run to observe it functioning as expected.</p>
+<p>However, should the application exit abruptly? Typically, we expect desktop applications to prompt users for confirmation before closing. Although this behavior can often be configured in the application's settings, let's explore such cases in the next section.</p>
+<h3 id="navigating-the-confirm-dialog">Navigating the confirm dialog</h3>
+<p>Suppose we need to request user confirmation before exiting the app by invoking <code>SystemNavigator.pop()</code>. Let's implement a Dialog for this purpose:</p>
+<pre><code class="language-dart">void _handleKeyEvent(BuildContext context, RawKeyEvent value) {
+  // If user pressed Command/Control + W keys, quit the app
+  if (value.isMetaPressed &amp;&amp; value.logicalKey == LogicalKeyboardKey.keyW ||
+      value.isControlPressed &amp;&amp; value.logicalKey == LogicalKeyboardKey.keyW) {
+    _showQuitConfirmationDialog(context);
+  }
+}
+
+void _showQuitConfirmationDialog(BuildContext context) {
+  showDialog(
+    context: context,
+    builder: (context) {
+      return AlertDialog(
+        title: const Text('Quit App'),
+        content: const Text('Are you sure you want to quit the app?'),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.of(context).pop(); // Close the dialog
+            },
+            child: const Text('Cancel'),
+          ),
+          TextButton(
+            onPressed: () {
+              // Close the app
+              SystemNavigator.pop();
+            },
+            child: const Text('Quit'),
+          ),
+        ],
+      );
+    },
+  );
+}
+</code></pre>
+<p>However, you might encounter an issue with the Navigator, as indicated by the error message:</p>
+<pre><code class="language-console">══╡ EXCEPTION CAUGHT BY SERVICES LIBRARY ╞══════════════════════════════════════════════════════════
+The following assertion was thrown while processing a raw key listener:
+Navigator operation requested with a context that does not include a Navigator.
+The context used to push or pop routes from the Navigator must be that of a widget that is a
+descendant of a Navigator widget.
+
+When the exception was thrown, this was the stack:
+#0      Navigator.of.&lt;anonymous closure&gt; (package:flutter/src/widgets/navigator.dart:2695:9)
+#1      Navigator.of (package:flutter/src/widgets/navigator.dart:2702:6)
+#2      showDialog (package:flutter/src/material/dialog.dart:1419:19)
+#3      MyApp.showQuitAppConfirmationDialog (package:netshare/main.dart:131:5)
+#4      MyApp._handleKeyEvent (package:netshare/main.dart:122:7)
+#5      MyApp.build.&lt;anonymous closure&gt;.&lt;anonymous closure&gt; (package:netshare/main.dart:111:67)
+#6      RawKeyboard.handleRawKeyEvent (package:flutter/src/services/raw_keyboard.dart:705:19)
+#7      KeyEventManager.handleRawKeyMessage (package:flutter/src/services/hardware_keyboard.dart:1050:30)
+#8      BasicMessageChannel.setMessageHandler.&lt;anonymous closure&gt; (package:flutter/src/services/platform_channel.dart:216:49)
+#9      _DefaultBinaryMessenger.setMessageHandler.&lt;anonymous closure&gt; (package:flutter/src/services/binding.dart:567:35)
+#10     _invoke2 (dart:ui/hooks.dart:345:13)
+#11     _ChannelCallbackRecord.invoke (dart:ui/channel_buffers.dart:45:5)
+#12     _Channel.push (dart:ui/channel_buffers.dart:135:31)
+#13     ChannelBuffers.push (dart:ui/channel_buffers.dart:343:17)
+#14     PlatformDispatcher._dispatchPlatformMessage (dart:ui/platform_dispatcher.dart:689:22)
+#15     _dispatchPlatformMessage (dart:ui/hooks.dart:257:31)
+
+Event: RawKeyDownEvent#f8a0b(logicalKey: LogicalKeyboardKey#510a7(keyId: &quot;0x00000077&quot;, keyLabel:
+  &quot;W&quot;, debugName: &quot;Key W&quot;), physicalKey: PhysicalKeyboardKey#b9a3b(usbHidUsage: &quot;0x0007001a&quot;,
+  debugName: &quot;Key W&quot;), repeat: false)
+════════════════════════════════════════════════════════════════════════════════════════════════════
+</code></pre>
+<p>The error message indicates that you are trying to use the Navigator to push or pop routes from a context that does not include a Navigator. This make sense as we are using Navigator outside of MaterialApp.router widgets. The solution to this problem involves using a GlobalKey. First, declare a GlobalKey:</p>
+<pre><code class="language-dart">final GlobalKey&lt;NavigatorState&gt; _navigatorKey = GlobalKey&lt;NavigatorState&gt;();
+</code></pre>
+<p>Then, add it to Material's <code>navigatorKey</code>:</p>
+<pre><code class="language-dart">MaterialApp(
+  navigatorKey: _navigatorKey
+)
+</code></pre>
+<p>If you use <code>go_router</code> package as route management, you can add it to GoRoute constructor.</p>
+<pre><code class="language-dart">final GoRouter _router = GoRouter(
+  navigatorKey: _navigatorKey
+)
+
+MaterialApp.router(
+  routerConfig: _router
+)
+</code></pre>
+<p>With the GlobalKey properly set, you can now use the context from <code>_navigatorKey</code> to address the issue. And now we can remove <code>BuildContext context</code> parameter from <code>_handleKeyEvent</code> method:</p>
+<pre><code class="language-dart">void _handleKeyEvent(BuildContext context, RawKeyEvent value) {
+  // If user pressed Command/Control + W keys, quit the app
+  if (value.isMetaPressed &amp;&amp; value.logicalKey == LogicalKeyboardKey.keyW ||
+      value.isControlPressed &amp;&amp; value.logicalKey == LogicalKeyboardKey.keyW) {
+    _showQuitConfirmationDialog(_navigatorKey.currentContext!);
+  }
+}
+</code></pre>
+<p>Voila! The app can gracefully exit after the user confirms, ensuring a smoother user experience.</p>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1710007442550/1a7bf60f-31c7-4f05-a2a8-3c4638d39388.gif align=" title="left" /></p>
+<p>Hold on a moment, there is one more issue to address. While the confirmation dialog is displayed, if the user presses Command/Control + W again, another dialog will overlap the current one.</p>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1710007453379/9da096cf-9ebf-413b-9975-a93226086484.gif align=" title="left" /></p>
+<p>To prevent this from happening and ensure a seamless user experience, we need to implement a mechanism that handles such scenarios gracefully. The most straightforward solution involves the use of a flag. To resolve this issue, declare a new flag and update the code as follows:</p>
+<pre><code class="language-dart">bool _isKeyboardListenerEnabled = true;
+
+void _handleKeyEvent(RawKeyEvent value) async {
+  if (!_isKeyboardListenerEnabled) return;
+
+  // If user pressed Command/Control + W keys, quit the app
+  if (value.isMetaPressed &amp;&amp; value.logicalKey == LogicalKeyboardKey.keyW || value.isControlPressed &amp;&amp; value.logicalKey == LogicalKeyboardKey.keyW) {
+    if (_navigatorKey.currentContext == null) return;
+
+    // show confirm dialog
+    _showQuitAppConfirmationDialog(_navigatorKey.currentContext!, (confirmCallback) {
+      if (confirmCallback) {
+        SystemNavigator.pop(); // Quit the app
+      }
+      // listen keyboard again
+      _isKeyboardListenerEnabled = true;
+    });
+  }
+}
+
+
+void _showQuitAppConfirmationDialog(BuildContext context, Function(bool)? confirmCallback) {
+  // Disable the keyboard listener.
+  _isKeyboardListenerEnabled = false;
+
+  showDialog(
+    barrierDismissible: false,
+    context: context,
+    builder: (context) {
+      return AlertDialog(
+        title: const Text('Quit App'),
+        content: const Text('Are you sure you want to quit the app?'),
+        actions: [
+          TextButton(
+            onPressed: () {
+              confirmCallback?.call(false);
+              Navigator.of(context).pop(); // Close the dialog
+            },
+            child: const Text('Cancel'),
+          ),
+          TextButton(
+            onPressed: () {
+              // Close the app
+              confirmCallback?.call(true);
+            },
+            child: const Text('Quit'),
+          ),
+        ],
+      );
+    },
+  );
+}
+</code></pre>
+<p>Now, run the app and repeatedly press the <code>Command/Control + W</code> keys. You'll notice that only one confirmation dialog appears, effectively resolving the issue.</p>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1710007488227/c2b2e595-b37d-44c6-aca6-bb4df20bff6f.gif align=" title="left" /></p>
+<h3 id="embracing-user-friendly-api">Embracing user-friendly API</h3>
+<p>Per <a href="https://docs.flutter.dev/release/breaking-changes/actions-api-revision">Actions API revision</a>:</p>
+<blockquote>
+<p>In Flutter an Intent is an object that’s typically bound to a keyboard key combination using the Shortcuts widget. An Intent can be bound to an Action, which can update the application’s state or perform other operations.</p>
+</blockquote>
+<p>This approach simplifies the process of capturing shortcut keys by utilizing Intent/Action pairs from the Flutter API. Thanks to Reddit folk <a href="https://www.reddit.com/user/eibaan/">eibaan</a> for sharing this approach. I received his <a href="https://www.reddit.com/r/FlutterDev/comments/17354xo/comment/k41qyup/?utm_source=share&amp;utm_medium=web2x&amp;context=3">comment</a> after sharing my article on the FlutterDev Reddit channel.</p>
+<p>Now, you can streamline your code by removing the keyboard listener from the previous solution and implementing the following steps:</p>
+<p>Firstly, declare an Intent named <code>QuitIntent</code>:</p>
+<pre><code class="language-dart">class QuitIntent extends Intent {
+  const QuitIntent();
+}
+</code></pre>
+<p>Next, define shortcuts and Actions:</p>
+<pre><code class="language-dart">MaterialApp.router(
+  routerConfig: _router,
+  shortcuts: const {
+    SingleActivator(LogicalKeyboardKey.keyW, meta: true): QuitIntent(),
+    SingleActivator(LogicalKeyboardKey.keyW, control: true): QuitIntent(),
+  },
+  builder: (context, child) {
+    return Actions(actions: {
+      QuitIntent: CallbackAction(onInvoke: (intent) =&gt; _handleIntent()),
+    }, child: child ?? const SizedBox.shrink());
+  },
+)
+</code></pre>
+<p>Finally, update <code>_handleKeyEvent()</code> method to <code>_handleIntent()</code>. You no longer need to check for pressed keys as this approach handles Intents seamlessly:</p>
+<pre><code class="language-dart">void _handleIntent() {
+  if (!_isKeyboardListenerEnabled) return;
+  if (_navigatorKey.currentContext == null) return;
+
+  // show confirm dialog
+  _showQuitAppConfirmationDialog(_navigatorKey.currentContext!, (confirmCallback) {
+    if (confirmCallback) {
+      SystemNavigator.pop(); // Quit the app
+    }
+    // listen keyboard again
+    _isKeyboardListenerEnabled = true;
+  });
+}
+</code></pre>
+<p>Run the app to observe that it behaves similarly to the first solution using keyboard events, but now with the enhanced user-friendly API.</p>
+<p>Check out the complete sample code at <a href="https://github.com/huynguyennovem/flutter-desktop-quit-app">flutter-desktop-quit-app</a>.</p>
+<h3 id="bringing-it-all-together-integration-with-netshare">Bringing it all together — Integration with NetShare</h3>
+<p>NetShare is an open-source Flutter project that makes it easy to share data in a local network. The latest release includes support for Android, macOS, Windows, and Linux platforms.</p>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1710007566673/60feb82b-2328-490d-8019-ccc9961338ce.png align=" title="left" /></p>
+<p>The integration of quit app shortcut keys into NetShare enhances the user experience by allowing users to swiftly exit the application, aligning with the natural behavior found in other native desktop applications.</p>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1710007585629/5a5cb99b-7e4b-4184-a986-59a6058d6b50.gif align=" title="left" /></p>
+<h3 id="conclusion">Conclusion</h3>
+<p>Managing the exit process of a Flutter desktop app with shortcut keys is essential for providing a user-friendly experience. By incorporating these techniques, your Flutter desktop app can achieve a level of professionalism and user-friendliness that mirrors that of established desktop applications, contributing to an enhanced user journey.</p>
+<p>Stay in touch with me for updates:</p>
+<ul>
+<li>
+<p>Twitter: <a href="https://twitter.com/HuyNguyenTw">https://twitter.com/HuyNguyenTw</a></p>
+</li>
+<li>
+<p>GitHub: <a href="https://github.com/huynguyennovem">https://github.com/huynguyennovem</a></p>
+</li>
+<li>
+<p>LinkedIn: <a href="https://linkedin.com/in/huynguyennovem">https://linkedin.com/in/huynguyennovem</a></p>
+</li>
+</ul>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

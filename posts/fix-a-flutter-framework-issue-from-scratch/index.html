@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Fix a Flutter framework issue from scratch - Huy Nguyen Blog</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Fix a Flutter framework issue from scratch";
+        var mkdocs_page_input_path = "posts/fix-a-flutter-framework-issue-from-scratch.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Huy Nguyen Blog
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Posts</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../community_activities/">Community Activities</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../projects_packages/">Projects and packages</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../contributions/">Contributions</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Huy Nguyen Blog</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Fix a Flutter framework issue from scratch</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p>Hi, I’m Huy, GitHub handle <a href="https://github.com/huycozy">@huycozy</a>.<br />
+I’m currently working as Flutter open-source engineer at <a href="https://codemagic.io">Codemagic</a>.<br />
+So far, I’ve had <a href="https://github.com/flutter/flutter/pulls?q=is%3Apr+author%3Ahuycozy+is%3Aclosed"><strong>41 PRs merged</strong></a> into the Flutter repository.</p>
+<p>Today, I want to share the journey of fixing a Flutter issue that stayed open for nearly 6 years:<br />
+👉 Issue <a href="https://github.com/flutter/flutter/issues/59143"><strong>#59143</strong></a> - <em>“</em><strong><em>TabBar.image does not render at initialIndex for the first time</em></strong><em>”</em></p>
+<p>In this article, I’ll walk through:</p>
+<ul>
+<li>
+<p>Understanding the issue</p>
+</li>
+<li>
+<p>Setting up the environment</p>
+</li>
+<li>
+<p>Investigating the source code</p>
+</li>
+<li>
+<p>Implementing the fix</p>
+</li>
+<li>
+<p>Writing tests</p>
+</li>
+<li>
+<p>Solve CI failures</p>
+</li>
+<li>
+<p>Handling cross-team reviews</p>
+</li>
+<li>
+<p>Getting the PR merged</p>
+</li>
+</ul>
+<p>Let’s dive in!</p>
+<h1 id="preparation"><strong>Preparation</strong></h1>
+<p>Before diving into debugging and fixing the issue, you need a proper Flutter contributor setup.<br />
+Here’s mine:</p>
+<h3 id="1-fork-the-repo"><strong>1. Fork the repo</strong></h3>
+<p>Go to <a href="https://github.com/flutter/flutter">https://github.com/flutter/flutter</a> and click <strong>Fork</strong> button.</p>
+<h3 id="2-clone-your-fork"><strong>2. Clone your fork</strong></h3>
+<pre><code class="language-console">git clone git@github.com:&lt;your-github-handle-here&gt;/flutter.git
+</code></pre>
+<p>For instance:</p>
+<pre><code class="language-console">git clone git@github.com:huycozy/flutter.git
+</code></pre>
+<h3 id="3-add-upstream-remote"><strong>3. Add upstream remote</strong></h3>
+<p>Inside the repo directory:</p>
+<pre><code class="language-console">cd &lt;your-forked-repo-location&gt;
+git remote -v
+</code></pre>
+<p>You should see something like:</p>
+<pre><code class="language-console">➜  flutter_pr git:(master) ✗ git remote -v
+origin  git@github.com:huycozy/flutter.git (fetch)
+origin  git@github.com:huycozy/flutter.git (push)
+upstream        https://github.com/flutter/flutter.git (fetch)
+upstream        https://github.com/flutter/flutter.git (push)
+</code></pre>
+<h3 id="4-keep-your-fork-updated"><strong>4. Keep your fork updated</strong></h3>
+<p>Whenever you come back to contribute, fetch the latest code from upstream and rebase it onto local forked repo (assume you are on master branch/channel):</p>
+<pre><code class="language-console">git fetch upstream
+git rebase upstream/master
+</code></pre>
+<p>(optional) Rebase onto your local master and push to your forked repo on GitHub:</p>
+<pre><code class="language-console">git rebase master
+git push origin master -f
+</code></pre>
+<p>Your environment is ready. Now we begin the fun part: solving the bug.</p>
+<h1 id="issue-analysis"><strong>Issue Analysis</strong></h1>
+<p>The issue title already gives a clue:</p>
+<blockquote>
+<p><strong>“TabBar.image does not render at initialIndex for the first time”</strong></p>
+</blockquote>
+<p>Meaning:<br />
+When a TabBar uses images (via <code>DecorationImage</code>), the initial tab’s image is not shown on first render - only on subsequent interactions.</p>
+<p>The next steps of analysis:</p>
+<h3 id="1-read-the-issue-thread">1. Read the issue thread</h3>
+<p>Always start by reading:</p>
+<ul>
+<li>
+<p>The first comment (issue description)</p>
+</li>
+<li>
+<p>Minimal reproduction code</p>
+</li>
+<li>
+<p>other comments, confirmation, additional hints</p>
+</li>
+</ul>
+<p>Fortunately, the triage team provided a clean reproduction sample(thanks to <a href="https://github.com/flutter/flutter/blob/master/docs/triage/README.md">Triage</a> process, I usually find triage comment first as triage team may refine the sample code so that you only need to copy-paste to reproduce the issue yourself locally). This is extremely valuable, as many issue reports come with complex code.</p>
+<h3 id="2-reproduce-locally"><strong>2. Reproduce locally</strong></h3>
+<p>I tested sample code using the latest Flutter master branch and confirmed:</p>
+<p>✔️ Bug still exists<br />
+✔️ Happens consistently<br />
+✔️ Only affects TabBar indicator images</p>
+<h3 id="3-study-issue-labels"><strong>3. Study issue labels</strong></h3>
+<p>Key labels:</p>
+<ul>
+<li>
+<p><code>triaged-design</code> → A valid framework-level issue</p>
+</li>
+<li>
+<p><code>P2</code> → Medium priority</p>
+</li>
+<li>
+<p><code>workaround-available</code> → Some attempted workarounds exist</p>
+</li>
+</ul>
+<p>Some of the proposed “workarounds” (Timers, delayed animateTo, precacheImage, etc.) did <strong>not</strong> solve the issue. At this point, it’s clear that the root cause is internal to TabBar’s rendering system.</p>
+<p>Next step: read the source code.</p>
+<h1 id="investigating-the-source-code">Investigating the source code</h1>
+<p>TabBar is defined in<a href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/material/tabs.dart"><code>packages/flutter/lib/src/material/tabs.dart</code></a></p>
+<p>While tracing the rendering flow, I found a reason why the issue occurs, which is related to "<strong>indicator</strong>" and "<strong>image</strong>". I shared the details at <a href="https://github.com/flutter/flutter/issues/59143#issuecomment-3626318406">https://github.com/flutter/flutter/issues/59143#issuecomment-3626318406</a>. I focused on two things related to the bug:</p>
+<ul>
+<li>
+<p><strong>The indicator painter</strong></p>
+</li>
+<li>
+<p><strong>Asynchronous image loading</strong></p>
+</li>
+</ul>
+<p>Here’s what happens:</p>
+<p>TabBar is using <a href="https://github.com/flutter/flutter/blob/6ff4a4acd97d2d9906cd1bff274adba61716e66a/packages/flutter/lib/src/material/tabs.dart#L465">_indicatorPainter</a>, which is a CustomPainter to manage painting things in the whole bar, and each <strong>image</strong> on tabs is painted by a BoxPainter named <code>_painter</code>, which also takes image configuration:</p>
+<ul>
+<li><a href="https://github.com/flutter/flutter/blob/6ff4a4acd97d2d9906cd1bff274adba61716e66a/packages/flutter/lib/src/material/tabs.dart#L571">tabs.dart#L571</a></li>
+</ul>
+<pre><code class="language-dart">_painter ??= indicator.createBoxPainter(markNeedsPaint);
+</code></pre>
+<ul>
+<li><a href="https://github.com/flutter/flutter/blob/6ff4a4acd97d2d9906cd1bff274adba61716e66a/packages/flutter/lib/src/material/tabs.dart#L582-L595">tabs.dart#L582-L595</a></li>
+</ul>
+<pre><code class="language-dart">    final configuration = ImageConfiguration(
+      size: _currentRect!.size,
+      textDirection: _currentTextDirection,
+      devicePixelRatio: devicePixelRatio,
+    );
+    if (showDivider &amp;&amp; dividerHeight! &gt; 0) {
+      final dividerPaint = Paint()
+        ..color = dividerColor!
+        ..strokeWidth = dividerHeight!;
+      final dividerP1 = Offset(0, size.height - (dividerPaint.strokeWidth / 2));
+      final dividerP2 = Offset(size.width, size.height - (dividerPaint.strokeWidth / 2));
+      canvas.drawLine(dividerP1, dividerP2, dividerPaint);
+    }
+    _painter!.paint(canvas, _currentRect!.topLeft, configuration);
+</code></pre>
+<p>In this scenario, image is loaded asynchronously, so tracing the flow, we will see what happened inside as below:</p>
+<p>1 . In _indicatorPainter, it requests to create a boxpainter: <a href="https://github.com/flutter/flutter/blob/6ff4a4acd97d2d9906cd1bff274adba61716e66a/packages/flutter/lib/src/material/tabs.dart#L571">tabs.dart#L571</a></p>
+<pre><code class="language-dart">_painter ??= indicator.createBoxPainter(markNeedsPaint);
+</code></pre>
+<ol>
+<li>paint background image in BoxDecorationPainter: <a href="https://github.com/flutter/flutter/blob/2343d68ca409b01fdb92057f6b24997aa92079f2/packages/flutter/lib/src/painting/box_decoration.dart#L536-L540">box_decoration.dart#L536-L540</a></li>
+</ol>
+<pre><code class="language-dart">  void _paintBackgroundImage(Canvas canvas, Rect rect, ImageConfiguration configuration) {
+    if (_decoration.image == null) {
+      return;
+    }
+    _imagePainter ??= _decoration.image!.createPainter(onChanged!);
+</code></pre>
+<ol>
+<li>handle asynchronous image source in DecorationImagePainter: <a href="https://github.com/flutter/flutter/blob/2343d68ca409b01fdb92057f6b24997aa92079f2/packages/flutter/lib/src/painting/decoration_image.dart#L375">decoration_image.dart#L375</a></li>
+</ol>
+<pre><code class="language-dart">final listener = ImageStreamListener(_handleImage, onError: _details.onError);
+</code></pre>
+<p>Inside <a href="https://github.com/flutter/flutter/blob/2343d68ca409b01fdb92057f6b24997aa92079f2/packages/flutter/lib/src/painting/decoration_image.dart#L413">_handleImage</a>, if it's a non-synchronousCall, <code>_onChanged</code> callback is called: <a href="https://github.com/flutter/flutter/blob/2343d68ca409b01fdb92057f6b24997aa92079f2/packages/flutter/lib/src/painting/decoration_image.dart#L423-L425">decoration_image.dart#L423-L425</a></p>
+<pre><code class="language-dart">if (!synchronousCall) {
+      _onChanged();
+    }
+</code></pre>
+<p><code>_onChanged</code> triggers <code>markNeedsPaint</code> callback, but in <code>markNeedsPaint</code>, it only sets <code>_needsPaint</code> flag to true, but doesn't actually trigger a repaint. I did debugging and saw that <a href="https://github.com/flutter/flutter/blob/2343d68ca409b01fdb92057f6b24997aa92079f2/packages/flutter/lib/src/material/tabs.dart#L460">shouldRepaint</a> is not invoked, even though <code>_needsPaint</code> is true already.</p>
+<h1 id="solution"><strong>Solution</strong></h1>
+<p>To fix the issue, we need to ensure the indicator painter <strong>actually repaints</strong> when the async image finishes loading.</p>
+<p>There is already a mechanism for this in Flutter:</p>
+<p><strong>CustomPainter accepts a</strong> <code>repaint</code> Listenable: <a href="https://github.com/flutter/flutter/blob/9d96df2364317334b55547ccb47c81aa9418eb71/packages/flutter/lib/src/rendering/custom_paint.dart#L152-L153">custom_paint.dart#L152-L153</a></p>
+<pre><code class="language-dart">/// The painter will repaint whenever `repaint` notifies its listeners.
+  const CustomPainter({Listenable? repaint}) : _repaint = repaint;
+</code></pre>
+<p>The docs said:"<em>The painter will repaint whenever</em> <code>repaint</code> <em>notifies its listeners.</em>" So, we can leverage this.</p>
+<p>The solution is to use a notifier, add it to repaint listener above, and trigger it on <code>markNeedsPaint</code> which is called when image indicator is loaded.</p>
+<h2 id="steps-to-fix">Steps to fix</h2>
+<ul>
+<li>Create a notifier:</li>
+</ul>
+<pre><code class="language-dart">// A ChangeNotifier for triggering repaints when async resources load.
+class _IndicatorPainterNotifier extends ChangeNotifier {
+  void notify() {
+    notifyListeners();
+  }
+}
+</code></pre>
+<ul>
+<li>Pass it to the CustomPainter:</li>
+</ul>
+<pre><code class="language-dart">_IndicatorPainter._({
+....
+    required _IndicatorPainterNotifier repaint,
+  }) : _repaint = repaint,
+       super(repaint: Listenable.merge(&lt;Listenable?&gt;[controller.animation, repaint]))
+</code></pre>
+<ul>
+<li>Trigger repaint on image load:</li>
+</ul>
+<pre><code class="language-dart">  void markNeedsPaint() {
+    _needsPaint = true;
+    _repaint.notify();
+  }
+
+  void dispose() {
+    assert(debugMaybeDispatchDisposed(this));
+    _painter?.dispose();
+    _repaint.dispose();
+  }
+</code></pre>
+<p>With this, the indicator now correctly repaints when async images finish loading - including on the first frame.</p>
+<h1 id="manually-test-the-fix">Manually test the fix</h1>
+<p>Use the original repro sample and run it with your locally built Flutter SDK (via alias, fvm, or switch scripts).</p>
+<p>Result:<br />
+✔️ Bug is gone<br />
+✔️ Initial tab image displays correctly<br />
+✔️ No regressions observed in manual UI tests</p>
+<p>Now it's time to write automated tests.</p>
+<h1 id="writing-tests">Writing tests</h1>
+<p>To verify repaint behavior, I used a custom decoration class that counts how many times the indicator is painted.</p>
+<p>Key ideas:</p>
+<ul>
+<li>
+<p>Initial paint count should be <code>1</code></p>
+</li>
+<li>
+<p>After async load completes, paint count must increase</p>
+</li>
+<li>
+<p>Switching tabs should further increase paint count</p>
+</li>
+</ul>
+<pre><code class="language-dart">testWidgets('TabBar indicator image should be rendered at initialIndex for the first time', (
+    WidgetTester tester,
+  ) async {
+    // TabBar indicators with asynchronously loaded images (e.g. from network)
+    // should trigger a repaint when the image finishes loading, even on the initial tab.
+    final decoration = TabBarAsyncImageIndicatorDecoration();
+
+    await tester.pumpWidget(
+      MaterialApp(
+        home: DefaultTabController(
+          length: 3,
+          child: Scaffold(
+            appBar: AppBar(
+              bottom: TabBar(
+                indicator: decoration,
+                tabs: const &lt;Widget&gt;[
+                  Tab(text: 'One'),
+                  Tab(text: 'Two'),
+                  Tab(text: 'Three'),
+                ],
+              ),
+            ),
+            body: const TabBarView(
+              children: &lt;Widget&gt;[
+                Center(child: Text('Page One')),
+                Center(child: Text('Page Two')),
+                Center(child: Text('Page Three')),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+
+    // Initial paint - indicator should be painted once.
+    expect(decoration.paintCount, 1);
+
+    // Pump with duration to allow the event queue (async image load simulation) to complete.
+    // Future.delayed(Duration.zero) schedules in the event queue, so we need to advance time.
+    await tester.pump(const Duration(milliseconds: 1));
+
+    // After async image loads, the indicator should be repainted.
+    // This verifies that the markNeedsPaint callback properly triggers a repaint.
+    expect(
+      decoration.paintCount,
+      greaterThan(1),
+      reason: 'Indicator should be repainted after async image loads',
+    );
+
+    // Verify the indicator repaints when switching tabs.
+    final int initialPaintCount = decoration.paintCount;
+    await tester.tap(find.text('Two'));
+    await tester.pumpAndSettle();
+
+    expect(
+      decoration.paintCount,
+      greaterThan(initialPaintCount),
+      reason: 'Indicator should repaint when switching tabs',
+    );
+  });
+</code></pre>
+<p>Run the test (also existing tests to make sure your fix doesn't introduce and regression issue)</p>
+<h1 id="submitting-the-fix"><strong>Submitting the fix</strong></h1>
+<ol>
+<li>
+<h3 id="create-a-branch"><strong>Create a branch</strong></h3>
+</li>
+</ol>
+<pre><code class="language-bash">git checkout -b fix/tabbar-image-repaint
+</code></pre>
+<ol>
+<li>
+<h3 id="commit-push">Commit &amp; push</h3>
+</li>
+</ol>
+<pre><code class="language-bash">git add .
+git commit -m &quot;Fix TabBar indicator image not rendering on initialIndex&quot;
+git push origin fix/tabbar-image-repaint
+</code></pre>
+<p>GitHub will automatically prompt you to open a PR.</p>
+<ol>
+<li>
+<h3 id="filling-pr-template">Filling PR template</h3>
+</li>
+</ol>
+<p>You need to follow PR template, fill up all the information so that reviewers can understand your fix better. Make sure you read the checklist too. Once you have completed filling PR description, just click the green button at the bottom to create the PR it is usually in draft state. I also prefer it as I will wait CI check to complete before marking it ready for review.</p>
+<ul>
+<li>
+<p>Explain the root cause</p>
+</li>
+<li>
+<p>Describe your fix</p>
+</li>
+<li>
+<p>Link to issue #59143 (make sure to use keywords to close issues automatically once the PR gets merged, see <a href="https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/using-keywords-in-issues-and-pull-requests#linking-a-pull-request-to-an-issue"><strong>Linking a pull request to an issue</strong></a><strong>)</strong></p>
+</li>
+<li>
+<p>Demo the fix with screenshot or video</p>
+<p>For example of mine:</p>
+</li>
+</ul>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1765534007463/20bd8cae-eac3-4872-a0f6-cddbe6d34182.png" /></p>
+<h1 id="solve-ci-tests">Solve CI tests</h1>
+<p>You may encounter failed tests from CI checks:</p>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1765534185124/b8d34b60-34e8-48c8-99c3-11e698a1b86e.png" /></p>
+<p>This is how I find the detailed error from the output (watch this <a href="https://www.youtube.com/watch?v=0Pb1P0bEblE">video</a> for another example):</p>
+<p><a href="https://youtu.be/-JMYvEvxlsc">https://youtu.be/-JMYvEvxlsc</a></p>
+<p>Oh wow, it failed at <a href="https://github.com/flutter/flutter/blob/master/dev/integration_tests/flutter_gallery/test/smoke_test.dart">flutter/dev/integration_tests/flutter_gallery/test/smoke_test.dart</a> . Now, open your IDE with the forked repo again, find that tests and try to reproduce the failure locally. Ok, this seems to be an easy fix, as it's saying that the new class <code>_IndicatorPainterNotifier</code> is missing <code>toString()</code> method.</p>
+<p>What should I do now? Just do the search in the entire project with keywords:"<em>extends ChangeNotifier {</em>". Then you will see there are a lot of classes having toString() already. I found one <code>_InputBorderGap extends ChangeNotifier {</code>. I just need to override the same:</p>
+<pre><code class="language-dart">@override
+  String toString() =&gt; describeIdentity(this);
+</code></pre>
+<p>Then run <code>smoke_test.dart</code> again, voila, it's passed now! Now you need to submit the fix to re-trigger the CI. Since the pr is only in draft, not ready to review yet, I will do git <strong><em>amend</em></strong> commit(or even squash) so that my commit history will be clean for reviewers.</p>
+<p>Once you push the commit, CI tasks will re-run automatically. Now just need to wait for them to finish. Wo ho, all tests are passed now!</p>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1765534710494/a5c30946-1d3c-4b68-be9e-ed8fb9900025.png" /></p>
+<p>It’s ready to get reviews from others. In the reviewers box, it will suggest some reviewers who have usually contributed to the changed files before.</p>
+<p>…&lt;to-be-continued&gt;</p>
+<p>(I will update the article later once the PR gets reviews and is merged)</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

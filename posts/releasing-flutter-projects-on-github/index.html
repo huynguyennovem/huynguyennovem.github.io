@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Releasing Flutter projects on GitHub - Huy Nguyen Blog</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Releasing Flutter projects on GitHub";
+        var mkdocs_page_input_path = "posts/releasing-flutter-projects-on-github.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Huy Nguyen Blog
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Posts</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../community_activities/">Community Activities</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../projects_packages/">Projects and packages</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../contributions/">Contributions</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Huy Nguyen Blog</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Releasing Flutter projects on GitHub</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p>Flutter is a popular open-source framework for building high-performance, high-fidelity mobile, web, and desktop applications. If you’re working on a Flutter project and want to distribute it on GitHub, this article will guide you through the process.</p>
+<p>In this article, I will use <a href="https://github.com/huynguyennovem/netshare">NetShare</a> as an example project. NetShare is an open-source Flutter project that makes it easy to share data in a local network. The latest release includes support for Android, macOS, Windows, and Linux platforms.</p>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1710004291830/786b8432-5881-4540-af9d-83a6fb7441c7.png" /></p>
+<h3 id="android">Android</h3>
+<ol>
+<li>
+<p>Prepare the app icon by using your preferred design tool. You can use Adobe Illustrator to export a high-quality PNG icon and then use Android Studio to generate all density icons. For more information, see the official <a href="https://developer.android.com/studio/write/create-app-icons#access">Create App Icons</a> documentation.</p>
+</li>
+<li>
+<p>Open <code>android</code> project (inside <code>flutter</code> project) on Android Studio and add the app icon.</p>
+</li>
+<li>
+<p>Set up the release configuration/key per the guideline provided in the official <a href="https://docs.flutter.dev/deployment/android">Flutter documentation</a>.</p>
+</li>
+<li>
+<p>Build the release APK from the console on the Flutter project root directory: <code>flutter build apk</code></p>
+</li>
+<li>
+<p>Upload the release APK to the Release on your GitHub project.</p>
+</li>
+</ol>
+<h3 id="macos">macOS</h3>
+<ol>
+<li>
+<p>Design your app icon by using your preferred design tool. And then you may use <a href="http://appicon.co">appicon.co</a> to generate all density icons.</p>
+</li>
+<li>
+<p>Open the macOS project and update the AppIcon on XCode. Check official <a href="https://developer.apple.com/documentation/xcode/configuring-your-app-icon">Apple documentation</a> for more details.</p>
+</li>
+<li>
+<p>Build the project from the console on the Flutter project root directory: <code>flutter build macos</code>. Sometimes, the old icon may be cached, and you need to run `flutter clean before building the app.</p>
+</li>
+<li>
+<p>On XCode, go to <code>Product &gt; Archive</code>.</p>
+</li>
+<li>
+<p>Once the archive is finished, click on Distribute App.</p>
+</li>
+<li>
+<p>Select the method of distribution as <code>Copy App</code></p>
+</li>
+<li>
+<p>Compress the app to a zip file and upload it to Release on your GitHub project.</p>
+</li>
+</ol>
+<h3 id="windows">Windows</h3>
+<ol>
+<li>
+<p>Update the app icon at <code>windows\runner\resources\app_icon.ico</code></p>
+</li>
+<li>
+<p>Change the app name at <code>windows\runner\main.cpp</code></p>
+</li>
+<li>
+<p>Execute <code>flutter build windows</code></p>
+</li>
+<li>
+<p>Download and install <a href="https://jrsoftware.org/download.php/is.exe">Inno Setup</a></p>
+</li>
+<li>
+<p>Open Inno Setup, create a new app, and follow step-by-step with <a href="https://protocoderspoint.com/how-to-create-exe-installation-file-of-flutter-windows-application/">protocoderspoint’s tutorial</a></p>
+</li>
+<li>
+<p>Upload the output file to the Release on your GitHub project.</p>
+</li>
+</ol>
+<p>You may also want to try the MSIX distribution by following the <a href="https://docs.flutter.dev/platform-integration/windows/building#distributing-windows-apps">official Flutter guideline</a>.</p>
+<h3 id="linux">Linux</h3>
+<p>Flutter apps can also be distributed on Linux using the Debian package format. To create a Debian package, we can use the <code>flutter_to_debian</code> package.</p>
+<ol>
+<li>
+<p>Follow the instructions in the <code>flutter_to_debian</code> package documentation at <a href="https://pub.dev/packages/flutter_to_debian">https://pub.dev/packages/flutter_to_debian</a>.</p>
+</li>
+<li>
+<p>Add <code>flutter_to_debian</code> to your system PATH by running the following command in your terminal:</p>
+</li>
+</ol>
+<pre><code class="language-bash">export PATH=&quot;$PATH&quot;:&quot;$HOME/.pub-cache/bin&quot;
+</code></pre>
+<ol>
+<li>Run <code>flutter_to_debian</code> from your Flutter project directory</li>
+</ol>
+<pre><code class="language-bash">huynq@ubuntu:~/Documents/WIP/netshare$ flutter_to_debian
+
+checking for debian 📦 in root project...  ✅
+
+start building debian package... ♻️  ♻️  ♻️
+
+No skeleton found
+🔥🔥🔥 (debian 📦) build done successfully  ✅
+
+😎 find your .deb at
+debian/packages/NetShare_2.0.0_amd64.deb
+</code></pre>
+<ol>
+<li>Test the output by installing it locally using the <code>dpkg</code> command:</li>
+</ol>
+<pre><code class="language-bash">sudo dpkg -i NetShare_2.0.0_amd64.deb
+</code></pre>
+<ol>
+<li>If the installation is successful and the app works as expected, upload output file to Releases on your GitHub project.</li>
+</ol>
+<h3 id="ios">iOS</h3>
+<p>iOS distribution requires an Apple developer account. Instead, publishing app to the AppStore could be an option. Please see the guidelines at <a href="https://docs.flutter.dev/deployment/ios">Build and release an iOS app</a> for specific steps.</p>
+<h3 id="web">Web</h3>
+<p>Web is easy to distribute since there are various ways to do it. You could use Firebase hosting or other hosting services to host built web content.</p>
+<ol>
+<li>
+<p>Execute <code>flutter build web</code>. There are two renderers <code>html</code> and <code>canvaskit</code> that you can choose (see <a href="https://docs.flutter.dev/platform-integration/web/renderers">web renderers</a> for more details).</p>
+</li>
+<li>
+<p>Check the output result locally with your local web server (node/python/…). I use Python server as an example:</p>
+</li>
+</ol>
+<pre><code class="language-bash">cd build/web
+python -m http.server 8000
+</code></pre>
+<p>This will start a web server at <a href="http://localhost:8000">http://localhost:8000</a> that serves the output files in the <code>build/web</code> directory.</p>
+<ol>
+<li>Deploy web by your favorite service (see <a href="https://docs.flutter.dev/deployment/web#deploying-to-the-web">deploy-to-the-web</a>).</li>
+</ol>
+<h3 id="conclusion">Conclusion</h3>
+<p>In this article, we have walked through the steps of releasing a Flutter project on GitHub. Each platform requires specific configuration and tooling, but with the appropriate guidelines and references, you can distribute your app on any platform you choose. By following these guidelines and distributing your Flutter project on GitHub, you can reach a wider audience and make your project accessible to others.</p>
+<p>Thank you for reading this article, and I hope that it will be helpful in guiding you through the process of releasing your Flutter project on GitHub.</p>
+<p>Also, if you are interested in the NetShare project, please keep up with the progress by following project on Github and Twitter:</p>
+<ul>
+<li>
+<p>Github project: <a href="https://github.com/huynguyennovem/netshare">https://github.com/huynguyennovem/netshare</a></p>
+</li>
+<li>
+<p>Twitter: <a href="https://twitter.com/NetShareOSS">https://twitter.com/NetShareOSS</a></p>
+</li>
+<li>
+<p>Maintainer: <a href="https://twitter.com/HuyNguyenTw">https://twitter.com/HuyNguyenTw</a></p>
+</li>
+</ul>
+<p>Thanks for reading!</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

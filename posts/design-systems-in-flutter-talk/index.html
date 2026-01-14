@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Design Systems in Flutter: Today, Tomorrow, and Beyond - Huy Nguyen Blog</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Design Systems in Flutter: Today, Tomorrow, and Beyond";
+        var mkdocs_page_input_path = "posts/design-systems-in-flutter-talk.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Huy Nguyen Blog
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Posts</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../community_activities/">Community Activities</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../projects_packages/">Projects and packages</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../contributions/">Contributions</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Huy Nguyen Blog</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Design Systems in Flutter: Today, Tomorrow, and Beyond</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p>At <strong>GDG DevFest Hanoi</strong> on 15 November 2025, I had the opportunity to share a topic about <strong>“Design Systems in Flutter: Today, Tomorrow, and Beyond</strong>”.</p>
+<p>It was an energizing room, with many developers and curious people wanting to understand how UI, frameworks, and design methodology are evolving together. In this post, I’d like to wrap up the session highlights and capture what we explored during the talk.</p>
+<h2 id="1-what-is-a-design-system">🧩 1. What is a Design System?</h2>
+<p>I kicked off the session with the basics:<br />
+<strong>What exactly is a design system?</strong></p>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1763524289309/57a132b4-fcee-403d-ad3c-b2fa4056c548.png" /></p>
+<p>Referring to <strong>Figma’s</strong> <a href="https://www.figma.com/blog/design-systems-101-what-is-a-design-system/#design-systems-and-ux-more-than-just-aesthetics"><strong>blog post</strong></a>, we explored design systems as a shared language - a combination of <strong>principles, patterns, components, tokens, and documentation</strong> that help teams build consistent interfaces faster and with fewer decisions.</p>
+<p>Beyond being a repository of reusable pieces, design systems are about alignment - reducing ambiguity, increasing velocity, and keeping products visually coherent even as teams scale.</p>
+<h2 id="2-material-design-as-an-example">🎨 2. Material Design as an example</h2>
+<p>To ground the concept, I walked through one of the most influential design systems of our era: <strong>Material Design</strong>.</p>
+<p>We explored:</p>
+<ul>
+<li>
+<p>Its <strong>history</strong>, from 2014 to 2025</p>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1763524399982/628ac455-06aa-43a3-82e5-7f0c3d5655f5.png" /></p>
+</li>
+<li>
+<p>It also came along with introduction videos showing the evolution through Material 1 → Material 2 → Material 3 → Material 3 Expressive</p>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1763524422290/b28a92d6-c0d8-4a31-a083-d3396bccfccd.png" /></p>
+</li>
+</ul>
+<p>Material is more than just a theme - it’s a milestone in unifying design language across platforms, and it helps explain why design systems matter at framework level.</p>
+<h2 id="3-introducing-decoupling-design-in-flutter">3. Introducing “Decoupling Design in Flutter”</h2>
+<p>This was the core of the talk: an inside look at the <strong>“Decoupling Design in Flutter”</strong> project currently being started and actively worked on by Flutter team.</p>
+<p>A fun <a href="https://df2025demo.codemagic.app">demo</a> showing what built-in design systems in Flutter look like:</p>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1763528217042/7fc58cf8-3aaf-48e8-9a16-98b7a7f80957.gif" /></p>
+<h3 id="why-the-decoupling-project-exists">Why the decoupling project exists</h3>
+<p>I shared the context that led to this initiative:</p>
+<ul>
+<li>
+<p>Flutter now spans <strong>web, desktop</strong> platforms, but maintaining built-in design libraries inside the SDK doesn't scale well.</p>
+</li>
+<li>
+<p>The community increasingly asks for support for <strong>third-party design systems</strong> like Fluent UI, Yaru, Shadcn, Hux, Moon, and more.</p>
+</li>
+</ul>
+<p>The arrival of <strong>Material 3 Expressive (May 2025)</strong> and Apple’s <strong>iOS 26 “Liquid Glass”</strong> design direction signaled a shift - UI design is becoming more dynamic and expressive than ever.</p>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1763528028920/d2f0d6eb-06be-4b15-8e63-454ab82154cc.jpeg" /></p>
+<h3 id="the-3-core-problems-today">The 3 Core Problems Today</h3>
+<p>I highlighted three major limitations in the current Flutter UI architecture:</p>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1763528390753/ab8cf20d-2c93-42d4-86e6-9b6f8504850b.jpeg" /></p>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1763527911134/7b60ffa9-6000-44d2-8b3c-212ea5c7f4e9.jpeg" /></p>
+<h4 id="1-forced-migrations"><strong>1. Forced Migrations</strong></h4>
+<p>Big UI shifts- like Material 2 → Material 3 often require massive refactors just to get essential fixes or platform support. Teams and developers pay a high maintenance cost.</p>
+<h4 id="2-slow-updates"><strong>2. Slow Updates</strong></h4>
+<p>Material and Cupertino updates are tied to Flutter’s quarterly releases. This delays bug fixes, design refinements, and feature updates that users expect sooner.</p>
+<h4 id="3-custom-ui-limits"><strong>3. Custom UI Limits</strong></h4>
+<p>Flutter’s core logic is tightly bound to Material, making custom design systems harder to build. Developers often end up duplicating components or losing accessibility features.</p>
+<p>These problems become more visible while the ecosystem grows.</p>
+<hr />
+<h3 id="project-goals-targets">🎯 Project Goals &amp; Targets</h3>
+<p>The Flutter team aims to solve these issues with a long-term architectural effort.</p>
+<p>Key goals:</p>
+<ul>
+<li>
+<p><strong>More flexibility</strong>: Let teams choose and swap design libraries without heavy refactors.</p>
+</li>
+<li>
+<p><strong>Faster updates</strong>: Material and Cupertino shouldn’t be locked to framework &amp; engine releases.</p>
+</li>
+<li>
+<p><strong>Lightweight framework</strong>: Reduce the core SDK’s size and responsibility.</p>
+</li>
+<li>
+<p><strong>Better foundations</strong>: Invest in the core widget library so design systems can layer on top cleanly.</p>
+</li>
+</ul>
+<h3 id="whats-changing">📦 What’s Changing?</h3>
+<p>The big shift:<br />
+<strong>Material and Cupertino will be moved out of Flutter’s core SDK.</strong></p>
+<p>They will live as <strong>standalone first-party packages</strong> in <a href="https://github.com/flutter/packages"><code>flutter/packages</code></a> repo and on <a href="http://pub.dev">pub.dev</a>.<br />
+This makes the framework:</p>
+<ul>
+<li>
+<p>lighter</p>
+</li>
+<li>
+<p>more modular</p>
+</li>
+<li>
+<p>able to iterate faster</p>
+</li>
+<li>
+<p>friendlier to 3rd-party design systems</p>
+</li>
+</ul>
+<p>Alongside that, Flutter is significantly investing in the <strong>core widgets library</strong>, making it a stronger foundation for any design system.</p>
+<h3 id="project-timeline">Project Timeline</h3>
+<p>I shared the plan announced by the Flutter team:</p>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1763528607169/fa36ea73-43f2-4f64-8451-c881fc66ef3a.png" /></p>
+<ul>
+<li>
+<p>Phase 1 (from July - End 2025):</p>
+<ul>
+<li>
+<p>Reinforcement - A Better Foundation Critical Pre-Decoupling Refactoring</p>
+</li>
+<li>
+<p>Ongoing Reinforcement and Community Collaboration</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Phase 2 (Early 2026)<strong>:</strong> Relocation - Establishing New Packages and a Faster Release Process</p>
+</li>
+<li>
+<p>Phase 3 (Late 2026 and Beyond)<strong>:</strong> Removal: A Phased and Predictable Deprecation</p>
+</li>
+</ul>
+<p>This is a multi-year effort, and when completed, apps will need to <strong>migrate to use external Material/Cupertino packages</strong> but with clear guides and tooling to support the transition.</p>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1763526707141/e6b13d2d-1ca1-4c57-8c22-28f218b28144.png" /></p>
+<h2 id="4-community-built-design-systems">4. Community-Built Design Systems</h2>
+<p>After discussing the upcoming changes, I showcased examples of thriving community design systems, including demos and visuals.</p>
+<p>These included:</p>
+<ul>
+<li>
+<p>Fluent UI</p>
+</li>
+<li>
+<p>Yaru</p>
+</li>
+<li>
+<p>Shadcn</p>
+</li>
+<li>
+<p>Hux</p>
+</li>
+<li>
+<p>Moon</p>
+</li>
+<li>
+<p>And several experimental or indie design libraries</p>
+</li>
+</ul>
+<p>The takeaway:<br />
+Flutter’s future UI ecosystem will be more modular, expressive, and diverse than ever.</p>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1763527269700/a7cb9cf7-39e7-46af-b131-27119b9138b9.jpeg" /></p>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1763527243399/fe64e0c4-cd7e-4b03-95b6-682b4071ec0e.jpeg" /></p>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1763527275338/a427dbe7-85a3-4565-977e-059591a20dcc.jpeg" /></p>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1763527283577/db819b4e-83d6-44a4-b645-bd753af65019.jpeg" /></p>
+<h2 id="5-introducing-flutter-pho-community">5. Introducing Flutter Phở community 🇻🇳</h2>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1763527439097/dadbe02a-21d5-428e-bf63-ad9336656403.png" /></p>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1763527500068/1b19a8fa-77b6-40eb-8608-14d5947e8d6d.png" /></p>
+<p>One highlight of my talk was sharing about <a href="https://www.facebook.com/groups/fluttervietnam"><strong>Flutter Phở</strong></a>, a new community initiative in Vietnam.</p>
+<p>I explained:</p>
+<ul>
+<li>
+<p>Why the community was started</p>
+</li>
+<li>
+<p>The desire to bring local meetups and events similar to global Flutter communities</p>
+</li>
+<li>
+<p>The goal of building a space where Vietnamese Flutter developers can connect, learn, and grow together</p>
+</li>
+</ul>
+<p>The response from the audience was incredibly encouraging. Many developers asked how they can join future events, exactly the kind of energy that sparks a strong community.</p>
+<h2 id="6-a-little-fun-game-time">6. A Little Fun: Game time</h2>
+<p>To close the session, we played a quick Kahoot quiz, equal parts fun and chaotic 😄<br />
+It was a great way to test what people learned, spark laughs, and end the session with high spirits before moving into networking.</p>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1763527657915/c7f6d81a-bed1-4347-a996-86c6dea6a74d.jpeg" /></p>
+<p><strong>Disclaimer:</strong> Everything in this talk comes from Flutter’s public documents and <a href="http://flutter.dev/go/decouple-design">design</a> proposals. I’m not speaking on behalf of the Flutter team, just sharing what’s publicly known.</p>
+<p>I also expect to listen to all your <a href="https://docs.google.com/forms/d/1EDPH4qA82_AxmnsWjTuVUVEEv-bh5Zwj-ZGI_VqYCIA/edit">feedback</a> and questions, if any:</p>
+<p>Feel free to look again at my slide for the talk <a href="https://docs.google.com/presentation/d/1b-8wf0A77Vxf2L9IVUpKe5Nsr-F0kfwEJWL_hEhGGDA/edit?usp=sharing">here</a>.</p>
+<p><img alt="" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1763528800108/c878dd5c-9f3f-4b57-a9e3-dab621a0a1ab.png" /></p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

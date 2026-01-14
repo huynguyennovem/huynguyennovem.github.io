@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Compiling Flutter Engine Locally - Getting Started (Part I) - Huy Nguyen Blog</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Compiling Flutter Engine Locally - Getting Started (Part I)";
+        var mkdocs_page_input_path = "posts/compiling-flutter-engine-locally-part-i.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Huy Nguyen Blog
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Posts</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../community_activities/">Community Activities</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../projects_packages/">Projects and packages</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../contributions/">Contributions</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Huy Nguyen Blog</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Compiling Flutter Engine Locally - Getting Started (Part I)</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p>Flutter empowers developers to dive deeper into the framework by compiling its engine locally. This process not only enables customization but also facilitates contributions to the open-source community. In this blog post, I will walk you through a step-by-step guide to preparing your development environment and compiling the Flutter engine locally.</p>
+<h2 id="prepare-environment">Prepare environment</h2>
+<p>The first step is to set up your development environment. Follow these steps to ensure you have all the necessary dependencies installed:</p>
+<p>Step 1. Install dependencies at <a href="https://github.com/flutter/flutter/wiki/Setting-up-the-Engine-development-environment#getting-dependencies">Getting dependencies</a>:</p>
+<pre><code class="language-bash">git
+ssh client
+python3
+Chromium's depot_tools
+curl
+unzip
+Visual Studio, Windows 10 SDK (for Windows)
+XCode, Rosetta (if using Mac M1)
+</code></pre>
+<p>Step 2. Head over to <a href="https://github.com/flutter/engine">https://github.com/flutter/engine</a> and fork the repository into your own GitHub account.</p>
+<p>Step 3. Open your terminal and create directory named <code>engine</code> and then cd to this directory:</p>
+<pre><code class="language-bash">➜  mkdir engine &amp;&amp; cd engine
+</code></pre>
+<p>Step 4. Create <code>.gclient</code> file and edit it with the following content. Replace &lt;your_github_username&gt; with your actual GitHub username:</p>
+<pre><code class="language-bash">solutions = [
+  {
+    &quot;managed&quot;: False,
+    &quot;name&quot;: &quot;src/flutter&quot;,
+    &quot;url&quot;: &quot;git@github.com:&lt;your_github_username&gt;/engine.git&quot;,
+    &quot;custom_deps&quot;: {},
+    &quot;deps_file&quot;: &quot;DEPS&quot;,
+    &quot;safesync_url&quot;: &quot;&quot;,
+  },
+]
+</code></pre>
+<p>Step 5. Fetch source code of environment for Flutter engine (<a href="https://github.com/flutter/buildroot">https://github.com/flutter/buildroot</a>)</p>
+<pre><code class="language-bash">➜  engine gclient sync
+</code></pre>
+<p>Result:</p>
+<pre><code class="language-bash">➜  engine pwd
+/Users/huynq/Documents/GitHub/engine
+
+➜  engine tree -L 2
+.
+└── src
+    ├── AUTHORS
+    ├── BUILD.gn
+    ├── CODEOWNERS
+    ├── LICENSE
+    ├── README.md
+    ├── build
+    ├── build_overrides
+    ├── buildtools
+    ├── flutter
+    ├── fuchsia
+    ├── gpu
+    ├── out
+    ├── third_party
+    └── tools
+
+11 directories, 5 files
+</code></pre>
+<p>Step 6. Fetch engine source from remote (<a href="https://github.com/flutter/engine">https://github.com/flutter/engine</a>)</p>
+<pre><code class="language-bash">➜  engine cd src/flutter/
+➜  flutter git:(main) git pull upstream main
+From github.com:flutter/engine
+ * branch                  main       -&gt; FETCH_HEAD
+Already up to date.
+</code></pre>
+<h2 id="compile-engine">Compile engine</h2>
+<p>Once you have set up your environment, you can proceed with compiling the Flutter engine.</p>
+<p><strong>Step 1.</strong> Fetch source code of environment again to update all dependencies.</p>
+<pre><code class="language-bash">➜  engine gclient sync
+Updating depot_tools...
+Syncing projects: 100% (141/141), done.                                                                            
+Hook 'python3 src/flutter/tools/pub_get_offline.py' took 10.45 secs
+Running hooks: 100% (15/15), done.
+</code></pre>
+<p><strong>Step 2.</strong> Prepare build files for DEVICE-side executables</p>
+<p>You can choose to compile for different platforms. For example, to compile for Android, use the following command:</p>
+<pre><code class="language-bash">➜  engine cd src/
+➜  src git:(6e71c38) ./flutter/tools/gn --android --android-cpu arm64 --unoptimized
+Generating GN files in: out/android_debug_unopt_arm64
+Generating Xcode projects took 441ms
+Generating compile_commands took 62ms
+Done. Made 808 targets from 292 files in 6681ms
+</code></pre>
+<p>Note:</p>
+<ul>
+<li>
+<p>If you build for ios, replace <code>--android</code> with <code>--ios</code> . For eg: <code>./flutter/tools/gn --ios --unoptimized</code></p>
+</li>
+<li>
+<p><em>There are some runtime modes you can select:</em> <code>--runtime-mode=[debug|profile|release]</code></p>
+</li>
+</ul>
+<p><strong>Step 3.</strong> Prepare the build files for HOST-side executables.</p>
+<pre><code class="language-bash">➜  src git:(6e71c38) ./flutter/tools/gn --unoptimized
+Using prebuilt Dart SDK binary. If you are editing Dart sources and wish to compile the Dart SDK, set `--no-prebuilt-dart-sdk`.
+Generating GN files in: out/host_debug_unopt
+Generating Xcode projects took 436ms
+Generating compile_commands took 84ms
+Done. Made 938 targets from 335 files in 4135ms
+</code></pre>
+<p><em>Note: There are some runtime modes you can select:</em> <code>--runtime-mode=[debug|profile|release]</code></p>
+<p><strong>Step 4</strong>. Build your executables</p>
+<p>These steps will take a long time, you should drink 2–3 cups of ☕️ while waiting 😌.</p>
+<p>First, build for DEVICE-side executables. I build for my arm64 Android device (Realme 6, Android 11, arm64-v8a), so it's <code>android_debug_unopt_arm64</code>. If it's iOS: <code>ninja -C out/ios_debug_unopt</code></p>
+<pre><code class="language-bash">➜  src git:(6e71c38) ninja -C out/android_debug_unopt_arm64
+ninja: Entering directory `out/android_debug_unopt_arm64'
+[209/5101] ACTION //flutter/shell/platform/android:flutter_shell_java(//build/toolchain/android:clang_arm64)
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+[5087/5098] ACTION //flutter/testing/scenario_...id_lint(//build/toolchain/android:clang_arm64)
+Warning: This version only understands SDK XML versions up to 2 but an SDK XML file of version 3 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+Warning: unexpected element (uri:&quot;&quot;, local:&quot;extension-level&quot;). Expected elements are &lt;{}codename&gt;,&lt;{}layoutlib&gt;,&lt;{}api-level&gt;
+Warning: unexpected element (uri:&quot;&quot;, local:&quot;base-extension&quot;). Expected elements are &lt;{}codename&gt;,&lt;{}layoutlib&gt;,&lt;{}api-level&gt;
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+[5089/5098] ACTION //flutter/testing/scenari...d_apk(//build/toolchain/android:clang_arm64)
+Warning: This version only understands SDK XML versions up to 2 but an SDK XML file of version 3 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+Warning: unexpected element (uri:&quot;&quot;, local:&quot;extension-level&quot;). Expected elements are &lt;{}codename&gt;,&lt;{}layoutlib&gt;,&lt;{}api-level&gt;
+Warning: unexpected element (uri:&quot;&quot;, local:&quot;base-extension&quot;). Expected elements are &lt;{}codename&gt;,&lt;{}layoutlib&gt;,&lt;{}api-level&gt;
+[5093/5098] ACTION //flutter/testing/scenari...t_apk(//build/toolchain/android:clang_arm64)
+Warning: This version only understands SDK XML versions up to 2 but an SDK XML file of version 3 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+Warning: unexpected element (uri:&quot;&quot;, local:&quot;extension-level&quot;). Expected elements are &lt;{}codename&gt;,&lt;{}layoutlib&gt;,&lt;{}api-level&gt;
+Warning: unexpected element (uri:&quot;&quot;, local:&quot;base-extension&quot;). Expected elements are &lt;{}codename&gt;,&lt;{}layoutlib&gt;,&lt;{}api-level&gt;
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+[5097/5097] STAMP obj/default.stamp
+</code></pre>
+<p>Next, build for HOST-side executables:</p>
+<pre><code class="language-bash">➜  src git:(6e71c38) ninja -C out/host_debug_unopt   
+ninja: Entering directory `out/host_debug_unopt'
+[0/1] Regenerating ninja files
+[6194/6194] STAMP obj/default.stamp
+</code></pre>
+<p><strong>Step 5.</strong> Use your build in Flutter project</p>
+<p>Now that you have successfully compiled the Flutter engine, you can use it in your Flutter projects. To do this, run your Flutter project with the following parameters:</p>
+<ul>
+<li>
+<p><code>--local-engine</code>: the device executable you built above</p>
+</li>
+<li>
+<p><code>--local-engine-src-path</code>: <code>engine/src</code> path</p>
+</li>
+<li>
+<p><code>--local-engine-host</code>: <code>host_debug_unopt</code> output (*)</p>
+</li>
+</ul>
+<blockquote>
+<p><em>(*) Since Nov 2023, Flutter tool should require</em><code>--local-engine-host</code><em>when</em><code>--local-engine</code><em>is set, see issue</em><a href="https://github.com/flutter/flutter/issues/132245">https://github.com/flutter/flutter/issues/132245</a></p>
+</blockquote>
+<pre><code class="language-bash">➜  new_3106 flutterm run --local-engine=android_debug_unopt_arm64 --local-engine-host=host_debug_unopt --local-engine-src-path=/Users/huynq/Documents/GitHub/engine/src
+Launching lib/main.dart on RMX2001 in debug mode...
+Running Gradle task 'assembleDebug'...                              5.3s
+✓  Built build/app/outputs/flutter-apk/app-debug.apk.
+D/ViewRootImpl(28547): enqueueInputEventMotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=964.0, y[0]=2138.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=277159252, downTime=277159252, deviceId=3, source=0x1002, displayId=0 }
+D/ViewRootImpl[MainActivity](28547): processMotionEvent MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=964.0, y[0]=2138.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=277159252, downTime=277159252, deviceId=3, source=0x1002, displayId=0 }
+D/ViewRootImpl[MainActivity](28547): dispatchPointerEvent handled=true, event=MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=964.0, y[0]=2138.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=277159252, downTime=277159252, deviceId=3, source=0x1002, displayId=0 }
+Syncing files to device RMX2001...                                 108ms
+
+Flutter run key commands.
+r Hot reload. 🔥🔥🔥
+R Hot restart.
+h List all available interactive commands.
+d Detach (terminate &quot;flutter run&quot; but leave application running).
+c Clear the screen
+q Quit (terminate the application on the device).
+</code></pre>
+<h2 id="troubleshoot">Troubleshoot</h2>
+<ol>
+<li>You may encounter <code>Unexpected Kernel Format Version 106</code> exception:</li>
+</ol>
+<pre><code class="language-console">➜  new_3106 flutterm run --local-engine=android_debug_unopt_arm64 --local-engine-host=host_debug_unopt --local-engine-src-path=/Users/huynq/Documents/GitHub/engine/src
+Resolving dependencies... (1.0s)
+&gt; collection 1.17.2 (was 1.17.1)
+&gt; matcher 0.12.16 (was 0.12.15)
+&gt; material_color_utilities 0.5.0 (was 0.2.0) (0.8.0 available)
+&gt; source_span 1.10.0 (was 1.9.1)
+&gt; stack_trace 1.11.1 (was 1.11.0)
+&gt; stream_channel 2.1.2 (was 2.1.1)
+&gt; test_api 0.6.1 (was 0.5.1)
++ web 0.1.4-beta
+These packages are no longer being depended on:
+- js 0.6.7
+Changed 9 dependencies!
+Launching lib/main.dart on RMX2001 in debug mode...
+Unhandled exception:
+Unexpected Kernel Format Version 106 (expected 104)
+#0      BinaryBuilder.readComponent.&lt;anonymous closure&gt; (package:kernel/binary/ast_from_binary.dart:691:9)
+#1      Timeline.timeSync (dart:developer/timeline.dart:171:22)
+#2      BinaryBuilder.readComponent (package:kernel/binary/ast_from_binary.dart:678:21)
+#3      _InitializationFromSdkSummary._prepareSummary (package:front_end/src/fasta/incremental_compiler.dart:2469:12)
+#4      _InitializationFromUri.initialize (package:front_end/src/fasta/incremental_compiler.dart:2543:23)
+&lt;asynchronous suspension&gt;
+#5      IncrementalCompiler._ensurePlatformAndInitialize (package:front_end/src/fasta/incremental_compiler.dart:1423:25)
+&lt;asynchronous suspension&gt;
+#6      IncrementalCompiler.computeDelta.&lt;anonymous closure&gt; (package:front_end/src/fasta/incremental_compiler.dart:312:11)
+&lt;asynchronous suspension&gt;
+#7      IncrementalCompiler.compile (package:vm/incremental_compiler.dart:75:50)
+&lt;asynchronous suspension&gt;
+#8      FrontendCompiler.compile (package:frontend_server/frontend_server.dart:599:11)
+&lt;asynchronous suspension&gt;
+#9      listenAndCompile.&lt;anonymous closure&gt; (package:frontend_server/frontend_server.dart:1310:11)
+&lt;asynchronous suspension&gt;
+the Dart compiler exited unexpectedly.
+the Dart compiler exited unexpectedly.
+Running Gradle task 'assembleDebug'...                                 ⣻%
+</code></pre>
+<p><strong>Solution</strong>: Hint from <a href="https://github.com/flutter/flutter/issues/50885#issuecomment-882045381">https://github.com/flutter/flutter/issues/50885#issuecomment-882045381</a></p>
+<p>Make sure you didn't forget to build for HOST-side executables:</p>
+<pre><code class="language-bash">./flutter/tools/gn --unoptimized
+ninja -C out/host_debug_unopt
+</code></pre>
+<ol>
+<li>Depreciation issue by Python 3.12</li>
+</ol>
+<pre><code class="language-bash">➜  engine gclient sync
+Syncing projects: 100% (137/137), done.                                                                            
+Running hooks:  14% ( 2/14) Generate sdk/version
+________ running 'python3 src/third_party/dart/tools/generate_sdk_version_file.py' in '/Users/huynq/Documents/GitHub/engine'
+/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/utils.py:294: SyntaxWarning: invalid escape sequence '\$'
+  ' awk &quot;{ print \$1 }&quot;',
+/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/utils.py:385: SyntaxWarning: invalid escape sequence '\d'
+  major = match_against('^MAJOR (\d+)$', content)
+/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/utils.py:386: SyntaxWarning: invalid escape sequence '\d'
+  minor = match_against('^MINOR (\d+)$', content)
+/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/utils.py:387: SyntaxWarning: invalid escape sequence '\d'
+  patch = match_against('^PATCH (\d+)$', content)
+/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/utils.py:388: SyntaxWarning: invalid escape sequence '\d'
+  prerelease = match_against('^PRERELEASE (\d+)$', content)
+/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/utils.py:389: SyntaxWarning: invalid escape sequence '\d'
+  prerelease_patch = match_against('^PRERELEASE_PATCH (\d+)$', content)
+Traceback (most recent call last):
+  File &quot;/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/generate_sdk_version_file.py&quot;, line 7, in &lt;module&gt;
+    import utils
+  File &quot;/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/utils.py&quot;, line 14, in &lt;module&gt;
+    import imp
+ModuleNotFoundError: No module named 'imp'
+Error: Command 'python3 src/third_party/dart/tools/generate_sdk_version_file.py' returned non-zero exit status 1 in /Users/huynq/Documents/GitHub/engine
+/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/utils.py:294: SyntaxWarning: invalid escape sequence '\$'
+  ' awk &quot;{ print \$1 }&quot;',
+/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/utils.py:385: SyntaxWarning: invalid escape sequence '\d'
+  major = match_against('^MAJOR (\d+)$', content)
+/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/utils.py:386: SyntaxWarning: invalid escape sequence '\d'
+  minor = match_against('^MINOR (\d+)$', content)
+/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/utils.py:387: SyntaxWarning: invalid escape sequence '\d'
+  patch = match_against('^PATCH (\d+)$', content)
+/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/utils.py:388: SyntaxWarning: invalid escape sequence '\d'
+  prerelease = match_against('^PRERELEASE (\d+)$', content)
+/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/utils.py:389: SyntaxWarning: invalid escape sequence '\d'
+  prerelease_patch = match_against('^PRERELEASE_PATCH (\d+)$', content)
+Traceback (most recent call last):
+  File &quot;/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/generate_sdk_version_file.py&quot;, line 7, in &lt;module&gt;
+    import utils
+  File &quot;/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/utils.py&quot;, line 14, in &lt;module&gt;
+    import imp
+ModuleNotFoundError: No module named 'imp'
+</code></pre>
+<p>This is a depreciation issue by using Python 3.12 in your system. Just downgrade or delete your python3 (which is Python 12) in your system.</p>
+<p>E.g steps (macOS):</p>
+<ul>
+<li>
+<p>Determine python version:</p>
+<p><code>bash
+➜  ~ python3 -V
+Python 3.12.2
+➜  ~ which python3
+/usr/local/bin/python3</code></p>
+</li>
+<li>
+<p>Go to <code>/usr/local/bin/python3</code>:</p>
+<p><code>bash
+➜  bin ls | grep python
+python
+python-build
+python3
+python3-config
+python3.10
+python3.10-config
+python3.11
+python3.11-config
+python3.9
+python3.9-config</code></p>
+<p>Then delete <code>python3</code> and <code>python3-config</code></p>
+</li>
+<li>
+<p>Retry:</p>
+<p><code>console
+➜  engine gclient sync
+Syncing projects: 100% (137/137), done.                                                                            
+Hook 'python3 src/flutter/tools/pub_get_offline.py' took 14.53 secs
+Running hooks: 100% (14/14), done.</code></p>
+</li>
+</ul>
+<h3 id="conclusion">Conclusion</h3>
+<p>Compiling the Flutter engine on local gives you the flexibility to customize and enhance the Flutter engine to suit your specific needs. This also be helpful to cherry-pick specific PR/fixes that haven't landed on the latest Flutter release yet. By following the steps mentioned in this article, you can set up your environment, compile the engine, and start contributing to the Flutter community as well.</p>
+<p>So, go ahead, explore the possibilities, and happy compiling Flutter engine!</p>
+<p>Stay in touch with me for updates:</p>
+<ul>
+<li>
+<p>Twitter: <a href="https://twitter.com/HuyNguyenTw">https://twitter.com/HuyNguyenTw</a></p>
+</li>
+<li>
+<p>GitHub: <a href="https://github.com/huynguyennovem">https://github.com/huynguyennovem</a></p>
+</li>
+<li>
+<p>LinkedIn: <a href="https://linkedin.com/in/huynguyennovem">https://linkedin.com/in/huynguyennovem</a></p>
+</li>
+</ul>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
