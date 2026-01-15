@@ -1,4 +1,4 @@
-I. Contribution to Flutter repository:
+I. Flutter repository
 
 Issues involved: [is:issue involves:huycozy](https://github.com/flutter/flutter/issues?q=is%3Aissue+involves%3Ahuycozy)
 
@@ -6,7 +6,7 @@ Issues reported: [is:issue author:huycozy](https://github.com/flutter/flutter/is
 
 PRs: [is:pr author:huycozy](https://github.com/flutter/flutter/pulls?q=is%3Apr+author%3Ahuycozy+is%3Aclosed+)
 
-II. Contribution to community packages/plugins
+II. Community packages/plugins
 
 Author of packages/plugins:
 

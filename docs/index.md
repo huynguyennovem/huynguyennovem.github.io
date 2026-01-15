@@ -21,6 +21,7 @@ Hi there! I'm Huy, a Flutter open-source engineer passionate about contributing 
 
 ## Find Me Online
 
+- **Email**: [huynguyennovem@gmail.com](mailto:[huynguyennovem@gmail.com])
 - **GitHub (Contributor)**: [@huycozy](https://github.com/huycozy) - Flutter framework contributions
 - **GitHub (Projects)**: [@huynguyennovem](https://github.com/huynguyennovem) - Open-source projects and plugins
 - Socials:
