@@ -1,6 +1,6 @@
 # Welcome to Huy Nguyen's Blog 👋
 
-Hi there! I'm Huy, a Flutter open-source engineer passionate about contributing to the Flutter ecosystem and sharing knowledge with the community.
+Hi there! I'm Huy, an open-source engineer passionate about contributing to the Flutter ecosystem and sharing knowledge with the community.
 
 ## 📝 Highlighted Posts
 
