@@ -2,13 +2,13 @@
 
 Hi there! I'm Huy, a Flutter open-source engineer passionate about contributing to the Flutter ecosystem and sharing knowledge with the community.
 
-## 📝 Recent Posts
+## 📝 Highlighted Posts
 
-- **[Resolving "Xcode issue UnityAds.h file not found" error when building iOS on Unity](posts/resolving-xcode-issue-unityadsh-file-not-found-error-when-building-ios-on-unity.md)** · *November 19, 2025*
+- **[Fix a Flutter framework issue from scratch](posts/fix-a-flutter-framework-issue-from-scratch.md)** · *December 12, 2025*
 - **[Design Systems in Flutter: Today, Tomorrow, and Beyond](posts/design-systems-in-flutter-talk.md)** · *November 19, 2025*
-- **[11 manual tests before publishing your Flutter app](posts/11-manual-tests-before-publishing-your-flutter-app.md)** · *August 07, 2025*
-- **[Compiling Flutter Engine Locally - Web engine (Part III)](posts/compiling-flutter-engine-locally-web-engine-part-iii.md)** · *March 24, 2024*
-- **[Compiling Flutter Engine Locally - What changes after monorepo (Part IV)](posts/compiling-flutter-engine-locally-part-iv.md)** · *February 23, 2025*
+- **[Compiling Flutter Engine Locally - Getting Started (Part I)](posts/compiling-flutter-engine-locally-part-i.md)** · *March 09, 2024*
+- **[Bisecting regression issue in Flutter](posts/bisecting-regression-issue-in-flutter.md)** · *March 09, 2024*
+- **[Introduction to NetShare - Flutter opensource project](posts/introduction-to-netshare-flutter-opensource-project.md)** · *March 09, 2024*
 
 [View all posts →](posts.md)
 

@@ -363,6 +363,12 @@ Compiling the Flutter engine on local gives you the flexibility to customize and
 
 So, go ahead, explore the possibilities, and happy compiling Flutter engine!
 
+Want to explore more about building Flutter engine? Check out my other posts:
+
+* [Compiling Flutter Engine Locally - Getting Started (Part II)](compiling-flutter-engine-locally-part-ii.md)
+* [Compiling Flutter Engine Locally - Web engine (Part III)](compiling-flutter-engine-locally-web-engine-part-iii.md)
+* [Compiling Flutter Engine Locally - What changes after monorepo (Part IV)](compiling-flutter-engine-locally-part-iv.md)
+
 Stay in touch with me for updates:
 
 * Twitter: [https://twitter.com/HuyNguyenTw](https://twitter.com/HuyNguyenTw)
