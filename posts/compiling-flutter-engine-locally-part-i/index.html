@@ -349,18 +349,17 @@ ModuleNotFoundError: No module named 'imp'
 <p>This is a depreciation issue by using Python 3.12 in your system. Just downgrade or delete your python3 (which is Python 12) in your system.</p>
 <p>E.g steps (macOS):</p>
 <ul>
-<li>
-<p>Determine python version:</p>
-<p><code>bash
-➜  ~ python3 -V
+<li>Determine python version:</li>
+</ul>
+<pre><code class="language-bash">➜  ~ python3 -V
 Python 3.12.2
 ➜  ~ which python3
-/usr/local/bin/python3</code></p>
-</li>
-<li>
-<p>Go to <code>/usr/local/bin/python3</code>:</p>
-<p><code>bash
-➜  bin ls | grep python
+/usr/local/bin/python3
+</code></pre>
+<ul>
+<li>Go to <code>/usr/local/bin/python3</code>:</li>
+</ul>
+<pre><code class="language-bash">➜  bin ls | grep python
 python
 python-build
 python3
@@ -370,18 +369,17 @@ python3.10-config
 python3.11
 python3.11-config
 python3.9
-python3.9-config</code></p>
+python3.9-config
+</code></pre>
 <p>Then delete <code>python3</code> and <code>python3-config</code></p>
-</li>
-<li>
-<p>Retry:</p>
-<p><code>console
-➜  engine gclient sync
+<ul>
+<li>Retry:</li>
+</ul>
+<pre><code class="language-console">➜  engine gclient sync
 Syncing projects: 100% (137/137), done.                                                                            
 Hook 'python3 src/flutter/tools/pub_get_offline.py' took 14.53 secs
-Running hooks: 100% (14/14), done.</code></p>
-</li>
-</ul>
+Running hooks: 100% (14/14), done.
+</code></pre>
 <h3 id="conclusion">Conclusion</h3>
 <p>Compiling the Flutter engine on local gives you the flexibility to customize and enhance the Flutter engine to suit your specific needs. This also be helpful to cherry-pick specific PR/fixes that haven't landed on the latest Flutter release yet. By following the steps mentioned in this article, you can set up your environment, compile the engine, and start contributing to the Flutter community as well.</p>
 <p>So, go ahead, explore the possibilities, and happy compiling Flutter engine!</p>
