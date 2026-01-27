@@ -2,7 +2,7 @@
 
 An open-source Flutter project that makes it easy to share data in a local network.
 
-Check it out for details 👉 [https://github.com/huynguyennovem/netshare](https://github.com/huynguyennovem/netshare)
+Check it out for details 👉 [https://github.com/NetShareOSS/netshare](https://github.com/NetShareOSS/netshare)
 
 2. open_dir package
 

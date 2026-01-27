@@ -48,6 +48,10 @@
                 </li>
               </ul>
               <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../talks/">Talks</a>
+                </li>
+              </ul>
+              <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
                 </li>
               </ul>
@@ -132,27 +136,31 @@
 <li>
 <h2 id="compiling-engine">Compiling engine</h2>
 <h3 id="prepare-build-files-for-device-side-executables">Prepare build files for DEVICE-side executables</h3>
-<p><code>console
- cd engine/src
-./flutter/tools/gn --android --android-cpu arm64 --unoptimized</code></p>
+</li>
+</ol>
+<pre><code class="language-console">  cd engine/src
+./flutter/tools/gn --android --android-cpu arm64 --unoptimized
+</code></pre>
 <p>If you build for ios, replace <code>--android</code> with <code>--ios</code>:</p>
-<p><code>console
-./flutter/tools/gn --ios --unoptimized</code></p>
-<h3 id="prepare-the-build-files-for-host-side-executables">Prepare the build files for HOST-side executables.</h3>
-<p><code>console
-./flutter/tools/gn --unoptimized</code></p>
-<p>You should now see the new output folders:</p>
-<p><code>console
-➜  out git:(master) ✗ pwd
+<pre><code class="language-console">./flutter/tools/gn --ios --unoptimized
+</code></pre>
+<pre><code>### Prepare the build files for HOST-side executables.
+</code></pre>
+<pre><code class="language-console">./flutter/tools/gn --unoptimized
+</code></pre>
+<pre><code>You should now see the new output folders:
+</code></pre>
+<pre><code class="language-console">➜  out git:(master) ✗ pwd
 /Users/huynq/Documents/GitHub/flutter_master/engine/src/out
 ➜  out git:(master) ✗ tree -L 1
 .
 ├── android_debug_unopt_arm64
-└── host_debug_unopt</code></p>
-<h3 id="build-executables">Build executables</h3>
-<p>Building can take a long time, so grab a coffee or take a break!</p>
-</li>
-</ol>
+└── host_debug_unopt
+</code></pre>
+<pre><code>### Build executables
+
+Building can take a long time, so grab a coffee or take a break!
+</code></pre>
 <pre><code class="language-console">➜  src git:(master) ✗ ninja -C out/host_debug_unopt
 ninja: Entering directory `out/host_debug_unopt'
 [8308/8308] ACTION //flutter/lib/snapshot:create_macos_gen_snapshots(//build/toolchain/mac:clang_x64)

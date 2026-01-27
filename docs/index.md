@@ -5,12 +5,17 @@ Hi there! I'm Huy, an open-source engineer passionate about contributing to the 
 ## 📝 Highlighted Posts
 
 - **[Fix a Flutter framework issue from scratch](posts/fix-a-flutter-framework-issue-from-scratch.md)** · *December 12, 2025*
-- **[Design Systems in Flutter: Today, Tomorrow, and Beyond](posts/design-systems-in-flutter-talk.md)** · *November 19, 2025*
 - **[Compiling Flutter Engine Locally - Getting Started (Part I)](posts/compiling-flutter-engine-locally-part-i.md)** · *March 09, 2024*
 - **[Bisecting regression issue in Flutter](posts/bisecting-regression-issue-in-flutter.md)** · *March 09, 2024*
 - **[Introduction to NetShare - Flutter opensource project](posts/introduction-to-netshare-flutter-opensource-project.md)** · *March 09, 2024*
 
 [View all posts →](posts.md)
+
+## 🎤 Highlighted Talks
+
+- **[Design Systems in Flutter: Today, Tomorrow, and Beyond](talks/design-systems-in-flutter-talk.md)** · *November 19, 2025*
+
+[View all talks →](talks.md)
 
 ## What I Do
 

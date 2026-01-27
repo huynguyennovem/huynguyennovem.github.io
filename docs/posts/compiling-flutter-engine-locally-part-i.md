@@ -322,39 +322,39 @@ E.g steps (macOS):
 
 * Determine python version:
     
-    ```bash
-    ➜  ~ python3 -V
-    Python 3.12.2
-    ➜  ~ which python3
-    /usr/local/bin/python3
-    ```
+```bash
+➜  ~ python3 -V
+Python 3.12.2
+➜  ~ which python3
+/usr/local/bin/python3
+```
     
 * Go to `/usr/local/bin/python3`:
     
-    ```bash
-    ➜  bin ls | grep python
-    python
-    python-build
-    python3
-    python3-config
-    python3.10
-    python3.10-config
-    python3.11
-    python3.11-config
-    python3.9
-    python3.9-config
-    ```
+```bash
+➜  bin ls | grep python
+python
+python-build
+python3
+python3-config
+python3.10
+python3.10-config
+python3.11
+python3.11-config
+python3.9
+python3.9-config
+```
     
-    Then delete `python3` and `python3-config`
+Then delete `python3` and `python3-config`
     
 * Retry:
     
-    ```console
-    ➜  engine gclient sync
-    Syncing projects: 100% (137/137), done.                                                                            
-    Hook 'python3 src/flutter/tools/pub_get_offline.py' took 14.53 secs
-    Running hooks: 100% (14/14), done.
-    ```
+```console
+➜  engine gclient sync
+Syncing projects: 100% (137/137), done.                                                                            
+Hook 'python3 src/flutter/tools/pub_get_offline.py' took 14.53 secs
+Running hooks: 100% (14/14), done.
+```
     
 
 ### Conclusion

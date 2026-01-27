@@ -59,33 +59,33 @@ gclient sync -D
     
     ### Prepare build files for DEVICE-side executables
     
-    ```console
-     cd engine/src
-    ./flutter/tools/gn --android --android-cpu arm64 --unoptimized
-    ```
-    
-    If you build for ios, replace `--android` with `--ios`:
-    
-    ```console
-    ./flutter/tools/gn --ios --unoptimized
-    ```
+```console
+  cd engine/src
+./flutter/tools/gn --android --android-cpu arm64 --unoptimized
+```
+
+If you build for ios, replace `--android` with `--ios`:
+
+```console
+./flutter/tools/gn --ios --unoptimized
+```
     
     ### Prepare the build files for HOST-side executables.
     
-    ```console
-    ./flutter/tools/gn --unoptimized
-    ```
+```console
+./flutter/tools/gn --unoptimized
+```
     
     You should now see the new output folders:
     
-    ```console
-    ➜  out git:(master) ✗ pwd
-    /Users/huynq/Documents/GitHub/flutter_master/engine/src/out
-    ➜  out git:(master) ✗ tree -L 1
-    .
-    ├── android_debug_unopt_arm64
-    └── host_debug_unopt
-    ```
+```console
+➜  out git:(master) ✗ pwd
+/Users/huynq/Documents/GitHub/flutter_master/engine/src/out
+➜  out git:(master) ✗ tree -L 1
+.
+├── android_debug_unopt_arm64
+└── host_debug_unopt
+```
     
     ### Build executables
     

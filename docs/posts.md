@@ -1,6 +1,6 @@
 # Blog Posts
 
-*15 posts*
+*14 posts*
 
 ## [Fix a Flutter framework issue from scratch](posts/fix-a-flutter-framework-issue-from-scratch.md)
 
@@ -37,18 +37,6 @@ In this article, I will use GitHub page (github.io) as it’s free and a custom 
 I tried this way and it seems to work for me:
 
 [Read more →](posts/resolving-xcode-issue-unityadsh-file-not-found-error-when-building-ios-on-unity.md)
-
----
-
-## [Design Systems in Flutter: Today, Tomorrow, and Beyond](posts/design-systems-in-flutter-talk.md)
-
-*November 19, 2025*
- · `flutter` `community` `gdg` `techtalks`
-
-
-At GDG DevFest Hanoi on 15 November 2025, I had the opportunity to share a topic about “Design Systems in Flutter: Today, Tomorrow, and Beyond”.
-
-[Read more →](posts/design-systems-in-flutter-talk.md)
 
 ---
 

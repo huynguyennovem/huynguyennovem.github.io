@@ -66,9 +66,9 @@ Finally, I’ve made numerous improvements to the desktop UI/UX to ensure a more
 
 I’m thrilled to bring these new features to the NetShare and hope users will make data sharing even more seamless and convenient. As always, I welcome feedback and suggestion from everyone, so please don’t hesitate to reach out if you have ideas or comments to share.
 
-Keep up with NetShare progress by following the project on Github and Twitter:
+Keep up with NetShare progress by following the project on GitHub and Twitter:
 
-* Github project: [https://github.com/huynguyennovem/netshare](https://github.com/huynguyennovem/netshare)
+* Github project: [https://github.com/NetShareOSS/netshare](https://github.com/NetShareOSS/netshare)
     
 * Twitter: [https://twitter.com/NetShareOSS](https://twitter.com/NetShareOSS)
     

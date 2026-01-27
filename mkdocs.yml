@@ -2,6 +2,7 @@ site_name: Huy Nguyen Blog
 nav:
   - Home: index.md
   - Posts: posts.md
+  - Talks: talks.md
   - About: about.md
   - Community Activities: community_activities.md
   - Projects and packages: projects_packages.md
