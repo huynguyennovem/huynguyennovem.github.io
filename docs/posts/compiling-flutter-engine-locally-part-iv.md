@@ -179,8 +179,8 @@ Update: This issue (\[[163487](https://github.com/flutter/flutter/issues/163487)
 
 Check out my related articles for compiling Flutter engine series:
 
-[https://huynq.dev/compiling-flutter-engine-locally-part-i](https://huynq.dev/compiling-flutter-engine-locally-part-i)
+[https://huynq.dev/posts/compiling-flutter-engine-locally-part-i](https://huynq.dev/posts/compiling-flutter-engine-locally-part-i)
 
-[https://huynq.dev/compiling-flutter-engine-locally-part-ii](https://huynq.dev/compiling-flutter-engine-locally-part-ii)
+[https://huynq.dev/posts/compiling-flutter-engine-locally-part-ii](https://huynq.dev/posts/compiling-flutter-engine-locally-part-ii)
 
-[https://huynq.dev/compiling-flutter-engine-locally-web-engine-part-iii](https://huynq.dev/compiling-flutter-engine-locally-web-engine-part-iii)
+[https://huynq.dev/posts/compiling-flutter-engine-locally-web-engine-part-iii](https://huynq.dev/posts/compiling-flutter-engine-locally-web-engine-part-iii)
