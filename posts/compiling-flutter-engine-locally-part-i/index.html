@@ -380,6 +380,53 @@ Syncing projects: 100% (137/137), done.
 Hook 'python3 src/flutter/tools/pub_get_offline.py' took 14.53 secs
 Running hooks: 100% (14/14), done.
 </code></pre>
+<ol>
+<li>No module named 'pipes'</li>
+</ol>
+<pre><code class="language-bash">Traceback (most recent call last):
+  File &quot;/Users/huym4/Documents/WORKING/SDK/flutter_forked_enginebuild/engine/src/flutter/third_party/depot_tools/ninja.py&quot;, line 14, in &lt;module&gt;
+    import gclient_paths
+  File &quot;/Users/huym4/Documents/WORKING/SDK/flutter_forked_enginebuild/engine/src/flutter/third_party/depot_tools/gclient_paths.py&quot;, line 16, in &lt;module&gt;
+    import gclient_utils
+  File &quot;/Users/huym4/Documents/WORKING/SDK/flutter_forked_enginebuild/engine/src/flutter/third_party/depot_tools/gclient_utils.py&quot;, line 16, in &lt;module&gt;
+    import pipes
+ModuleNotFoundError: No module named 'pipes'
+</code></pre>
+<p>The problem is that: I'm using Python version 3.13. 
+However, the Python standard library module <code>pipes</code> was removed in Python 3.13. Older versions of the ninja Python package still import it
+There are two solutions in my mind:</p>
+<ol>
+<li>Downgrade Python to 3.12</li>
+<li>
+<p>Upgrade ninja using by Flutter in DEPS file</p>
+</li>
+<li>
+<p>Old:</p>
+</li>
+</ol>
+<pre><code>  'third_party/ninja': {
+    'packages': [
+      {
+        'package': 'infra/3pp/tools/ninja/${{platform}}',
+        'version': 'version:2@1.11.1.chromium.4',
+      }
+    ],
+    'dep_type': 'cipd',
+  },
+</code></pre>
+<ul>
+<li>New:</li>
+</ul>
+<pre><code>  'third_party/ninja': {
+    'packages': [
+      {
+        'package': 'infra/3pp/tools/ninja/${{platform}}',
+        'version': 'version:2@1.12.1.chromium.2',
+      }
+    ],
+    'dep_type': 'cipd',
+  },
+</code></pre>
 <h3 id="conclusion">Conclusion</h3>
 <p>Compiling the Flutter engine on local gives you the flexibility to customize and enhance the Flutter engine to suit your specific needs. This also be helpful to cherry-pick specific PR/fixes that haven't landed on the latest Flutter release yet. By following the steps mentioned in this article, you can set up your environment, compile the engine, and start contributing to the Flutter community as well.</p>
 <p>So, go ahead, explore the possibilities, and happy compiling Flutter engine!</p>
