@@ -257,9 +257,7 @@ c Clear the screen
 q Quit (terminate the application on the device).
 </code></pre>
 <h2 id="troubleshoot">Troubleshoot</h2>
-<ol>
-<li>You may encounter <code>Unexpected Kernel Format Version 106</code> exception:</li>
-</ol>
+<h3 id="1-you-may-encounter-unexpected-kernel-format-version-106-exception">1. You may encounter <code>Unexpected Kernel Format Version 106</code> exception:</h3>
 <pre><code class="language-console">➜  new_3106 flutterm run --local-engine=android_debug_unopt_arm64 --local-engine-host=host_debug_unopt --local-engine-src-path=/Users/huynq/Documents/GitHub/engine/src
 Resolving dependencies... (1.0s)
 &gt; collection 1.17.2 (was 1.17.1)
@@ -301,9 +299,7 @@ Running Gradle task 'assembleDebug'...                                 ⣻%
 <pre><code class="language-bash">./flutter/tools/gn --unoptimized
 ninja -C out/host_debug_unopt
 </code></pre>
-<ol>
-<li>Depreciation issue by Python 3.12</li>
-</ol>
+<h3 id="2-depreciation-issue-by-python-312">2. Depreciation issue by Python 3.12</h3>
 <pre><code class="language-bash">➜  engine gclient sync
 Syncing projects: 100% (137/137), done.                                                                            
 Running hooks:  14% ( 2/14) Generate sdk/version
@@ -380,9 +376,7 @@ Syncing projects: 100% (137/137), done.
 Hook 'python3 src/flutter/tools/pub_get_offline.py' took 14.53 secs
 Running hooks: 100% (14/14), done.
 </code></pre>
-<ol>
-<li>No module named 'pipes'</li>
-</ol>
+<h3 id="3-no-module-named-pipes">3. No module named 'pipes'</h3>
 <pre><code class="language-bash">Traceback (most recent call last):
   File &quot;/Users/huym4/Documents/WORKING/SDK/flutter_forked_enginebuild/engine/src/flutter/third_party/depot_tools/ninja.py&quot;, line 14, in &lt;module&gt;
     import gclient_paths
@@ -395,15 +389,9 @@ ModuleNotFoundError: No module named 'pipes'
 <p>The problem is that: I'm using Python version 3.13. 
 However, the Python standard library module <code>pipes</code> was removed in Python 3.13. Older versions of the ninja Python package still import it
 There are two solutions in my mind:</p>
-<ol>
-<li>Downgrade Python to 3.12</li>
-<li>
-<p>Upgrade ninja using by Flutter in DEPS file</p>
-</li>
-<li>
+<p>1) Downgrade Python to 3.12</p>
+<p>2) Upgrade ninja using by Flutter in DEPS file</p>
 <p>Old:</p>
-</li>
-</ol>
 <pre><code>  'third_party/ninja': {
     'packages': [
       {
@@ -414,9 +402,7 @@ There are two solutions in my mind:</p>
     'dep_type': 'cipd',
   },
 </code></pre>
-<ul>
-<li>New:</li>
-</ul>
+<p>New:</p>
 <pre><code>  'third_party/ninja': {
     'packages': [
       {
@@ -427,9 +413,7 @@ There are two solutions in my mind:</p>
     'dep_type': 'cipd',
   },
 </code></pre>
-<ol>
-<li>skia_path does not exist</li>
-</ol>
+<h3 id="4-skia_path-does-not-exist">4. skia_path does not exist</h3>
 <pre><code class="language-bash">src [master●●] ./flutter/tools/gn --android --android-cpu arm64 --unoptimized
 Traceback (most recent call last):
   File &quot;./flutter/tools/gn&quot;, line 1372, in &lt;module&gt;
@@ -447,9 +431,9 @@ OSError: path does not exist
 <p>I think it's due to <code>gclient sync</code> somehow was not completed. Let's just retry it and add <code>-v</code> to see the details:</p>
 <pre><code class="language-bash">gclient sync -D -v
 </code></pre>
-<p>Here are my steps (after mono repo):
-1. Copy .gclient from template and put it in sdk root dir(it was in engine dir previously)
-2. Execute <code>gclient sync -D -v</code> from sdk root dir</p>
+<p>Here are my steps (after mono repo):</p>
+<p>1) Copy .gclient from template and put it in sdk root dir(it was in engine dir previously)</p>
+<p>2) Execute <code>gclient sync -D -v</code> from sdk root dir</p>
 <h3 id="conclusion">Conclusion</h3>
 <p>Compiling the Flutter engine on local gives you the flexibility to customize and enhance the Flutter engine to suit your specific needs. This also be helpful to cherry-pick specific PR/fixes that haven't landed on the latest Flutter release yet. By following the steps mentioned in this article, you can set up your environment, compile the engine, and start contributing to the Flutter community as well.</p>
 <p>So, go ahead, explore the possibilities, and happy compiling Flutter engine!</p>
