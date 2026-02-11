@@ -427,6 +427,29 @@ There are two solutions in my mind:</p>
     'dep_type': 'cipd',
   },
 </code></pre>
+<ol>
+<li>skia_path does not exist</li>
+</ol>
+<pre><code class="language-bash">src [master●●] ./flutter/tools/gn --android --android-cpu arm64 --unoptimized
+Traceback (most recent call last):
+  File &quot;./flutter/tools/gn&quot;, line 1372, in &lt;module&gt;
+    sys.exit(main(sys.argv))
+  File &quot;./flutter/tools/gn&quot;, line 1351, in main
+    gn_args = to_command_line(to_gn_args(args))
+  File &quot;./flutter/tools/gn&quot;, line 448, in to_gn_args
+    gn_args.update(setup_git_versions())
+  File &quot;./flutter/tools/gn&quot;, line 356, in setup_git_versions
+    revision_args['skia_version'] = get_repository_version(skia_path)
+  File &quot;./flutter/tools/gn&quot;, line 315, in get_repository_version
+    raise IOError('path does not exist')
+OSError: path does not exist
+</code></pre>
+<p>I think it's due to <code>gclient sync</code> somehow was not completed. Let's just retry it and add <code>-v</code> to see the details:</p>
+<pre><code class="language-bash">gclient sync -D -v
+</code></pre>
+<p>Here are my steps (after mono repo):
+1. Copy .gclient from template and put it in sdk root dir(it was in engine dir previously)
+2. Execute <code>gclient sync -D -v</code> from sdk root dir</p>
 <h3 id="conclusion">Conclusion</h3>
 <p>Compiling the Flutter engine on local gives you the flexibility to customize and enhance the Flutter engine to suit your specific needs. This also be helpful to cherry-pick specific PR/fixes that haven't landed on the latest Flutter release yet. By following the steps mentioned in this article, you can set up your environment, compile the engine, and start contributing to the Flutter community as well.</p>
 <p>So, go ahead, explore the possibilities, and happy compiling Flutter engine!</p>
