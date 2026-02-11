@@ -219,7 +219,7 @@ q Quit (terminate the application on the device).
 
 ## Troubleshoot
 
-1. You may encounter `Unexpected Kernel Format Version 106` exception:
+### 1. You may encounter `Unexpected Kernel Format Version 106` exception:
     
 
 ```console
@@ -269,7 +269,7 @@ Make sure you didn't forget to build for HOST-side executables:
 ninja -C out/host_debug_unopt
 ```
 
-2. Depreciation issue by Python 3.12
+### 2. Depreciation issue by Python 3.12
     
 
 ```bash
@@ -355,7 +355,83 @@ Syncing projects: 100% (137/137), done.
 Hook 'python3 src/flutter/tools/pub_get_offline.py' took 14.53 secs
 Running hooks: 100% (14/14), done.
 ```
-    
+
+### 3. No module named 'pipes'
+
+```bash
+Traceback (most recent call last):
+  File "/Users/huym4/Documents/WORKING/SDK/flutter_forked_enginebuild/engine/src/flutter/third_party/depot_tools/ninja.py", line 14, in <module>
+    import gclient_paths
+  File "/Users/huym4/Documents/WORKING/SDK/flutter_forked_enginebuild/engine/src/flutter/third_party/depot_tools/gclient_paths.py", line 16, in <module>
+    import gclient_utils
+  File "/Users/huym4/Documents/WORKING/SDK/flutter_forked_enginebuild/engine/src/flutter/third_party/depot_tools/gclient_utils.py", line 16, in <module>
+    import pipes
+ModuleNotFoundError: No module named 'pipes'
+```
+The problem is that: I'm using Python version 3.13. 
+However, the Python standard library module `pipes` was removed in Python 3.13. Older versions of the ninja Python package still import it
+There are two solutions in my mind:
+
+  1) Downgrade Python to 3.12
+
+  2) Upgrade ninja using by Flutter in DEPS file
+
+Old:
+
+```
+  'third_party/ninja': {
+    'packages': [
+      {
+        'package': 'infra/3pp/tools/ninja/${{platform}}',
+        'version': 'version:2@1.11.1.chromium.4',
+      }
+    ],
+    'dep_type': 'cipd',
+  },
+```
+New:
+
+```
+  'third_party/ninja': {
+    'packages': [
+      {
+        'package': 'infra/3pp/tools/ninja/${{platform}}',
+        'version': 'version:2@1.12.1.chromium.2',
+      }
+    ],
+    'dep_type': 'cipd',
+  },
+```
+
+### 4. skia_path does not exist
+
+```bash
+src [master●●] ./flutter/tools/gn --android --android-cpu arm64 --unoptimized
+Traceback (most recent call last):
+  File "./flutter/tools/gn", line 1372, in <module>
+    sys.exit(main(sys.argv))
+  File "./flutter/tools/gn", line 1351, in main
+    gn_args = to_command_line(to_gn_args(args))
+  File "./flutter/tools/gn", line 448, in to_gn_args
+    gn_args.update(setup_git_versions())
+  File "./flutter/tools/gn", line 356, in setup_git_versions
+    revision_args['skia_version'] = get_repository_version(skia_path)
+  File "./flutter/tools/gn", line 315, in get_repository_version
+    raise IOError('path does not exist')
+OSError: path does not exist
+```
+
+I think it's due to `gclient sync` somehow was not completed. Let's just retry it and add `-v` to see the details:
+
+```bash
+gclient sync -D -v
+```
+
+Here are my steps (after mono repo):
+
+1) Copy .gclient from template and put it in sdk root dir(it was in engine dir previously)
+
+2) Execute `gclient sync -D -v` from sdk root dir
 
 ### Conclusion
 
