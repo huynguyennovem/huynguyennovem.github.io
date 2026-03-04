@@ -10,8 +10,7 @@ tags: opensource, flutter, contribute
 
 ---
 
-Hi, I’m Huy, GitHub handle [@huycozy](https://github.com/huycozy).  
-I’m currently working as Flutter open-source engineer at [Codemagic](https://codemagic.io).  
+Hi, I’m Huy, GitHub handle [@huycozy](https://github.com/huycozy).
 So far, I’ve had [**45 PRs merged**](https://github.com/flutter/flutter/pulls?q=is%3Apr+author%3Ahuycozy+is%3Aclosed) into the Flutter repository.
 
 Today, I want to share the journey of fixing a Flutter issue that stayed open for nearly 6 years:  
