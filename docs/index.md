@@ -24,7 +24,8 @@ Hi there! I'm Huy, an open-source engineer passionate about contributing to the 
 - 🎤 **Community Speaker** - Presenting at tech events
 - 💻 **Open Source Developer** - Building and maintaining Flutter packages and projects
 
-## Feedbacks
+<div id="Feedback" class="section-anchor-target" aria-hidden="true"></div>
+## Feedback
 
 <div class="feedback-strip" aria-label="Feedback from people I have worked with" role="list">
   <article class="feedback-card feedback-card--default feedback-card--codemagic is-active" role="listitem" tabindex="0">

@@ -1,0 +1,51 @@
+.rst-content h1[id],
+.rst-content h2[id],
+.rst-content h3[id],
+.rst-content h4[id],
+.rst-content h5[id],
+.rst-content h6[id] {
+  scroll-margin-top: 4rem;
+}
+
+.section-copy-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.35rem;
+  color: #7a8492;
+  font-weight: 700;
+  font-size: 0.8em;
+  line-height: 1;
+  opacity: 0;
+  text-decoration: none;
+  transition: opacity 0.18s ease, color 0.18s ease;
+}
+
+.section-copy-link:hover,
+.section-copy-link:focus,
+.section-copy-link.is-copied {
+  opacity: 1;
+  color: #1f5fa8;
+  text-decoration: none;
+}
+
+.rst-content h1[id]:hover .section-copy-link,
+.rst-content h1[id]:focus-within .section-copy-link,
+.rst-content h2[id]:hover .section-copy-link,
+.rst-content h2[id]:focus-within .section-copy-link,
+.rst-content h3[id]:hover .section-copy-link,
+.rst-content h3[id]:focus-within .section-copy-link,
+.rst-content h4[id]:hover .section-copy-link,
+.rst-content h4[id]:focus-within .section-copy-link,
+.rst-content h5[id]:hover .section-copy-link,
+.rst-content h5[id]:focus-within .section-copy-link,
+.rst-content h6[id]:hover .section-copy-link,
+.rst-content h6[id]:focus-within .section-copy-link {
+  opacity: 0.65;
+}
+
+@media (hover: none) {
+  .section-copy-link {
+    opacity: 0.55;
+  }
+}
