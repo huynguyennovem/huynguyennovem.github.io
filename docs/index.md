@@ -76,7 +76,6 @@ Hi there! I'm Huy, an open-source engineer passionate about contributing to the 
       <p class="feedback-card__quote">"I worked with Huy at Codemagic, where we collaborated on fixing Flutter issues. Huy demonstrated strong attention to detail and a thoughtful approach to problem-solving. He carefully investigated issues to identify root causes and focused on implementing reliable fixes. He was also responsive, communicated clearly in discussions and pull requests, and collaborated well with others. Working with him was productive and straightforward."</p>
     </div>
   </article>
-  <!--
   <article class="feedback-card feedback-card--google" role="listitem" tabindex="0">
     <div class="feedback-card__summary">
       <div class="feedback-card__avatar-shell">
@@ -90,7 +89,7 @@ Hi there! I'm Huy, an open-source engineer passionate about contributing to the 
         <p class="feedback-card__role">Engineering Manager</p>
         <span class="feedback-card__badge feedback-card__badge--google">Google</span>
       </div>
-      <p class="feedback-card__quote">"Temporary feedback card for testing horizontal scroll. Replace this quote once the real feedback arrives."</p>
+      <p class="feedback-card__quote">"Huy has been an invaluable contributor to the Flutter ecosystem, demonstrating a deep commitment to accessibility and Material Design excellence. His impactful work ranges from fixing critical semantics issues across platforms to enhancing documentation and adding high-quality widget examples. Whether resolving subtle VoiceOver bugs or improving the diagnosticability of core styles, Huy's attention to detail and consistent dedication continues to improve Flutter's robustness and inclusivity."</p>
     </div>
   </article>
   <article class="feedback-card feedback-card--google" role="listitem" tabindex="0">
@@ -106,9 +105,10 @@ Hi there! I'm Huy, an open-source engineer passionate about contributing to the 
         <p class="feedback-card__role">Software Engineer</p>
         <span class="feedback-card__badge feedback-card__badge--google">Google</span>
       </div>
-      <p class="feedback-card__quote">"Temporary feedback card for testing horizontal scroll. Replace this quote once the real feedback arrives."</p>
+      <p class="feedback-card__quote">"Huy quickly went from submitting a few issue fixes to being a key part of Flutter's maintenance and development, proactively improving parts of the codebase and providing valuable insights to the team. He's the sort of engineer that can see the bigger picture of what he's working on and go beyond the task at hand. I wouldn't hesitate to work with him again in the future if given the chance."</p>
     </div>
   </article>
+  <!--
   <article class="feedback-card feedback-card--google" role="listitem" tabindex="0">
     <div class="feedback-card__summary">
       <div class="feedback-card__avatar-shell">

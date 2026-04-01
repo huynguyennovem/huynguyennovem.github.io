@@ -111,32 +111,57 @@
   --feedback-y: 77%;
 }
 
-.feedback-strip:has(.feedback-card:nth-of-type(4)) .feedback-card:nth-of-type(1) {
+.feedback-strip:has(.feedback-card:nth-of-type(5)):not(:has(.feedback-card:nth-of-type(6))) .feedback-card:nth-of-type(1) {
+  --feedback-x: 20%;
+  --feedback-y: 18%;
+}
+
+.feedback-strip:has(.feedback-card:nth-of-type(5)):not(:has(.feedback-card:nth-of-type(6))) .feedback-card:nth-of-type(2) {
+  --feedback-x: 12.5%;
+  --feedback-y: 50%;
+}
+
+.feedback-strip:has(.feedback-card:nth-of-type(5)):not(:has(.feedback-card:nth-of-type(6))) .feedback-card:nth-of-type(3) {
+  --feedback-x: 50%;
+  --feedback-y: 87%;
+}
+
+.feedback-strip:has(.feedback-card:nth-of-type(5)):not(:has(.feedback-card:nth-of-type(6))) .feedback-card:nth-of-type(4) {
+  --feedback-x: 80%;
+  --feedback-y: 18%;
+}
+
+.feedback-strip:has(.feedback-card:nth-of-type(5)):not(:has(.feedback-card:nth-of-type(6))) .feedback-card:nth-of-type(5) {
+  --feedback-x: 87.5%;
+  --feedback-y: 50%;
+}
+
+.feedback-strip:has(.feedback-card:nth-of-type(6)) .feedback-card:nth-of-type(1) {
   --feedback-x: 21%;
   --feedback-y: 23%;
 }
 
-.feedback-strip:has(.feedback-card:nth-of-type(4)) .feedback-card:nth-of-type(2) {
+.feedback-strip:has(.feedback-card:nth-of-type(6)) .feedback-card:nth-of-type(2) {
   --feedback-x: 14.5%;
   --feedback-y: 50%;
 }
 
-.feedback-strip:has(.feedback-card:nth-of-type(4)) .feedback-card:nth-of-type(3) {
+.feedback-strip:has(.feedback-card:nth-of-type(6)) .feedback-card:nth-of-type(3) {
   --feedback-x: 21%;
   --feedback-y: 77%;
 }
 
-.feedback-strip:has(.feedback-card:nth-of-type(4)) .feedback-card:nth-of-type(4) {
+.feedback-strip:has(.feedback-card:nth-of-type(6)) .feedback-card:nth-of-type(4) {
   --feedback-x: 79%;
   --feedback-y: 23%;
 }
 
-.feedback-strip:has(.feedback-card:nth-of-type(4)) .feedback-card:nth-of-type(5) {
+.feedback-strip:has(.feedback-card:nth-of-type(6)) .feedback-card:nth-of-type(5) {
   --feedback-x: 85.5%;
   --feedback-y: 50%;
 }
 
-.feedback-strip:has(.feedback-card:nth-of-type(4)) .feedback-card:nth-of-type(6) {
+.feedback-strip:has(.feedback-card:nth-of-type(6)) .feedback-card:nth-of-type(6) {
   --feedback-x: 79%;
   --feedback-y: 77%;
 }
