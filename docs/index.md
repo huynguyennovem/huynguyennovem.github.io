@@ -117,7 +117,6 @@ I'm currently open to new opportunities, especially Flutter projects. I prefer o
       <p class="feedback-card__quote">"Huy quickly went from submitting a few issue fixes to being a key part of Flutter's maintenance and development, proactively improving parts of the codebase and providing valuable insights to the team. He's the sort of engineer that can see the bigger picture of what he's working on and go beyond the task at hand. I wouldn't hesitate to work with him again in the future if given the chance."</p>
     </div>
   </article>
-  <!--
   <article class="feedback-card feedback-card--google" role="listitem" tabindex="0">
     <div class="feedback-card__summary">
       <div class="feedback-card__avatar-shell">
@@ -131,10 +130,9 @@ I'm currently open to new opportunities, especially Flutter projects. I prefer o
         <p class="feedback-card__role">Software Engineer</p>
         <span class="feedback-card__badge feedback-card__badge--google">Google</span>
       </div>
-      <p class="feedback-card__quote">"Temporary feedback card for testing horizontal scroll. Replace this quote once the real feedback arrives."</p>
+      <p class="feedback-card__quote">"Huy is an incredibly hardworking developer who is always willing to dive deep into complicated technical issues. We had a great time working together and contributing to the Flutter Material library; his dedication and focus on solving tough problems made him a fantastic partner in the development process."</p>
     </div>
   </article>
-  -->
 </div>
 
 ## Find Me Online
