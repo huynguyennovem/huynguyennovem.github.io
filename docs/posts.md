@@ -1,6 +1,18 @@
 # Blog Posts
 
-*14 posts*
+*15 posts*
+
+## [Publishing your Flutter iOS app to the App Store with ASC CLI](posts/publishing-your-flutter-ios-app-to-the-app-store-with-asc-cli.md)
+
+*April 16, 2026*
+ · `flutter` `ios` `appstore` `cli` `publishing`
+
+
+Publishing an iOS build from Flutter can be quick when you use ASC CLI. This short tutorial shows the flow I usually follow to upload a new iOS build to App Store Connect.
+
+[Read more →](posts/publishing-your-flutter-ios-app-to-the-app-store-with-asc-cli.md)
+
+---
 
 ## [Fix a Flutter framework issue from scratch](posts/fix-a-flutter-framework-issue-from-scratch.md)
 

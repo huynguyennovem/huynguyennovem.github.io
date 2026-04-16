@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Huy Nguyen" /><link rel="canonical" href="https://huynq.dev/posts/publishing-your-flutter-ios-app-to-the-app-store-with-asc-cli/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Publishing your Flutter iOS app to the App Store with ASC CLI - Huy Nguyen Blog</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../stylesheets/home-feedback.css" rel="stylesheet" />
+        <link href="../../stylesheets/heading-links.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Publishing your Flutter iOS app to the App Store with ASC CLI";
+        var mkdocs_page_input_path = "posts/publishing-your-flutter-ios-app-to-the-app-store-with-asc-cli.md";
+        var mkdocs_page_url = "/posts/publishing-your-flutter-ios-app-to-the-app-store-with-asc-cli/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script>
+ 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RJT4VPTE10"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RJT4VPTE10');
+</script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Huy Nguyen Blog
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../experiences/">Experiences</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Posts</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../talks/">Talks</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../community_activities/">Community Activities</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../projects_packages/">Projects and packages</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../contributions/">Contributions</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Huy Nguyen Blog</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Publishing your Flutter iOS app to the App Store with ASC CLI</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p>Publishing an iOS build from Flutter can be quick when you use ASC CLI.</p>
+<p>This short tutorial shows the flow I usually follow to upload a new iOS build to App Store Connect.
+I have been using this flow while building and shipping <a href="https://compactkit.cc/"><strong>CompactKit</strong></a>.</p>
+<h2 id="1-build-the-ipa-from-your-flutter-project">1. Build the IPA from your Flutter project</h2>
+<pre><code class="language-sh">flutter build ipa
+</code></pre>
+<p>After the build finishes, your IPA should be at:</p>
+<p><code>build/ios/ipa/&lt;app-name&gt;.ipa</code></p>
+<h2 id="2-install-asc-cli">2. Install ASC CLI</h2>
+<p>Go to the GH page: <a href="https://github.com/rudrankriyam/App-Store-Connect-CLI">App-Store-Connect-CLI</a>, then follow the <strong>Install</strong> section.</p>
+<p>Once ASC is installed and authenticated on your machine, you can publish directly from terminal.</p>
+<h2 id="3-get-your-app-id">3. Get your app ID</h2>
+<pre><code class="language-sh">asc apps
+</code></pre>
+<p>Find your app in the list and copy its app ID.</p>
+<h2 id="4-publish-to-app-store-connect">4. Publish to App Store Connect</h2>
+<pre><code class="language-sh">asc publish appstore --app &lt;app-id&gt; --ipa &lt;path-to-ipa-file&gt;
+</code></pre>
+<p><img alt="ASC CLI upload finished" src="../../img/posts/asc%20cli%20finish.png" /></p>
+<p>When the upload completes, open <a href="https://appstoreconnect.apple.com/">App Store Connect</a> and navigate to your app.</p>
+<p>You should see a new version created automatically and attached to the uploaded build:</p>
+<p><img alt="New version in App Store Connect" src="../../img/posts/appstore%20new%20version.png" /></p>
+<p>Then fill in <strong>What's New</strong> and submit for review:</p>
+<p><img alt="Fill in What's New before submitting" src="../../img/posts/what%20news.png" /></p>
+<h2 id="built-from-real-experience-compactkit">Built from real experience: CompactKit</h2>
+<p>I wrote this guide from my own release workflow while building <strong>CompactKit</strong>.
+If you want to see a real app shipped, check it out here 👉 <a href="https://compactkit.cc/">compactkit.cc</a></p>
+<p>That's all! Happy publishing!</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../javascripts/home-feedback.js"></script>
+      <script src="../../javascripts/heading-links.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
