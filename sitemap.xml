@@ -2,106 +2,110 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://huynq.dev/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://huynq.dev/about/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://huynq.dev/community_activities/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://huynq.dev/contributions/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://huynq.dev/experiences/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://huynq.dev/posts/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://huynq.dev/projects_packages/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://huynq.dev/talks/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://huynq.dev/posts/11-manual-tests-before-publishing-your-flutter-app/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://huynq.dev/posts/bisecting-regression-issue-in-flutter/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://huynq.dev/posts/compiling-flutter-engine-locally-part-i/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://huynq.dev/posts/compiling-flutter-engine-locally-part-ii/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://huynq.dev/posts/compiling-flutter-engine-locally-part-iv/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://huynq.dev/posts/compiling-flutter-engine-locally-web-engine-part-iii/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://huynq.dev/posts/crafting-responsive-desktop-ui-for-overlayentry-in-flutter/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://huynq.dev/posts/fix-a-flutter-framework-issue-from-scratch/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-18</lastmod>
+    </url>
+    <url>
+         <loc>https://huynq.dev/posts/how-to-prevent-jetsam-oom-crash-on-ios-in-flutter-media-flow/</loc>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://huynq.dev/posts/integrating-flutter-module-into-your-ios-swiftui-project-in-5-steps/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://huynq.dev/posts/introduction-to-netshare-flutter-opensource-project/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://huynq.dev/posts/publish-a-landing-page-with-a-custom-domain-for-your-product/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://huynq.dev/posts/publishing-your-flutter-ios-app-to-the-app-store-with-asc-cli/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://huynq.dev/posts/releasing-flutter-projects-on-github/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://huynq.dev/posts/resolving-xcode-issue-unityadsh-file-not-found-error-when-building-ios-on-unity/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://huynq.dev/posts/streamlining-exiting-your-flutter-desktop-app-with-shortcut-keys/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://huynq.dev/talks/android-11-meetup/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://huynq.dev/talks/design-systems-in-flutter-talk/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://huynq.dev/talks/google-technologies-kickstart-gdsc-ptit/</loc>
-         <lastmod>2026-04-16</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
 </urlset>
