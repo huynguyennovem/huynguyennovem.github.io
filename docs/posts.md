@@ -1,6 +1,18 @@
 # Blog Posts
 
-*15 posts*
+*16 posts*
+
+## [How to prevent Jetsam/OOM crashes on iOS in Flutter media flows](posts/how-to-prevent-jetsam-oom-crash-on-ios-in-flutter-media-flow.md)
+
+*April 18, 2026*
+ · `flutter` `ios` `crashlytics` `memory` `performance`
+
+
+If your Flutter app crashes after camera/media handoff only in App Store review, it can be a memory-pressure termination (Jetsam). This post explains how to confirm the flow and reduce memory spikes.
+
+[Read more →](posts/how-to-prevent-jetsam-oom-crash-on-ios-in-flutter-media-flow.md)
+
+---
 
 ## [Publishing your Flutter iOS app to the App Store with ASC CLI](posts/publishing-your-flutter-ios-app-to-the-app-store-with-asc-cli.md)
 
