@@ -4,13 +4,14 @@ site_description: Huy Nguyen is an open-source engineer focused on Flutter, acce
 site_author: Huy Nguyen
 nav:
   - Home: index.md
-  - Experiences: experiences.md
   - Posts: posts.md
   - Talks: talks.md
   - About: about.md
   - Community Activities: community_activities.md
   - Projects and packages: projects_packages.md
   - Contributions: contributions.md
+exclude_docs: |
+  experiences.md
 theme:
   name: readthedocs
   custom_dir: overrides

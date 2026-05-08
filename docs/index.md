@@ -2,15 +2,6 @@
 
 Hi there! I'm Huy, an open-source engineer passionate about contributing to the Flutter ecosystem and sharing knowledge with the community.
 
-## Open to Work
-
-I'm currently open to new opportunities, especially Flutter projects. I prefer open-source work and remote-first roles.
-
-<div class="cta-links">
-  <a class="cta-button" href="experiences/">See my experience</a>
-  <a class="cta-button cta-button--secondary" href="files/Nguyen Quang Huy-Software Engineer.pdf" target="_blank" rel="noopener">View my CV</a>
-</div>
-
 ## 📝 Highlighted Posts
 
 - **[Fix a Flutter framework issue from scratch](posts/fix-a-flutter-framework-issue-from-scratch.md)** · *December 12, 2025*
