@@ -1,21 +1,33 @@
 1. Netshare
 
-An open-source Flutter project that makes it easy to share data in a local network.
+    An open-source Flutter project that makes it easy to share data in a local network.
 
-Check it out for details 👉 [https://github.com/NetShareOSS/netshare](https://github.com/NetShareOSS/netshare)
+    Check it out for details 👉 [https://netfshare.site/](https://netfshare.site/)
 
-2. open_dir package
+2. MenGauge
 
-A Flutter plugin for opening native directory on desktop platforms by given path.
+    An indie project built with Flutter, published on Android and iOS stores. Check it out 👉 [https://mengauge.app](https://mengauge.app)
 
-Check it on pub.dev: [https://pub.dev/packages/open_dir](https://pub.dev/packages/open_dir)
+3. CompactKit
 
-3. uni_selected_button
+    CompactKit is a simple tool to compress and optimize photos, videos, PDFs, documents, and code.
 
-A Flutter widget that is a group of buttons where only one button can be selected at a time.
+    Check it out 👉 [https://compactkit.cc/](https://compactkit.cc/)
 
-Check it on pub.dev: [https://pub.dev/packages/uni_selected_button](https://pub.dev/packages/uni_selected_button)
+4. open_dir package
 
-MenGauge
+    A Flutter plugin for opening native directory on desktop platforms by given path.
 
-An indie project built with Flutter, published on Android and iOS stores. Check it out 👉 [https://mengauge.app](https://mengauge.app)
+    Check it on pub.dev: [https://pub.dev/packages/open_dir](https://pub.dev/packages/open_dir)
+
+5. uni_selected_button
+
+    A Flutter widget that is a group of buttons where only one button can be selected at a time.
+
+    Check it on pub.dev: [https://pub.dev/packages/uni_selected_button](https://pub.dev/packages/uni_selected_button)
+
+6. netshare_saf
+
+    Flutter plugin that exposes the Android Storage Access Framework (SAF) APIs needed by NetShare-style local file hosting apps.
+
+    Check it out on GitHub: [NetShareOSS/netshare_saf](https://github.com/NetShareOSS/netshare_saf)
