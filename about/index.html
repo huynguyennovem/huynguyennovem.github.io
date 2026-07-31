@@ -4,34 +4,84 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Huy Nguyen" /><link rel="canonical" href="https://huynq.dev/about/" />
-      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <link rel="icon" href="../img/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="shortcut icon" href="../img/favicon.ico" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
     <title>About - Huy Nguyen Blog</title>
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
-        <link href="../stylesheets/home-feedback.css" rel="stylesheet" />
+    <link rel="preload" href="../css/theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="preload" href="../css/theme_extra.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet" href="../css/theme.css" />
+      <link rel="stylesheet" href="../css/theme_extra.css" />
+    </noscript>
+    <style>
+      /* Critical shell styles while theme.css loads asynchronously */
+      html { box-sizing: border-box; }
+      *, *::before, *::after { box-sizing: inherit; }
+      body {
+        margin: 0;
+        color: #404040;
+        background: #fcfcfc;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.5;
+      }
+      .wy-grid-for-nav { position: relative; width: 100%; }
+      .wy-nav-side {
+        position: fixed; top: 0; bottom: 0; left: 0; width: 300px;
+        background: #343131; z-index: 200; overflow-y: auto;
+      }
+      .wy-side-nav-search {
+        background: #2980b9; padding: 0.8rem 1rem; color: #fcfcfc; text-align: center;
+      }
+      .wy-side-nav-search a { color: #fcfcfc; text-decoration: none; font-weight: 700; }
+      .wy-nav-content-wrap { margin-left: 300px; background: #fcfcfc; min-height: 100vh; }
+      .wy-nav-content { padding: 1.6rem 3em; max-width: 800px; }
+      .wy-nav-top { display: none; background: #2980b9; color: #fcfcfc; padding: 0.4rem 0.8rem; }
+      .wy-menu-vertical a { color: #d9d9d9; text-decoration: none; display: block; padding: 0.4rem 1.5rem; }
+      .rst-content h1 { margin-top: 0; font-size: 2rem; }
+      @media screen and (max-width: 768px) {
+        .wy-nav-side { left: -300px; }
+        .wy-nav-side.shift { left: 0; }
+        .wy-nav-content-wrap { margin-left: 0; }
+        .wy-nav-content-wrap.shift { left: 300px; position: relative; }
+        .wy-nav-top { display: block; }
+        .wy-nav-content { padding: 1rem 1.2rem; }
+      }
+    </style>
+        <link href="../stylesheets/perf.css" rel="stylesheet" />
         <link href="../stylesheets/heading-links.css" rel="stylesheet" />
     
       <script>
-        // Current page data
         var mkdocs_page_name = "About";
         var mkdocs_page_input_path = "about.md";
         var mkdocs_page_url = "/about/";
       </script>
     
-    <!--[if lt IE 9]>
-      <script src="../js/html5shiv.min.js"></script>
-    <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script>
  
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RJT4VPTE10"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  function loadGtag() {
+    if (window.__gtagLoaded) return;
+    window.__gtagLoaded = true;
+    var s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RJT4VPTE10';
+    s.async = true;
+    document.head.appendChild(s);
     gtag('js', new Date());
-    gtag('config', 'G-RJT4VPTE10');
+    gtag('config', 'G-RJT4VPTE10', { anonymize_ip: true });
+  }
+  ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (evt) {
+    window.addEventListener(evt, loadGtag, { once: true, passive: true });
+  });
+  // Fallback for users who never interact
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(function () { setTimeout(loadGtag, 5000); }, { timeout: 10000 });
+  } else {
+    window.addEventListener('load', function () { setTimeout(loadGtag, 8000); });
+  }
 </script>
 
 </head>
@@ -39,10 +89,11 @@
 <body class="wy-body-for-nav" role="document">
 
   <div class="wy-grid-for-nav">
+
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Huy Nguyen Blog
+          <a href=".." class="site-title"> Huy Nguyen Blog
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -84,11 +135,15 @@
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <button type="button" data-toggle="wy-nav-top" class="mobile-nav-toggle" aria-label="Open navigation menu">
+            <span></span><span></span><span></span>
+          </button>
           <a href="..">Huy Nguyen Blog</a>
         
       </nav>
+
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
@@ -140,18 +195,9 @@
     
   </span>
 </div>
-    <script src="../js/jquery-3.6.0.min.js"></script>
     <script>var base_url = "..";</script>
-    <script src="../js/theme_extra.js"></script>
-    <script src="../js/theme.js"></script>
-      <script src="../javascripts/home-feedback.js"></script>
-      <script src="../javascripts/heading-links.js"></script>
-      <script src="../search/main.js"></script>
-    <script>
-        jQuery(function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        });
-    </script>
+    <script src="../javascripts/nav.js" defer></script>
+        <script src="../javascripts/heading-links.js"></script>
 
 </body>
 </html>
