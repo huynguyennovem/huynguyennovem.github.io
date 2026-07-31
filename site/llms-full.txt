@@ -1,0 +1,3669 @@
+# Huy Nguyen — Full Context
+
+> Expanded LLM context for https://huynq.dev. Includes about, projects, contributions, talks, and all blog posts.
+
+Generated from the site markdown sources. For a curated index, see https://huynq.dev/llms.txt
+
+---
+
+## About
+
+Source: https://huynq.dev/about/
+
+Glad you come here!
+
+I'm Huy, an open-source engineer passionate about contributing to the Flutter ecosystem and sharing knowledge with the community. I have a GitHub handle [huycozy](https://github.com/huycozy). You may find me hanging around on [https://github.com/flutter/flutter](https://github.com/flutter/flutter) :)
+
+Check out [huynguyennovem](https://github.com/huynguyennovem) as my other GitHub account for open-source projects and plugins.
+
+---
+
+## Projects and packages
+
+Source: https://huynq.dev/projects_packages/
+
+1. Netshare
+
+    An open-source Flutter project that makes it easy to share data in a local network.
+
+    Check it out for details 👉 [https://netfshare.site/](https://netfshare.site/)
+
+2. MenGauge
+
+    An indie project built with Flutter, published on Android and iOS stores. Check it out 👉 [https://mengauge.app](https://mengauge.app)
+
+3. CompactKit
+
+    CompactKit is a simple tool to compress and optimize photos, videos, PDFs, documents, and code.
+
+    Check it out 👉 [https://compactkit.cc/](https://compactkit.cc/)
+
+4. open_dir package
+
+    A Flutter plugin for opening native directory on desktop platforms by given path.
+
+    Check it on pub.dev: [https://pub.dev/packages/open_dir](https://pub.dev/packages/open_dir)
+
+5. uni_selected_button
+
+    A Flutter widget that is a group of buttons where only one button can be selected at a time.
+
+    Check it on pub.dev: [https://pub.dev/packages/uni_selected_button](https://pub.dev/packages/uni_selected_button)
+
+6. netshare_saf
+
+    Flutter plugin that exposes the Android Storage Access Framework (SAF) APIs needed by NetShare-style local file hosting apps.
+
+    Check it out on GitHub: [NetShareOSS/netshare_saf](https://github.com/NetShareOSS/netshare_saf)
+
+---
+
+## Contributions
+
+Source: https://huynq.dev/contributions/
+
+I. Flutter repository
+
+Issues involved: [is:issue involves:huycozy](https://github.com/flutter/flutter/issues?q=is%3Aissue+involves%3Ahuycozy)
+
+Issues reported: [is:issue author:huycozy](https://github.com/flutter/flutter/issues?q=is%3Aissue+author%3Ahuycozy+)
+
+PRs: [is:pr author:huycozy](https://github.com/flutter/flutter/pulls?q=is%3Apr+author%3Ahuycozy+is%3Aclosed+)
+
+II. Community packages/plugins
+
+Author of packages/plugins:
+
+[https://pub.dev/packages/open_dir](https://pub.dev/packages/open_dir)
+
+[https://pub.dev/packages/uni_selected_button](https://pub.dev/packages/uni_selected_button)
+
+Contribute to [flutter_downloader](https://github.com/fluttercommunity/flutter_downloader/pulls/huynguyennovem)
+
+---
+
+## Community activities
+
+Source: https://huynq.dev/community_activities/
+
+**I. GDG DEVFEST HANOI 2025**
+
+Be a speaker at 𝐆𝐃𝐆 𝐃𝐞𝐯𝐅𝐞𝐬𝐭 𝐇𝐚𝐧𝐨𝐢 𝟐𝟎𝟐𝟓 with topic Design Systems in Flutter: Today, Tomorrow, and Beyond
+
+[Read more →](talks/design-systems-in-flutter-talk.md)
+
+**II. GLOBAL ENTREPREP INCUBATOR 2025**
+
+Be a mentor for a startup team in tech
+
+Link to activity: [https://www.linkedin.com/posts/global-entreprep-incubator_ge25-meet-the-mentors-part-7-ge25-continues-ugcPost-7366737453195386880-i3Gd](https://www.linkedin.com/posts/global-entreprep-incubator_ge25-meet-the-mentors-part-7-ge25-continues-ugcPost-7366737453195386880-i3Gd)
+
+I**II. GDSC Hackathon Vietnam 2024**
+
+Be a Flutter mentor for participants, training teams, and acting as competition judges.
+
+Link to Activity: [https://www.facebook.com/gdschackathonvietnam](https://www.facebook.com/gdschackathonvietnam)
+
+**IV. Online Codelab Challenge - GDG Devfest Hanoi 2022**
+
+Be a Flutter mentor for participants at Codelab Challenge - Devfest Hanoi 2022. Guide participants to implement codelabs with Material Design, Flutter basic components and Firebase in Flutter on Cloud Run environment.
+
+Link to Activity: [https://gdg.community.dev/events/details/google-gdg-cloud-hanoi-presents-gdg-devfest-hanoi-2022/](https://gdg.community.dev/events/details/google-gdg-cloud-hanoi-presents-gdg-devfest-hanoi-2022/)
+
+---
+
+## Talks index
+
+Source: https://huynq.dev/talks/
+
+# Talks
+
+## [Design Systems in Flutter: Today, Tomorrow, and Beyond](talks/design-systems-in-flutter-talk.md)
+
+*November 19, 2025*
+ · `flutter` `community` `gdg` `techtalks`
+
+At GDG DevFest Hanoi on 15 November 2025, I had the opportunity to share a topic about “Design Systems in Flutter: Today, Tomorrow, and Beyond”.
+
+[Read more →](talks/design-systems-in-flutter-talk.md)
+
+## [Google Technologies Kickstart for Student - GDSC PTIT](talks/google-technologies-kickstart-gdsc-ptit.md)
+
+*April 14, 2025*
+ · `flutter` `community` `gdsc` `student`
+
+Be a speaker for the Google Technologies Kickstart for Student series of events organized by GDSC PTIT. I bring to students the topic "Boost up your Flutter development with open source projects" and hands-on lab “Debug layout issue with Flutter Inspector tool”.
+
+[Read more →](talks/google-technologies-kickstart-gdsc-ptit.md)
+
+## [Android 11 Meetup](talks/android-11-meetup.md)
+
+*August 1, 2020*
+ · `android` `community` `meetup`
+
+After Android 11 was released, I had the opportunity to share a topic about “Android 11: Behavior changes for apps”.
+
+[Read more →](talks/android-11-meetup.md)
+
+---
+
+## Talk: Android 11 Meetup
+
+Source: https://huynq.dev/talks/android-11-meetup/
+
+After Android 11 was released, I had the opportunity to share a topic about “Android 11:Behavior changes for apps”.
+
+Link to Activity: [https://gdg.community.dev/events/details/google-gdg-cloud-hanoi-presents-android-11-meetup-gdg-cloud-hanoi-online-event/](https://gdg.community.dev/events/details/google-gdg-cloud-hanoi-presents-android-11-meetup-gdg-cloud-hanoi-online-event/)
+
+---
+
+## Talk: Design Systems In Flutter Talk
+
+Source: https://huynq.dev/talks/design-systems-in-flutter-talk/
+
+At **GDG DevFest Hanoi** on 15 November 2025, I had the opportunity to share a topic about **“Design Systems in Flutter: Today, Tomorrow, and Beyond**”.
+
+It was an energizing room, with many developers and curious people wanting to understand how UI, frameworks, and design methodology are evolving together. In this post, I’d like to wrap up the session highlights and capture what we explored during the talk.
+
+## 🧩 1. What is a Design System?
+
+I kicked off the session with the basics:  
+**What exactly is a design system?**
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1763524289309/57a132b4-fcee-403d-ad3c-b2fa4056c548.png)
+
+Referring to **Figma’s** [**blog post**](https://www.figma.com/blog/design-systems-101-what-is-a-design-system/#design-systems-and-ux-more-than-just-aesthetics), we explored design systems as a shared language - a combination of **principles, patterns, components, tokens, and documentation** that help teams build consistent interfaces faster and with fewer decisions.
+
+Beyond being a repository of reusable pieces, design systems are about alignment - reducing ambiguity, increasing velocity, and keeping products visually coherent even as teams scale.
+
+## 🎨 2. Material Design as an example
+
+To ground the concept, I walked through one of the most influential design systems of our era: **Material Design**.
+
+We explored:
+
+* Its **history**, from 2014 to 2025
+    
+    ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1763524399982/628ac455-06aa-43a3-82e5-7f0c3d5655f5.png)
+    
+* It also came along with introduction videos showing the evolution through Material 1 → Material 2 → Material 3 → Material 3 Expressive
+    
+    ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1763524422290/b28a92d6-c0d8-4a31-a083-d3396bccfccd.png)
+    
+
+Material is more than just a theme - it’s a milestone in unifying design language across platforms, and it helps explain why design systems matter at framework level.
+
+## 3\. Introducing “Decoupling Design in Flutter”
+
+This was the core of the talk: an inside look at the **“Decoupling Design in Flutter”** project currently being started and actively worked on by Flutter team.
+
+A fun [demo](https://df2025demo.codemagic.app) showing what built-in design systems in Flutter look like:
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1763528217042/7fc58cf8-3aaf-48e8-9a16-98b7a7f80957.gif)
+
+### Why the decoupling project exists
+
+I shared the context that led to this initiative:
+
+* Flutter now spans **web, desktop** platforms, but maintaining built-in design libraries inside the SDK doesn't scale well.
+    
+* The community increasingly asks for support for **third-party design systems** like Fluent UI, Yaru, Shadcn, Hux, Moon, and more.
+    
+
+The arrival of **Material 3 Expressive (May 2025)** and Apple’s **iOS 26 “Liquid Glass”** design direction signaled a shift - UI design is becoming more dynamic and expressive than ever.
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1763528028920/d2f0d6eb-06be-4b15-8e63-454ab82154cc.jpeg)
+
+### The 3 Core Problems Today
+
+I highlighted three major limitations in the current Flutter UI architecture:
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1763528390753/ab8cf20d-2c93-42d4-86e6-9b6f8504850b.jpeg)
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1763527911134/7b60ffa9-6000-44d2-8b3c-212ea5c7f4e9.jpeg)
+
+#### **1\. Forced Migrations**
+
+Big UI shifts- like Material 2 → Material 3 often require massive refactors just to get essential fixes or platform support. Teams and developers pay a high maintenance cost.
+
+#### **2\. Slow Updates**
+
+Material and Cupertino updates are tied to Flutter’s quarterly releases. This delays bug fixes, design refinements, and feature updates that users expect sooner.
+
+#### **3\. Custom UI Limits**
+
+Flutter’s core logic is tightly bound to Material, making custom design systems harder to build. Developers often end up duplicating components or losing accessibility features.
+
+These problems become more visible while the ecosystem grows.
+
+---
+
+### 🎯 Project Goals & Targets
+
+The Flutter team aims to solve these issues with a long-term architectural effort.
+
+Key goals:
+
+* **More flexibility**: Let teams choose and swap design libraries without heavy refactors.
+    
+* **Faster updates**: Material and Cupertino shouldn’t be locked to framework & engine releases.
+    
+* **Lightweight framework**: Reduce the core SDK’s size and responsibility.
+    
+* **Better foundations**: Invest in the core widget library so design systems can layer on top cleanly.
+    
+
+### 📦 What’s Changing?
+
+The big shift:  
+**Material and Cupertino will be moved out of Flutter’s core SDK.**
+
+They will live as **standalone first-party packages** in [`flutter/packages`](https://github.com/flutter/packages) repo and on [pub.dev](http://pub.dev).  
+This makes the framework:
+
+* lighter
+    
+* more modular
+    
+* able to iterate faster
+    
+* friendlier to 3rd-party design systems
+    
+
+Alongside that, Flutter is significantly investing in the **core widgets library**, making it a stronger foundation for any design system.
+
+### Project Timeline
+
+I shared the plan announced by the Flutter team:
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1763528607169/fa36ea73-43f2-4f64-8451-c881fc66ef3a.png)
+
+* Phase 1 (from July - End 2025):
+    
+    * Reinforcement - A Better Foundation Critical Pre-Decoupling Refactoring
+        
+    * Ongoing Reinforcement and Community Collaboration
+        
+* Phase 2 (Early 2026)**:** Relocation - Establishing New Packages and a Faster Release Process
+    
+* Phase 3 (Late 2026 and Beyond)**:** Removal: A Phased and Predictable Deprecation
+    
+
+This is a multi-year effort, and when completed, apps will need to **migrate to use external Material/Cupertino packages** but with clear guides and tooling to support the transition.
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1763526707141/e6b13d2d-1ca1-4c57-8c22-28f218b28144.png)
+
+## 4\. Community-Built Design Systems
+
+After discussing the upcoming changes, I showcased examples of thriving community design systems, including demos and visuals.
+
+These included:
+
+* Fluent UI
+    
+* Yaru
+    
+* Shadcn
+    
+* Hux
+    
+* Moon
+    
+* And several experimental or indie design libraries
+    
+
+The takeaway:  
+Flutter’s future UI ecosystem will be more modular, expressive, and diverse than ever.
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1763527269700/a7cb9cf7-39e7-46af-b131-27119b9138b9.jpeg)
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1763527243399/fe64e0c4-cd7e-4b03-95b6-682b4071ec0e.jpeg)
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1763527275338/a427dbe7-85a3-4565-977e-059591a20dcc.jpeg)
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1763527283577/db819b4e-83d6-44a4-b645-bd753af65019.jpeg)
+
+## 5\. Introducing Flutter Phở community 🇻🇳
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1763527439097/dadbe02a-21d5-428e-bf63-ad9336656403.png)
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1763527500068/1b19a8fa-77b6-40eb-8608-14d5947e8d6d.png)
+
+One highlight of my talk was sharing about [**Flutter Phở**](https://www.facebook.com/groups/fluttervietnam), a new community initiative in Vietnam.
+
+I explained:
+
+* Why the community was started
+    
+* The desire to bring local meetups and events similar to global Flutter communities
+    
+* The goal of building a space where Vietnamese Flutter developers can connect, learn, and grow together
+    
+
+The response from the audience was incredibly encouraging. Many developers asked how they can join future events, exactly the kind of energy that sparks a strong community.
+
+## 6\. A Little Fun: Game time
+
+To close the session, we played a quick Kahoot quiz, equal parts fun and chaotic 😄  
+It was a great way to test what people learned, spark laughs, and end the session with high spirits before moving into networking.
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1763527657915/c7f6d81a-bed1-4347-a996-86c6dea6a74d.jpeg)
+
+**Disclaimer:** Everything in this talk comes from Flutter’s public documents and [design](http://flutter.dev/go/decouple-design) proposals. I’m not speaking on behalf of the Flutter team, just sharing what’s publicly known.
+
+I also expect to listen to all your [feedback](https://docs.google.com/forms/d/1EDPH4qA82_AxmnsWjTuVUVEEv-bh5Zwj-ZGI_VqYCIA/edit) and questions, if any:
+
+Feel free to look again at my slide for the talk [here](https://docs.google.com/presentation/d/1b-8wf0A77Vxf2L9IVUpKe5Nsr-F0kfwEJWL_hEhGGDA/edit?usp=sharing).
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1763528800108/c878dd5c-9f3f-4b57-a9e3-dab621a0a1ab.png)
+
+---
+
+## Talk: Google Technologies Kickstart Gdsc Ptit
+
+Source: https://huynq.dev/talks/google-technologies-kickstart-gdsc-ptit/
+
+Be a speaker for the **Google Technologies Kickstart for Student** series of events organized by **GDSC PTIT**. 
+
+I brought to students the topic **"Boost up your Flutter development with open source projects"** and conducted a hands-on lab **“Debug layout issue with Flutter Inspector tool”**.
+
+Link to Activity: [https://www.facebook.com/share/p/16yD8oivhz/](https://www.facebook.com/share/p/16yD8oivhz/)
+
+---
+
+## Post: Resolving "Xcode issue UnityAds.h file not found" error when building iOS on Unity
+
+Source: https://huynq.dev/posts/resolving-xcode-issue-unityadsh-file-not-found-error-when-building-ios-on-unity/
+
+I tried this way and it seems to work for me:
+
+1. Create pod: cd to the generated iOS project, `pod init`, then add pod UnityAds, follow this [https://docs.unity.com/en-us/grow/ads/ios-sdk/install-sdk](https://docs.unity.com/en-us/grow/ads/ios-sdk/install-sdk)
+    
+
+```plaintext
+target 'Unity-iPhone' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Unity-iPhone
+  pod 'UnityAds'
+
+  target 'Unity-iPhone Tests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+```
+
+2. run `pod install`
+    
+3. On XCode, go to Frameworks, Libraries and Embedded Content, add `UnityAds.xcframework`
+    
+4. Reopen XCode with `.xcworkspace` file. It should appear after installing a plugin
+    
+5. Product &gt; Archive again
+
+---
+
+## Post: 11 manual tests before publishing your Flutter app
+
+Source: https://huynq.dev/posts/11-manual-tests-before-publishing-your-flutter-app/
+
+1. **Run** `flutter analyze`, `flutter run -v`, and go through the output logs.  
+    This helps you catch unresolved warnings in the code and also check if you’ve accidentally printed any sensitive information to the console.
+    
+2. **Run** `flutter run --profile`.  
+    Use Flutter DevTools to monitor your app’s performance. Watch out for screens with too many janks or overloaded raster threads. These might indicate issues like loading large images, performing heavy tasks on the main thread, or improperly optimized scrollable lists.
+    
+3. **Run** `flutter run --release`.  
+    This allows you to check whether the release build is smaller (IPA, AAB/APK) due to tree shaking, and whether startup time and overall performance improve. Most importantly, confirm that the app doesn't crash. Some bugs only appear in release mode, such as assertion errors, dynamic library loading issues on Android, viewport dimension problems, etc.
+    
+4. **Test on all available devices and OS versions, if any.**  
+    This helps detect compatibility issues you might miss when developing on a particular machine. Consider using [Firebase Test Lab](https://firebase.google.com/docs/test-lab) for more comprehensive testing.
+    
+5. **If your budget allows, get at least one Android device from each major Chinese OEM (e.g: Xiaomi, Huawei) and a Samsung Galaxy.**  
+    Impeller-related bugs (text rendering, images, scrolling) and even fatal crashes are commonly found on these devices. Although most of them get fixed quickly, there’s no guarantee that all edge cases are covered before they hit production.
+    
+6. **Integrate an analytics tool to catch crashes early.**  
+    Tools like Firebase Analytics or Sentry can help detect crashes that don’t appear in release mode, beta/closed testing (Android), or TestFlight (iOS), but only emerge in production.
+    
+7. **Test app behavior with OS-specific gestures and settings:**  
+    Examples include gesture-based navigation (edge-swipe back) on both Android and iOS, and scroll-to-top gestures for list views on iOS.
+    
+8. **Test foreground and background switching:**  
+    For example, use the app, then go to the home screen or recent apps menu and return. Ensure the app handles these transitions smoothly.
+    
+9. **Accessibility (a11y) testing:**  
+    Enable TalkBack (Android) and VoiceOver (iOS). Check whether the main features of the app are usable and whether screen readers correctly read all labels. Imagine using the app as someone with visual or auditory impairments.
+    
+10. **Test with Android Developer Options:**  
+    Enable **"Don’t keep activities"** and adjust **"Transition animation scale"** settings to test how your app handles system-level interruptions and UI animations.
+    
+11. **Test under poor network conditions:**  
+    On Android, use the emulator’s built-in network throttling. On iOS, use **Network Link Conditioner** available in Developer settings.
+    
+
+Happy testing!
+
+---
+
+## Post: Publishing your Flutter iOS app to the App Store with ASC CLI
+
+Source: https://huynq.dev/posts/publishing-your-flutter-ios-app-to-the-app-store-with-asc-cli/
+
+Publishing an iOS build from Flutter can be quick when you use ASC CLI.
+
+This short tutorial shows the flow I usually follow to upload a new iOS build to App Store Connect.
+I have been using this flow while building and shipping [**CompactKit**](https://compactkit.cc/).
+
+## 1. Build the IPA from your Flutter project
+
+```sh
+flutter build ipa
+```
+
+After the build finishes, your IPA should be at:
+
+`build/ios/ipa/.ipa`
+
+## 2. Install ASC CLI
+
+Go to the GH page: [App-Store-Connect-CLI](https://github.com/rudrankriyam/App-Store-Connect-CLI), then follow the **Install** section.
+
+Once ASC is installed and authenticated on your machine, you can publish directly from terminal.
+
+## 3. Get your app ID
+
+```sh
+asc apps
+```
+
+Find your app in the list and copy its app ID.
+
+## 4. Publish to App Store Connect
+
+```sh
+asc publish appstore --app  --ipa 
+```
+
+![ASC CLI upload finished](../img/posts/asc%20cli%20finish.png)
+
+When the upload completes, open [App Store Connect](https://appstoreconnect.apple.com/) and navigate to your app.
+
+You should see a new version created automatically and attached to the uploaded build:
+
+![New version in App Store Connect](../img/posts/appstore%20new%20version.png)
+
+Then fill in **What's New** and submit for review:
+
+![Fill in What's New before submitting](../img/posts/what%20news.png)
+
+## Built from real experience: CompactKit
+
+I wrote this guide from my own release workflow while building **CompactKit**.
+If you want to see a real app shipped, check it out here 👉 [compactkit.cc](https://compactkit.cc/)
+
+That's all! Happy publishing!
+
+---
+
+## Post: Compiling Flutter Engine Locally - Web engine (Part III)
+
+Source: https://huynq.dev/posts/compiling-flutter-engine-locally-web-engine-part-iii/
+
+In this part, we will try building Web engine and also handle some errors that may happen during the build. We will use `felt` tool for this. Before using it, let's add it to your PATH environment variables. The path would be: `ENGINE_ROOT/src/flutter/lib/web_ui/dev`. For e.g:
+
+```bash
+export PATH=/Users/huynq/Documents/GitHub/engine/src/flutter/lib/web_ui/dev:$PATH
+```
+
+Then you can call `felt` command from anywhere.
+
+Next, as common steps stated in previous tutorials, we need to check out engine commit we want to build with and also update dependencies. In this tutorial, I assume we use the latest engine revision from main branch.
+
+1. Update the Flutter Engine repo:
+    
+
+```bash
+➜  cd /Users/huynq/Documents/GitHub/engine/src/flutter
+➜  git pull upstream main
+```
+
+2. Update dependencies
+    
+
+```bash
+➜  engine gclient sync
+Syncing projects: 100% (137/137), done.                                                                            
+Hook 'python3 src/flutter/tools/pub_get_offline.py' took 14.53 secs
+Running hooks: 100% (14/14), done.
+```
+
+3. Felt build
+    
+
+This command will build Web engine target. Some targets could be used with: `sdk`, `canvaskit`, `canvaskit_chromium` and `skwasm`. You can check them all [here](https://github.com/flutter/engine/blob/main/lib/web_ui/README.md#felt-build).
+
+```bash
+➜  src git:(44ca359) felt build
+Running on MacOS. Will check the file and user limits.
+File limits too low increasing the file limits
+User limits too low increasing the user limits
+Running `dart pub get` in 'engine/src/flutter/lib/web_ui'
+Running gn...
+Generating GN files in: out/wasm_release
+Generating compile_commands took 39ms
+Done. Made 185 targets from 94 files in 3169ms
+Running autoninja...
+ninja: Entering directory `/Users/huynq/Documents/GitHub/engine/src/out/wasm_release'
+[139/2539] LINK canvaskit/canvaskit.js
+cache:INFO: generating system asset: symbol_lists/266569fa9c69a946597f128c95d4d54feb22c5ff.json... (this will be cached in "/Users/huynq/Documents/GitHub/engine/src/buildtools/emsdk/upstream/emscripten/cache/symbol_lists/266569fa9c69a946597f128c95d4d54feb22c5ff.json" for subsequent builds)
+cache:INFO:  - ok
+[2530/2539] LINK skwasm/skwasm.js
+cache:INFO: generating system asset: symbol_lists/8332cd38f4026705eee5a4cdaee53cba8dad116b.json... (this will be cached in "/Users/huynq/Documents/GitHub/engine/src/buildtools/emsdk/upstream/emscripten/cache/symbol_lists/8332cd38f4026705eee5a4cdaee53cba8dad116b.json" for subsequent builds)
+cache:INFO:  - ok
+cache:INFO: generating system asset: sysroot/lib/wasm32-emscripten/lto/crtbegin.o... (this will be cached in "/Users/huynq/Documents/GitHub/engine/src/buildtools/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/lto/crtbegin.o" for subsequent builds)
+system_libs:INFO: compiled 1 inputs
+cache:INFO:  - ok
+cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/lto/libGL-mt-webgl2.a... (this will be cached in "/Users/huynq/Documents/GitHub/engine/src/buildtools/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/lto/libGL-mt-webgl2.a" for subsequent builds)
+system_libs:INFO: compiled 4 inputs
+cache:INFO:  - ok
+cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/lto/libc_optz-mt.a... (this will be cached in "/Users/huynq/Documents/GitHub/engine/src/buildtools/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/lto/libc_optz-mt.a" for subsequent builds)
+system_libs:INFO: compiled 7 inputs
+cache:INFO:  - ok
+cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/lto/libbulkmemory.a... (this will be cached in "/Users/huynq/Documents/GitHub/engine/src/buildtools/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/lto/libbulkmemory.a" for subsequent builds)
+system_libs:INFO: compiled 4 inputs
+cache:INFO:  - ok
+cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/lto/libnoexit.a... (this will be cached in "/Users/huynq/Documents/GitHub/engine/src/buildtools/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/lto/libnoexit.a" for subsequent builds)
+system_libs:INFO: compiled 1 inputs
+cache:INFO:  - ok
+cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/lto/libc-mt.a... (this will be cached in "/Users/huynq/Documents/GitHub/engine/src/buildtools/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/lto/libc-mt.a" for subsequent builds)
+system_libs:INFO: compiled 1108 inputs
+cache:INFO:  - ok
+cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/lto/libdlmalloc-mt.a... (this will be cached in "/Users/huynq/Documents/GitHub/engine/src/buildtools/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/lto/libdlmalloc-mt.a" for subsequent builds)
+system_libs:INFO: compiled 1 inputs
+cache:INFO:  - ok
+cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/lto/libcompiler_rt-mt.a... (this will be cached in "/Users/huynq/Documents/GitHub/engine/src/buildtools/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/lto/libcompiler_rt-mt.a" for subsequent builds)
+system_libs:INFO: compiled 175 inputs
+cache:INFO:  - ok
+cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/lto/libc++-mt-noexcept.a... (this will be cached in "/Users/huynq/Documents/GitHub/engine/src/buildtools/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/lto/libc++-mt-noexcept.a" for subsequent builds)
+system_libs:INFO: compiled 49 inputs
+cache:INFO:  - ok
+cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/lto/libc++abi-mt-noexcept.a... (this will be cached in "/Users/huynq/Documents/GitHub/engine/src/buildtools/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/lto/libc++abi-mt-noexcept.a" for subsequent builds)
+system_libs:INFO: compiled 16 inputs
+cache:INFO:  - ok
+cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/lto/libsockets-mt.a... (this will be cached in "/Users/huynq/Documents/GitHub/engine/src/buildtools/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/lto/libsockets-mt.a" for subsequent builds)
+system_libs:INFO: compiled 21 inputs
+cache:INFO:  - ok
+[2539/2539] STAMP obj/default.stamp
+➜  src git:(44ca359)
+```
+
+4. Run your Flutter project
+    
+
+```bash
+➜  flutterm create demo_web_engine
+➜  cd demo_web_engine
+➜  demo_web_engine flutterm --local-web-sdk=wasm_release run -d chrome --local-engine-src-path=/Users/huynq/Documents/GitHub/engine/src
+Launching lib/main.dart on Chrome in debug mode...
+Warning: In index.html:37: Local variable for "serviceWorkerVersion" is deprecated. Use "{{flutter_service_worker_version}}" template token instead.
+Warning: In index.html:46: "FlutterLoader.loadEntrypoint" is deprecated. Use "FlutterLoader.load" instead.
+Waiting for connection from debug service on Chrome...             22.8s
+This app is linked to the debug service: ws://127.0.0.1:58589/P1bktcnKBgw=/ws
+Debug service listening on ws://127.0.0.1:58589/P1bktcnKBgw=/ws
+
+🔥  To hot restart changes while running, press "r" or "R".
+For a more detailed help message, press "h". To quit, press "q".
+
+A Dart VM Service on Chrome is available at: http://127.0.0.1:58589/P1bktcnKBgw=
+The Flutter DevTools debugger and profiler on Chrome is available at: http://127.0.0.1:9100?uri=http://127.0.0.1:58589/P1bktcnKBgw=
+```
+
+### Troubleshooting
+
+1. felt build failed: `buildtools/emsdk/upstream/emscripten/em++: No such file or directory`
+    
+
+```bash
+➜  src git:(44ca359) felt build
+Running on MacOS. Will check the file and user limits.
+File limits too low increasing the file limits
+Password:
+User limits too low increasing the user limits
+Running `dart pub get` in 'engine/src/flutter/lib/web_ui'
+Running gn...
+Generating GN files in: out/wasm_release
+Generating compile_commands took 44ms
+Done. Made 185 targets from 94 files in 3670ms
+Running autoninja...
+ninja: Entering directory `/Users/huynq/Documents/GitHub/engine/src/out/wasm_release'
+[7/4197] CXX canvaskit/obj/flutter/third_party/skia/src/ports/fontmgr_custom.SkFontMgr_custom.o
+FAILED: canvaskit/obj/flutter/third_party/skia/src/ports/fontmgr_custom.SkFontMgr_custom.o 
+/Users/huynq/Documents/GitHub/engine/src/buildtools/emsdk/upstream/emscripten/em++ --em-config /Users/huynq/Documents/GitHub/engine/src/buildtools/emsdk/.emscripten -MD -MF canvaskit/obj/flutter/third_party/skia/src/ports/fontmgr_custom.SkFontMgr_custom.o.d -DUSE_OPENSSL=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DSK_ENABLE_DUMP_GPU -DSK_FORCE_AAA -DSK_LEGACY_IGNORE_DRAW_VERTICES_BLEND_WITH_NO_SHADER -DSK_DISABLE_LEGACY_GRDIRECTCONTEXT_BOOLS -DSK_DISABLE_LEGACY_GRDIRECTCONTEXT_FLUSH -DSK_RESOLVE_FILTERS_BEFORE_RESTORE -DSK_DISABLE_LEGACY_SHADERCONTEXT -DSK_DISABLE_LOWP_RASTER_PIPELINE -DSK_FORCE_RASTER_PIPELINE_BLITTER -DSK_METAL_WAIT_UNTIL_SCHEDULED -DSK_DISABLE_EFFECT_DESERIALIZATION -DSK_ENABLE_PRECOMPILE -DSKNX_NO_SIMD -DSK_FORCE_8_BYTE_ALIGNMENT -DSK_DISABLE_TRACING -DSK_ASSUME_WEBGL=1 -DSK_USE_WEBGL -DSK_GANESH -DSK_GAMMA_APPLY_TO_A8 -DSKIA_IMPLEMENTATION=1 -DSK_TYPEFACE_FACTORY_FREETYPE -I../.. -Icanvaskit/gen -I../../flutter/third_party/skia -fno-strict-aliasing -fcolor-diagnostics -Wendif-labels -Werror -Wno-missing-field-initializers -Wno-unused-parameter -Wno-shift-negative-value -Wno-unused-function -Wno-unused-variable -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-implicit-int-float-conversion -Wno-deprecated-copy -Wno-psabi -Wno-deprecated-literal-operator -Wno-non-c-typedef-for-linkage -Wno-range-loop-construct -Wstring-conversion -Wnewline-eof -O3 -g0 -fvisibility-inlines-hidden -std=c++17 -fno-rtti   -c ../../flutter/third_party/skia/src/ports/SkFontMgr_custom.cpp -o canvaskit/obj/flutter/third_party/skia/src/ports/fontmgr_custom.SkFontMgr_custom.o
+/bin/sh: /Users/huynq/Documents/GitHub/engine/src/buildtools/emsdk/upstream/emscripten/em++: No such file or directory
+[16/4197] ACTION //flutter/web_sdk:web_engine_library(//build/toolchain/wasm:wasm)
+ninja: build stopped: subcommand failed.
+Pipeline experienced the following failures:
+  "ninja": Sub-process failed.
+Command: autoninja -C /Users/huynq/Documents/GitHub/engine/src/out/wasm_release
+Working directory: /Users/huynq/Documents/GitHub/engine/src/flutter/lib/web_ui
+Exit code: 1
+
+Test pipeline failed.
+```
+
+It's telling `emsdk` is missing from `buildtools` dir. You need to add it manually:
+
+* Step 1: Add `download_emsdk` to `engine/.gclient` file as below:
+    
+
+```bash
+solutions = [
+  {
+    "managed": False,
+    "name": "src/flutter",
+    "url": "git@github.com:huycozy/engine.git",
+    "custom_deps": {},
+    "deps_file": "DEPS",
+    "safesync_url": "",
+    "custom_vars": {"download_emsdk": True},
+  },
+]
+```
+
+* Step 2: Update dependencies again
+    
+
+```bash
+➜  engine gclient sync
+```
+
+Then you will see `emsdk` is downloaded in `buildtools`.
+
+2. `web` dependency error
+    
+
+You may hit errors like:
+
+```dart
+               ^
+../../.pub-cache/hosted/pub.dev/web-0.5.1/lib/src/dom/webrtc_encoded_transform.dart:148:34: Error: Type 'invalid-type' is not a valid type for external `dart:js_interop` APIs. The only valid types are: @staticInterop types, JS types from `dart:js_interop`, void, bool, num, double, int, String, and any extension type that erases to one of these types.
+Use one of the valid types instead.
+  external JSArray get contributingSources;
+                                 ^
+../../.pub-cache/hosted/pub.dev/web-0.5.1/lib/src/dom/webrtc_encoded_transform.dart:216:32: Error: Type 'invalid-type' is not a valid type for external `dart:js_interop` APIs. The only valid types are: @staticInterop types, JS types from `dart:js_interop`, void, bool, num, double, int, String, and any extension type that erases to one of these types.
+Use one of the valid types instead.
+  external JSPromise generateKeyFrame([String rid]);
+                               ^
+../../.pub-cache/hosted/pub.dev/web-0.5.1/lib/src/dom/webrtc_encoded_transform.dart:237:30: Error: Type 'invalid-type' is not a valid type for external `dart:js_interop` APIs. The only valid types are: @staticInterop types, JS types from `dart:js_interop`, void, bool, num, double, int, String, and any extension type that erases to one of these types.
+Use one of the valid types instead.
+  external JSPromise sendKeyFrameRequest();
+                             ^
+../../.pub-cache/hosted/pub.dev/web-0.5.1/lib/src/dom/webrtc_encoded_transform.dart:252:20: Error: Type 'invalid-type' is not a valid type for external `dart:js_interop` APIs. The only valid types are: @staticInterop types, JS types from `dart:js_interop`, void, bool, num, double, int, String, and any extension type that erases to one of these types.
+Use one of the valid types instead.
+  external factory RTCRtpScriptTransform(
+                   ^
+../../.pub-cache/hosted/pub.dev/web-0.5.1/lib/src/dom/xhr.dart:263:40: Error: Type 'invalid-type' is not a valid type for external `dart:js_interop` APIs. The only valid types are: @staticInterop types, JS types from `dart:js_interop`, void, bool, num, double, int, String, and any extension type that erases to one of these types.
+Use one of the valid types instead.
+  external JSArray getAll(String name);
+                                       ^
+Failed to compile application.
+```
+
+It could be `web` package version depreciation issue. Just try downgrading package version then retry.
+
+```bash
+dart pub downgrade web
+```
+
+Or use a specific package version in project:
+
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  web: 0.4.2
+```
+
+Hope this will be useful for you!
+
+Stay in touch with me for updates:
+
+* Twitter: [https://twitter.com/HuyNguyenTw](https://twitter.com/HuyNguyenTw)
+    
+* GitHub: [https://github.com/huynguyennovem](https://github.com/huynguyennovem)
+    
+* LinkedIn: [https://linkedin.com/in/huynguyennovem](https://linkedin.com/in/huynguyennovem)
+    
+
+### References
+
+* [https://github.com/flutter/flutter/wiki/Compiling-the-engine#compiling-for-the-web](https://github.com/flutter/flutter/wiki/Compiling-the-engine#compiling-for-the-web)
+    
+* [https://github.com/flutter/engine/blob/main/lib/web\_ui/README.md](https://github.com/flutter/engine/blob/main/lib/web_ui/README.md)
+
+---
+
+## Post: Compiling Flutter Engine Locally - What changes after monorepo (Part IV)
+
+Source: https://huynq.dev/posts/compiling-flutter-engine-locally-part-iv/
+
+Since Flutter monorepo is now complete, there are some updates to the engine compilation process. This article will guide you through the updated steps and help troubleshoot common issues you may encounter.
+
+1. ## Preparing
+    
+
+First, ensure you have all required [dependencies](https://github.com/flutter/flutter/blob/master/engine/src/flutter/docs/contributing/Setting-up-the-Engine-development-environment.md#getting-dependencies). Refer to [Part I](https://huynq.dev/compiling-flutter-engine-locally-part-i) for an overview (note that it was written before the monorepo merged).
+
+### Setting up `.gclient`
+
+1. Navigate to `/engine/scripts`.
+    
+2. Copy the standard.gclient file to the Flutter SDK root directory.
+    
+3. Rename it to .gclient and place it in your Flutter SDK root. Follow the [official guide](https://github.com/flutter/flutter/blob/master/engine/README.md) for more details.
+    
+
+Example of `.gclient` content:
+
+```json
+solutions = [
+  {
+    "custom_deps": {},
+    "deps_file": "DEPS",
+    "managed": False,
+    "name": ".",
+    "safesync_url": "",
+
+    # If you are using SSH to connect to GitHub, change the URL to:
+    # git@github.com:flutter/flutter.git
+    "url": "git@github.com:flutter/flutter.git",
+
+    # Uncomment the custom_vars section below if you plan to build the web engine.
+    # "custom_vars": {
+    #   "download_emsdk": True,
+    # },
+  },
+]
+```
+
+Run the following command to fetch dependencies:
+
+```console
+gclient sync -D
+```
+
+2. ## Compiling engine
+    
+    ### Prepare build files for DEVICE-side executables
+    
+```console
+  cd engine/src
+./flutter/tools/gn --android --android-cpu arm64 --unoptimized
+```
+
+If you build for ios, replace `--android` with `--ios`:
+
+```console
+./flutter/tools/gn --ios --unoptimized
+```
+    
+    ### Prepare the build files for HOST-side executables.
+    
+```console
+./flutter/tools/gn --unoptimized
+```
+    
+    You should now see the new output folders:
+    
+```console
+➜  out git:(master) ✗ pwd
+/Users/huynq/Documents/GitHub/flutter_master/engine/src/out
+➜  out git:(master) ✗ tree -L 1
+.
+├── android_debug_unopt_arm64
+└── host_debug_unopt
+```
+    
+    ### Build executables
+    
+    Building can take a long time, so grab a coffee or take a break!
+    
+
+```console
+➜  src git:(master) ✗ ninja -C out/host_debug_unopt
+ninja: Entering directory `out/host_debug_unopt'
+[8308/8308] ACTION //flutter/lib/snapshot:create_macos_gen_snapshots(//build/toolchain/mac:clang_x64)
+```
+
+```bash
+  src git:(master) ✗ ninja -C out/android_debug_unopt_arm64
+ninja: Entering directory `out/android_debug_unopt_arm64'
+[45/5875] ACTION //flutter/shell/platform/android:flutter_shell_java(//build/toolchain/android:clang_arm64)
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+[5875/5875] ACTION //flutter/shell/platform/android:flutter_jar_zip(//build/toolchain/android:clang_arm64)
+```
+
+If it's iOS:
+
+```bash
+ninja -C out/ios_debug_unopt
+```
+
+(make sure you `Prepare the build files` from the above step)
+
+### Use your build in Flutter project
+
+Check out [first article](https://huynq.dev/compiling-flutter-engine-locally-part-i) for details of parameters on integrating the compiled engine with your Flutter project.
+
+3. ## Troubleshooting
+    
+
+3.1 Using deprecated `ANDROID_SDK_ROOT`
+
+```console
+➜  src git:(cc9bcdd) ninja -C out/android_debug_unopt_arm64
+ninja: Entering directory `out/android_debug_unopt_arm64'
+[78/6415] ACTION //flutter/shell/platform/android:flutter_shell_java(//build/toolchain/android:clang_arm64)
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+[6404/6415] ACTION //flutter/testing/scenario_app/android:android_lint(//build/toolchain/android:clang_arm64)
+FAILED: scenario_app/reports/lint-results.xml 
+vpython3 ../../flutter/testing/rules/run_gradle.py /Users/huynq/Documents/GitHub/flutter_beta/engine/src/flutter/testing/scenario_app/android lint --no-daemon -Pflutter_jar=/Users/huynq/Documents/GitHub/flutter_beta/engine/src/out/android_debug_unopt_arm64/flutter.jar -Pout_dir=/Users/huynq/Documents/GitHub/flutter_beta/engine/src/out/android_debug_unopt_arm64/scenario_app --project-cache-dir=/Users/huynq/Documents/GitHub/flutter_beta/engine/src/out/android_debug_unopt_arm64/scenario_app/.gradle --gradle-user-home=/Users/huynq/Documents/GitHub/flutter_beta/engine/src/out/android_debug_unopt_arm64/scenario_app/.gradle
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Could not determine the dependencies of task ':app:lintReportDebug'.
+> Several environment variables and/or system properties contain different paths to the SDK.
+  Please correct and use only one way to inject the SDK location.
+  
+  ANDROID_HOME: /Users/huynq/Documents/GitHub/flutter_beta/engine/src/flutter/third_party/android_tools/sdk
+  ANDROID_SDK_ROOT: /Users/huynq/Library/Android/sdk
+  
+  It is recommended to use ANDROID_HOME as other methods are deprecated
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+```
+
+The solution is to remove `ANDROID_SDK_ROOT` from path env if you set it to Android SDK.That's it!
+
+3.2 ninja not found
+
+```console
+depot_tools/ninja.py: Could not find Ninja in the third_party of the current project, nor in your PATH.
+Please take one of the following actions to install Ninja:
+- If your project has DEPS, add a CIPD Ninja dependency to DEPS.
+- Otherwise, add Ninja to your PATH *after* depot_tools.
+```
+
+Thank [jonahwilliams](https://github.com/jonahwilliams) for the [workaround](https://github.com/flutter/flutter/issues/163487#issuecomment-2673643365). I'm not sure how it's fixed later on (perhaps we will not need to add ninja to path on our side), but adding ninja from SDK can work around this issue:
+
+```bash
+export PATH=$HOME/flutter/engine/src/flutter/third_party/depot_tools/ninja:$PATH
+export PATH=$HOME/flutter/engine/src/flutter/third_party/ninja:$PATH
+```
+
+Update: This issue (\[[163487](https://github.com/flutter/flutter/issues/163487)\]([https://github.com/flutter/flutter/issues/163487](https://github.com/flutter/flutter/issues/163487))) has been fixed, we don’t need this workaround anymore, just keep your path as is.
+
+Check out my related articles for compiling Flutter engine series:
+
+[https://huynq.dev/posts/compiling-flutter-engine-locally-part-i](https://huynq.dev/posts/compiling-flutter-engine-locally-part-i)
+
+[https://huynq.dev/posts/compiling-flutter-engine-locally-part-ii](https://huynq.dev/posts/compiling-flutter-engine-locally-part-ii)
+
+[https://huynq.dev/posts/compiling-flutter-engine-locally-web-engine-part-iii](https://huynq.dev/posts/compiling-flutter-engine-locally-web-engine-part-iii)
+
+---
+
+## Post: Streamlining exiting your Flutter desktop app with Shortcut keys
+
+Source: https://huynq.dev/posts/streamlining-exiting-your-flutter-desktop-app-with-shortcut-keys/
+
+Flutter has emerged as a versatile framework for developing desktop applications, offering extensive support for handling keyboard events and providing a seamless user experience.
+
+In this article, we'll explore how Flutter simplifies the process of exiting desktop apps using shortcut keys. We'll delve into the solution for handling app, tackle the issue when working with the Navigator, embrace user-friendly API, and finally, demonstrate of integrating these solutions into the open-source Flutter project NetShare.
+
+### Capture keyboard events
+
+Managing app exit through shortcut keys in a Flutter desktop app lies in utilizing the `RawKeyboard.instance.addListener` to monitor raw keyboard events. By incorporating this approach within your `initState()` method, you can effectively capture user keyboard interactions. Here's how you can set it up:
+
+```dart
+@override
+void initState() {
+  super.initState();
+
+  RawKeyboard.instance.addListener((key) {
+    // Handle the raw keyboard event here.
+  });
+}
+```
+
+Within the keyboard callback, you gain the ability to examine the `key` parameter, which reveals which key was either pressed or released.
+
+Moreover, for precise shortcut key detection, you can leverage the `key.isMetaPressed` and `key.isControlPressed` properties in conjunction with the `key.logicalKey` property.
+
+This allows you to identify specific key combinations like `Command + W` (on macOS) or `Control + W` (on Windows/Linux) to initiate the app's exit process:
+
+```dart
+RawKeyboard.instance.addListener((key) {
+  if (value.isMetaPressed && value.logicalKey == LogicalKeyboardKey.keyW ||
+        value.isControlPressed && value.logicalKey == LogicalKeyboardKey.keyW) {
+    SystemNavigator.pop();
+  }
+});
+```
+
+Rather than listening to keyboard events within the `initState()`, an alternative approach is to register listener within MaterialApp's builder, as below:
+
+```dart
+MaterialApp.router(
+  routerConfig: _router,
+  builder: (context, child) {
+    // Handle keyboard listener here
+    RawKeyboard.instance.addListener((RawKeyEvent value) => _handleKeyEvent(context, value));
+    return child ?? const SizedBox.shrink();
+  },
+)
+```
+
+Now, give the app a test run to observe it functioning as expected.
+
+However, should the application exit abruptly? Typically, we expect desktop applications to prompt users for confirmation before closing. Although this behavior can often be configured in the application's settings, let's explore such cases in the next section.
+
+### Navigating the confirm dialog
+
+Suppose we need to request user confirmation before exiting the app by invoking `SystemNavigator.pop()`. Let's implement a Dialog for this purpose:
+
+```dart
+void _handleKeyEvent(BuildContext context, RawKeyEvent value) {
+  // If user pressed Command/Control + W keys, quit the app
+  if (value.isMetaPressed && value.logicalKey == LogicalKeyboardKey.keyW ||
+      value.isControlPressed && value.logicalKey == LogicalKeyboardKey.keyW) {
+    _showQuitConfirmationDialog(context);
+  }
+}
+
+void _showQuitConfirmationDialog(BuildContext context) {
+  showDialog(
+    context: context,
+    builder: (context) {
+      return AlertDialog(
+        title: const Text('Quit App'),
+        content: const Text('Are you sure you want to quit the app?'),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.of(context).pop(); // Close the dialog
+            },
+            child: const Text('Cancel'),
+          ),
+          TextButton(
+            onPressed: () {
+              // Close the app
+              SystemNavigator.pop();
+            },
+            child: const Text('Quit'),
+          ),
+        ],
+      );
+    },
+  );
+}
+```
+
+However, you might encounter an issue with the Navigator, as indicated by the error message:
+
+```console
+══╡ EXCEPTION CAUGHT BY SERVICES LIBRARY ╞══════════════════════════════════════════════════════════
+The following assertion was thrown while processing a raw key listener:
+Navigator operation requested with a context that does not include a Navigator.
+The context used to push or pop routes from the Navigator must be that of a widget that is a
+descendant of a Navigator widget.
+
+When the exception was thrown, this was the stack:
+#0      Navigator.of. (package:flutter/src/widgets/navigator.dart:2695:9)
+#1      Navigator.of (package:flutter/src/widgets/navigator.dart:2702:6)
+#2      showDialog (package:flutter/src/material/dialog.dart:1419:19)
+#3      MyApp.showQuitAppConfirmationDialog (package:netshare/main.dart:131:5)
+#4      MyApp._handleKeyEvent (package:netshare/main.dart:122:7)
+#5      MyApp.build.. (package:netshare/main.dart:111:67)
+#6      RawKeyboard.handleRawKeyEvent (package:flutter/src/services/raw_keyboard.dart:705:19)
+#7      KeyEventManager.handleRawKeyMessage (package:flutter/src/services/hardware_keyboard.dart:1050:30)
+#8      BasicMessageChannel.setMessageHandler. (package:flutter/src/services/platform_channel.dart:216:49)
+#9      _DefaultBinaryMessenger.setMessageHandler. (package:flutter/src/services/binding.dart:567:35)
+#10     _invoke2 (dart:ui/hooks.dart:345:13)
+#11     _ChannelCallbackRecord.invoke (dart:ui/channel_buffers.dart:45:5)
+#12     _Channel.push (dart:ui/channel_buffers.dart:135:31)
+#13     ChannelBuffers.push (dart:ui/channel_buffers.dart:343:17)
+#14     PlatformDispatcher._dispatchPlatformMessage (dart:ui/platform_dispatcher.dart:689:22)
+#15     _dispatchPlatformMessage (dart:ui/hooks.dart:257:31)
+
+Event: RawKeyDownEvent#f8a0b(logicalKey: LogicalKeyboardKey#510a7(keyId: "0x00000077", keyLabel:
+  "W", debugName: "Key W"), physicalKey: PhysicalKeyboardKey#b9a3b(usbHidUsage: "0x0007001a",
+  debugName: "Key W"), repeat: false)
+════════════════════════════════════════════════════════════════════════════════════════════════════
+```
+
+The error message indicates that you are trying to use the Navigator to push or pop routes from a context that does not include a Navigator. This make sense as we are using Navigator outside of MaterialApp.router widgets. The solution to this problem involves using a GlobalKey. First, declare a GlobalKey:
+
+```dart
+final GlobalKey _navigatorKey = GlobalKey();
+```
+
+Then, add it to Material's `navigatorKey`:
+
+```dart
+MaterialApp(
+  navigatorKey: _navigatorKey
+)
+```
+
+If you use `go_router` package as route management, you can add it to GoRoute constructor.
+
+```dart
+final GoRouter _router = GoRouter(
+  navigatorKey: _navigatorKey
+)
+
+MaterialApp.router(
+  routerConfig: _router
+)
+```
+
+With the GlobalKey properly set, you can now use the context from `_navigatorKey` to address the issue. And now we can remove `BuildContext context` parameter from `_handleKeyEvent` method:
+
+```dart
+void _handleKeyEvent(BuildContext context, RawKeyEvent value) {
+  // If user pressed Command/Control + W keys, quit the app
+  if (value.isMetaPressed && value.logicalKey == LogicalKeyboardKey.keyW ||
+      value.isControlPressed && value.logicalKey == LogicalKeyboardKey.keyW) {
+    _showQuitConfirmationDialog(_navigatorKey.currentContext!);
+  }
+}
+```
+
+Voila! The app can gracefully exit after the user confirms, ensuring a smoother user experience.
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1710007442550/1a7bf60f-31c7-4f05-a2a8-3c4638d39388.gif align="left")
+
+Hold on a moment, there is one more issue to address. While the confirmation dialog is displayed, if the user presses Command/Control + W again, another dialog will overlap the current one.
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1710007453379/9da096cf-9ebf-413b-9975-a93226086484.gif align="left")
+
+To prevent this from happening and ensure a seamless user experience, we need to implement a mechanism that handles such scenarios gracefully. The most straightforward solution involves the use of a flag. To resolve this issue, declare a new flag and update the code as follows:
+
+```dart
+bool _isKeyboardListenerEnabled = true;
+
+void _handleKeyEvent(RawKeyEvent value) async {
+  if (!_isKeyboardListenerEnabled) return;
+
+  // If user pressed Command/Control + W keys, quit the app
+  if (value.isMetaPressed && value.logicalKey == LogicalKeyboardKey.keyW || value.isControlPressed && value.logicalKey == LogicalKeyboardKey.keyW) {
+    if (_navigatorKey.currentContext == null) return;
+
+    // show confirm dialog
+    _showQuitAppConfirmationDialog(_navigatorKey.currentContext!, (confirmCallback) {
+      if (confirmCallback) {
+        SystemNavigator.pop(); // Quit the app
+      }
+      // listen keyboard again
+      _isKeyboardListenerEnabled = true;
+    });
+  }
+}
+
+void _showQuitAppConfirmationDialog(BuildContext context, Function(bool)? confirmCallback) {
+  // Disable the keyboard listener.
+  _isKeyboardListenerEnabled = false;
+
+  showDialog(
+    barrierDismissible: false,
+    context: context,
+    builder: (context) {
+      return AlertDialog(
+        title: const Text('Quit App'),
+        content: const Text('Are you sure you want to quit the app?'),
+        actions: [
+          TextButton(
+            onPressed: () {
+              confirmCallback?.call(false);
+              Navigator.of(context).pop(); // Close the dialog
+            },
+            child: const Text('Cancel'),
+          ),
+          TextButton(
+            onPressed: () {
+              // Close the app
+              confirmCallback?.call(true);
+            },
+            child: const Text('Quit'),
+          ),
+        ],
+      );
+    },
+  );
+}
+```
+
+Now, run the app and repeatedly press the `Command/Control + W` keys. You'll notice that only one confirmation dialog appears, effectively resolving the issue.
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1710007488227/c2b2e595-b37d-44c6-aca6-bb4df20bff6f.gif align="left")
+
+### Embracing user-friendly API
+
+Per [Actions API revision](https://docs.flutter.dev/release/breaking-changes/actions-api-revision):
+
+> In Flutter an Intent is an object that’s typically bound to a keyboard key combination using the Shortcuts widget. An Intent can be bound to an Action, which can update the application’s state or perform other operations.
+
+This approach simplifies the process of capturing shortcut keys by utilizing Intent/Action pairs from the Flutter API. Thanks to Reddit folk [eibaan](https://www.reddit.com/user/eibaan/) for sharing this approach. I received his [comment](https://www.reddit.com/r/FlutterDev/comments/17354xo/comment/k41qyup/?utm_source=share&utm_medium=web2x&context=3) after sharing my article on the FlutterDev Reddit channel.
+
+Now, you can streamline your code by removing the keyboard listener from the previous solution and implementing the following steps:
+
+Firstly, declare an Intent named `QuitIntent`:
+
+```dart
+class QuitIntent extends Intent {
+  const QuitIntent();
+}
+```
+
+Next, define shortcuts and Actions:
+
+```dart
+MaterialApp.router(
+  routerConfig: _router,
+  shortcuts: const {
+    SingleActivator(LogicalKeyboardKey.keyW, meta: true): QuitIntent(),
+    SingleActivator(LogicalKeyboardKey.keyW, control: true): QuitIntent(),
+  },
+  builder: (context, child) {
+    return Actions(actions: {
+      QuitIntent: CallbackAction(onInvoke: (intent) => _handleIntent()),
+    }, child: child ?? const SizedBox.shrink());
+  },
+)
+```
+
+Finally, update `_handleKeyEvent()` method to `_handleIntent()`. You no longer need to check for pressed keys as this approach handles Intents seamlessly:
+
+```dart
+void _handleIntent() {
+  if (!_isKeyboardListenerEnabled) return;
+  if (_navigatorKey.currentContext == null) return;
+
+  // show confirm dialog
+  _showQuitAppConfirmationDialog(_navigatorKey.currentContext!, (confirmCallback) {
+    if (confirmCallback) {
+      SystemNavigator.pop(); // Quit the app
+    }
+    // listen keyboard again
+    _isKeyboardListenerEnabled = true;
+  });
+}
+```
+
+Run the app to observe that it behaves similarly to the first solution using keyboard events, but now with the enhanced user-friendly API.
+
+Check out the complete sample code at [flutter-desktop-quit-app](https://github.com/huynguyennovem/flutter-desktop-quit-app).
+
+### Bringing it all together — Integration with NetShare
+
+NetShare is an open-source Flutter project that makes it easy to share data in a local network. The latest release includes support for Android, macOS, Windows, and Linux platforms.
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1710007566673/60feb82b-2328-490d-8019-ccc9961338ce.png align="left")
+
+The integration of quit app shortcut keys into NetShare enhances the user experience by allowing users to swiftly exit the application, aligning with the natural behavior found in other native desktop applications.
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1710007585629/5a5cb99b-7e4b-4184-a986-59a6058d6b50.gif align="left")
+
+### Conclusion
+
+Managing the exit process of a Flutter desktop app with shortcut keys is essential for providing a user-friendly experience. By incorporating these techniques, your Flutter desktop app can achieve a level of professionalism and user-friendliness that mirrors that of established desktop applications, contributing to an enhanced user journey.
+
+Stay in touch with me for updates:
+
+* Twitter: [https://twitter.com/HuyNguyenTw](https://twitter.com/HuyNguyenTw)
+    
+* GitHub: [https://github.com/huynguyennovem](https://github.com/huynguyennovem)
+    
+* LinkedIn: [https://linkedin.com/in/huynguyennovem](https://linkedin.com/in/huynguyennovem)
+
+---
+
+## Post: Integrating Flutter module into your iOS SwiftUI project in 5 steps
+
+Source: https://huynq.dev/posts/integrating-flutter-module-into-your-ios-swiftui-project-in-5-steps/
+
+In certain scenarios, undertaking the extensive task of migrating or rewriting an entire existing application using Flutter may demand a considerable amount of effort, a factor that companies usually consider before deciding to use Flutter for their projects. To support this, Flutter offers an option of integrating Flutter as a module within an existing application, a.k.a **add-to-app**.
+
+This article provides a comprehensive step-by-step guide to seamlessly integrate Flutter module into your iOS SwiftUI project. Furthermore, you will gain insights into establishing communication between Flutter and your existing app through the use of MethodChannel. Let's start!
+
+### 1\. Create an iOS native app with SwiftUI from XCode
+
+Begin by setting up a native iOS project, which we'll name `iOSCounterApp`. In this example, let's modify the main view defined in `ContentView.swift` as follows:
+
+```swift
+import SwiftUI
+
+struct ContentView: View {
+    @State var counter = 0
+    
+    var body: some View {
+        VStack {
+            Text("Counter: \(counter)").font(.largeTitle)
+            Button(action: {
+                increaseCounter()
+            }) {
+                Text("Increase counter")
+                    .font(.headline)
+                    .padding()
+                    .background(Color.yellow)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }.padding(.vertical, 8)
+            
+            Button(action: {
+                //TODO: handle opening Flutter screen here
+            }) {
+                Text("Open Flutter View")
+                    .font(.headline)
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }.padding(.vertical, 10)
+        }
+        
+    }
+
+    func increaseCounter() {
+        self.counter+=1
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+```
+
+The application class, `iOSCounterApp.swift`, can remain as is:
+
+```swift
+import SwiftUI
+
+@main
+struct iOSCounterApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+    }
+}
+```
+
+Run the application on an iOS device or simulator to see the following result:
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1710007046631/555e8358-b808-4cc2-b538-14bac5687e98.png)
+
+### 2\. Setting up Flutter module
+
+#### 2.1. Create a Flutter module
+
+Let's create it in the directory at the same level as your existing iOS project (sibling directories):
+
+```bash
+➜  iOSCounterApp pwd
+/Users/huynq/Desktop/iOSCounterApp
+
+➜  iOSCounterApp flutter create --template  module flutter_counter
+
+➜  iOSCounterApp tree -L 1                                                   
+.
+├── flutter_counter
+└── iOSCounterApp
+
+3 directories, 0 files
+```
+
+#### 2.2. Exploring Flutter module
+
+Open `flutter_counter` in IDE and observe something new. Generally, a Flutter module resembles a standard Flutter project.
+
+1. In `pubspec.yaml`, scroll to the end to find a new `module` section. This section identifies the Flutter module:
+    
+
+```yaml
+  module:
+    androidX: true
+    androidPackage: com.example.flutter_counter
+    iosBundleIdentifier: com.example.flutterCounter
+```
+
+2. Inside the hidden `.ios` directory, you'll notice a new file named `podhelper.rb`. This script manages Pod installation (Flutter engine, plugins, application) and `.framework` (Flutter.framework, App.framework).
+    
+
+Whenever you add a new plugin to the Flutter module, this script will update it in your existing application.
+
+3. The location of the `.xcconfig` files is slightly different from a typical Flutter project. In a standard Flutter project, you'll find the `.xcconfig` files in the `ios/Flutter` directory:
+    
+
+```bash
+➜  Flutter tree -L 1            
+.
+├── AppFrameworkInfo.plist
+├── Debug.xcconfig
+├── Flutter.podspec
+├── Generated.xcconfig
+├── Release.xcconfig
+└── flutter_export_environment.sh
+```
+
+However, in the Flutter module, they are located in two separate directories:
+
+```bash
+➜  .ios tree -L 2
+.
+├── Config
+│   ├── Debug.xcconfig
+│   ├── Flutter.xcconfig
+│   └── Release.xcconfig
+├── Flutter
+│   ├── AppFrameworkInfo.plist
+│   ├── FlutterPluginRegistrant
+│   ├── Generated.xcconfig
+│   ├── README.md
+│   ├── flutter_export_environment.sh
+│   └── podhelper.rb
+```
+
+#### 2.3. Adding dependencies to Flutter module (optional)
+
+You can add Flutter dependencies to module on `pubspec.yaml` file and also implement your code in the `lib/` directory. However, for now, let's keep it as the default counter app and revisit to module directory later.
+
+### 3\. Embedding the Flutter module to existing application
+
+First, let's create Podfile in your existing project:
+
+```bash
+➜  iOSCounterApp cd iOSCounterApp/
+➜  iOSCounterApp pod init 
+```
+
+Result:
+
+```ruby
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'iOSCounterApp' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for iOSCounterApp
+
+end
+```
+
+Then, update the generated Podfile as follows:
+
+```Ruby
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+flutter_application_path = '../flutter_counter'
+load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
+
+target 'iOSCounterApp' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for iOSCounterApp
+  install_all_flutter_pods(flutter_application_path)
+end
+
+post_install do |installer|
+  flutter_post_install(installer) if defined?(flutter_post_install)
+end
+```
+
+Run the following command:
+
+```bash
+pod install
+```
+
+Note: Whenever you add a new plugin to the Flutter module, you'll need to run `pod install` again in the existing project to refresh it.
+
+There is `.xcworkspace` file as the pod is installed successfully. Now, let's close the opening `.xcodeproj` and open `.xcworkspace` in XCode. You can try running the project again to make sure nothing is broken. If it goes well, you will see it is still the same as before.
+
+You'll notice a new `.xcworkspace` file, indicating that the Pod was successfully installed. Close the existing `.xcodeproj` and open the `.xcworkspace` in Xcode.
+
+Try running the project to ensure that everything works as expected. If it runs smoothly, the application should appear unchanged as the begins. Now, let's proceed to the final steps.
+
+### 4\. Starting Flutter from existing application
+
+To initiate a Flutter view from your existing application, we'll utilize `FlutterEngine` and `FlutterViewController`. The `FlutterEngine` manages the Dart VM and Flutter runtime, while the `FlutterViewController` connects to the `FlutterEngine` and displays rendered frames.
+
+We'll initialize the `FlutterEngine` before using it, aka `pre-warming`. This approach is recommended. Okay, let's do it!
+
+First, create a `FlutterEngine` in `iOSCounterApp.swift`:
+
+```swift
+import SwiftUI
+import Flutter
+
+class FlutterDependencies: ObservableObject {
+    let flutterEngine = FlutterEngine(name: "flutter-engine")
+    init() {
+        flutterEngine.run()
+        // If you added a plugin to Flutter module, you also need to register plugin to flutter engine
+        GeneratedPluginRegistrant.register(with: self.flutterEngine)
+    }
+}
+
+@main
+struct iOSCounterApp: App {
+    @StateObject var flutterDependencies = FlutterDependencies()
+    
+    var body: some Scene {
+        WindowGroup {
+            ContentView().environmentObject(flutterDependencies)
+        }
+    }
+}
+```
+
+Next, update `ContentView.swift` as follows:
+
+```swift
+import SwiftUI
+import Flutter
+
+struct ContentView: View {
+    // Flutter dependencies are passed in an EnvironmentObject.
+    @EnvironmentObject var flutterDependencies: FlutterDependencies
+
+    @State var counter = 0
+    
+    var body: some View {
+        VStack {
+            Text("Counter: \(counter)").font(.largeTitle)
+            Button(action: {
+                increaseCounter()
+            }) {
+                Text("Increase counter")
+                    .font(.headline)
+                    .padding()
+                    .background(Color.yellow)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }.padding(.vertical, 8)
+            
+            Button(action: {
+                showFlutter()
+            }) {
+                Text("Open Flutter View")
+                    .font(.headline)
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }.padding(.vertical, 10)
+        }
+        
+    }
+    
+    func increaseCounter() {
+        self.counter+=1
+    }
+
+    func showFlutter() {
+        // Get RootViewController from window scene
+        guard
+          let windowScene = UIApplication.shared.connectedScenes
+            .first(where: { $0.activationState == .foregroundActive && $0 is UIWindowScene }) as? UIWindowScene,
+          let window = windowScene.windows.first(where: \.isKeyWindow),
+          let rootViewController = window.rootViewController
+        else { return }
+
+        // Create a FlutterViewController from pre-warm FlutterEngine
+        let flutterViewController = FlutterViewController(
+          engine: flutterDependencies.flutterEngine,
+          nibName: nil,
+          bundle: nil)
+        flutterViewController.modalPresentationStyle = .overCurrentContext
+        flutterViewController.isViewOpaque = false
+
+        rootViewController.present(flutterViewController, animated: true)
+      }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+```
+
+Now, we need to update Flutter module code:
+
+```dart
+appBar: AppBar(
+	title: Text(widget.title),
+	actions: [
+	  IconButton(
+	    onPressed: () => SystemNavigator.pop(animated: true),
+	    icon: const Icon(Icons.exit_to_app),
+	  ),
+	],
+),
+```
+
+We added a button that enables you to exit the Flutter view with `SystemNavigator.pop`. `SystemNavigator.pop` is used to request Flutter application be popped off navigation stack and return control to the platform-specific host (e.g, Android Activity or iOS ViewController). It's a well-suited API for this purpose.
+
+Now, let's return to the Xcode project with your existing app and run it.
+
+Voila! You can now open a Flutter screen and seamlessly close it.
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1710007202711/14d70d39-27b3-4474-97b4-34bfa2b7bbd6.gif)
+
+However, you might have noticed that data is stored separately between the Flutter module and the existing app. If you're wondering how to synchronize or share data between these two portions (Flutter and the existing app), let's delve into the next parts to explore this further.
+
+### 5\. Share data between Flutter and existing application
+
+#### 5.1. Existing app implementation
+
+The solution is to use [MethodChannel](https://api.flutter.dev/flutter/services/MethodChannel-class.html). You usually see `FlutterMethodChannel` initiation in UIViewController's `viewDidLoad` (UIKit), but there is no equivalent `viewDidLoad` in SwiftUI.
+
+Here's how we address this.
+
+SwiftUI provides `onAppear` which closely resembles `viewDidLoad`. However, it has limitation, especially when your existing app has multiple views. `onAppear` triggers each time we navigate forward and back to the original view where we intend to initialize the method channel. On Android, it behaves similarly to Activity's `onResume` callback.
+
+To work around this, we will "cook" `onAppear` to "simulate" `viewDidLoad`. I'd like to acknowledge [Sarun](https://sarunw.com) for his tutorial on this issue, available [here](https://sarunw.com/posts/swiftui-viewdidload/).
+
+Add the following code to `ContentView.swift`:
+
+```swift
+struct ViewDidLoadModifier: ViewModifier {
+    @State private var viewDidLoad = false
+    let action: (() -> Void)?
+    
+    func body(content: Content) -> some View {
+        content
+            .onAppear {
+                if viewDidLoad == false {
+                    viewDidLoad = true
+                    action?()
+                }
+            }
+    }
+}
+
+extension View {
+    func onViewDidLoad(perform action: (() -> Void)? = nil) -> some View {
+        self.modifier(ViewDidLoadModifier(action: action))
+    }
+}
+```
+
+Next, apply `onViewDidLoad` to outermost view, which in this case is `VStack`:
+
+```swift
+VStack {
+    // existing code, not paste here as it's long
+}.onViewDidLoad {
+    handleMethodChannel()
+}
+```
+
+Now, we've effectively managed the lifecycle issue. Let's complete the remaining steps in `handleMethodChannel()`:
+
+```swift
+func handleMethodChannel() {
+    flutterMethodChannel = FlutterMethodChannel(name: "flutter_channel/counter", binaryMessenger: flutterDependencies.flutterEngine.binaryMessenger)
+    flutterMethodChannel?.setMethodCallHandler({
+        (call: FlutterMethodCall, result: @escaping FlutterResult) -> Void in
+        switch(call.method) {
+        case "increaseCounter":
+            counter += 1
+            submitCounter()
+        case "getCounter":
+            submitCounter()
+        default:
+            print("Unrecognized method: \(call.method)")
+        }
+    })
+}
+
+func submitCounter() {
+    flutterMethodChannel?.invokeMethod("submitCounter", arguments: counter)
+}
+```
+
+Additionally, remember to update the changed value (counter) through the method channel as well:
+
+```swift
+func increaseCounter() {
+    self.counter+=1
+    submitCounter()
+}
+```
+
+#### 5.1. Flutter module implementation
+
+On Flutter side, let's declare a MethodChannel and handle all method calls:
+
+```dart
+final _methodChannel = const MethodChannel('flutter_channel/counter');
+
+@override
+void initState() {
+	super.initState();
+	_methodChannel.setMethodCallHandler((call) => _handleMethodCall(call));
+	_methodChannel.invokeMethod('getCounter');
+}
+
+_handleMethodCall(MethodCall call) {
+	if (call.method == 'submitCounter') {
+	  setState(() {
+	    _counter = call.arguments as int;
+	  });
+	}
+}
+```
+
+Also, invoke `increaseCounter` method when increasing counter by tapping on FAB as well:
+
+```dart
+void _incrementCounter() {
+	setState(() {
+	  _counter++;
+	});
+	_methodChannel.invokeMethod('increaseCounter');
+}
+```
+
+#### Final result
+
+Voila! Now you can seamlessly communicate between Flutter module and existing app.
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1710007242276/7c26c0ae-715d-4fd4-95dc-8f38572eee57.gif)
+
+Check out the complete sample code at [https://github.com/huynguyennovem/flutter-add-to-app-ios-swiftui](https://github.com/huynguyennovem/flutter-add-to-app-ios-swiftui)
+
+### Conclusion
+
+This article has walked you through the process of integrating a Flutter module into your iOS application, allowing for seamless communication and data exchange. By incorporating Flutter's capabilities within your native iOS project, your team won't have to worry about rewriting your entire app with Flutter, streamlining development and enhancing the user experience.
+
+Stay in touch with me for updates:
+
+* Twitter: [https://twitter.com/HuyNguyenTw](https://twitter.com/HuyNguyenTw)
+    
+* GitHub: [https://github.com/huynguyennovem](https://github.com/huynguyennovem)
+    
+* LinkedIn: [https://linkedin.com/in/huynguyennovem](https://linkedin.com/in/huynguyennovem)
+
+---
+
+## Post: Compiling Flutter Engine Locally - Apply a fixed commit (Part II)
+
+Source: https://huynq.dev/posts/compiling-flutter-engine-locally-part-ii/
+
+Welcome back to the second part of the series on compiling the Flutter engine locally. In the first article, we learned how to build the engine using the latest version. Now, we'll explore how to build the engine on a specific version and apply a fixed commit to it for your desired engine version.
+
+The example I will use in this article: [https://github.com/flutter/flutter/issues/130476](https://github.com/flutter/flutter/issues/130476)
+
+## Issue analysis
+
+* The bug doesn't occur on stable `3.10.6` but on master `3.13.0-3.0.pre.21` (as OP reported). The current master is `3.13.0-7.0.pre.57` (the released version I have on my machine now) and the issue is already fixed on this version.
+    
+* The bug is fixed by [https://github.com/flutter/engine/pull/43695](https://github.com/flutter/engine/pull/43695). The commit is [https://github.com/flutter/engine/commit/bf6d4bfe27cca6e6189382d17e5d371162492a27](https://github.com/flutter/engine/commit/bf6d4bfe27cca6e6189382d17e5d371162492a27):
+    
+    ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1710006843724/6ef7a8bc-927e-4f1a-97ab-8640af201da9.png)
+    
+* The fix is only available on these master versions: `3.13.0-7.0.pre`, `3.13.0-6.0.pre`, `3.13.0-5.0.pre`
+    
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1710006875089/33c18764-98c8-4416-b48c-d1e20a5b6fe1.png)
+
+* The bug appears on master version `3.13.0-3.0.pre.21` which has engine revision `1b1ccdd1f5` (you can check this from `flutter doctor -v` of OP report)
+    
+
+👉 The final goal is building an engine version which is started from revision of Flutter master `3.13.0-3.0.pre.21`, and then cherry-pick the fix commit above. To make it easier to imagine:
+
+> engine output X = 3.13.0-3.0.pre.21 + bf6d4bfe27cca6e6189382d17e5d371162492a27).
+
+Let's go through the steps below section by section. The first section is intended to build the engine at a specific released version. But if you only need to build engine with fix (the final goal), you can skip the 1st section and go to 2nd section.
+
+## Build engine
+
+### 1\. Build engine on a specific released version
+
+Currently, my local engine repository (`src/flutter`) is on the latest version `3.13.0-7.0.pre.57`. But I want to build engine at version `3.13.0-3.0.pre.21`. The bug can be reproducible on this version, so I can verify the result by checking the bug after building process finished.
+
+* Step 1: cd to main engine directory (`src/flutter` is actually engine repository, not `engine` directory outside)
+    
+
+```bash
+➜  engine cd src/flutter/
+```
+
+* Step 2: Checkout new branch from that revision, named it `master-313-030-pre21-build-engine`:
+    
+
+```bash
+ ➜  flutter git:(main) git checkout -b master-313-030-pre21-build-engine 1b1ccdd1f5 
+Updating files: 100% (1799/1799), done.
+Switched to a new branch 'master-313-030-pre21-build-engine'
+```
+
+* Step 3: Start building it as previous guide (without needing to rebuild files for device-side and host-side executables)
+    
+
+```bash
+➜  engine gclient sync
+Updating depot_tools...
+Syncing projects: 100% (141/141), done.                                                                            
+Hook 'python3 src/flutter/tools/pub_get_offline.py' took 16.11 secs
+Running hooks: 100% (15/15), done.                           
+
+➜  engine cd src 
+
+➜  src git:(master) ninja -C out/host_debug_unopt
+ninja: Entering directory `out/host_debug_unopt'
+[0/1] Regenerating ninja files
+[3077/3077] STAMP obj/default.stamp
+
+➜  src git:(master) ninja -C out/ios_debug_unopt
+ninja: Entering directory `out/ios_debug_unopt'
+[0/1] Regenerating ninja files
+[1639/1639] STAMP obj/default.stamp
+
+➜  new_3106 flutterm run --local-engine=ios_debug_unopt --local-engine-src-path=/Users/huynq/Documents/GitHub/engine/src
+Launching lib/main.dart on iPhone in debug mode...
+Automatically signing iOS for device deployment using specified development team in Xcode project: 
+Running Xcode build...                                                  
+ └─Compiling, linking and signing...                         6.5s
+Xcode build done.                                           17.5s
+
+[VERBOSE-2:validation.cc(49)] Break on 'ImpellerValidationBreak' to inspect point of failure: Could not find glyph position in the atlas.
+Installing and launching...                                        17.2s
+Syncing files to device iPhone...                                   81ms
+
+Flutter run key commands.
+r Hot reload. 🔥🔥🔥
+R Hot restart.
+h List all available interactive commands.
+d Detach (terminate "flutter run" but leave application running).
+c Clear the screen
+q Quit (terminate the application on the device).
+
+A Dart VM Service on iPhone is available at: http://127.0.0.1:57579/aq7ACWb5yII=/
+The Flutter DevTools debugger and profiler on iPhone is available at: http://127.0.0.1:9101?uri=http://127.0.0.1:57579/aq7ACWb5yII=/
+```
+
+Nice, I can see the bug now with the wrong UI on iPhone and there are many logs `ImpellerValidationBreak` in the output console, it means the engine is built at released version `3.13.0-3.0.pre.21` successfully. You can then use this build to test or validate any issues you encountered as well.
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1710006912566/daa7c00f-07f1-4195-b9b4-08ee47a4732f.png)
+
+### 2\. Build engine with a fix
+
+Now, let's say you encounter a specific bug that has already been fixed in the Flutter engine's latest version, but you don't want to upgrade the SDK entirely. You can cherry-pick the fix into your local engine build to address the issue. Here's how:
+
+* Step 1: Let's make sure the previous branch is clean with no local change. Otherwise, let's delete the current local branch created above `master-313-030-pre21-build-engine` and recreate it. (Skip this step if you haven't tried the 1st section yet)
+    
+
+```bash
+➜  flutter git:(main) git branch -d master-313-030-pre21-build-engine
+Deleted branch master-313-030-pre21-build-engine (was 1b1ccdd1f5).
+
+➜  flutter git:(1b1ccdd1f5) git checkout -b master-313-030-pre21-build-engine 1b1ccdd1f5
+Switched to a new branch 'master-313-030-pre21-build-engine'
+```
+
+* Step 2: pick the commit that fixed the bug. There might be some conflicts, you should solve them and commit changes to your created branch (`master-313-030-pre21-build-engine`). The good commit can be found in section `First analysis` above.
+    
+
+```bash
+➜  flutter git:(master-313-030-pre21-build-engine) ✗ git cherry-pick bf6d4bfe27cca6e6189382d17e5d371162492a27
+error: could not apply bf6d4bfe27... [Impeller] Fix text scaling issues again, this time with perspective when a save layer is involved (#43695)
+hint: after resolving the conflicts, mark the corrected paths
+hint: with 'git add ' or 'git rm '
+hint: and commit the result with 'git commit'
+
+➜  flutter git:(master-313-030-pre21-build-engine) ✗ git add .
+
+➜  flutter git:(master-313-030-pre21-build-engine) ✗ git commit -m "pick fix for issue 130476"                           
+[master-313-030-pre21-build-engine d6a51cc0c1] pick fix for issue 130476
+6 files changed, 46 insertions(+), 8 deletions(-)
+
+➜  flutter git:(master-313-030-pre21-build-engine) git log --oneline
+d6a51cc0c1 (HEAD -> master-313-030-pre21-build-engine) pick fix for issue 130476
+1b1ccdd1f5 Roll Skia from 4e989b1564ee to bedc92598644 (1 revision) (#43617)
+cf2fa190fd move rtree and canvas_spy sources to Fuchsia sub-directory (#43615)
+...
+```
+
+* Step 3: Now you have the engine source as expected, start building engine as the previous guide (same as the previous section, no need to rebuild files for device-side and host-side executables)
+    
+
+```bash
+➜  flutter git:(master-313-030-pre21-build-engine) cd ../..
+
+➜  engine gclient sync
+Updating depot_tools...
+Syncing projects: 100% (141/141), done.                                                                            
+Hook 'python3 src/flutter/tools/pub_get_offline.py' took 11.47 secs
+Running hooks: 100% (15/15), done.  
+
+➜  engine cd src
+
+➜  src git:(master) ninja -C out/host_debug_unopt
+ninja: Entering directory `out/host_debug_unopt'
+[0/1] Regenerating ninja files
+[135/1722] CXX obj/flutter/impeller/compiler/impellerc_unittests.compiler_t[157/1722] CX[197/1722] CXX obj/flutter/impeller/tessellator/tessellator.tessellator.o
+[1717/1717] STAMP obj/default.stamp
+
+➜  src git:(master) ninja -C out/ios_debug_unopt
+ninja: Entering directory `out/ios_debug_unopt'
+[0/1] Regenerating ninja files
+[965/965] STAMP obj/default.stamp
+```
+
+* Step 4: Run the new engine build on sample code to verify if the bug has been fixed:
+    
+
+```bash
+➜  new_3106 flutterm run --local-engine=ios_debug_unopt --local-engine-host=host_debug_unopt --local-engine-src-path=/Users/huynq/Documents/GitHub/engine/src
+Launching lib/main.dart on iPhone in debug mode...
+Automatically signing iOS for device deployment using specified development team in Xcode project: 
+Running Xcode build...                                                  
+ └─Compiling, linking and signing...                         8.8s
+Xcode build done.                                           23.4s
+(lldb) 2023-07-24 01:43:18.641430+0700 Runner[24931:2805923] [VERBOSE-1:FlutterView.mm(72)] Rendering wide gamut colors is turned on but isn't supported, downgrading the color gamut to sRGB.
+[VERBOSE-2:FlutterDarwinContextMetalImpeller.mm(37)] Using the Impeller rendering backend.
+flutter: A message on the flutter/lifecycle channel was discarded before it could be handled.
+This happens when a plugin sends messages to the framework side before the framework has had an opportunity to register a listener. See the ChannelBuffers API documentation for details on how to configure the channel to expect more messages, or to expect messages to get discarded:
+  https://api.flutter.dev/flutter/dart-ui/ChannelBuffers-class.html
+The capacity of the flutter/lifecycle channel is 1 message.
+flutter: A message on the flutter/lifecycle channel was discarded before it could be handled.
+This happens when a plugin sends messages to the framework side before the framework has had an opportunity to register a listener. See the ChannelBuffers API documentation for details on how to configure the channel to expect more messages, or to expect messages to get discarded:
+  https://api.flutter.dev/flutter/dart-ui/ChannelBuffers-class.html
+The capacity of the flutter/lifecycle channel is 1 message.
+Installing and launching...                                        26.4s
+Syncing files to device iPhone...                                   79ms
+
+Flutter run key commands.
+r Hot reload. 🔥🔥🔥
+R Hot restart.
+h List all available interactive commands.
+d Detach (terminate "flutter run" but leave application running).
+c Clear the screen
+q Quit (terminate the application on the device).
+
+A Dart VM Service on iPhone is available at: http://127.0.0.1:51251/it0Y8nWAtVI=/
+The Flutter DevTools debugger and profiler on iPhone is available at: http://127.0.0.1:9101?uri=http://127.0.0.1:51251/it0Y8nWAtVI=/
+```
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1710006944237/81c2317b-3e66-494d-9c60-9213d13d337b.webp)
+
+## Troubleshoot
+
+*1\. Can not checkout specific engine revision*
+
+Try fetching all branches:
+
+```bash
+➜  flutter git:(main) git checkout -b master-313-030-pre21-build-engine 1b1ccdd1f5
+fatal: '1b1ccdd1f5' is not a commit and a branch 'master-313-030-pre21-build-engine' cannot be created from it
+
+➜  flutter git:(main) git fetch --all
+Fetching origin
+Fetching upstream
+remote: Enumerating objects: 412516, done.
+remote: Counting objects: 100% (7692/7692), done.
+remote: Compressing objects: 100% (121/121), done.
+remote: Total 412516 (delta 7606), reused 7635 (delta 7568), pack-reused 404824
+Receiving objects: 100% (412516/412516), 226.28 MiB | 7.28 MiB/s, done.
+Resolving deltas: 100% (316772/316772), completed with 1100 local objects.
+From github.com:flutter/engine
+ * [new branch]            CaseyHillers-patch-1                              -> upstream/CaseyHillers-patch-1
+ * [new branch]            CaseyHillers-patch-2                              -> upstream/CaseyHillers-patch-2
+ ....
+```
+
+```bash
+ ➜  flutter git:(main) git checkout -b master-313-030-pre21-build-engine 1b1ccdd1f5 
+Updating files: 100% (1799/1799), done.
+Switched to a new branch 'master-313-030-pre21-build-engine'
+```
+
+*2\. Failed when building host-side executable*
+
+```bash
+➜  src git:(master) ninja -C out/host_debug_unopt
+ninja: Entering directory `out/host_debug_unopt'
+[8/1668] CXX obj/flutter/display_list/effects/display_list_unittests.dl_image_filter_unittests.o
+FAILED: obj/flutter/display_list/effects/display_list_unittests.dl_image_filter_unittests.o 
+../../buildtools/mac-x64/clang/bin/clang++ -MD -MF obj/flutter/display_list/effects/display_list_unittests.dl_image_filter_unittests.o.d -DUSE_OPENSSL=1 -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D_FORTIFY_SOURCE=2 -D_LIBCPP_DISABLE_AVAILABILITY=1 -D_LIBCPP_DISABLE_VISIBILITY_ANNOTATIONS -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS -D_DEBUG -DSK_TYPEFACE_FACTORY_CORETEXT -DSK_GL -DSK_METAL -DSK_ENABLE_DUMP_GPU -DSK_CODEC_DECODES_JPEG -DSK_CODEC_DECODES_PNG -DSK_CODEC_DECODES_WEBP -DSK_HAS_WUFFS_LIBRARY -DSK_XML -DFLUTTER_RUNTIME_MODE_DEBUG=1 -DFLUTTER_RUNTIME_MODE_PROFILE=2 -DFLUTTER_RUNTIME_MODE_RELEASE=3 -DFLUTTER_RUNTIME_MODE_JIT_RELEASE=4 -DDART_LEGACY_API=\[\[deprecated\]\] -DFLUTTER_RUNTIME_MODE=1 -DFLUTTER_JIT_RUNTIME=1 -DIMPELLER_DEBUG=1 -DIMPELLER_SUPPORTS_RENDERING=1 -DIMPELLER_ENABLE_METAL=1 -DIMPELLER_ERROR_CHECK_ALL_GL_CALLS -DSK_FORCE_AAA -DSK_LEGACY_IGNORE_DRAW_VERTICES_BLEND_WITH_NO_SHADER -DSK_DISABLE_LEGACY_SHADERCONTEXT -DSK_DISABLE_LOWP_RASTER_PIPELINE -DSK_FORCE_RASTER_PIPELINE_BLITTER -DSK_METAL_WAIT_UNTIL_SCHEDULED -DSK_DISABLE_EFFECT_DESERIALIZATION -DSK_ENABLE_SKSL -DSK_ENABLE_SKSL_IN_RASTER_PIPELINE -DSK_ENABLE_PRECOMPILE -DSK_GANESH -DSK_USE_PERFETTO -DSK_ENABLE_API_AVAILABLE -I../.. -Igen -I../../third_party/libcxx/include -I../../third_party/libcxxabi/include -I../../build/secondary/third_party/libcxx/config -I../../flutter -Igen/flutter -I../../third_party/flatbuffers/include -I../../third_party/skia -I../../third_party/googletest/googlemock/include -I../../third_party/googletest/googletest/include -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=10.14.0 -fno-strict-aliasing -fstack-protector-all -arch x86_64 -fcolor-diagnostics -Wall -Wextra -Wendif-labels -Werror -Wno-missing-field-initializers -Wno-unused-parameter -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-deprecated-copy -Wno-psabi -Wno-unqualified-std-cast-call -Wno-non-c-typedef-for-linkage -Wno-range-loop-construct -Wunguarded-availability -Wno-deprecated-declarations -fvisibility=hidden -Wstring-conversion -Wnewline-eof -O0 -g2 -Wno-newline-eof -fvisibility-inlines-hidden -std=c++17 -fno-rtti -nostdinc++ -nostdinc++ -fvisibility=hidden -fno-exceptions -stdlib=libc++ -Wno-inconsistent-missing-override  -c ../../flutter/display_list/effects/dl_image_filter_unittests.cc -o obj/flutter/display_list/effects/display_list_unittests.dl_image_filter_unittests.o
+../../flutter/display_list/effects/dl_image_filter_unittests.cc:687:11: error: use of undeclared identifier 'SkColorFilters'; did you mean 'SkColorFilter'?
+          SkColorFilters::Blend(SK_ColorRED, SkBlendMode::kSrcOver), nullptr),
+          ^~~~~~~~~~~~~~
+          SkColorFilter
+../../third_party/skia/include/effects/SkImageFilters.h:30:7: note: 'SkColorFilter' declared here
+class SkColorFilter;
+      ^
+../../flutter/display_list/effects/dl_image_filter_unittests.cc:687:11: error: incomplete type 'SkColorFilter' named in nested name specifier
+          SkColorFilters::Blend(SK_ColorRED, SkBlendMode::kSrcOver), nullptr),
+          ^~~~~~~~~~~~~~~~
+../../third_party/skia/include/core/SkImageFilter.h:15:7: note: forward declaration of 'SkColorFilter'
+class SkColorFilter;
+      ^
+../../flutter/display_list/effects/dl_image_filter_unittests.cc:687:46: error: incomplete type 'SkBlendMode' named in nested name specifier
+          SkColorFilters::Blend(SK_ColorRED, SkBlendMode::kSrcOver), nullptr),
+                                             ^~~~~~~~~~~~~
+../../flutter/display_list/effects/dl_image_filter_unittests.cc:694:15: error: use of undeclared identifier 'SkColorFilters'; did you mean 'SkColorFilter'?
+              SkColorFilters::Blend(SK_ColorRED, SkBlendMode::kSrcOver),
+              ^~~~~~~~~~~~~~
+              SkColorFilter
+../../third_party/skia/include/effects/SkImageFilters.h:30:7: note: 'SkColorFilter' declared here
+class SkColorFilter;
+      ^
+../../flutter/display_list/effects/dl_image_filter_unittests.cc:694:15: error: incomplete type 'SkColorFilter' named in nested name specifier
+              SkColorFilters::Blend(SK_ColorRED, SkBlendMode::kSrcOver),
+              ^~~~~~~~~~~~~~~~
+../../third_party/skia/include/core/SkImageFilter.h:15:7: note: forward declaration of 'SkColorFilter'
+class SkColorFilter;
+      ^
+../../flutter/display_list/effects/dl_image_filter_unittests.cc:694:50: error: incomplete type 'SkBlendMode' named in nested name specifier
+              SkColorFilters::Blend(SK_ColorRED, SkBlendMode::kSrcOver),
+                                                 ^~~~~~~~~~~~~
+6 errors generated.
+[17/1668] CXX obj/flutter/display_list/testing/display_list_testing.dl_test_snippets.o
+ninja: build stopped: subcommand failed.
+```
+
+This may be caused by you haven't run `gclient sync` at engine directory. Make sure you ran `gclient sync` before building executables.
+
+```bash
+➜  engine gclient sync
+Updating depot_tools...
+Syncing projects: 100% (141/141), done.                                                                            
+Hook 'python3 src/flutter/tools/pub_get_offline.py' took 16.11 secs
+Running hooks: 100% (15/15), done.                           
+➜  engine cd src 
+➜  src git:(master) ninja -C out/host_debug_unopt
+ninja: Entering directory `out/host_debug_unopt'
+[0/1] Regenerating ninja files
+[3077/3077] STAMP obj/default.stamp
+➜  src git:(master) ninja -C out/ios_debug_unopt
+ninja: Entering directory `out/ios_debug_unopt'
+[0/1] Regenerating ninja files
+[1639/1639] STAMP obj/default.stamp
+```
+
+## Conclusion
+
+Congratulations! You've now mastered the art of compiling the Flutter engine locally on specific versions and applying fixes. Armed with this knowledge, you can confidently tackle various development scenarios and verify bug fixes without the need to upgrade to the latest SDK version.
+
+Now, armed with your newfound expertise, go forth and build amazing Flutter applications with confidence, knowing you have the power to control and customize the engine to suit your needs.
+
+Happy Fluttering!
+
+Stay in touch with me for updates:
+
+* Twitter: [https://twitter.com/HuyNguyenTw](https://twitter.com/HuyNguyenTw)
+    
+* GitHub: [https://github.com/huynguyennovem](https://github.com/huynguyennovem)
+    
+* LinkedIn: [https://linkedin.com/in/huynguyennovem](https://linkedin.com/in/huynguyennovem)
+
+---
+
+## Post: Compiling Flutter Engine Locally - Getting Started (Part I)
+
+Source: https://huynq.dev/posts/compiling-flutter-engine-locally-part-i/
+
+Flutter empowers developers to dive deeper into the framework by compiling its engine locally. This process not only enables customization but also facilitates contributions to the open-source community. In this blog post, I will walk you through a step-by-step guide to preparing your development environment and compiling the Flutter engine locally.
+
+## Prepare environment
+
+The first step is to set up your development environment. Follow these steps to ensure you have all the necessary dependencies installed:
+
+Step 1. Install dependencies at [Getting dependencies](https://github.com/flutter/flutter/wiki/Setting-up-the-Engine-development-environment#getting-dependencies):
+
+```bash
+git
+ssh client
+python3
+Chromium's depot_tools
+curl
+unzip
+Visual Studio, Windows 10 SDK (for Windows)
+XCode, Rosetta (if using Mac M1)
+```
+
+Step 2. Head over to [https://github.com/flutter/engine](https://github.com/flutter/engine) and fork the repository into your own GitHub account.
+
+Step 3. Open your terminal and create directory named `engine` and then cd to this directory:
+
+```bash
+➜  mkdir engine && cd engine
+```
+
+Step 4. Create `.gclient` file and edit it with the following content. Replace &lt;your\_github\_username&gt; with your actual GitHub username:
+
+```bash
+solutions = [
+  {
+    "managed": False,
+    "name": "src/flutter",
+    "url": "git@github.com:/engine.git",
+    "custom_deps": {},
+    "deps_file": "DEPS",
+    "safesync_url": "",
+  },
+]
+```
+
+Step 5. Fetch source code of environment for Flutter engine ([https://github.com/flutter/buildroot](https://github.com/flutter/buildroot))
+
+```bash
+➜  engine gclient sync
+```
+
+Result:
+
+```bash
+➜  engine pwd
+/Users/huynq/Documents/GitHub/engine
+
+➜  engine tree -L 2
+.
+└── src
+    ├── AUTHORS
+    ├── BUILD.gn
+    ├── CODEOWNERS
+    ├── LICENSE
+    ├── README.md
+    ├── build
+    ├── build_overrides
+    ├── buildtools
+    ├── flutter
+    ├── fuchsia
+    ├── gpu
+    ├── out
+    ├── third_party
+    └── tools
+
+11 directories, 5 files
+```
+
+Step 6. Fetch engine source from remote ([https://github.com/flutter/engine](https://github.com/flutter/engine))
+
+```bash
+➜  engine cd src/flutter/
+➜  flutter git:(main) git pull upstream main
+From github.com:flutter/engine
+ * branch                  main       -> FETCH_HEAD
+Already up to date.
+```
+
+## Compile engine
+
+Once you have set up your environment, you can proceed with compiling the Flutter engine.
+
+**Step 1.** Fetch source code of environment again to update all dependencies.
+
+```bash
+➜  engine gclient sync
+Updating depot_tools...
+Syncing projects: 100% (141/141), done.                                                                            
+Hook 'python3 src/flutter/tools/pub_get_offline.py' took 10.45 secs
+Running hooks: 100% (15/15), done.
+```
+
+**Step 2.** Prepare build files for DEVICE-side executables
+
+You can choose to compile for different platforms. For example, to compile for Android, use the following command:
+
+```bash
+➜  engine cd src/
+➜  src git:(6e71c38) ./flutter/tools/gn --android --android-cpu arm64 --unoptimized
+Generating GN files in: out/android_debug_unopt_arm64
+Generating Xcode projects took 441ms
+Generating compile_commands took 62ms
+Done. Made 808 targets from 292 files in 6681ms
+```
+
+Note:
+
+* If you build for ios, replace `--android` with `--ios` . For eg: `./flutter/tools/gn --ios --unoptimized`
+    
+* *There are some runtime modes you can select:* `--runtime-mode=[debug|profile|release]`
+    
+
+**Step 3.** Prepare the build files for HOST-side executables.
+
+```bash
+➜  src git:(6e71c38) ./flutter/tools/gn --unoptimized
+Using prebuilt Dart SDK binary. If you are editing Dart sources and wish to compile the Dart SDK, set `--no-prebuilt-dart-sdk`.
+Generating GN files in: out/host_debug_unopt
+Generating Xcode projects took 436ms
+Generating compile_commands took 84ms
+Done. Made 938 targets from 335 files in 4135ms
+```
+
+*Note: There are some runtime modes you can select:* `--runtime-mode=[debug|profile|release]`
+
+**Step 4**. Build your executables
+
+These steps will take a long time, you should drink 2–3 cups of ☕️ while waiting 😌.
+
+First, build for DEVICE-side executables. I build for my arm64 Android device (Realme 6, Android 11, arm64-v8a), so it's `android_debug_unopt_arm64`. If it's iOS: `ninja -C out/ios_debug_unopt`
+
+```bash
+➜  src git:(6e71c38) ninja -C out/android_debug_unopt_arm64
+ninja: Entering directory `out/android_debug_unopt_arm64'
+[209/5101] ACTION //flutter/shell/platform/android:flutter_shell_java(//build/toolchain/android:clang_arm64)
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+[5087/5098] ACTION //flutter/testing/scenario_...id_lint(//build/toolchain/android:clang_arm64)
+Warning: This version only understands SDK XML versions up to 2 but an SDK XML file of version 3 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+Warning: unexpected element (uri:"", local:"extension-level"). Expected elements are ,,
+Warning: unexpected element (uri:"", local:"base-extension"). Expected elements are ,,
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+[5089/5098] ACTION //flutter/testing/scenari...d_apk(//build/toolchain/android:clang_arm64)
+Warning: This version only understands SDK XML versions up to 2 but an SDK XML file of version 3 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+Warning: unexpected element (uri:"", local:"extension-level"). Expected elements are ,,
+Warning: unexpected element (uri:"", local:"base-extension"). Expected elements are ,,
+[5093/5098] ACTION //flutter/testing/scenari...t_apk(//build/toolchain/android:clang_arm64)
+Warning: This version only understands SDK XML versions up to 2 but an SDK XML file of version 3 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+Warning: unexpected element (uri:"", local:"extension-level"). Expected elements are ,,
+Warning: unexpected element (uri:"", local:"base-extension"). Expected elements are ,,
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+[5097/5097] STAMP obj/default.stamp
+```
+
+Next, build for HOST-side executables:
+
+```bash
+➜  src git:(6e71c38) ninja -C out/host_debug_unopt   
+ninja: Entering directory `out/host_debug_unopt'
+[0/1] Regenerating ninja files
+[6194/6194] STAMP obj/default.stamp
+```
+
+**Step 5.** Use your build in Flutter project
+
+Now that you have successfully compiled the Flutter engine, you can use it in your Flutter projects. To do this, run your Flutter project with the following parameters:
+
+* `--local-engine`: the device executable you built above
+    
+* `--local-engine-src-path`: `engine/src` path
+    
+* `--local-engine-host`: `host_debug_unopt` output (\*)
+    
+
+> *(\*) Since Nov 2023, Flutter tool should require*`--local-engine-host`*when*`--local-engine`*is set, see issue*[https://github.com/flutter/flutter/issues/132245](https://github.com/flutter/flutter/issues/132245)
+
+```bash
+➜  new_3106 flutterm run --local-engine=android_debug_unopt_arm64 --local-engine-host=host_debug_unopt --local-engine-src-path=/Users/huynq/Documents/GitHub/engine/src
+Launching lib/main.dart on RMX2001 in debug mode...
+Running Gradle task 'assembleDebug'...                              5.3s
+✓  Built build/app/outputs/flutter-apk/app-debug.apk.
+D/ViewRootImpl(28547): enqueueInputEventMotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=964.0, y[0]=2138.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=277159252, downTime=277159252, deviceId=3, source=0x1002, displayId=0 }
+D/ViewRootImpl[MainActivity](28547): processMotionEvent MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=964.0, y[0]=2138.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=277159252, downTime=277159252, deviceId=3, source=0x1002, displayId=0 }
+D/ViewRootImpl[MainActivity](28547): dispatchPointerEvent handled=true, event=MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=964.0, y[0]=2138.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=277159252, downTime=277159252, deviceId=3, source=0x1002, displayId=0 }
+Syncing files to device RMX2001...                                 108ms
+
+Flutter run key commands.
+r Hot reload. 🔥🔥🔥
+R Hot restart.
+h List all available interactive commands.
+d Detach (terminate "flutter run" but leave application running).
+c Clear the screen
+q Quit (terminate the application on the device).
+```
+
+## Troubleshoot
+
+### 1. You may encounter `Unexpected Kernel Format Version 106` exception:
+    
+
+```console
+➜  new_3106 flutterm run --local-engine=android_debug_unopt_arm64 --local-engine-host=host_debug_unopt --local-engine-src-path=/Users/huynq/Documents/GitHub/engine/src
+Resolving dependencies... (1.0s)
+> collection 1.17.2 (was 1.17.1)
+> matcher 0.12.16 (was 0.12.15)
+> material_color_utilities 0.5.0 (was 0.2.0) (0.8.0 available)
+> source_span 1.10.0 (was 1.9.1)
+> stack_trace 1.11.1 (was 1.11.0)
+> stream_channel 2.1.2 (was 2.1.1)
+> test_api 0.6.1 (was 0.5.1)
++ web 0.1.4-beta
+These packages are no longer being depended on:
+- js 0.6.7
+Changed 9 dependencies!
+Launching lib/main.dart on RMX2001 in debug mode...
+Unhandled exception:
+Unexpected Kernel Format Version 106 (expected 104)
+#0      BinaryBuilder.readComponent. (package:kernel/binary/ast_from_binary.dart:691:9)
+#1      Timeline.timeSync (dart:developer/timeline.dart:171:22)
+#2      BinaryBuilder.readComponent (package:kernel/binary/ast_from_binary.dart:678:21)
+#3      _InitializationFromSdkSummary._prepareSummary (package:front_end/src/fasta/incremental_compiler.dart:2469:12)
+#4      _InitializationFromUri.initialize (package:front_end/src/fasta/incremental_compiler.dart:2543:23)
+
+#5      IncrementalCompiler._ensurePlatformAndInitialize (package:front_end/src/fasta/incremental_compiler.dart:1423:25)
+
+#6      IncrementalCompiler.computeDelta. (package:front_end/src/fasta/incremental_compiler.dart:312:11)
+
+#7      IncrementalCompiler.compile (package:vm/incremental_compiler.dart:75:50)
+
+#8      FrontendCompiler.compile (package:frontend_server/frontend_server.dart:599:11)
+
+#9      listenAndCompile. (package:frontend_server/frontend_server.dart:1310:11)
+
+the Dart compiler exited unexpectedly.
+the Dart compiler exited unexpectedly.
+Running Gradle task 'assembleDebug'...                                 ⣻%
+```
+
+**Solution**: Hint from [https://github.com/flutter/flutter/issues/50885#issuecomment-882045381](https://github.com/flutter/flutter/issues/50885#issuecomment-882045381)
+
+Make sure you didn't forget to build for HOST-side executables:
+
+```bash
+./flutter/tools/gn --unoptimized
+ninja -C out/host_debug_unopt
+```
+
+### 2. Depreciation issue by Python 3.12
+    
+
+```bash
+➜  engine gclient sync
+Syncing projects: 100% (137/137), done.                                                                            
+Running hooks:  14% ( 2/14) Generate sdk/version
+________ running 'python3 src/third_party/dart/tools/generate_sdk_version_file.py' in '/Users/huynq/Documents/GitHub/engine'
+/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/utils.py:294: SyntaxWarning: invalid escape sequence '\$'
+  ' awk "{ print \$1 }"',
+/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/utils.py:385: SyntaxWarning: invalid escape sequence '\d'
+  major = match_against('^MAJOR (\d+)$', content)
+/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/utils.py:386: SyntaxWarning: invalid escape sequence '\d'
+  minor = match_against('^MINOR (\d+)$', content)
+/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/utils.py:387: SyntaxWarning: invalid escape sequence '\d'
+  patch = match_against('^PATCH (\d+)$', content)
+/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/utils.py:388: SyntaxWarning: invalid escape sequence '\d'
+  prerelease = match_against('^PRERELEASE (\d+)$', content)
+/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/utils.py:389: SyntaxWarning: invalid escape sequence '\d'
+  prerelease_patch = match_against('^PRERELEASE_PATCH (\d+)$', content)
+Traceback (most recent call last):
+  File "/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/generate_sdk_version_file.py", line 7, in 
+    import utils
+  File "/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/utils.py", line 14, in 
+    import imp
+ModuleNotFoundError: No module named 'imp'
+Error: Command 'python3 src/third_party/dart/tools/generate_sdk_version_file.py' returned non-zero exit status 1 in /Users/huynq/Documents/GitHub/engine
+/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/utils.py:294: SyntaxWarning: invalid escape sequence '\$'
+  ' awk "{ print \$1 }"',
+/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/utils.py:385: SyntaxWarning: invalid escape sequence '\d'
+  major = match_against('^MAJOR (\d+)$', content)
+/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/utils.py:386: SyntaxWarning: invalid escape sequence '\d'
+  minor = match_against('^MINOR (\d+)$', content)
+/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/utils.py:387: SyntaxWarning: invalid escape sequence '\d'
+  patch = match_against('^PATCH (\d+)$', content)
+/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/utils.py:388: SyntaxWarning: invalid escape sequence '\d'
+  prerelease = match_against('^PRERELEASE (\d+)$', content)
+/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/utils.py:389: SyntaxWarning: invalid escape sequence '\d'
+  prerelease_patch = match_against('^PRERELEASE_PATCH (\d+)$', content)
+Traceback (most recent call last):
+  File "/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/generate_sdk_version_file.py", line 7, in 
+    import utils
+  File "/Users/huynq/Documents/GitHub/engine/src/third_party/dart/tools/utils.py", line 14, in 
+    import imp
+ModuleNotFoundError: No module named 'imp'
+```
+
+This is a depreciation issue by using Python 3.12 in your system. Just downgrade or delete your python3 (which is Python 12) in your system.
+
+E.g steps (macOS):
+
+* Determine python version:
+    
+```bash
+➜  ~ python3 -V
+Python 3.12.2
+➜  ~ which python3
+/usr/local/bin/python3
+```
+    
+* Go to `/usr/local/bin/python3`:
+    
+```bash
+➜  bin ls | grep python
+python
+python-build
+python3
+python3-config
+python3.10
+python3.10-config
+python3.11
+python3.11-config
+python3.9
+python3.9-config
+```
+    
+Then delete `python3` and `python3-config`
+    
+* Retry:
+    
+```console
+➜  engine gclient sync
+Syncing projects: 100% (137/137), done.                                                                            
+Hook 'python3 src/flutter/tools/pub_get_offline.py' took 14.53 secs
+Running hooks: 100% (14/14), done.
+```
+
+### 3. No module named 'pipes'
+
+```bash
+Traceback (most recent call last):
+  File "/Users/huym4/Documents/WORKING/SDK/flutter_forked_enginebuild/engine/src/flutter/third_party/depot_tools/ninja.py", line 14, in 
+    import gclient_paths
+  File "/Users/huym4/Documents/WORKING/SDK/flutter_forked_enginebuild/engine/src/flutter/third_party/depot_tools/gclient_paths.py", line 16, in 
+    import gclient_utils
+  File "/Users/huym4/Documents/WORKING/SDK/flutter_forked_enginebuild/engine/src/flutter/third_party/depot_tools/gclient_utils.py", line 16, in 
+    import pipes
+ModuleNotFoundError: No module named 'pipes'
+```
+The problem is that: I'm using Python version 3.13. 
+However, the Python standard library module `pipes` was removed in Python 3.13. Older versions of the ninja Python package still import it
+There are two solutions in my mind:
+
+  1) Downgrade Python to 3.12
+
+  2) Upgrade ninja using by Flutter in DEPS file
+
+Old:
+
+```
+  'third_party/ninja': {
+    'packages': [
+      {
+        'package': 'infra/3pp/tools/ninja/${{platform}}',
+        'version': 'version:2@1.11.1.chromium.4',
+      }
+    ],
+    'dep_type': 'cipd',
+  },
+```
+New:
+
+```
+  'third_party/ninja': {
+    'packages': [
+      {
+        'package': 'infra/3pp/tools/ninja/${{platform}}',
+        'version': 'version:2@1.12.1.chromium.2',
+      }
+    ],
+    'dep_type': 'cipd',
+  },
+```
+
+### 4. skia_path does not exist
+
+```bash
+src [master●●] ./flutter/tools/gn --android --android-cpu arm64 --unoptimized
+Traceback (most recent call last):
+  File "./flutter/tools/gn", line 1372, in 
+    sys.exit(main(sys.argv))
+  File "./flutter/tools/gn", line 1351, in main
+    gn_args = to_command_line(to_gn_args(args))
+  File "./flutter/tools/gn", line 448, in to_gn_args
+    gn_args.update(setup_git_versions())
+  File "./flutter/tools/gn", line 356, in setup_git_versions
+    revision_args['skia_version'] = get_repository_version(skia_path)
+  File "./flutter/tools/gn", line 315, in get_repository_version
+    raise IOError('path does not exist')
+OSError: path does not exist
+```
+
+I think it's due to `gclient sync` somehow was not completed. Let's just retry it and add `-v` to see the details:
+
+```bash
+gclient sync -D -v
+```
+
+Here are my steps (after mono repo):
+
+1) Copy .gclient from template and put it in sdk root dir(it was in engine dir previously)
+
+2) Execute `gclient sync -D -v` from sdk root dir
+
+### Conclusion
+
+Compiling the Flutter engine on local gives you the flexibility to customize and enhance the Flutter engine to suit your specific needs. This also be helpful to cherry-pick specific PR/fixes that haven't landed on the latest Flutter release yet. By following the steps mentioned in this article, you can set up your environment, compile the engine, and start contributing to the Flutter community as well.
+
+So, go ahead, explore the possibilities, and happy compiling Flutter engine!
+
+Want to explore more about building Flutter engine? Check out my other posts:
+
+* [Compiling Flutter Engine Locally - Getting Started (Part II)](compiling-flutter-engine-locally-part-ii.md)
+* [Compiling Flutter Engine Locally - Web engine (Part III)](compiling-flutter-engine-locally-web-engine-part-iii.md)
+* [Compiling Flutter Engine Locally - What changes after monorepo (Part IV)](compiling-flutter-engine-locally-part-iv.md)
+
+Stay in touch with me for updates:
+
+* Twitter: [https://twitter.com/HuyNguyenTw](https://twitter.com/HuyNguyenTw)
+    
+* GitHub: [https://github.com/huynguyennovem](https://github.com/huynguyennovem)
+    
+* LinkedIn: [https://linkedin.com/in/huynguyennovem](https://linkedin.com/in/huynguyennovem)
+
+---
+
+## Post: Bisecting regression issue in Flutter
+
+Source: https://huynq.dev/posts/bisecting-regression-issue-in-flutter/
+
+Flutter is a popular framework for building cross-platform applications. However, regression issues may arise occasionally due to the introduction of a bad commit. Identifying and isolating these problematic commits is crucial for maintaining a stable framework. In this blog post, I will explore the process of bisecting a bad commit in a regression issue. I will also provide some helpful tips for effective bisecting.
+
+### Start bisecting a regression issue
+
+This is a regression issue filed in Flutter repository: [https://github.com/flutter/flutter/issues/129969](https://github.com/flutter/flutter/issues/129969). It's a framework issue that causes application to crash when dragging mouse over Tooltip while selecting text in SelectionArea.
+
+Let's assume you have already had multiple Flutter versions installed on your machine (you can use fvm or alias). I'm using alias and have stable, beta, master channels on my machine corresponding to *flutter*, *flutterb* and *flutterm* aliases.
+
+First, we need to identify which channel we should start doing bisect. In this case, I can verify quickly the issue is not reproducible on stable channel, but it's reproducible on master channel (by running sample code on both these channels). So we will start bisecting on master channel.
+
+The first good commit will be the commit on which version 3.10.5 is released. You can check this commit on the Flutter release page at [https://docs.flutter.dev/release/archive?tab=macos](https://docs.flutter.dev/release/archive?tab=macos). After looking version 3.10.5 on release page, I can see the good commit is `796c8ef`.
+
+Let's start!
+
+**Step 1: cd to Flutter SDK path and mark commit range**
+
+```bash
+➜  cd 
+➜  flutter_master git:(master) git bisect start
+➜  flutter_master git:(master) git bisect bad              //the latest commit is bad
+➜  flutter_master git:(master) git bisect good 796c8ef     //the commit on 3.10.5 release is good
+Bisecting: a merge base must be tested
+[e749db6f915c341d15b9cb81dc19bdc9e791c72f] Revert "Refactor reorderable list semantics" (#124368)
+```
+
+**Step 2: Evaluate commit is good or bad**
+
+We notice git revision has been changed to `e749db6f91`. Git automatically check out a commit for testing. Then we need to open project where you found the bug, run it and confirm whether the bug is present or not. Make sure you select flutter master channel for that project.
+
+If the result is good, let's mark that commit as good. Otherwise, let's mark it as bad. In this case, I can see the bug is not present on this commit, so I will mark it as good.
+
+```bash
+➜  flutter_master git:(e749db6f91) git bisect good        
+Bisecting: 662 revisions left to test after this (roughly 9 steps)
+[8135a4bedac87a8fc61318f1848f7acc9a511964] Roll Flutter Engine from 3c23ddae1d2a to 9039c2dfb74c (2 revisions) (#127154)
+```
+
+**Step 3: Repeat testing and marking**
+
+Git will automatically select a new commit for testing based on your previous marking. And then it will display the final commit hash associated with the bad commit.
+
+```bash
+➜  flutter_master git:(8135a4beda) git bisect good 
+Bisecting: 331 revisions left to test after this (roughly 8 steps)
+[ddfe8a358cbcff2f72af3b382d8a625a239068cf] Update `chip.dart` to use set of `MaterialState` (#128507)
+➜  flutter_master git:(ddfe8a358c) git bisect good 
+Bisecting: 165 revisions left to test after this (roughly 7 steps)
+[5d8cc978b9113bf2a6033131e67b030f0ebb93d2] Refactor `Analytics` global getter to point to context only (#129196)
+➜  flutter_master git:(5d8cc978b9) git bisect bad  
+Bisecting: 82 revisions left to test after this (roughly 6 steps)
+[4fe84d7af72fe04fad20b40e62eb9973fda8245f] Roll Flutter Engine from 66a5761412f9 to 727b4413fe6f (10 revisions) (#128841)
+➜  flutter_master git:(4fe84d7af7) git bisect bad
+Bisecting: 41 revisions left to test after this (roughly 5 steps)
+[6c471d3ec24b5fc0d3f9004d61d9be85322762bd] Roll Flutter Engine from 962d78e0ae9c to 3d76ba6d6d5f (1 revision) (#128645)
+➜  flutter_master git:(6c471d3ec2) git bisect bad
+Bisecting: 20 revisions left to test after this (roughly 4 steps)
+[befd86d6b14e1df2f4a10d9e282970a6ffa978d7] Roll Flutter Engine from cb93477008d6 to 93afba901b3b (2 revisions) (#128573)
+➜  flutter_master git:(befd86d6b1) git bisect good
+Bisecting: 10 revisions left to test after this (roughly 3 steps)
+[a35ae60102e77eb6d2556e95d5061823063209ab] Roll Flutter Engine from bc6e047570f6 to 071e1fb21c7a (1 revision) (#128602)
+➜  flutter_master git:(a35ae60102) git bisect good
+Bisecting: 5 revisions left to test after this (roughly 3 steps)
+[ca11492b6bdc0f49708173324dccc461fc20e1d9] Roll Flutter Engine from 488876ed26c6 to 3e90345cdca7 (3 revisions) (#128617)
+➜  flutter_master git:(ca11492b6b) git bisect good
+Bisecting: 2 revisions left to test after this (roughly 2 steps)
+[e39ed8e86aa18192d272a0d9ca345a0240c8ccf8] Bump actions/checkout from 3.5.2 to 3.5.3 (#128625)
+➜  flutter_master git:(e39ed8e86a) git bisect good
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[e1fdb1aa74003f771eb83ba0e9828a04ce7799f4] migrate `Tooltip` to use  `OverlayPortal` (#127728)
+➜  flutter_master git:(e1fdb1aa74) git bisect bad 
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[9e8143a0473ec9f3f640cd199d0d393b8f9324ca] Roll Flutter Engine from b037db26037f to 962d78e0ae9c (10 revisions) (#128643)
+➜  flutter_master git:(9e8143a047) git bisect good
+e1fdb1aa74003f771eb83ba0e9828a04ce7799f4 is the first bad commit
+commit e1fdb1aa74003f771eb83ba0e9828a04ce7799f4
+Author: LongCatIsLooong 
+Date:   Sat Jun 10 13:54:37 2023 -0700
+
+    migrate `Tooltip` to use  `OverlayPortal` (#127728)
+    
+    https://github.com/flutter/flutter/issues/7151 isn't a problem with OverlayPortal so the test is removed.
+    Also removed some `mounted` checks since they're no longer needed.
+
+ packages/flutter/lib/src/material/tooltip.dart   | 166 ++++++++---------------
+ packages/flutter/test/material/tooltip_test.dart |  41 +-----
+ 2 files changed, 61 insertions(+), 146 deletions(-)
+➜  flutter_master git:(9e8143a047)
+```
+
+Great! Now you found the bad commit and the PR caused the bug. You can post it to issue thread and wait for the fix. This will help issue-fixing progress faster.
+
+Don't forget to reset bisecting process after you found the bad commit.
+
+```bash
+git bisect reset
+flutter doctor  //to fetch SDK again
+```
+
+### Tips for Bisecting
+
+1. Choose the right Flutter version to start bisecting. When identifying a known good and bad commit, it is essential to choose versions that are reasonably close to each other. This ensures a more efficient bisecting process, as commits too far apart may require excessive testing and marking. Let's store several stable versions on your machine and check them manually before bisecting, to determine a stable version contains good commits.
+    
+2. You may see this message each time run the app again:
+    
+
+```bash
+Waiting for another flutter command to release the startup lock...
+```
+
+It will take a bit (a few tens of seconds or longer depending on your machine), but be patient. Open Activity Monitor and monitor `dart`/`dart:flutter_tools:snapshot` processes, if they take up too many resources and cause freezing (you see the above message for too long without any progress (app can't run), kill them and run flutter again (this case rarely happens and I hardly need to use it).
+
+### Conclusion
+
+Bisecting bad commits is an essential technique for diagnosing regression issues in the Flutter framework. By following the outlined steps and utilizing the provided tips, you can efficiently isolate the commit responsible for the issue and contribute to improving the stability and reliability of Flutter applications. Remember to share your findings and contribute to the Flutter issue database, enabling the community to resolve these problems collaboratively.
+
+Happy bisecting!
+
+Stay in touch with me for updates:
+
+* Twitter: [https://twitter.com/HuyNguyenTw](https://twitter.com/HuyNguyenTw)
+    
+* GitHub: [https://github.com/huynguyennovem](https://github.com/huynguyennovem)
+    
+* LinkedIn: [https://linkedin.com/in/huynguyennovem](https://linkedin.com/in/huynguyennovem)
+
+---
+
+## Post: Crafting responsive Desktop UI for OverlayEntry in Flutter
+
+Source: https://huynq.dev/posts/crafting-responsive-desktop-ui-for-overlayentry-in-flutter/
+
+In Flutter, OverlayEntry allows developers to create overlay widgets on top of existing UI elements. In this article, we will dive into the process of creating OverlayEntry, tackling the challenge of resizing window, and demonstrate its potential with a QR popup on NetShare. Let’s get started!
+
+### OverlayEntry overview
+
+OverlayEntry renders widgets on top of existing UI elements, providing the ability to create interactive and visually appealing overlays. To create a simple OverlayEntry, we can use the following code snippet:
+
+```dart
+// Create an OverlayEntry
+final overlayEntry = OverlayEntry(builder: (context) {}
+
+// Add the OverlayEntry to the Overlay
+Overlay.of(context, debugRequiredFor: widget).insert(overlayEntry!);
+```
+
+The problem is that we don’t have a specific location for it yet. So how to display OverlayEntry at the desired position?
+
+Assume that we need to show the OverlayEntry at the button position when it is clicked. First, find the position of the button with `findRenderObject()` from button key and then use `localToGlobal()` to convert the local position to the global coordinate system. Next, use these positions in the Positioned widget. And finally fill up content for OverlayEntry, which is the child of Positioned.
+
+```dart
+ _showOverlay() {
+    _clearOverlay();
+
+    final RenderBox buttonRenderBox = _buttonKey.currentContext?.findRenderObject() as RenderBox;
+    final buttonSize = buttonRenderBox.size;
+    final buttonPosition = buttonRenderBox.localToGlobal(Offset.zero);
+
+    overlayEntry = OverlayEntry(builder: (context) {
+      return GestureDetector(
+          behavior: HitTestBehavior.translucent,
+          onTap: _clearOverlay,
+          child: Stack(
+            children: [
+              Positioned(
+                top: buttonPosition.dy + buttonSize.height,
+                left: buttonPosition.dx + buttonSize.height,
+                child: SizedBox(
+                  width: overlaySize,
+                  height: overlaySize,
+                  child: Container(
+                    alignment: Alignment.center,
+                    color: Colors.blue,
+                    child: const Text(
+                      'Hello',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16.0,
+                        decoration: TextDecoration.none,
+                      ),
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ));
+    });
+    
+    // Add the OverlayEntry to the Overlay.
+    Overlay.of(context, debugRequiredFor: widget).insert(overlayEntry!);
+  }
+
+  _clearOverlay() {
+    overlayEntry?.remove();
+    overlayEntry = null;
+  }
+```
+
+You may notice the snippet code above call to `_clearOverlay()` method. It’s just to make sure that only one OverlayEntry is shown with the action that triggered it.
+
+And this is the result:
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1710004536985/d52a3848-cb0d-4559-9b93-32e7a3fca973.gif)
+
+### Responsive OverlayEntry on Desktop UI
+
+Even OverlayEntry can be displayed, it lacks the flexibility to adapt window resizing.
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1710004604930/dc0bd53f-4f39-474f-9492-6cccf4827db1.gif)
+
+Resizing a window should not hinder the seamless experience of our overlays. To ensure that our OverlayEntry adapts to changes in window size, we can leverage the power of LayoutBuilder. By wrapping our overlay content with a LayoutBuilder widget, we gain access to the constraints of the parent container.
+
+```dart
+  _showOverlay() {
+    _clearOverlay();
+
+    overlayEntry = OverlayEntry(builder: (context) {
+      return GestureDetector(
+        behavior: HitTestBehavior.translucent,
+        onTap: _clearOverlay,
+        child: LayoutBuilder(
+          builder: (BuildContext context, BoxConstraints constraints) {
+            final RenderBox buttonRenderBox = _buttonKey.currentContext?.findRenderObject() as RenderBox;
+            final buttonSize = buttonRenderBox.size;
+            final buttonPosition = buttonRenderBox.localToGlobal(Offset.zero);
+            return Stack(
+              children: [
+                Positioned(
+                  top: buttonPosition.dy + buttonSize.height,
+                  left: buttonPosition.dx + buttonSize.height,
+                  child: SizedBox(
+                    width: overlaySize,
+                    height: overlaySize,
+                    child: Container(
+                      alignment: Alignment.center,
+                      color: Colors.blue,
+                      child: const Text(
+                        'Hello',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16.0,
+                          decoration: TextDecoration.none,
+                        ),
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            );
+          },
+        ),
+      );
+    });
+
+    // Add the OverlayEntry to the Overlay.
+    Overlay.of(context, debugRequiredFor: widget).insert(overlayEntry!);
+  }
+```
+
+Explain more about this, why do we include the button position calculation in LayoutBuilder? That’s because when the window resizes, the position of the button is also changed, so it is necessary to recalculate its position when the window resizing ends. Let’s see how this worked:
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1710004615388/26c4c9ba-bdb5-44ad-a6c2-7b8947a128ae.gif)
+
+That’s great, right? Let’s check the complete source code for this demo at this [gist](https://gist.github.com/huynguyennovem/55f36f71f5b17b9834d5ee4e7654fba5).
+
+### Bringing it All Together — QR Popup on NetShare
+
+To demonstrate the versatility of OverlayEntry, let’s take a look at QR popup on NetShare. [NetShare](https://github.com/huynguyennovem/netshare) is an open-source Flutter project that makes it easy to share data in a local network. The latest release includes support for Android, macOS, Windows, and Linux platforms.
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1710004647277/28a49538-26ba-4176-8164-b9b91dddcfd9.png)
+
+NetShare utilizes OverlayEntry to display a QR code overlay when the user clicks on the “QR” image button within the NetShare app in Server mode. The QR code overlay will provide a convenient way for users to quickly scan and access shared files on their mobile devices.
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1710004689104/ed4ab90e-2ae6-44f2-85ba-820c5962f9a4.gif)
+
+In this article, we explored the fundamentals of OverlayEntry, tackled the challenge of resizing window, and demonstrated its potential by creating a captivating QR popup on NetShare. Armed with this knowledge, you can now unleash your creativity and build visually stunning and interactive desktop applications with Flutter.
+
+Happy Flutter-ing!
+
+Stay in touch with me for updates:
+
+* Twitter: [https://twitter.com/HuyNguyenTw](https://twitter.com/HuyNguyenTw)
+    
+* GitHub: [https://github.com/huynguyennovem](https://github.com/huynguyennovem)
+    
+* LinkedIn: [https://linkedin.com/in/huynguyennovem](https://linkedin.com/in/huynguyennovem)
+
+---
+
+## Post: Releasing Flutter projects on GitHub
+
+Source: https://huynq.dev/posts/releasing-flutter-projects-on-github/
+
+Flutter is a popular open-source framework for building high-performance, high-fidelity mobile, web, and desktop applications. If you’re working on a Flutter project and want to distribute it on GitHub, this article will guide you through the process.
+
+In this article, I will use [NetShare](https://github.com/huynguyennovem/netshare) as an example project. NetShare is an open-source Flutter project that makes it easy to share data in a local network. The latest release includes support for Android, macOS, Windows, and Linux platforms.
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1710004291830/786b8432-5881-4540-af9d-83a6fb7441c7.png)
+
+### Android
+
+1. Prepare the app icon by using your preferred design tool. You can use Adobe Illustrator to export a high-quality PNG icon and then use Android Studio to generate all density icons. For more information, see the official [Create App Icons](https://developer.android.com/studio/write/create-app-icons#access) documentation.
+    
+2. Open `android` project (inside `flutter` project) on Android Studio and add the app icon.
+    
+3. Set up the release configuration/key per the guideline provided in the official [Flutter documentation](https://docs.flutter.dev/deployment/android).
+    
+4. Build the release APK from the console on the Flutter project root directory: `flutter build apk`
+    
+5. Upload the release APK to the Release on your GitHub project.
+    
+
+### macOS
+
+1. Design your app icon by using your preferred design tool. And then you may use [appicon.co](http://appicon.co) to generate all density icons.
+    
+2. Open the macOS project and update the AppIcon on XCode. Check official [Apple documentation](https://developer.apple.com/documentation/xcode/configuring-your-app-icon) for more details.
+    
+3. Build the project from the console on the Flutter project root directory: `flutter build macos`. Sometimes, the old icon may be cached, and you need to run \`flutter clean before building the app.
+    
+4. On XCode, go to `Product > Archive`.
+    
+5. Once the archive is finished, click on Distribute App.
+    
+6. Select the method of distribution as `Copy App`
+    
+7. Compress the app to a zip file and upload it to Release on your GitHub project.
+    
+
+### Windows
+
+1. Update the app icon at `windows\runner\resources\app_icon.ico`
+    
+2. Change the app name at `windows\runner\main.cpp`
+    
+3. Execute `flutter build windows`
+    
+4. Download and install [Inno Setup](https://jrsoftware.org/download.php/is.exe)
+    
+5. Open Inno Setup, create a new app, and follow step-by-step with [protocoderspoint’s tutorial](https://protocoderspoint.com/how-to-create-exe-installation-file-of-flutter-windows-application/)
+    
+6. Upload the output file to the Release on your GitHub project.
+    
+
+You may also want to try the MSIX distribution by following the [official Flutter guideline](https://docs.flutter.dev/platform-integration/windows/building#distributing-windows-apps).
+
+### Linux
+
+Flutter apps can also be distributed on Linux using the Debian package format. To create a Debian package, we can use the `flutter_to_debian` package.
+
+1. Follow the instructions in the `flutter_to_debian` package documentation at [https://pub.dev/packages/flutter\_to\_debian](https://pub.dev/packages/flutter_to_debian).
+    
+2. Add `flutter_to_debian` to your system PATH by running the following command in your terminal:
+    
+
+```bash
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+```
+
+3. Run `flutter_to_debian` from your Flutter project directory
+    
+
+```bash
+huynq@ubuntu:~/Documents/WIP/netshare$ flutter_to_debian
+
+checking for debian 📦 in root project...  ✅
+
+start building debian package... ♻️  ♻️  ♻️
+
+No skeleton found
+🔥🔥🔥 (debian 📦) build done successfully  ✅
+
+😎 find your .deb at
+debian/packages/NetShare_2.0.0_amd64.deb
+```
+
+4. Test the output by installing it locally using the `dpkg` command:
+    
+
+```bash
+sudo dpkg -i NetShare_2.0.0_amd64.deb
+```
+
+5. If the installation is successful and the app works as expected, upload output file to Releases on your GitHub project.
+    
+
+### iOS
+
+iOS distribution requires an Apple developer account. Instead, publishing app to the AppStore could be an option. Please see the guidelines at [Build and release an iOS app](https://docs.flutter.dev/deployment/ios) for specific steps.
+
+### Web
+
+Web is easy to distribute since there are various ways to do it. You could use Firebase hosting or other hosting services to host built web content.
+
+1. Execute `flutter build web`. There are two renderers `html` and `canvaskit` that you can choose (see [web renderers](https://docs.flutter.dev/platform-integration/web/renderers) for more details).
+    
+2. Check the output result locally with your local web server (node/python/…). I use Python server as an example:
+    
+
+```bash
+cd build/web
+python -m http.server 8000
+```
+
+This will start a web server at [http://localhost:8000](http://localhost:8000) that serves the output files in the `build/web` directory.
+
+3. Deploy web by your favorite service (see [deploy-to-the-web](https://docs.flutter.dev/deployment/web#deploying-to-the-web)).
+    
+
+### Conclusion
+
+In this article, we have walked through the steps of releasing a Flutter project on GitHub. Each platform requires specific configuration and tooling, but with the appropriate guidelines and references, you can distribute your app on any platform you choose. By following these guidelines and distributing your Flutter project on GitHub, you can reach a wider audience and make your project accessible to others.
+
+Thank you for reading this article, and I hope that it will be helpful in guiding you through the process of releasing your Flutter project on GitHub.
+
+Also, if you are interested in the NetShare project, please keep up with the progress by following project on Github and Twitter:
+
+* Github project: [https://github.com/huynguyennovem/netshare](https://github.com/huynguyennovem/netshare)
+    
+* Twitter: [https://twitter.com/NetShareOSS](https://twitter.com/NetShareOSS)
+    
+* Maintainer: [https://twitter.com/HuyNguyenTw](https://twitter.com/HuyNguyenTw)
+    
+
+Thanks for reading!
+
+---
+
+## Post: Introduction to NetShare - Flutter opensource project
+
+Source: https://huynq.dev/posts/introduction-to-netshare-flutter-opensource-project/
+
+It’s been a few months since I [first launched NetShare on Twitter](https://twitter.com/HuyNguyenTw/status/1613235672072220673), and I’m so excited to announce the release of a new version that brings new features and improvements. For those of you who may have missed the initial launch, NetShare is an open-source Flutter project that makes it easy to share data in a local network.
+
+Let’s start with a quick recap of what NetShare achieved so far. In the previous launch, I shared how NetShare can help users share files between MacOS and Android platforms. Flutter lovers expressed interest in the first version:
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1710003537605/b01e619d-ea84-49de-985e-00100f390a8f.webp)
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1710003567767/58c3eabb-789a-4c5b-8f45-c13b16d5569a.webp)
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1710003581915/cde3e41b-a7f6-4ad0-90db-1904cf465bb9.webp)
+
+Thank you all for this interest, it has motivated me to persist in releasing the current and upcoming versions. Since then, I’ve been working to improve NetShare and make it even more useful for everyone. I’m proud to share that NetShare has now released version 2.0, which includes new features and enhancements. Here are some of the key updates in this release:
+
+### 1\. Build for Windows and Linux
+
+NetShare has expanded the supported platforms to include Windows and Linux, in addition to the existing Android and macOS from the previous release. This makes NetShare accessible to even more users, regardless of their operating system. Check out the demo video on [YouTube channel](https://www.youtube.com/watch?v=KIReSrqF8FI&list=PL14hk3c2BHZxEY4SupK4RAUQRaeyZ73gX)!
+
+### 2\. Switching between Client and Server modes
+
+With the new version, users can now switch between Client and Server modes, making it easy to control the flow of data between devices.
+
+### 3\. File mime type icon
+
+The application added file mime-type icons to make it easier to identify different file types at a glance.
+
+### 4\. Download/Open file and file state
+
+Users can now download and open files directly from within NetShare, as well as see the state of each file.
+
+### 5\. Open sharing native directory
+
+Manually finding and opening the sharing directory can be time-consuming and frustrating. Now users can open it directly from NetShare, saving time and hassle.
+
+### 6\. Display server uptime
+
+NetShare now displays server uptime, giving users a better sense of how long their server has been running.
+
+### 7\. QR Connect method
+
+This helps users easy to connect devices without the need for typing in IP address and port.
+
+### 8\. Drag-drop and remove files on the uploading screen
+
+With the new version, users can now drag and drop files on the uploading screen, as well as remove files from the queue.
+
+### 9\. Limit window size on desktop
+
+Limiting window size on desktop to ensure a better user experience.
+
+### 10\. Friendly desktop UI/UX
+
+Finally, I’ve made numerous improvements to the desktop UI/UX to ensure a more user-friendly experience overall.
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1710003736023/2388ac7d-d883-4825-a8c0-40665624ab36.webp)
+
+I’m thrilled to bring these new features to the NetShare and hope users will make data sharing even more seamless and convenient. As always, I welcome feedback and suggestion from everyone, so please don’t hesitate to reach out if you have ideas or comments to share.
+
+Keep up with NetShare progress by following the project on GitHub and Twitter:
+
+* Github project: [https://github.com/NetShareOSS/netshare](https://github.com/NetShareOSS/netshare)
+    
+* Twitter: [https://twitter.com/NetShareOSS](https://twitter.com/NetShareOSS)
+    
+* Maintainer: [https://twitter.com/HuyNguyenTw](https://twitter.com/HuyNguyenTw)
+    
+
+Thanks for your support, and happy NetSharing!
+
+---
+
+## Post: How to prevent Jetsam/OOM crashes on iOS in Flutter media flows
+
+Source: https://huynq.dev/posts/how-to-prevent-jetsam-oom-crash-on-ios-in-flutter-media-flow/
+
+I recently got an App Store rejection because the reviewer could reproduce a fatal crash during a camera/media flow.
+
+The confusing part: I could not reproduce it locally in Debug or Release (from Flutter tool and from Xcode).
+
+Then I checked Firebase Crashlytics and saw a crash report with a stack trace that looked unrelated to my app logic (mostly `UIAccessibility` frames). At first glance, it did not look like a normal Dart exception.
+
+After correlating Crashlytics with Firebase Analytics breadcrumbs, I could reconstruct the exact reviewer flow.
+
+Here is the truncated stacktrace in Firebase Crashlytics:
+
+```sh
+Crashed: com.apple.main-thread
+0  Flutter                        0x43a13c _$LT$core..char..ToLowercase$u20$as$u20$core..iter..traits..double_ended..DoubleEndedIterator$GT$::next_back::h8e46a25d72ae0e8d + 354584
+1  UIAccessibility                0x7838 -[NSObject(AXPrivCategory) _accessibilityContainingParentForOrdering] + 200
+2  UIAccessibility                0x76c4 _scrollParentForComparingGeometryOfView + 148
+3  UIAccessibility                0x5888 -[NSObject _accessibilityCompareGeometry:] + 852
+4  UIAccessibility                0x5510 -[NSObject(AXPrivCategory) accessibilityCompareGeometry:] + 52
+5  CoreFoundation                 0x24c8c __CFSimpleMergeSort + 100
+6  CoreFoundation                 0x24ab4 CFSortIndexes + 260
+7  CoreFoundation                 0x26900 -[NSMutableArray sortRange:options:usingComparator:] + 448
+8  CoreFoundation                 0xc70d4 -[NSMutableArray sortUsingSelector:] + 176
+9  UIKit                          0x16a1e4 -[UIViewAccessibility _accessibilityUserTestingSubviewsSorted:] + 332
+10 UIKit                          0x16a068 -[UIViewAccessibility automationElements] + 160
+11 UIAccessibility                0x31894 -[NSObject(AXPrivCategory) _iosAccessibilityAttributeValue:] + 220
+12 UIAccessibility                0x5d59c -[NSObject(UIAccessibilityAutomation) _accessibilityUserTestingSnapshotDescendantsWithAttributes:maxDepth:maxChildren:maxArrayCount:honorsModalViews:] + 924
+13 UIAccessibility                0x5ebb4 -[NSObject(UIAccessibilityAutomation) _accessibilityUserTestingSnapshotWithOptions:] + 940
+14 UIAccessibility                0x2e6c0 -[NSObject(AXPrivCategory) _iosAccessibilityAttributeValue:forParameter:] + 1420
+15 UIKit                          0x575e0 -[UIApplicationAccessibility _iosAccessibilityAttributeValue:forParameter:] + 1648
+16 UIAccessibility                0xcb9c _copyParameterizedAttributeValueCallback + 364
+17 AXRuntime                      0xe268 ___AXXMIGCopyParameterizedAttributeValue_block_invoke + 64
+18 AXRuntime                      0xd9c0 _handleNonMainThreadCallback + 60
+19 AXRuntime                      0xe09c _AXXMIGCopyParameterizedAttributeValue + 480
+20 AXRuntime                      0x808c AXUIElementCopyParameterizedAttributeValueRecursive + 640
+21 AXRuntime                      0x7d74 AXUIElementCopyParameterizedAttributeValue + 96
+22 XCTAutomationSupport           0x7f30 (Missing UUID f4602ce4c6873048a49e7e2d5cfde760)
+23 XCTAutomationSupport           0x11be4 (Missing UUID f4602ce4c6873048a49e7e2d5cfde760)
+24 XCTAutomationSupport           0xf7d4 (Missing UUID f4602ce4c6873048a49e7e2d5cfde760)
+25 XCTAutomationSupport           0x2b8d0 (Missing UUID f4602ce4c6873048a49e7e2d5cfde760)
+26 CoreFoundation                 0x2d750 __CFRUNLOOP_IS_CALLING_OUT_TO_A_BLOCK__ + 28
+27 CoreFoundation                 0x2d41c __CFRunLoopDoBlocks + 396
+28 CoreFoundation                 0x2ee40 __CFRunLoopRun + 848
+29 CoreFoundation                 0x2e1d0 _CFRunLoopRunSpecificWithOptions + 532
+30 GraphicsServices               0x1498 GSEventRunModal + 120
+31 UIKitCore                      0x1212c4  + 796
+32 UIKitCore                      0x8c158 UIApplicationMain + 332
+33 UIKitCore                      0x298698  + 528
+34 Runner                         0x6d48 main + 4337397064 (AppDelegate.swift:4337397064)
+35 ???                            0x181f45c1c (Missing)
+```
+
+Additonal thing is it occured on iPhone 16 Pro / iOS 26.4.1, which is a high-end model device.
+
+## The crash flow I found
+
+1. Open a screen with image/video picker.
+2. Tap **Camera** as input source.
+3. Record a video and tap **Use Video**.
+4. Return to Flutter screen.
+5. App is terminated due to memory pressure (Jetsam/OOM).
+
+## Why this is easy to misread
+
+When iOS kills your process because of memory pressure, the report can show system-level frames, and it may not look like "your code crashed".
+
+In practice, this is still your app's memory profile problem, especially around camera/media handoff and preview decoding.
+
+## What fixed it for me
+
+### 1) Limit capture payload early
+
+For camera images via `image_picker`, do not request full-size assets unless really necessary.
+
+Before:
+
+```dart
+final XFile? image = await _picker.pickImage(source: source);
+```
+
+After:
+
+```dart
+final XFile? image = await _picker.pickImage(
+  source: ImageSource.camera,
+  maxWidth: 1920,
+  maxHeight: 1920,
+  imageQuality: 85,
+  requestFullMetadata: false,
+);
+```
+
+For videos, also constrain what you can (for example duration), then compress/transcode if needed before heavy processing.
+
+### 2) Avoid full-resolution image decode in preview widgets
+
+Before:
+
+```dart
+Image.file(
+  _selectedImage!,
+  height: 250,
+  width: double.infinity,
+  fit: BoxFit.cover,
+)
+```
+
+After:
+
+```dart
+Image(
+  image: ResizeImage(FileImage(_selectedImage!), width: 1080),
+  height: 250,
+  width: double.infinity,
+  fit: BoxFit.cover,
+  filterQuality: FilterQuality.low,
+)
+```
+
+This significantly reduces decode memory while still looking good enough for preview.
+
+### 3) Evict old preview image when replacing media
+
+If users re-pick media multiple times, stale decoded images can keep memory high.
+
+```dart
+import 'dart:async';
+
+Future _evictImagePreview(File? imageFile) async {
+  if (imageFile == null) {
+    return;
+  }
+  await FileImage(imageFile).evict();
+}
+
+Future _pickImage(ImageSource source) async {
+  final File? previousImage = _selectedImage;
+
+  final XFile? image = await _picker.pickImage(
+    source: source,
+    maxWidth: 1920,
+    maxHeight: 1920,
+    imageQuality: 85,
+    requestFullMetadata: false,
+  );
+
+  if (image != null) {
+    await _evictImagePreview(previousImage);
+    setState(() {
+      _selectedImage = File(image.path);
+    });
+  }
+}
+
+@override
+void dispose() {
+  unawaited(_evictImagePreview(_selectedImage));
+  super.dispose();
+}
+```
+
+### 4) Handle memory-pressure callback globally
+
+Listen for memory pressure and clear caches proactively.
+
+```dart
+class AppState extends State with WidgetsBindingObserver {
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  @override
+  void didHaveMemoryPressure() {
+    final ImageCache imageCache = PaintingBinding.instance.imageCache;
+    imageCache.clear();
+    imageCache.clearLiveImages();
+    super.didHaveMemoryPressure();
+  }
+}
+```
+
+## Practical checklist before submitting to App Store
+
+1. Test media capture with large/long assets in **Release** mode.
+2. Repeat pick/retake/cancel cycles to detect memory growth.
+3. Verify image/video preview widgets do not decode full-resolution files.
+4. Keep Crashlytics + Analytics breadcrumbs enabled for production diagnostics.
+5. Validate on at least one lower-memory iPhone model, not only high-end devices.
+
+## Built from real experience: CompactKit
+
+I wrote this guide from my own release workflow while building **CompactKit**.
+If you want to see a real app shipped, check it out here 👉 [compactkit.cc](https://compactkit.cc/)
+
+## Evaluative Perspective
+
+If a crash only appears in App Store review but not locally, treat it as a real production condition, not a reviewer anomaly.
+
+Telemetry plus memory-safe media handling usually reveals the root cause quickly.
+
+Happy debugging!
+
+---
+
+## Post: Publish a landing page with a custom domain for your product
+
+Source: https://huynq.dev/posts/publish-a-landing-page-with-a-custom-domain-for-your-product/
+
+In this article, I will use GitHub page (github.io) as it’s free and a custom domain purchased from [Namecheap](http://namecheap.com)
+
+1. Purchase your favourite domain in [Namecheap](http://namecheap.com)
+    
+2. Create a GitHub account, then create a repo named `your-account-name.github.io`, it will build a page automatically.
+    
+3. Build your landing page with any web framework and push to the repository `your-account-name.github.io`
+    
+4. Link domain with github page:
+    
+
+* Go to your domain panel&gt; Advance DNS &gt; Add 4 `A record`(s) with IP as below with Host as `@`:
+    
+    * 185.199.108.153
+        
+    * 185.199.109.153
+        
+    * 185.199.110.153
+        
+    * 185.199.111.153
+        
+    
+    And a `CNAME record` with Host as `www` and value as `your-account-name.github.io`
+    
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1763702776388/c8a4afd6-6d21-4a13-af5b-5f9193c1ce77.png)
+
+Go to the repo `your-account-name.github.io` &gt; Settings &gt; Pages , fill your custom domain and wait DNS check to be successful! Voila! You can also check `Enforce HTTPS` . GitHub page will auto-provide TLS/SSL to your site.
+
+---
+
+## Post: Fix a Flutter framework issue from scratch
+
+Source: https://huynq.dev/posts/fix-a-flutter-framework-issue-from-scratch/
+
+Hi, I’m Huy, GitHub handle [@huycozy](https://github.com/huycozy).
+So far, I’ve had [**45 PRs merged**](https://github.com/flutter/flutter/pulls?q=is%3Apr+author%3Ahuycozy+is%3Aclosed) into the Flutter repository.
+
+Today, I want to share the journey of fixing a Flutter issue that stayed open for nearly 6 years:  
+👉 Issue [**#59143**](https://github.com/flutter/flutter/issues/59143) - *“****TabBar.image does not render at initialIndex for the first time****”*
+
+In this article, I’ll walk through:
+
+* Understanding the issue
+    
+* Setting up the environment
+    
+* Investigating the source code
+    
+* Implementing the fix
+    
+* Writing tests
+    
+* Solve CI failures
+    
+* Handling cross-team reviews
+    
+* Getting the PR merged
+    
+
+Let’s dive in!
+
+# **Preparation**
+
+Before diving into debugging and fixing the issue, you need a proper Flutter contributor setup.  
+Here’s mine:
+
+### **1\. Fork the repo**
+
+Go to [https://github.com/flutter/flutter](https://github.com/flutter/flutter) and click **Fork** button.
+
+### **2\. Clone your fork**
+
+```console
+git clone git@github.com:/flutter.git
+```
+
+For instance:
+
+```console
+git clone git@github.com:huycozy/flutter.git
+```
+
+### **3\. Add upstream remote**
+
+Inside the repo directory:
+
+```console
+cd 
+git remote -v
+```
+
+You should see something like:
+
+```console
+➜  flutter_pr git:(master) ✗ git remote -v
+origin  git@github.com:huycozy/flutter.git (fetch)
+origin  git@github.com:huycozy/flutter.git (push)
+upstream        https://github.com/flutter/flutter.git (fetch)
+upstream        https://github.com/flutter/flutter.git (push)
+```
+
+### **4\. Keep your fork updated**
+
+Whenever you come back to contribute, fetch the latest code from upstream and rebase it onto local forked repo (assume you are on master branch/channel):
+
+```console
+git fetch upstream
+git rebase upstream/master
+```
+
+(optional) Rebase onto your local master and push to your forked repo on GitHub:
+
+```console
+git rebase master
+git push origin master -f
+```
+
+Your environment is ready. Now we begin the fun part: solving the bug.
+
+# **Issue Analysis**
+
+The issue title already gives a clue:
+
+> **“TabBar.image does not render at initialIndex for the first time”**
+
+Meaning:  
+When a TabBar uses images (via `DecorationImage`), the initial tab’s image is not shown on first render - only on subsequent interactions.
+
+The next steps of analysis:
+
+### 1\. Read the issue thread
+
+Always start by reading:
+
+* The first comment (issue description)
+    
+* Minimal reproduction code
+    
+* other comments, confirmation, additional hints
+    
+
+Fortunately, the triage team provided a clean reproduction sample(thanks to [Triage](https://github.com/flutter/flutter/blob/master/docs/triage/README.md) process, I usually find triage comment first as triage team may refine the sample code so that you only need to copy-paste to reproduce the issue yourself locally). This is extremely valuable, as many issue reports come with complex code.
+
+### **2\. Reproduce locally**
+
+I tested sample code using the latest Flutter master branch and confirmed:
+
+✔️ Bug still exists  
+✔️ Happens consistently  
+✔️ Only affects TabBar indicator images
+
+### **3\. Study issue labels**
+
+Key labels:
+
+* `triaged-design` → A valid framework-level issue
+    
+* `P2` → Medium priority
+    
+* `workaround-available` → Some attempted workarounds exist
+    
+
+Some of the proposed “workarounds” (Timers, delayed animateTo, precacheImage, etc.) did **not** solve the issue. At this point, it’s clear that the root cause is internal to TabBar’s rendering system.
+
+Next step: read the source code.
+
+# Investigating the source code
+
+TabBar is defined in[`packages/flutter/lib/src/material/tabs.dart`](https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/material/tabs.dart)
+
+While tracing the rendering flow, I found a reason why the issue occurs, which is related to "**indicator**" and "**image**". I shared the details at [https://github.com/flutter/flutter/issues/59143#issuecomment-3626318406](https://github.com/flutter/flutter/issues/59143#issuecomment-3626318406). I focused on two things related to the bug:
+
+* **The indicator painter**
+    
+* **Asynchronous image loading**
+    
+
+Here’s what happens:
+
+TabBar is using [\_indicatorPainter](https://github.com/flutter/flutter/blob/6ff4a4acd97d2d9906cd1bff274adba61716e66a/packages/flutter/lib/src/material/tabs.dart#L465), which is a CustomPainter to manage painting things in the whole bar, and each **image** on tabs is painted by a BoxPainter named `_painter`, which also takes image configuration:
+
+* [tabs.dart#L571](https://github.com/flutter/flutter/blob/6ff4a4acd97d2d9906cd1bff274adba61716e66a/packages/flutter/lib/src/material/tabs.dart#L571)
+    
+
+```dart
+_painter ??= indicator.createBoxPainter(markNeedsPaint);
+```
+
+* [tabs.dart#L582-L595](https://github.com/flutter/flutter/blob/6ff4a4acd97d2d9906cd1bff274adba61716e66a/packages/flutter/lib/src/material/tabs.dart#L582-L595)
+    
+
+```dart
+    final configuration = ImageConfiguration(
+      size: _currentRect!.size,
+      textDirection: _currentTextDirection,
+      devicePixelRatio: devicePixelRatio,
+    );
+    if (showDivider && dividerHeight! > 0) {
+      final dividerPaint = Paint()
+        ..color = dividerColor!
+        ..strokeWidth = dividerHeight!;
+      final dividerP1 = Offset(0, size.height - (dividerPaint.strokeWidth / 2));
+      final dividerP2 = Offset(size.width, size.height - (dividerPaint.strokeWidth / 2));
+      canvas.drawLine(dividerP1, dividerP2, dividerPaint);
+    }
+    _painter!.paint(canvas, _currentRect!.topLeft, configuration);
+```
+
+In this scenario, image is loaded asynchronously, so tracing the flow, we will see what happened inside as below:
+
+1 . In \_indicatorPainter, it requests to create a boxpainter: [tabs.dart#L571](https://github.com/flutter/flutter/blob/6ff4a4acd97d2d9906cd1bff274adba61716e66a/packages/flutter/lib/src/material/tabs.dart#L571)
+
+```dart
+_painter ??= indicator.createBoxPainter(markNeedsPaint);
+```
+
+2. paint background image in BoxDecorationPainter: [box\_decoration.dart#L536-L540](https://github.com/flutter/flutter/blob/2343d68ca409b01fdb92057f6b24997aa92079f2/packages/flutter/lib/src/painting/box_decoration.dart#L536-L540)
+    
+
+```dart
+  void _paintBackgroundImage(Canvas canvas, Rect rect, ImageConfiguration configuration) {
+    if (_decoration.image == null) {
+      return;
+    }
+    _imagePainter ??= _decoration.image!.createPainter(onChanged!);
+```
+
+3. handle asynchronous image source in DecorationImagePainter: [decoration\_image.dart#L375](https://github.com/flutter/flutter/blob/2343d68ca409b01fdb92057f6b24997aa92079f2/packages/flutter/lib/src/painting/decoration_image.dart#L375)
+    
+
+```dart
+final listener = ImageStreamListener(_handleImage, onError: _details.onError);
+```
+
+Inside [\_handleImage](https://github.com/flutter/flutter/blob/2343d68ca409b01fdb92057f6b24997aa92079f2/packages/flutter/lib/src/painting/decoration_image.dart#L413), if it's a non-synchronousCall, `_onChanged` callback is called: [decoration\_image.dart#L423-L425](https://github.com/flutter/flutter/blob/2343d68ca409b01fdb92057f6b24997aa92079f2/packages/flutter/lib/src/painting/decoration_image.dart#L423-L425)
+
+```dart
+if (!synchronousCall) {
+      _onChanged();
+    }
+```
+
+`_onChanged` triggers `markNeedsPaint` callback, but in `markNeedsPaint`, it only sets `_needsPaint` flag to true, but doesn't actually trigger a repaint. I did debugging and saw that [shouldRepaint](https://github.com/flutter/flutter/blob/2343d68ca409b01fdb92057f6b24997aa92079f2/packages/flutter/lib/src/material/tabs.dart#L460) is not invoked, even though `_needsPaint` is true already.
+
+# **Solution**
+
+To fix the issue, we need to ensure the indicator painter **actually repaints** when the async image finishes loading.
+
+There is already a mechanism for this in Flutter:
+
+**CustomPainter accepts a** `repaint` Listenable: [custom\_paint.dart#L152-L153](https://github.com/flutter/flutter/blob/9d96df2364317334b55547ccb47c81aa9418eb71/packages/flutter/lib/src/rendering/custom_paint.dart#L152-L153)
+
+```dart
+/// The painter will repaint whenever `repaint` notifies its listeners.
+  const CustomPainter({Listenable? repaint}) : _repaint = repaint;
+```
+
+The docs said:"*The painter will repaint whenever* `repaint` *notifies its listeners.*" So, we can leverage this.
+
+The solution is to use a notifier, add it to repaint listener above, and trigger it on `markNeedsPaint` which is called when image indicator is loaded.
+
+## Steps to fix
+
+* Create a notifier:
+    
+
+```dart
+// A ChangeNotifier for triggering repaints when async resources load.
+class _IndicatorPainterNotifier extends ChangeNotifier {
+  void notify() {
+    notifyListeners();
+  }
+}
+```
+
+* Pass it to the CustomPainter:
+    
+
+```dart
+_IndicatorPainter._({
+....
+    required _IndicatorPainterNotifier repaint,
+  }) : _repaint = repaint,
+       super(repaint: Listenable.merge([controller.animation, repaint]))
+```
+
+* Trigger repaint on image load:
+    
+
+```dart
+  void markNeedsPaint() {
+    _needsPaint = true;
+    _repaint.notify();
+  }
+
+  void dispose() {
+    assert(debugMaybeDispatchDisposed(this));
+    _painter?.dispose();
+    _repaint.dispose();
+  }
+```
+
+With this, the indicator now correctly repaints when async images finish loading - including on the first frame.
+
+# Manually test the fix
+
+Use the original repro sample and run it with your locally built Flutter SDK (via alias, fvm, or switch scripts).
+
+Result:  
+✔️ Bug is gone  
+✔️ Initial tab image displays correctly  
+✔️ No regressions observed in manual UI tests
+
+Now it's time to write automated tests.
+
+# Writing tests
+
+To verify repaint behavior, I used a custom decoration class that counts how many times the indicator is painted.
+
+Key ideas:
+
+* Initial paint count should be `1`
+    
+* After async load completes, paint count must increase
+    
+* Switching tabs should further increase paint count
+    
+
+```dart
+testWidgets('TabBar indicator image should be rendered at initialIndex for the first time', (
+    WidgetTester tester,
+  ) async {
+    // TabBar indicators with asynchronously loaded images (e.g. from network)
+    // should trigger a repaint when the image finishes loading, even on the initial tab.
+    final decoration = TabBarAsyncImageIndicatorDecoration();
+
+    await tester.pumpWidget(
+      MaterialApp(
+        home: DefaultTabController(
+          length: 3,
+          child: Scaffold(
+            appBar: AppBar(
+              bottom: TabBar(
+                indicator: decoration,
+                tabs: const [
+                  Tab(text: 'One'),
+                  Tab(text: 'Two'),
+                  Tab(text: 'Three'),
+                ],
+              ),
+            ),
+            body: const TabBarView(
+              children: [
+                Center(child: Text('Page One')),
+                Center(child: Text('Page Two')),
+                Center(child: Text('Page Three')),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+
+    // Initial paint - indicator should be painted once.
+    expect(decoration.paintCount, 1);
+
+    // Pump with duration to allow the event queue (async image load simulation) to complete.
+    // Future.delayed(Duration.zero) schedules in the event queue, so we need to advance time.
+    await tester.pump(const Duration(milliseconds: 1));
+
+    // After async image loads, the indicator should be repainted.
+    // This verifies that the markNeedsPaint callback properly triggers a repaint.
+    expect(
+      decoration.paintCount,
+      greaterThan(1),
+      reason: 'Indicator should be repainted after async image loads',
+    );
+
+    // Verify the indicator repaints when switching tabs.
+    final int initialPaintCount = decoration.paintCount;
+    await tester.tap(find.text('Two'));
+    await tester.pumpAndSettle();
+
+    expect(
+      decoration.paintCount,
+      greaterThan(initialPaintCount),
+      reason: 'Indicator should repaint when switching tabs',
+    );
+  });
+```
+
+Run the test (also existing tests to make sure your fix doesn't introduce and regression issue)
+
+# **Submitting the fix**
+
+1. ### **Create a branch**
+    
+
+```bash
+git checkout -b fix/tabbar-image-repaint
+```
+
+2. ### Commit & push
+    
+
+```bash
+git add .
+git commit -m "Fix TabBar indicator image not rendering on initialIndex"
+git push origin fix/tabbar-image-repaint
+```
+
+GitHub will automatically prompt you to open a PR.
+
+3. ### Filling PR template
+    
+
+You need to follow PR template, fill up all the information so that reviewers can understand your fix better. Make sure you read the checklist too. Once you have completed filling PR description, just click the green button at the bottom to create the PR it is usually in draft state. I also prefer it as I will wait CI check to complete before marking it ready for review.
+
+* Explain the root cause
+    
+* Describe your fix
+    
+* Link to issue #59143 (make sure to use keywords to close issues automatically once the PR gets merged, see [**Linking a pull request to an issue**](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/using-keywords-in-issues-and-pull-requests#linking-a-pull-request-to-an-issue)**)**
+    
+* Demo the fix with screenshot or video
+    
+    For example of mine:
+    
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1765534007463/20bd8cae-eac3-4872-a0f6-cddbe6d34182.png)
+
+# Solve CI tests
+
+You may encounter failed tests from CI checks:
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1765534185124/b8d34b60-34e8-48c8-99c3-11e698a1b86e.png)
+
+This is how I find the detailed error from the output (watch this [video](https://www.youtube.com/watch?v=0Pb1P0bEblE) for another example):
+
+[https://youtu.be/-JMYvEvxlsc](https://youtu.be/-JMYvEvxlsc)
+
+Oh wow, it failed at [flutter/dev/integration\_tests/flutter\_gallery/test/smoke\_test.dart](https://github.com/flutter/flutter/blob/master/dev/integration_tests/flutter_gallery/test/smoke_test.dart) . Now, open your IDE with the forked repo again, find that tests and try to reproduce the failure locally. Ok, this seems to be an easy fix, as it's saying that the new class `_IndicatorPainterNotifier` is missing `toString()` method.
+
+What should I do now? Just do the search in the entire project with keywords:"*extends ChangeNotifier {*". Then you will see there are a lot of classes having toString() already. I found one `_InputBorderGap extends ChangeNotifier {`. I just need to override the same:
+
+```dart
+@override
+  String toString() => describeIdentity(this);
+```
+
+Then run `smoke_test.dart` again, voila, it's passed now! Now you need to submit the fix to re-trigger the CI. Since the pr is only in draft, not ready to review yet, I will do git ***amend*** commit(or even squash) so that my commit history will be clean for reviewers.
+
+Once you push the commit, CI tasks will re-run automatically. Now just need to wait for them to finish. Wo ho, all tests are passed now!
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1765534710494/a5c30946-1d3c-4b68-be9e-ed8fb9900025.png)
+
+It’s ready to get reviews from others. In the reviewers box, it will suggest some reviewers who have usually contributed to the changed files before.
+
+After a few days, I got the first review from a maintainer:
+
+https://cdn.hashnode.com/res/hashnode/image/upload/v1768880607251/d48e0393-bd73-44cf-a0f4-0f6e5ae899b6.png
+
+It's just a small comment, asking me to add documentation explaining a bit. So I added it and submitted the PR again. Since the reviewer approved the PR, I added `autosubmit` label myself to let CI run one last time and then it got merged!

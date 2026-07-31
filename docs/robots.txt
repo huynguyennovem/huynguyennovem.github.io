@@ -1,0 +1,60 @@
+# Robots.txt for huynq.dev
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://huynq.dev/sitemap.xml
+
+# AI/LLM friendly content
+# See https://llmstxt.org for the llms.txt specification
+# llms.txt provides curated content for AI assistants and LLMs
+
+# Allow AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Content Signals — declare AI content usage preferences
+# See https://contentsignals.org/
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+
+# AI-friendly content locations
+# - /llms.txt - Curated overview for AI/LLMs (markdown)
+# - /llms-full.txt - Full expanded content for larger context windows
+# - /sitemap.xml - All indexable pages

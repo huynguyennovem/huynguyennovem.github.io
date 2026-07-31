@@ -1,0 +1,89 @@
+# Huy Nguyen
+
+> Huy Nguyen is an open-source engineer focused on Flutter, accessibility, Material Design, and community knowledge sharing. This is his personal site at huynq.dev — technical writing, talks, open-source projects, and Flutter framework contributions.
+
+Personal website of Huy Nguyen (GitHub: [@huycozy](https://github.com/huycozy) for Flutter contributions, [@huynguyennovem](https://github.com/huynguyennovem) for projects). Content covers Flutter framework internals, engine compilation, iOS/desktop integration, publishing, and open-source contribution workflows.
+
+Key facts:
+- Flutter framework contributor (Material widgets, accessibility/semantics)
+- Open-source engineer with experience at Codemagic on Flutter issue triage and fixes
+- Speaker at GDG DevFest Hanoi and community events
+- Author of Flutter packages and indie apps (NetShare, MenGauge, CompactKit)
+- Site: https://huynq.dev
+
+---
+
+## Pages
+
+- [Home](https://huynq.dev/): Overview, highlighted posts/talks, and professional background
+- [About](https://huynq.dev/about/): Short bio and GitHub profiles
+- [Posts](https://huynq.dev/posts/): Index of all technical blog posts
+- [Talks](https://huynq.dev/talks/): Conference and meetup talks
+- [Projects and packages](https://huynq.dev/projects_packages/): Open-source apps and Flutter packages
+- [Contributions](https://huynq.dev/contributions/): Flutter repo issues/PRs and community package work
+- [Community activities](https://huynq.dev/community_activities/): Mentoring, speaking, and community involvement
+
+---
+
+## Highlighted Posts
+
+- [Fix a Flutter framework issue from scratch](https://huynq.dev/posts/fix-a-flutter-framework-issue-from-scratch/): End-to-end walkthrough of investigating and fixing a Flutter framework issue
+- [Compiling Flutter Engine Locally - Getting Started (Part I)](https://huynq.dev/posts/compiling-flutter-engine-locally-part-i/): Environment setup and first local Flutter engine build
+- [Bisecting regression issue in Flutter](https://huynq.dev/posts/bisecting-regression-issue-in-flutter/): Using git bisect to isolate Flutter framework regressions
+- [How to prevent Jetsam/OOM crashes on iOS in Flutter media flows](https://huynq.dev/posts/how-to-prevent-jetsam-oom-crash-on-ios-in-flutter-media-flow/): Diagnosing and reducing iOS memory-pressure terminations in camera/media flows
+- [Introduction to NetShare - Flutter opensource project](https://huynq.dev/posts/introduction-to-netshare-flutter-opensource-project/): Overview of NetShare, a local-network file sharing Flutter app
+
+---
+
+## All Posts
+
+- [How to prevent Jetsam/OOM crashes on iOS in Flutter media flows](https://huynq.dev/posts/how-to-prevent-jetsam-oom-crash-on-ios-in-flutter-media-flow/): Memory-pressure crashes after camera/media handoff on iOS
+- [Publishing your Flutter iOS app to the App Store with ASC CLI](https://huynq.dev/posts/publishing-your-flutter-ios-app-to-the-app-store-with-asc-cli/): Upload Flutter iOS builds to App Store Connect via ASC CLI
+- [Fix a Flutter framework issue from scratch](https://huynq.dev/posts/fix-a-flutter-framework-issue-from-scratch/): Contributing a Flutter framework fix from investigation to PR
+- [Publish a landing page with a custom domain for your product](https://huynq.dev/posts/publish-a-landing-page-with-a-custom-domain-for-your-product/): GitHub Pages + custom domain for a product landing page
+- [Resolving Xcode UnityAds.h file not found when building iOS on Unity](https://huynq.dev/posts/resolving-xcode-issue-unityadsh-file-not-found-error-when-building-ios-on-unity/): Fix for a common Unity iOS Xcode header error
+- [11 manual tests before publishing your Flutter app](https://huynq.dev/posts/11-manual-tests-before-publishing-your-flutter-app/): Pre-release checklist for Flutter apps
+- [Compiling Flutter Engine Locally - What changes after monorepo (Part IV)](https://huynq.dev/posts/compiling-flutter-engine-locally-part-iv/): Engine build updates after Flutter monorepo
+- [Compiling Flutter Engine Locally - Web engine (Part III)](https://huynq.dev/posts/compiling-flutter-engine-locally-web-engine-part-iii/): Building the Flutter web engine with felt
+- [Streamlining exiting your Flutter desktop app with Shortcut keys](https://huynq.dev/posts/streamlining-exiting-your-flutter-desktop-app-with-shortcut-keys/): Desktop keyboard shortcuts to quit a Flutter app
+- [Integrating Flutter module into your iOS SwiftUI project in 5 steps](https://huynq.dev/posts/integrating-flutter-module-into-your-ios-swiftui-project-in-5-steps/): Add a Flutter module to an existing SwiftUI iOS app
+- [Compiling Flutter Engine Locally - Apply a fixed commit (Part II)](https://huynq.dev/posts/compiling-flutter-engine-locally-part-ii/): Build engine at a specific commit and apply a fix
+- [Compiling Flutter Engine Locally - Getting Started (Part I)](https://huynq.dev/posts/compiling-flutter-engine-locally-part-i/): First-time local Flutter engine compilation
+- [Bisecting regression issue in Flutter](https://huynq.dev/posts/bisecting-regression-issue-in-flutter/): Isolate bad commits causing Flutter regressions
+- [Crafting responsive Desktop UI for OverlayEntry in Flutter](https://huynq.dev/posts/crafting-responsive-desktop-ui-for-overlayentry-in-flutter/): Responsive OverlayEntry UI for Flutter desktop
+- [Releasing Flutter projects on GitHub](https://huynq.dev/posts/releasing-flutter-projects-on-github/): Release and distribute Flutter projects via GitHub
+- [Introduction to NetShare - Flutter opensource project](https://huynq.dev/posts/introduction-to-netshare-flutter-opensource-project/): Local-network file sharing with Flutter
+
+---
+
+## Talks
+
+- [Design Systems in Flutter: Today, Tomorrow, and Beyond](https://huynq.dev/talks/design-systems-in-flutter-talk/): GDG DevFest Hanoi 2025 talk on Flutter design systems
+- [Google Technologies Kickstart for Student - GDSC PTIT](https://huynq.dev/talks/google-technologies-kickstart-gdsc-ptit/): Flutter open source + Flutter Inspector lab for students
+- [Android 11 Meetup](https://huynq.dev/talks/android-11-meetup/): Android 11 behavior changes for apps
+
+---
+
+## Projects and Packages
+
+- [NetShare](https://netfshare.site/): Open-source Flutter app for sharing data on a local network
+- [MenGauge](https://mengauge.app): Indie Flutter app on Android and iOS
+- [CompactKit](https://compactkit.cc/): Compress and optimize photos, videos, PDFs, documents, and code
+- [open_dir](https://pub.dev/packages/open_dir): Flutter plugin to open a native directory on desktop
+- [uni_selected_button](https://pub.dev/packages/uni_selected_button): Flutter single-select button group widget
+- [netshare_saf](https://github.com/NetShareOSS/netshare_saf): Android Storage Access Framework APIs for NetShare-style apps
+
+---
+
+## External Resources
+
+- [GitHub (Flutter contributions)](https://github.com/huycozy): Flutter framework issues and PRs
+- [GitHub (projects)](https://github.com/huynguyennovem): Open-source projects and plugins
+- [LinkedIn](https://www.linkedin.com/in/huynguyennovem/): Professional profile
+- [Twitter/X](https://twitter.com/huynguyentw): Updates and sharing
+- [Email](mailto:huynguyennovem@gmail.com): Contact
+- [Site source](https://github.com/huynguyennovem/huynguyennovem.github.io): MkDocs source for this website
+
+## Optional
+
+- [Full Context Version](https://huynq.dev/llms-full.txt): Expanded version with page and post content inline for larger context windows
