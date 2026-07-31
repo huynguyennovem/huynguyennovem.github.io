@@ -51,10 +51,11 @@ User-agent: Bytespider
 Allow: /
 
 # Content Signals — declare AI content usage preferences
-# See https://contentsignals.org/
+# See https://contentsignals.org/ and https://datatracker.ietf.org/doc/draft-romm-aipref-contentsignals/
 Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
 # AI-friendly content locations
 # - /llms.txt - Curated overview for AI/LLMs (markdown)
 # - /llms-full.txt - Full expanded content for larger context windows
 # - /sitemap.xml - All indexable pages
+# - /.well-known/agents.json - Machine-readable agent discovery and content catalog

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://agentprotocol.ai/schemas/agents.json",
+  "version": "1.0.0",
+  "siteInfo": {
+    "name": "Huy Nguyen Blog",
+    "description": "Personal site of Huy Nguyen, an open-source engineer focused on Flutter, accessibility, Material Design, and community knowledge sharing. Covers Flutter framework internals, engine compilation, iOS/desktop integration, publishing, and open-source contribution workflows.",
+    "logoUrl": "https://huynq.dev/img/huy-social.jpg",
+    "primaryUrl": "https://huynq.dev"
+  },
+  "aiContent": {
+    "llmsTxt": "https://huynq.dev/llms.txt",
+    "llmsFullTxt": "https://huynq.dev/llms-full.txt",
+    "sitemap": "https://huynq.dev/sitemap.xml"
+  },
+  "capabilities": [
+    {
+      "name": "GetLLMContext",
+      "description": "Returns a curated overview of Huy Nguyen and this site for AI/LLM consumption.",
+      "endpoint": "https://huynq.dev/llms.txt",
+      "method": "GET",
+      "contentType": "text/markdown"
+    },
+    {
+      "name": "GetFullContext",
+      "description": "Returns expanded content with all pages and blog posts inline for larger context windows.",
+      "endpoint": "https://huynq.dev/llms-full.txt",
+      "method": "GET",
+      "contentType": "text/markdown"
+    },
+    {
+      "name": "GetSitemap",
+      "description": "Returns the XML sitemap listing all indexable pages.",
+      "endpoint": "https://huynq.dev/sitemap.xml",
+      "method": "GET",
+      "contentType": "application/xml"
+    }
+  ],
+  "externalResources": {
+    "githubContributions": "https://github.com/huycozy",
+    "githubProjects": "https://github.com/huynguyennovem",
+    "linkedin": "https://www.linkedin.com/in/huynguyennovem/",
+    "twitter": "https://twitter.com/huynguyentw",
+    "source": "https://github.com/huynguyennovem/huynguyennovem.github.io"
+  },
+  "policy": {
+    "contactEmail": "huynguyennovem@gmail.com"
+  }
+}
