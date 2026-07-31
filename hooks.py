@@ -11,9 +11,24 @@ from pathlib import Path
 FONT_FACE_RE = re.compile(r"@font-face\{.*?\}", re.DOTALL)
 
 
+def _copy_well_known(docs_dir: Path, site_dir: Path) -> None:
+    """MkDocs skips dot-directories, so copy /.well-known (agents.json) manually."""
+    src = docs_dir / ".well-known"
+    if not src.is_dir():
+        return
+    dest = site_dir / ".well-known"
+    dest.mkdir(parents=True, exist_ok=True)
+    for path in src.iterdir():
+        if path.is_file():
+            shutil.copy2(path, dest / path.name)
+            print(f"[llm] copied .well-known/{path.name}")
+
+
 def on_post_build(config, **kwargs) -> None:
-    """Strip unused fonts and purge unused theme CSS after the site is built."""
+    """Copy static LLM extras and slim theme assets after the site is built."""
     site_dir = Path(config["site_dir"])
+    _copy_well_known(Path(config["docs_dir"]), site_dir)
+
     theme_css = site_dir / "css" / "theme.css"
     if not theme_css.exists():
         return
