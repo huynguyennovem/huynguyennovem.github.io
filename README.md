@@ -6,3 +6,4 @@
 - LLM discoverability (`/llms.txt`, `/llms-full.txt`, `/robots.txt`):
     - Edit `docs/llms.txt` and `docs/robots.txt` as needed
     - Regenerate full context after content changes: `python3 scripts/generate_llms_full.py`
+- Performance: `hooks.py` strips unused theme fonts/CSS on build (requires `npx` for PurgeCSS)

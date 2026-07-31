@@ -20,11 +20,28 @@
 <meta name="twitter:image" content="{{ config.extra.social_image }}" />
 <meta name="twitter:image:alt" content="Portrait of Huy Nguyen" />
 {% endif %}
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RJT4VPTE10"></script>
+{#- Load Google Analytics only after first user interaction to keep lab/LCP clean #}
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  function loadGtag() {
+    if (window.__gtagLoaded) return;
+    window.__gtagLoaded = true;
+    var s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RJT4VPTE10';
+    s.async = true;
+    document.head.appendChild(s);
     gtag('js', new Date());
-    gtag('config', 'G-RJT4VPTE10');
+    gtag('config', 'G-RJT4VPTE10', { anonymize_ip: true });
+  }
+  ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (evt) {
+    window.addEventListener(evt, loadGtag, { once: true, passive: true });
+  });
+  // Fallback for users who never interact
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(function () { setTimeout(loadGtag, 5000); }, { timeout: 10000 });
+  } else {
+    window.addEventListener('load', function () { setTimeout(loadGtag, 8000); });
+  }
 </script>
 {% endblock %}

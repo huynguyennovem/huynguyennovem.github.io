@@ -2,6 +2,8 @@ site_url: https://huynq.dev
 site_name: Huy Nguyen Blog
 site_description: Huy Nguyen is an open-source engineer focused on Flutter, accessibility, Material Design, and community knowledge sharing.
 site_author: Huy Nguyen
+hooks:
+  - hooks.py
 nav:
   - Home: index.md
   - Posts: posts.md
@@ -15,7 +17,9 @@ exclude_docs: |
 theme:
   name: readthedocs
   custom_dir: overrides
+  highlightjs: false
 extra_css:
+  - stylesheets/perf.css
   - stylesheets/home-feedback.css
   - stylesheets/heading-links.css
 extra_javascript:

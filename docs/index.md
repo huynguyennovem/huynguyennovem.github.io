@@ -36,7 +36,7 @@ Hi there! I'm Huy, an open-source engineer passionate about contributing to the 
   <article class="feedback-card feedback-card--default feedback-card--codemagic is-active" role="listitem" tabindex="0">
     <div class="feedback-card__summary">
       <div class="feedback-card__avatar-shell">
-        <img class="feedback-card__avatar" src="img/helina.jpg" alt="Helina Ariva">
+        <img class="feedback-card__avatar" src="img/helina.webp" alt="Helina Ariva" width="96" height="96" loading="lazy" decoding="async">
       </div>
       <p class="feedback-card__label">Helina Ariva</p>
     </div>
@@ -52,7 +52,7 @@ Hi there! I'm Huy, an open-source engineer passionate about contributing to the 
   <article class="feedback-card feedback-card--codemagic" role="listitem" tabindex="0">
     <div class="feedback-card__summary">
       <div class="feedback-card__avatar-shell">
-        <img class="feedback-card__avatar" src="img/taha.jpg" alt="Taha Tesser">
+        <img class="feedback-card__avatar" src="img/taha.webp" alt="Taha Tesser" width="96" height="96" loading="lazy" decoding="async">
       </div>
       <p class="feedback-card__label">Taha</p>
     </div>
@@ -68,7 +68,7 @@ Hi there! I'm Huy, an open-source engineer passionate about contributing to the 
   <article class="feedback-card feedback-card--codemagic" role="listitem" tabindex="0">
     <div class="feedback-card__summary">
       <div class="feedback-card__avatar-shell">
-        <img class="feedback-card__avatar" src="img/kostia.jpeg" alt="Kostiantyn Sokolovskyi">
+        <img class="feedback-card__avatar" src="img/kostia.webp" alt="Kostiantyn Sokolovskyi" width="96" height="96" loading="lazy" decoding="async">
       </div>
       <p class="feedback-card__label">Kostia</p>
     </div>
@@ -84,7 +84,7 @@ Hi there! I'm Huy, an open-source engineer passionate about contributing to the 
   <article class="feedback-card feedback-card--google" role="listitem" tabindex="0">
     <div class="feedback-card__summary">
       <div class="feedback-card__avatar-shell">
-        <img class="feedback-card__avatar" src="img/kate.jpg" alt="Kate Lovett">
+        <img class="feedback-card__avatar" src="img/kate.webp" alt="Kate Lovett" width="96" height="96" loading="lazy" decoding="async">
       </div>
       <p class="feedback-card__label">Kate</p>
     </div>
@@ -100,7 +100,7 @@ Hi there! I'm Huy, an open-source engineer passionate about contributing to the 
   <article class="feedback-card feedback-card--google" role="listitem" tabindex="0">
     <div class="feedback-card__summary">
       <div class="feedback-card__avatar-shell">
-        <img class="feedback-card__avatar" src="img/justin.jpg" alt="Justin McCandless">
+        <img class="feedback-card__avatar" src="img/justin.webp" alt="Justin McCandless" width="96" height="96" loading="lazy" decoding="async">
       </div>
       <p class="feedback-card__label">Justin</p>
     </div>
@@ -116,7 +116,7 @@ Hi there! I'm Huy, an open-source engineer passionate about contributing to the 
   <article class="feedback-card feedback-card--google" role="listitem" tabindex="0">
     <div class="feedback-card__summary">
       <div class="feedback-card__avatar-shell">
-        <img class="feedback-card__avatar" src="img/cheng.jpeg" alt="Qun Cheng">
+        <img class="feedback-card__avatar" src="img/cheng.webp" alt="Qun Cheng" width="96" height="96" loading="lazy" decoding="async">
       </div>
       <p class="feedback-card__label">Qun</p>
     </div>
