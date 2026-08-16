@@ -2,10 +2,12 @@
 
 Hi there! I'm Huy, an open-source engineer passionate about contributing to the Flutter ecosystem and sharing knowledge with the community.
 
+<!-- Temporarily hidden. Uncomment to show again.
 <div class="status-callout" role="status" aria-label="Current availability">
   <span class="status-callout__label">Current status</span>
   <p class="status-callout__text"><strong>Open to new opportunities</strong> in Flutter and mobile engineering, especially roles where open-source work, developer experience, or thoughtful product building are part of the culture.</p>
 </div>
+-->
 
 ## 📝 Highlighted Posts
 
