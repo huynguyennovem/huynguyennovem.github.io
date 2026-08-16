@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Test web in local",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "mkdocs serve",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "Deploy web",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "mkdocs build && mkdocs gh-deploy",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
