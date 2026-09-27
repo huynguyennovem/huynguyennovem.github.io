@@ -72,6 +72,7 @@ Key facts:
 - [open_dir](https://pub.dev/packages/open_dir): Flutter plugin to open a native directory on desktop
 - [uni_selected_button](https://pub.dev/packages/uni_selected_button): Flutter single-select button group widget
 - [netshare_saf](https://github.com/NetShareOSS/netshare_saf): Android Storage Access Framework APIs for NetShare-style apps
+- [cloudflare_worker_kv](https://pub.dev/packages/cloudflare_worker_kv): Flutter remote config backed by Cloudflare Workers KV
 
 ---
 

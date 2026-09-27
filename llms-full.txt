@@ -56,6 +56,12 @@ Source: https://huynq.dev/projects_packages/
 
     Check it out on GitHub: [NetShareOSS/netshare_saf](https://github.com/NetShareOSS/netshare_saf)
 
+7. cloudflare_worker_kv
+
+    Remote config for Flutter apps backed by Cloudflare Workers KV, with in-app defaults, fetch/activate, typed getters, and offline caching.
+
+    Check it on pub.dev: [https://pub.dev/packages/cloudflare_worker_kv](https://pub.dev/packages/cloudflare_worker_kv)
+
 ---
 
 ## Contributions
@@ -77,6 +83,8 @@ Author of packages/plugins:
 [https://pub.dev/packages/open_dir](https://pub.dev/packages/open_dir)
 
 [https://pub.dev/packages/uni_selected_button](https://pub.dev/packages/uni_selected_button)
+
+[https://pub.dev/packages/cloudflare_worker_kv](https://pub.dev/packages/cloudflare_worker_kv)
 
 Contribute to [flutter_downloader](https://github.com/fluttercommunity/flutter_downloader/pulls/huynguyennovem)
 
