@@ -10,10 +10,29 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
+import yaml
+from pathspec import GitIgnoreSpec
+
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 OUT = DOCS / "llms-full.txt"
 SITE_URL = "https://huynq.dev"
+
+
+def _load_unbuilt_spec() -> GitIgnoreSpec:
+    """Docs that `mkdocs build` leaves out (exclude_docs + draft_docs)."""
+    config = yaml.safe_load((ROOT / "mkdocs.yml").read_text(encoding="utf-8")) or {}
+    lines: list[str] = []
+    for key in ("exclude_docs", "draft_docs"):
+        lines += (config.get(key) or "").splitlines()
+    return GitIgnoreSpec.from_lines(lines)
+
+
+UNBUILT = _load_unbuilt_spec()
+
+
+def is_built(path: Path) -> bool:
+    return not UNBUILT.match_file(path.relative_to(DOCS).as_posix())
 
 # Order matters: identity first, then curated content.
 SECTIONS: list[tuple[str, str, Path]] = [
@@ -30,9 +49,9 @@ def _post_sort_key(path: Path) -> str:
     return match.group(1).strip() if match else path.name
 
 
-TALK_FILES = sorted((DOCS / "talks").glob("*.md"))
+TALK_FILES = sorted(p for p in (DOCS / "talks").glob("*.md") if is_built(p))
 POST_FILES = sorted(
-    (DOCS / "posts").glob("*.md"),
+    (p for p in (DOCS / "posts").glob("*.md") if is_built(p)),
     key=_post_sort_key,
     reverse=True,
 )

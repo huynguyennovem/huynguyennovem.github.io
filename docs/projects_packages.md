@@ -31,3 +31,9 @@
     Flutter plugin that exposes the Android Storage Access Framework (SAF) APIs needed by NetShare-style local file hosting apps.
 
     Check it out on GitHub: [NetShareOSS/netshare_saf](https://github.com/NetShareOSS/netshare_saf)
+
+7. cloudflare_worker_kv
+
+    Remote config for Flutter apps backed by Cloudflare Workers KV, with in-app defaults, fetch/activate, typed getters, and offline caching.
+
+    Check it on pub.dev: [https://pub.dev/packages/cloudflare_worker_kv](https://pub.dev/packages/cloudflare_worker_kv)

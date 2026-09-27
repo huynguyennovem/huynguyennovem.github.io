@@ -14,6 +14,9 @@ nav:
   - Contributions: contributions.md
 exclude_docs: |
   experiences.md
+# Shown by `mkdocs serve`, left out of `mkdocs build` / `gh-deploy`.
+draft_docs: |
+  posts/how-to-build-a-signed-and-notarized-macos-dmg-on-flutter.md
 theme:
   name: readthedocs
   custom_dir: overrides

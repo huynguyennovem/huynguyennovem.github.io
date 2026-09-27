@@ -14,4 +14,6 @@ Author of packages/plugins:
 
 [https://pub.dev/packages/uni_selected_button](https://pub.dev/packages/uni_selected_button)
 
+[https://pub.dev/packages/cloudflare_worker_kv](https://pub.dev/packages/cloudflare_worker_kv)
+
 Contribute to [flutter_downloader](https://github.com/fluttercommunity/flutter_downloader/pulls/huynguyennovem)
