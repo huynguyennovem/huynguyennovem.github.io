@@ -8,7 +8,7 @@ Key facts:
 - Flutter framework contributor (Material widgets, accessibility/semantics)
 - Open-source engineer with experience at Codemagic on Flutter issue triage and fixes
 - Speaker at GDG DevFest Hanoi and community events
-- Author of Flutter packages and indie apps (NetShare, MenGauge, CompactKit)
+- Author of Flutter packages and indie apps (NetShare, CompactKit)
 - Site: https://huynq.dev
 
 ---
@@ -67,7 +67,6 @@ Key facts:
 ## Projects and Packages
 
 - [NetShare](https://netfshare.site/): Open-source Flutter app for sharing data on a local network
-- [MenGauge](https://mengauge.app): Indie Flutter app on Android and iOS
 - [CompactKit](https://compactkit.cc/): Compress and optimize photos, videos, PDFs, documents, and code
 - [open_dir](https://pub.dev/packages/open_dir): Flutter plugin to open a native directory on desktop
 - [uni_selected_button](https://pub.dev/packages/uni_selected_button): Flutter single-select button group widget
