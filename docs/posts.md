@@ -1,6 +1,18 @@
 # Blog Posts
 
-*16 posts*
+*17 posts*
+
+## [How to build a signed and notarized macOS DMG on Flutter](posts/how-to-build-a-signed-and-notarized-macos-dmg-on-flutter.md)
+
+*August 20, 2026*
+ · `flutter` `macos` `dmg` `desktop` `publishing`
+
+
+When shipping a Flutter macOS app outside the Mac App Store, you need Developer ID signing and Apple notarization. This post covers the shell scripts I use to automate the entire release flow, including retrying when Apple's timestamp service fails.
+
+[Read more →](posts/how-to-build-a-signed-and-notarized-macos-dmg-on-flutter.md)
+
+---
 
 ## [How to prevent Jetsam/OOM crashes on iOS in Flutter media flows](posts/how-to-prevent-jetsam-oom-crash-on-ios-in-flutter-media-flow.md)
 

@@ -7,23 +7,23 @@ tags: flutter, macos, dmg, desktop, publishing
 
 ---
 
-If you distribute a Flutter macOS app outside the Mac App Store (for example via GitHub Releases), users need a DMG that opens without Gatekeeper blocking it.
+When I started shipping [**NetShare**](https://github.com/huynguyennovem/netshare) outside the Mac App Store, I assumed the hard part would be the Flutter side. It wasn't. The hard part was getting a DMG that a stranger can download, double-click, and open without macOS throwing a scary "cannot be verified" dialog at them.
 
-That means **Developer ID Application** signing plus **Apple notarization** — not a Mac App Store identity.
+To get there you need two things: **Developer ID Application** signing and **Apple notarization**. A Mac App Store identity won't do the job here.
 
-This tutorial is the flow I use while shipping [**NetShare**](https://github.com/huynguyennovem/netshare), built on the [`dmg`](https://pub.dev/packages/dmg) Dart package.
+My first version of the release flow was a single command, `dart run dmg`. It worked... until it didn't. So this post covers both: the one-liner, why I eventually moved away from it, and the small set of shell scripts I use today.
 
-## Flow
+## The flow
 
 ```mermaid
 flowchart LR
-  build["flutter build macos --release"] --> app["YourApp.app"]
-  app --> dmgPkg["dmgbuild creates DMG"]
-  dmgPkg --> sign["codesign Developer ID"]
-  sign --> notary["notarytool notarize"]
-  notary --> staple["stapler staple"]
-  staple --> github["GitHub Releases"]
+  build["flutter build macos"] --> sign["codesign app (inside-out)"]
+  sign --> dmg["dmgbuild creates DMG"]
+  dmg --> notarize["sign + notarize + staple DMG"]
+  notarize --> upload["upload (optional)"]
 ```
+
+Five steps, one orchestrator script that calls the others. Each step can also run on its own, which turns out to matter a lot when something fails at 90%.
 
 ## 1. One-time setup
 
@@ -35,17 +35,19 @@ xcode-select -p   # should point at Xcode.app
 security find-identity -v -p codesigning | grep "Developer ID Application"
 ```
 
-You need a cert like:
+You're looking for a certificate that reads like this:
 
 `Developer ID Application: Your Name (TEAMID)`
 
-If it is missing: Xcode → Settings → Accounts → Manage Certificates → **Developer ID Application**.
+If it's missing, open Xcode → Settings → Accounts → Manage Certificates and create a **Developer ID Application** certificate.
 
-### Notary profile (required for production)
+### A notary profile in Keychain
 
-1. Open [App Store Connect → Integrations → App Store Connect API](https://appstoreconnect.apple.com/access/integrations/api).
-2. Create an API key (Admin), download the `.p8`, and note the **Issuer ID** and **Key ID**.
-3. Store credentials in Keychain (prefer non-interactive flags so the path is not mistyped):
+Notarization needs credentials, and I prefer to keep them in Keychain instead of passing them around in scripts.
+
+1. Go to [App Store Connect → Integrations → App Store Connect API](https://appstoreconnect.apple.com/access/integrations/api).
+2. Create an API key, download the `.p8` file, and write down the **Issuer ID** and **Key ID**.
+3. Store them as a named profile:
 
 ```sh
 xcrun notarytool store-credentials "NotaryProfile" \
@@ -54,121 +56,222 @@ xcrun notarytool store-credentials "NotaryProfile" \
   --issuer "<Issuer-ID-UUID>"
 ```
 
-The profile lives in Keychain. **Do not commit** the `.p8` file.
+From now on every script only needs the profile name, `NotaryProfile`. The `.p8` file itself never goes into git.
 
-### Dev dependency
+### The `dmg` package
 
 ```sh
 flutter pub add --dev dmg
 ```
 
-## 2. Fix Xcode Release signing for the DMG path
+## 2. Don't let Xcode sign for the Mac App Store
 
-Package `dmg` **re-signs** the `.app` with Developer ID after the Flutter build. Xcode only needs a successful local Release build.
+Whatever signs the `.app` at the end of the day will be our scripts, so Xcode only needs to produce a clean Release build. A few things will quietly break notarization if they're set in the Runner's Release configuration:
 
-Do **not** use Mac App Store identity for this flow:
+- A `3rd Party Mac Developer Application` identity
+- A Mac App Store provisioning profile
+- `OTHER_CODE_SIGN_FLAGS = "--timestamp=none"`
 
-- Avoid `3rd Party Mac Developer Application`
-- Avoid a Mac App Store provisioning profile specifier
-- Avoid `OTHER_CODE_SIGN_FLAGS = "--timestamp=none"` (that flag breaks notarization)
+I keep Release on `Apple Development` with automatic signing and my team set. Developer ID gets applied later.
 
-For the Runner **Release** config, use something like:
+## 3. Configure `dmg` to only package
 
-- `CODE_SIGN_STYLE = Automatic`
-- `CODE_SIGN_IDENTITY = Apple Development`
-- Your `DEVELOPMENT_TEAM` set
-
-Then let `dmg` apply Developer ID + notarization.
-
-## 3. Configure `dmg` in `pubspec.yaml`
+Here's the part that differs from most tutorials. The `dmg` package can build, sign and notarize in one go, but I only use it for the packaging step. Everything else is switched off in `pubspec.yaml`:
 
 ```yaml
 dmg:
   sign-certificate: "Developer ID Application: Your Name (TEAMID)"
   notary-profile: NotaryProfile
-  build: true
-  clean-build: true
-  sign: true
-  notarization: true
+  build: false
+  clean-build: false
+  sign: false
+  notarization: false
 ```
 
-Replace the certificate string with the exact output from `security find-identity`.
+## 4. Why I stopped using `dart run dmg` to sign
 
-## 4. Build the DMG
+The one-liner signs the app with `codesign --deep`. It looks convenient, but it has two problems:
 
-From the project root:
+- Apple recommends signing nested code first and the container last, not letting `--deep` figure out the order.
+- Every signature asks Apple's timestamp server for a timestamp. When that service is slow or unreachable, `codesign` fails with `A timestamp was expected but was not found`, usually halfway through some nested dylib. A Flutter app has plenty of those.
+
+After the third or fourth failed release attempt, I took signing out of the package and wrote it myself.
+
+## 5. The scripts
+
+Everything lives in `scripts/macos/` and runs from the project root.
+
+### A retry wrapper for `codesign`
+
+A small shared library does one job: run `codesign`, and if the timestamp error shows up, wait and try again with a growing delay.
 
 ```sh
-dart run dmg
+CODESIGN_IDENTITY="${CODESIGN_IDENTITY:-Developer ID Application: Your Name (TEAMID)}"
+NOTARY_PROFILE="${NOTARY_PROFILE:-NotaryProfile}"
+CODESIGN_MAX_ATTEMPTS="${CODESIGN_MAX_ATTEMPTS:-8}"
+
+codesign_with_retry() {
+  local attempt=1 delay=2 output status=0
+
+  while (( attempt <= CODESIGN_MAX_ATTEMPTS )); do
+    output="$(/usr/bin/codesign "$@" 2>&1)" && status=0 || status=$?
+    if (( status == 0 )); then
+      [[ -n "$output" ]] && printf '%s\n' "$output"
+      return 0
+    fi
+    [[ -n "$output" ]] && printf '%s\n' "$output" >&2
+
+    if [[ "$output" == *"timestamp was expected but was not found"* ]] &&
+      (( attempt < CODESIGN_MAX_ATTEMPTS )); then
+      echo "timestamp failed (attempt ${attempt}); retrying in ${delay}s..." >&2
+      sleep "$delay"
+      delay=$(( delay * 2 > 15 ? 15 : delay * 2 ))
+      attempt=$((attempt + 1))
+      continue
+    fi
+    return "$status"
+  done
+  return "$status"
+}
 ```
 
-This typically:
+The delay goes 2, 4, 8 seconds and then caps at 15. Any other kind of error fails immediately, since retrying a real signing problem just wastes time.
 
-1. Cleans `build/macos` (if `clean-build: true`)
-2. Runs `flutter build macos --release` (with obfuscation options when configured)
-3. Signs the `.app` with Developer ID
-4. Creates the DMG via `dmgbuild`
-5. Signs the DMG
-6. Submits notarization and waits
-7. Staples the ticket onto the DMG
-
-Output:
-
-`build/macos/Build/Products/Release/<AppName>.dmg`
-
-Useful flags:
+### Sign the app, inside-out
 
 ```sh
-# Local smoke test only (Gatekeeper will warn)
-dart run dmg --no-sign --no-notarization
+while IFS= read -r -d '' item; do
+  [[ "$item" == "$APP_PATH" ]] && continue
+  codesign_with_retry --force --options runtime --timestamp \
+    --sign "$CODESIGN_IDENTITY" -- "$item"
+done < <(
+  find "$APP_PATH/Contents" -depth \( \
+    -name '*.dylib' -o -name '*.framework' -o -name '*.bundle' \
+    -o -name '*.xpc' -o -name '*.appex' \
+  \) -print0
+)
 
-# Reuse an existing .app
-dart run dmg --no-build --no-clean-build
+codesign_with_retry --force --options runtime --timestamp \
+  --entitlements "$ENTITLEMENTS" \
+  --sign "$CODESIGN_IDENTITY" -- "$APP_PATH"
+
+codesign --verify --verbose=2 "$APP_PATH"
 ```
 
-## 5. Verify before you upload
+`find -depth` lists the deepest items first, so leaf libraries get signed before the frameworks that contain them. The `.app` goes last, together with its entitlements. The hardened runtime (`--options runtime`) is mandatory, because notarization rejects anything without it.
+
+### Sign, notarize and staple the DMG
 
 ```sh
-APP="build/macos/Build/Products/Release/<AppName>.app"
-DMG="build/macos/Build/Products/Release/<AppName>.dmg"
+codesign_with_retry --force --timestamp --options runtime \
+  --sign "$CODESIGN_IDENTITY" -- "$DMG_PATH"
 
+xcrun notarytool submit "$DMG_PATH" \
+  --keychain-profile "$NOTARY_PROFILE" \
+  --wait
+
+xcrun stapler staple "$DMG_PATH"
+xcrun stapler validate "$DMG_PATH"
+```
+
+`--wait` blocks until Apple finishes, which usually takes a few minutes. Stapling attaches the notarization ticket to the DMG itself, so it still opens cleanly when the user is offline.
+
+### One script to rule them all
+
+The orchestrator simply runs everything in order and stops on the first error:
+
+```sh
+set -euo pipefail
+
+flutter build macos --release \
+  --obfuscate \
+  --split-debug-info=./build/debug-macos-info
+
+./scripts/macos/codesign_macos_app.sh "$APP_PATH"
+
+dart run dmg --no-build --no-sign --no-notarization
+
+./scripts/macos/notarize_macos_dmg.sh "$DMG_PATH"
+
+./scripts/macos/upload_dmg_r2.sh   # optional
+```
+
+The result lands in `build/macos/Build/Products/Release/<AppName>.dmg`. I also wired it to an IntelliJ run configuration, so a release is one click.
+
+If the app is already built and signed, there's no need to start over. Run only what's left:
+
+```sh
+dart run dmg --no-build --no-sign --no-notarization
+./scripts/macos/notarize_macos_dmg.sh
+```
+
+## 6. Verify before you ship
+
+Don't trust the green output, check it:
+
+```sh
 codesign -dv --verbose=4 "$APP"
 codesign -dv --verbose=4 "$DMG"
 spctl --assess --type open --context context:primary-signature -v "$DMG"
 xcrun stapler validate "$DMG"
 ```
 
-Expect Developer ID identity, a timestamp, `spctl` accepted, and stapler OK.
+You want a Developer ID authority, a timestamp, `spctl` saying *accepted*, and stapler saying the ticket is valid. Then copy the DMG to another Mac (a VM works too), install the app, and click around. A build that passes every check can still crash on launch because of a missing entitlement, and you only find out on a clean machine.
 
-Then copy the DMG to another Mac (or a VM), install the app, and smoke-test the main features.
+## 7. Optional: upload to Cloudflare R2
 
-## 6. Publish
+For hosting the DMG I use Cloudflare R2. It speaks the S3 API, so a few lines of `boto3` are enough:
 
-1. Rename for clarity, e.g. `YourApp-1.2.3.dmg`.
-2. Upload to GitHub Releases with your other platform artifacts.
-3. If you used Dart obfuscation, keep `debug-macos-info/` for crash symbolication — **do not** ship it inside the DMG.
+```python
+client = boto3.client(
+    "s3",
+    endpoint_url=f"https://{account_id}.r2.cloudflarestorage.com",
+    aws_access_key_id=access_key_id,
+    aws_secret_access_key=secret_access_key,
+    region_name="auto",
+    config=Config(signature_version="s3v4", s3={"addressing_style": "path"}),
+)
+
+client.put_object(
+    Bucket=bucket,
+    Key="releases/macos/NetShare.dmg",
+    Body=body,
+    ContentType="application/x-apple-diskimage",
+    CacheControl="public, max-age=300",
+)
+```
+
+Two details that cost me some time:
+
+- Newer boto3 versions compute extra checksums by default, which can hang or fail against R2. Setting `AWS_REQUEST_CHECKSUM_CALCULATION=when_required` and `AWS_RESPONSE_CHECKSUM_VALIDATION=when_required` fixes it.
+- The account ID, keys and bucket name come from a git-ignored `.env.r2` file, never from the script. Mine is a copy of an example file that only lists the variable names.
+
+If you'd rather keep things simple, GitHub Releases works just as well. Rename the file to something like `YourApp-1.2.3.dmg` and attach it.
+
+One more thing: if you build with `--obfuscate`, keep the `--split-debug-info` output somewhere safe. You'll need it to read crash stack traces. It does not belong inside the DMG.
 
 ## Troubleshooting
 
-**`notarytool`: “The file couldn’t be opened”**
+**`A timestamp was expected but was not found`**
 
-Usually a bad path from the interactive prompt (extra spaces/quotes) or quarantine on a downloaded `.p8`. Prefer the non-interactive `store-credentials` command above. If needed:
+Apple's timestamp service is flaky. The retry wrapper handles most cases. If it still fails repeatedly even though `timestamp.apple.com` is reachable, switch networks or turn on a VPN, then re-run only the app signing script.
+
+**`notarytool`: "The file couldn't be opened"**
+
+Usually a mistyped path from the interactive prompt, or a quarantine flag on a downloaded `.p8`. Use the non-interactive `store-credentials` command above, and if needed:
 
 ```sh
 xattr -d com.apple.quarantine "/path/to/AuthKey_XXXXXXXXXX.p8"
 ```
 
-**Signing / notarization fails after a “successful” Flutter build**
-
-Check that Release is not still on a Mac App Store identity or `--timestamp=none`.
-
 **Never commit secrets**
 
-Keep `.p8` files and Issuer IDs out of git. Only the Keychain profile name (`NotaryProfile`) belongs in `pubspec.yaml`.
+`.p8` files, Issuer IDs, access keys and `.env` files stay out of git. The only thing that belongs in the repo is the Keychain profile name.
 
-## Built from real experience: NetShare
+## Wrapping up
 
-I wrote this guide from the macOS release workflow for **NetShare**.
-If you want to see a real Flutter desktop app shipped this way, check the repo and releases 👉 [github.com/huynguyennovem/netshare](https://github.com/huynguyennovem/netshare)
+None of these steps is hard on its own. The pain comes from the pieces failing in ways that look unrelated, like a timestamp server outage breaking your release at the last dylib. Splitting the flow into small scripts that can be re-run independently made releases boring again, which is exactly what I want from a release process.
+
+You can see the whole thing in action in [NetShare](https://netfshare.site/).
 
 That's all! Happy shipping!
