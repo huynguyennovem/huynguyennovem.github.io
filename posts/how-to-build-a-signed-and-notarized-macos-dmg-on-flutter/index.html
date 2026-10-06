@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Huy Nguyen" /><link rel="canonical" href="https://huynq.dev/posts/how-to-build-a-signed-and-notarized-macos-dmg-on-flutter/" />
+    <link rel="icon" href="../../img/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <title>How to build a signed and notarized macOS DMG on Flutter - Huy Nguyen Blog</title>
+    <link rel="preload" href="../../css/theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="preload" href="../../css/theme_extra.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet" href="../../css/theme.css" />
+      <link rel="stylesheet" href="../../css/theme_extra.css" />
+    </noscript>
+    <style>
+      /* Critical shell styles while theme.css loads asynchronously */
+      html { box-sizing: border-box; }
+      *, *::before, *::after { box-sizing: inherit; }
+      body {
+        margin: 0;
+        color: #404040;
+        background: #fcfcfc;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.5;
+      }
+      .wy-grid-for-nav { position: relative; width: 100%; }
+      .wy-nav-side {
+        position: fixed; top: 0; bottom: 0; left: 0; width: 300px;
+        background: #343131; z-index: 200; overflow-y: auto;
+      }
+      .wy-side-nav-search {
+        background: #2980b9; padding: 0.8rem 1rem; color: #fcfcfc; text-align: center;
+      }
+      .wy-side-nav-search a { color: #fcfcfc; text-decoration: none; font-weight: 700; }
+      .wy-nav-content-wrap { margin-left: 300px; background: #fcfcfc; min-height: 100vh; }
+      .wy-nav-content { padding: 1.6rem 3em; max-width: 800px; }
+      .wy-nav-top { display: none; background: #2980b9; color: #fcfcfc; padding: 0.4rem 0.8rem; }
+      .wy-menu-vertical a { color: #d9d9d9; text-decoration: none; display: block; padding: 0.4rem 1.5rem; }
+      .rst-content h1 { margin-top: 0; font-size: 2rem; }
+      @media screen and (max-width: 768px) {
+        .wy-nav-side { left: -300px; }
+        .wy-nav-side.shift { left: 0; }
+        .wy-nav-content-wrap { margin-left: 0; }
+        .wy-nav-content-wrap.shift { left: 300px; position: relative; }
+        .wy-nav-top { display: block; }
+        .wy-nav-content { padding: 1rem 1.2rem; }
+      }
+    </style>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" media="print" onload="this.media='all'" />
+      <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" /></noscript>
+        <link href="../../stylesheets/perf.css" rel="stylesheet" />
+        <link href="../../stylesheets/heading-links.css" rel="stylesheet" />
+    
+      <script>
+        var mkdocs_page_name = "How to build a signed and notarized macOS DMG on Flutter";
+        var mkdocs_page_input_path = "posts/how-to-build-a-signed-and-notarized-macos-dmg-on-flutter.md";
+        var mkdocs_page_url = "/posts/how-to-build-a-signed-and-notarized-macos-dmg-on-flutter/";
+      </script>
+    
+ 
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  function loadGtag() {
+    if (window.__gtagLoaded) return;
+    window.__gtagLoaded = true;
+    var s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RJT4VPTE10';
+    s.async = true;
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-RJT4VPTE10', { anonymize_ip: true });
+  }
+  ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (evt) {
+    window.addEventListener(evt, loadGtag, { once: true, passive: true });
+  });
+  // Fallback for users who never interact
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(function () { setTimeout(loadGtag, 5000); }, { timeout: 10000 });
+  } else {
+    window.addEventListener('load', function () { setTimeout(loadGtag, 8000); });
+  }
+</script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="site-title"> Huy Nguyen Blog
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Posts</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../talks/">Talks</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../community_activities/">Community Activities</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../projects_packages/">Projects and packages</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../contributions/">Contributions</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <button type="button" data-toggle="wy-nav-top" class="mobile-nav-toggle" aria-label="Open navigation menu">
+            <span></span><span></span><span></span>
+          </button>
+          <a href="../..">Huy Nguyen Blog</a>
+        
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">How to build a signed and notarized macOS DMG on Flutter</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p>When I started shipping <a href="https://github.com/huynguyennovem/netshare"><strong>NetShare</strong></a> outside the Mac App Store, I assumed the hard part would be the Flutter side. It wasn't. The hard part was getting a DMG that a stranger can download, double-click, and open without macOS throwing a scary "cannot be verified" dialog at them.</p>
+<p>To get there you need two things: <strong>Developer ID Application</strong> signing and <strong>Apple notarization</strong>. A Mac App Store identity won't do the job here.</p>
+<p>My first version of the release flow was a single command, <code>dart run dmg</code>. It worked... until it didn't. So this post covers both: the one-liner, why I eventually moved away from it, and the small set of shell scripts I use today.</p>
+<h2 id="the-flow">The flow</h2>
+<pre><code class="language-mermaid">flowchart LR
+  build[&quot;flutter build macos&quot;] --&gt; sign[&quot;codesign app (inside-out)&quot;]
+  sign --&gt; dmg[&quot;dmgbuild creates DMG&quot;]
+  dmg --&gt; notarize[&quot;sign + notarize + staple DMG&quot;]
+  notarize --&gt; upload[&quot;upload (optional)&quot;]
+</code></pre>
+<p>Five steps, one orchestrator script that calls the others. Each step can also run on its own, which turns out to matter a lot when something fails at 90%.</p>
+<h2 id="1-one-time-setup">1. One-time setup</h2>
+<h3 id="tools">Tools</h3>
+<pre><code class="language-sh">python3 -m pip install --user dmgbuild
+xcode-select -p   # should point at Xcode.app
+security find-identity -v -p codesigning | grep &quot;Developer ID Application&quot;
+</code></pre>
+<p>You're looking for a certificate that reads like this:</p>
+<p><code>Developer ID Application: Your Name (TEAMID)</code></p>
+<p>If it's missing, open Xcode → Settings → Accounts → Manage Certificates and create a <strong>Developer ID Application</strong> certificate.</p>
+<h3 id="a-notary-profile-in-keychain">A notary profile in Keychain</h3>
+<p>Notarization needs credentials, and I prefer to keep them in Keychain instead of passing them around in scripts.</p>
+<ol>
+<li>Go to <a href="https://appstoreconnect.apple.com/access/integrations/api">App Store Connect → Integrations → App Store Connect API</a>.</li>
+<li>Create an API key, download the <code>.p8</code> file, and write down the <strong>Issuer ID</strong> and <strong>Key ID</strong>.</li>
+<li>Store them as a named profile:</li>
+</ol>
+<pre><code class="language-sh">xcrun notarytool store-credentials &quot;NotaryProfile&quot; \
+  --key &quot;/path/to/AuthKey_XXXXXXXXXX.p8&quot; \
+  --key-id &quot;XXXXXXXXXX&quot; \
+  --issuer &quot;&lt;Issuer-ID-UUID&gt;&quot;
+</code></pre>
+<p>From now on every script only needs the profile name, <code>NotaryProfile</code>. The <code>.p8</code> file itself never goes into git.</p>
+<h3 id="the-dmg-package">The <code>dmg</code> package</h3>
+<pre><code class="language-sh">flutter pub add --dev dmg
+</code></pre>
+<h2 id="2-dont-let-xcode-sign-for-the-mac-app-store">2. Don't let Xcode sign for the Mac App Store</h2>
+<p>Whatever signs the <code>.app</code> at the end of the day will be our scripts, so Xcode only needs to produce a clean Release build. A few things will quietly break notarization if they're set in the Runner's Release configuration:</p>
+<ul>
+<li>A <code>3rd Party Mac Developer Application</code> identity</li>
+<li>A Mac App Store provisioning profile</li>
+<li><code>OTHER_CODE_SIGN_FLAGS = "--timestamp=none"</code></li>
+</ul>
+<p>I keep Release on <code>Apple Development</code> with automatic signing and my team set. Developer ID gets applied later.</p>
+<h2 id="3-configure-dmg-to-only-package">3. Configure <code>dmg</code> to only package</h2>
+<p>Here's the part that differs from most tutorials. The <code>dmg</code> package can build, sign and notarize in one go, but I only use it for the packaging step. Everything else is switched off in <code>pubspec.yaml</code>:</p>
+<pre><code class="language-yaml">dmg:
+  sign-certificate: &quot;Developer ID Application: Your Name (TEAMID)&quot;
+  notary-profile: NotaryProfile
+  build: false
+  clean-build: false
+  sign: false
+  notarization: false
+</code></pre>
+<h2 id="4-why-i-stopped-using-dart-run-dmg-to-sign">4. Why I stopped using <code>dart run dmg</code> to sign</h2>
+<p>The one-liner signs the app with <code>codesign --deep</code>. It looks convenient, but it has two problems:</p>
+<ul>
+<li>Apple recommends signing nested code first and the container last, not letting <code>--deep</code> figure out the order.</li>
+<li>Every signature asks Apple's timestamp server for a timestamp. When that service is slow or unreachable, <code>codesign</code> fails with <code>A timestamp was expected but was not found</code>, usually halfway through some nested dylib. A Flutter app has plenty of those.</li>
+</ul>
+<p>After the third or fourth failed release attempt, I took signing out of the package and wrote it myself.</p>
+<h2 id="5-the-scripts">5. The scripts</h2>
+<p>Everything lives in <code>scripts/macos/</code> and runs from the project root.</p>
+<h3 id="a-retry-wrapper-for-codesign">A retry wrapper for <code>codesign</code></h3>
+<p>A small shared library does one job: run <code>codesign</code>, and if the timestamp error shows up, wait and try again with a growing delay.</p>
+<pre><code class="language-sh">CODESIGN_IDENTITY=&quot;${CODESIGN_IDENTITY:-Developer ID Application: Your Name (TEAMID)}&quot;
+NOTARY_PROFILE=&quot;${NOTARY_PROFILE:-NotaryProfile}&quot;
+CODESIGN_MAX_ATTEMPTS=&quot;${CODESIGN_MAX_ATTEMPTS:-8}&quot;
+
+codesign_with_retry() {
+  local attempt=1 delay=2 output status=0
+
+  while (( attempt &lt;= CODESIGN_MAX_ATTEMPTS )); do
+    output=&quot;$(/usr/bin/codesign &quot;$@&quot; 2&gt;&amp;1)&quot; &amp;&amp; status=0 || status=$?
+    if (( status == 0 )); then
+      [[ -n &quot;$output&quot; ]] &amp;&amp; printf '%s\n' &quot;$output&quot;
+      return 0
+    fi
+    [[ -n &quot;$output&quot; ]] &amp;&amp; printf '%s\n' &quot;$output&quot; &gt;&amp;2
+
+    if [[ &quot;$output&quot; == *&quot;timestamp was expected but was not found&quot;* ]] &amp;&amp;
+      (( attempt &lt; CODESIGN_MAX_ATTEMPTS )); then
+      echo &quot;timestamp failed (attempt ${attempt}); retrying in ${delay}s...&quot; &gt;&amp;2
+      sleep &quot;$delay&quot;
+      delay=$(( delay * 2 &gt; 15 ? 15 : delay * 2 ))
+      attempt=$((attempt + 1))
+      continue
+    fi
+    return &quot;$status&quot;
+  done
+  return &quot;$status&quot;
+}
+</code></pre>
+<p>The delay goes 2, 4, 8 seconds and then caps at 15. Any other kind of error fails immediately, since retrying a real signing problem just wastes time.</p>
+<h3 id="sign-the-app-inside-out">Sign the app, inside-out</h3>
+<pre><code class="language-sh">while IFS= read -r -d '' item; do
+  [[ &quot;$item&quot; == &quot;$APP_PATH&quot; ]] &amp;&amp; continue
+  codesign_with_retry --force --options runtime --timestamp \
+    --sign &quot;$CODESIGN_IDENTITY&quot; -- &quot;$item&quot;
+done &lt; &lt;(
+  find &quot;$APP_PATH/Contents&quot; -depth \( \
+    -name '*.dylib' -o -name '*.framework' -o -name '*.bundle' \
+    -o -name '*.xpc' -o -name '*.appex' \
+  \) -print0
+)
+
+codesign_with_retry --force --options runtime --timestamp \
+  --entitlements &quot;$ENTITLEMENTS&quot; \
+  --sign &quot;$CODESIGN_IDENTITY&quot; -- &quot;$APP_PATH&quot;
+
+codesign --verify --verbose=2 &quot;$APP_PATH&quot;
+</code></pre>
+<p><code>find -depth</code> lists the deepest items first, so leaf libraries get signed before the frameworks that contain them. The <code>.app</code> goes last, together with its entitlements. The hardened runtime (<code>--options runtime</code>) is mandatory, because notarization rejects anything without it.</p>
+<h3 id="sign-notarize-and-staple-the-dmg">Sign, notarize and staple the DMG</h3>
+<pre><code class="language-sh">codesign_with_retry --force --timestamp --options runtime \
+  --sign &quot;$CODESIGN_IDENTITY&quot; -- &quot;$DMG_PATH&quot;
+
+xcrun notarytool submit &quot;$DMG_PATH&quot; \
+  --keychain-profile &quot;$NOTARY_PROFILE&quot; \
+  --wait
+
+xcrun stapler staple &quot;$DMG_PATH&quot;
+xcrun stapler validate &quot;$DMG_PATH&quot;
+</code></pre>
+<p><code>--wait</code> blocks until Apple finishes, which usually takes a few minutes. Stapling attaches the notarization ticket to the DMG itself, so it still opens cleanly when the user is offline.</p>
+<h3 id="one-script-to-rule-them-all">One script to rule them all</h3>
+<p>The orchestrator simply runs everything in order and stops on the first error:</p>
+<pre><code class="language-sh">set -euo pipefail
+
+flutter build macos --release \
+  --obfuscate \
+  --split-debug-info=./build/debug-macos-info
+
+./scripts/macos/codesign_macos_app.sh &quot;$APP_PATH&quot;
+
+dart run dmg --no-build --no-sign --no-notarization
+
+./scripts/macos/notarize_macos_dmg.sh &quot;$DMG_PATH&quot;
+
+./scripts/macos/upload_dmg_r2.sh   # optional
+</code></pre>
+<p>The result lands in <code>build/macos/Build/Products/Release/&lt;AppName&gt;.dmg</code>. I also wired it to an IntelliJ run configuration, so a release is one click.</p>
+<p>If the app is already built and signed, there's no need to start over. Run only what's left:</p>
+<pre><code class="language-sh">dart run dmg --no-build --no-sign --no-notarization
+./scripts/macos/notarize_macos_dmg.sh
+</code></pre>
+<h2 id="6-verify-before-you-ship">6. Verify before you ship</h2>
+<p>Don't trust the green output, check it:</p>
+<pre><code class="language-sh">codesign -dv --verbose=4 &quot;$APP&quot;
+codesign -dv --verbose=4 &quot;$DMG&quot;
+spctl --assess --type open --context context:primary-signature -v &quot;$DMG&quot;
+xcrun stapler validate &quot;$DMG&quot;
+</code></pre>
+<p>You want a Developer ID authority, a timestamp, <code>spctl</code> saying <em>accepted</em>, and stapler saying the ticket is valid. Then copy the DMG to another Mac (a VM works too), install the app, and click around. A build that passes every check can still crash on launch because of a missing entitlement, and you only find out on a clean machine.</p>
+<h2 id="7-optional-upload-to-cloudflare-r2">7. Optional: upload to Cloudflare R2</h2>
+<p>For hosting the DMG I use Cloudflare R2. It speaks the S3 API, so a few lines of <code>boto3</code> are enough:</p>
+<pre><code class="language-python">client = boto3.client(
+    &quot;s3&quot;,
+    endpoint_url=f&quot;https://{account_id}.r2.cloudflarestorage.com&quot;,
+    aws_access_key_id=access_key_id,
+    aws_secret_access_key=secret_access_key,
+    region_name=&quot;auto&quot;,
+    config=Config(signature_version=&quot;s3v4&quot;, s3={&quot;addressing_style&quot;: &quot;path&quot;}),
+)
+
+client.put_object(
+    Bucket=bucket,
+    Key=&quot;releases/macos/NetShare.dmg&quot;,
+    Body=body,
+    ContentType=&quot;application/x-apple-diskimage&quot;,
+    CacheControl=&quot;public, max-age=300&quot;,
+)
+</code></pre>
+<p>Two details that cost me some time:</p>
+<ul>
+<li>Newer boto3 versions compute extra checksums by default, which can hang or fail against R2. Setting <code>AWS_REQUEST_CHECKSUM_CALCULATION=when_required</code> and <code>AWS_RESPONSE_CHECKSUM_VALIDATION=when_required</code> fixes it.</li>
+<li>The account ID, keys and bucket name come from a git-ignored <code>.env.r2</code> file, never from the script. Mine is a copy of an example file that only lists the variable names.</li>
+</ul>
+<p>If you'd rather keep things simple, GitHub Releases works just as well. Rename the file to something like <code>YourApp-1.2.3.dmg</code> and attach it.</p>
+<p>One more thing: if you build with <code>--obfuscate</code>, keep the <code>--split-debug-info</code> output somewhere safe. You'll need it to read crash stack traces. It does not belong inside the DMG.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong><code>A timestamp was expected but was not found</code></strong></p>
+<p>Apple's timestamp service is flaky. The retry wrapper handles most cases. If it still fails repeatedly even though <code>timestamp.apple.com</code> is reachable, switch networks or turn on a VPN, then re-run only the app signing script.</p>
+<p><strong><code>notarytool</code>: "The file couldn't be opened"</strong></p>
+<p>Usually a mistyped path from the interactive prompt, or a quarantine flag on a downloaded <code>.p8</code>. Use the non-interactive <code>store-credentials</code> command above, and if needed:</p>
+<pre><code class="language-sh">xattr -d com.apple.quarantine &quot;/path/to/AuthKey_XXXXXXXXXX.p8&quot;
+</code></pre>
+<p><strong>Never commit secrets</strong></p>
+<p><code>.p8</code> files, Issuer IDs, access keys and <code>.env</code> files stay out of git. The only thing that belongs in the repo is the Keychain profile name.</p>
+<h2 id="wrapping-up">Wrapping up</h2>
+<p>None of these steps is hard on its own. The pain comes from the pieces failing in ways that look unrelated, like a timestamp server outage breaking your release at the last dylib. Splitting the flow into small scripts that can be re-run independently made releases boring again, which is exactly what I want from a release process.</p>
+<p>You can see the whole thing in action in <a href="https://netshare.site/">NetShare</a>.</p>
+<p>That's all! Happy shipping!</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = "../..";</script>
+    <script src="../../javascripts/nav.js" defer></script>
+        <script src="../../javascripts/heading-links.js"></script>
+      <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js" defer></script>
+      <script>
+        window.addEventListener('DOMContentLoaded', function () {
+          if (window.hljs) { hljs.highlightAll(); }
+        });
+      </script>
+
+</body>
+</html>
