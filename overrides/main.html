@@ -45,3 +45,10 @@
   }
 </script>
 {% endblock %}
+
+{% block footer %}
+{{ super() }}
+{% if page %}
+<p class="visitor-counter" hidden>This page: <span data-visits="page"></span> views · All pages: <span data-visits="site"></span> views</p>
+{% endif %}
+{% endblock %}

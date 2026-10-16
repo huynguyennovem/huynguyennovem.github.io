@@ -8,3 +8,5 @@ Gemfile.lock
 /huynguyennovem.github.io.iml
 .idea/
 .DS_Store
+workers/visit-counter/node_modules/
+workers/visit-counter/.wrangler/

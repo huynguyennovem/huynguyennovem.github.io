@@ -1,0 +1,25 @@
+{
+	"name": "visit-counter",
+	"main": "src/index.js",
+	"compatibility_date": "2026-10-01",
+	"workers_dev": false,
+	"routes": [
+		{
+			"pattern": "huynq.dev/api/visits*",
+			"zone_name": "huynq.dev"
+		}
+	],
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "visit-counter",
+			"database_id": "7cdf58a3-5771-4af5-a56e-d2fb02048b2f"
+		},
+		{
+			"binding": "visit_counter",
+			"database_name": "visit-counter",
+			"database_id": "7cdf58a3-5771-4af5-a56e-d2fb02048b2f",
+			"remote": true
+		}
+	]
+}

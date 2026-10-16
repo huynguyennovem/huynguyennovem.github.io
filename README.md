@@ -7,3 +7,8 @@
     - Edit `docs/llms.txt` and `docs/robots.txt` as needed
     - Regenerate full context after content changes: `python3 scripts/generate_llms_full.py`
 - Performance: `hooks.py` strips unused theme fonts/CSS on build (requires `npx` for PurgeCSS)
+- Visitor counter (Cloudflare Worker + D1 at `huynq.dev/api/visits`, source in `workers/visit-counter/`):
+    - Login once: `npx wrangler login`
+    - Create DB and put its id into `wrangler.jsonc`: `npx wrangler d1 create visit-counter`
+    - Init schema: `npx wrangler d1 execute visit-counter --remote --file=schema.sql`
+    - Deploy: `npm run deploy` (from `workers/visit-counter/`)

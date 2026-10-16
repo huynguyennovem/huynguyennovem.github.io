@@ -25,6 +25,7 @@ extra_css:
 extra_javascript:
   - javascripts/home-feedback.js
   - javascripts/heading-links.js
+  - javascripts/visitor-counter.js
 extra:
   social_image: https://huynq.dev/img/huy-social.jpg?v=20260401-1
   social_image_type: image/jpeg
