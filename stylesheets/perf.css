@@ -74,3 +74,10 @@ img {
   border: 1px solid #e1e4e5;
   padding: 8px 16px;
 }
+
+.visitor-counter {
+  margin: 12px 0 0;
+  color: #808080;
+  font-size: 85%;
+  text-align: center;
+}
