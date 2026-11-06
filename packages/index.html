@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="Open-source Flutter packages and plugins by Huy Nguyen: cloudflare_worker_kv, open_dir, uni_selected_button, and netshare_saf." /><meta name="author" content="Huy Nguyen" /><link rel="canonical" href="https://huynq.dev/packages/" />
+    <link rel="icon" href="../img/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="shortcut icon" href="../img/favicon.ico" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <title>Packages - Huy Nguyen Blog</title>
+    <link rel="preload" href="../css/theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="preload" href="../css/theme_extra.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet" href="../css/theme.css" />
+      <link rel="stylesheet" href="../css/theme_extra.css" />
+    </noscript>
+    <style>
+      /* Critical shell styles while theme.css loads asynchronously */
+      html { box-sizing: border-box; }
+      *, *::before, *::after { box-sizing: inherit; }
+      body {
+        margin: 0;
+        color: #404040;
+        background: #fcfcfc;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.5;
+      }
+      .wy-grid-for-nav { position: relative; width: 100%; }
+      .wy-nav-side {
+        position: fixed; top: 0; bottom: 0; left: 0; width: 300px;
+        background: #343131; z-index: 200; overflow-y: auto;
+      }
+      .wy-side-nav-search {
+        background: #2980b9; padding: 0.8rem 1rem; color: #fcfcfc; text-align: center;
+      }
+      .wy-side-nav-search a { color: #fcfcfc; text-decoration: none; font-weight: 700; }
+      .wy-nav-content-wrap { margin-left: 300px; background: #fcfcfc; min-height: 100vh; }
+      .wy-nav-content { padding: 1.6rem 3em; max-width: 800px; }
+      .wy-nav-top { display: none; background: #2980b9; color: #fcfcfc; padding: 0.4rem 0.8rem; }
+      .wy-menu-vertical a { color: #d9d9d9; text-decoration: none; display: block; padding: 0.4rem 1.5rem; }
+      .rst-content h1 { margin-top: 0; font-size: 2rem; }
+      @media screen and (max-width: 768px) {
+        .wy-nav-side { left: -300px; }
+        .wy-nav-side.shift { left: 0; }
+        .wy-nav-content-wrap { margin-left: 0; }
+        .wy-nav-content-wrap.shift { left: 300px; position: relative; }
+        .wy-nav-top { display: block; }
+        .wy-nav-content { padding: 1rem 1.2rem; }
+      }
+    </style>
+        <link href="../stylesheets/perf.css" rel="stylesheet" />
+        <link href="../stylesheets/heading-links.css" rel="stylesheet" />
+        <link href="../stylesheets/projects.css" rel="stylesheet" />
+    
+      <script>
+        var mkdocs_page_name = "Packages";
+        var mkdocs_page_input_path = "packages.md";
+        var mkdocs_page_url = "/packages/";
+      </script>
+    
+ 
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  function loadGtag() {
+    if (window.__gtagLoaded) return;
+    window.__gtagLoaded = true;
+    var s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RJT4VPTE10';
+    s.async = true;
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-RJT4VPTE10', { anonymize_ip: true });
+  }
+  ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (evt) {
+    window.addEventListener(evt, loadGtag, { once: true, passive: true });
+  });
+  // Fallback for users who never interact
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(function () { setTimeout(loadGtag, 5000); }, { timeout: 10000 });
+  } else {
+    window.addEventListener('load', function () { setTimeout(loadGtag, 8000); });
+  }
+</script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="site-title"> Huy Nguyen Blog
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../posts/">Posts</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../talks/">Talks</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../community_activities/">Community Activities</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../products/">Indie Products</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Packages</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#cloudflare_worker_kv">cloudflare_worker_kv</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#open_dir">open_dir</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#uni_selected_button">uni_selected_button</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#netshare_saf">netshare_saf</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../contributions/">Contributions</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <button type="button" data-toggle="wy-nav-top" class="mobile-nav-toggle" aria-label="Open navigation menu">
+            <span></span><span></span><span></span>
+          </button>
+          <a href="..">Huy Nguyen Blog</a>
+        
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Packages</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="packages">Packages</h1>
+<p>Open-source Flutter packages and plugins I maintain. They are free to use, and issues and pull requests are welcome.</p>
+<section aria-label="Flutter packages" class="project-grid">
+<article class="project-card project-card--package">
+<h2 id="cloudflare_worker_kv">cloudflare_worker_kv</h2>
+<p>Remote config for Flutter apps backed by Cloudflare Workers KV: in-app defaults, fetch and activate, typed getters, and an offline cache.</p>
+<ul aria-label="Type and platforms" class="project-tags">
+<li>Remote config</li>
+<li>Android</li>
+<li>iOS</li>
+<li>Web</li>
+<li>Desktop</li>
+</ul>
+<p class="project-actions"><a href="https://pub.dev/packages/cloudflare_worker_kv">pub.dev</a> <a href="https://github.com/huynguyennovem/cloudflare-worker-kv">GitHub</a></p>
+</article>
+<article class="project-card project-card--package">
+<h2 id="open_dir">open_dir</h2>
+<p>A plugin that opens a native directory on desktop platforms from a given path.</p>
+<ul aria-label="Type and platforms" class="project-tags">
+<li>Plugin</li>
+<li>macOS</li>
+<li>Windows</li>
+<li>Linux</li>
+</ul>
+<p class="project-actions"><a href="https://pub.dev/packages/open_dir">pub.dev</a> <a href="https://github.com/NetShareOSS/open_dir">GitHub</a></p>
+</article>
+<article class="project-card project-card--package">
+<h2 id="uni_selected_button">uni_selected_button</h2>
+<p>A group of buttons where only one button can be selected at a time.</p>
+<ul aria-label="Type and platforms" class="project-tags">
+<li>Widget</li>
+<li>Android</li>
+<li>iOS</li>
+<li>Web</li>
+<li>Desktop</li>
+</ul>
+<p class="project-actions"><a href="https://pub.dev/packages/uni_selected_button">pub.dev</a> <a href="https://github.com/huynguyennovem/uni_selected_button">GitHub</a></p>
+</article>
+<article class="project-card project-card--package">
+<h2 id="netshare_saf">netshare_saf</h2>
+<p>Exposes the Android Storage Access Framework (SAF) APIs that local file hosting apps need. Built for <a href="../products/netshare/">NetShare</a>.</p>
+<ul aria-label="Type and platforms" class="project-tags">
+<li>Plugin</li>
+<li>Android</li>
+</ul>
+<p class="project-actions"><a href="https://github.com/NetShareOSS/netshare_saf">GitHub</a></p>
+</article>
+</section>
+<p>Looking for apps instead? See my <a href="../products/">indie products</a>.</p>
+              
+            </div>
+          </div>
+<footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../products/" class="btn btn-neutral float-left" title="Indie Products"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../contributions/" class="btn btn-neutral float-right" title="Contributions">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+
+<p class="visitor-counter" hidden>This page: <span data-visits="page"></span> views · All pages: <span data-visits="site"></span> views</p>
+
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../products/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../contributions/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = "..";</script>
+    <script src="../javascripts/nav.js" defer></script>
+        <script src="../javascripts/heading-links.js"></script>
+        <script src="../javascripts/visitor-counter.js"></script>
+
+</body>
+</html>

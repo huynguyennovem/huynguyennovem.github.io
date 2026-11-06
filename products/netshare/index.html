@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="NetShare is a free, open-source Flutter app for fast, private file sharing between devices on the same local network. Available on Android, iOS, and macOS." /><meta name="author" content="Huy Nguyen" /><link rel="canonical" href="https://huynq.dev/products/netshare/" />
+    <link rel="icon" href="../../img/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <title>NetShare - Huy Nguyen Blog</title>
+    <link rel="preload" href="../../css/theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="preload" href="../../css/theme_extra.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet" href="../../css/theme.css" />
+      <link rel="stylesheet" href="../../css/theme_extra.css" />
+    </noscript>
+    <style>
+      /* Critical shell styles while theme.css loads asynchronously */
+      html { box-sizing: border-box; }
+      *, *::before, *::after { box-sizing: inherit; }
+      body {
+        margin: 0;
+        color: #404040;
+        background: #fcfcfc;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.5;
+      }
+      .wy-grid-for-nav { position: relative; width: 100%; }
+      .wy-nav-side {
+        position: fixed; top: 0; bottom: 0; left: 0; width: 300px;
+        background: #343131; z-index: 200; overflow-y: auto;
+      }
+      .wy-side-nav-search {
+        background: #2980b9; padding: 0.8rem 1rem; color: #fcfcfc; text-align: center;
+      }
+      .wy-side-nav-search a { color: #fcfcfc; text-decoration: none; font-weight: 700; }
+      .wy-nav-content-wrap { margin-left: 300px; background: #fcfcfc; min-height: 100vh; }
+      .wy-nav-content { padding: 1.6rem 3em; max-width: 800px; }
+      .wy-nav-top { display: none; background: #2980b9; color: #fcfcfc; padding: 0.4rem 0.8rem; }
+      .wy-menu-vertical a { color: #d9d9d9; text-decoration: none; display: block; padding: 0.4rem 1.5rem; }
+      .rst-content h1 { margin-top: 0; font-size: 2rem; }
+      @media screen and (max-width: 768px) {
+        .wy-nav-side { left: -300px; }
+        .wy-nav-side.shift { left: 0; }
+        .wy-nav-content-wrap { margin-left: 0; }
+        .wy-nav-content-wrap.shift { left: 300px; position: relative; }
+        .wy-nav-top { display: block; }
+        .wy-nav-content { padding: 1rem 1.2rem; }
+      }
+    </style>
+        <link href="../../stylesheets/perf.css" rel="stylesheet" />
+        <link href="../../stylesheets/heading-links.css" rel="stylesheet" />
+        <link href="../../stylesheets/projects.css" rel="stylesheet" />
+    
+      <script>
+        var mkdocs_page_name = "NetShare";
+        var mkdocs_page_input_path = "products/netshare.md";
+        var mkdocs_page_url = "/products/netshare/";
+      </script>
+    
+ 
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  function loadGtag() {
+    if (window.__gtagLoaded) return;
+    window.__gtagLoaded = true;
+    var s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RJT4VPTE10';
+    s.async = true;
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-RJT4VPTE10', { anonymize_ip: true });
+  }
+  ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (evt) {
+    window.addEventListener(evt, loadGtag, { once: true, passive: true });
+  });
+  // Fallback for users who never interact
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(function () { setTimeout(loadGtag, 5000); }, { timeout: 10000 });
+  } else {
+    window.addEventListener('load', function () { setTimeout(loadGtag, 8000); });
+  }
+</script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="site-title"> Huy Nguyen Blog
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../posts/">Posts</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../talks/">Talks</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../community_activities/">Community Activities</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Indie Products</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../packages/">Packages</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../contributions/">Contributions</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <button type="button" data-toggle="wy-nav-top" class="mobile-nav-toggle" aria-label="Open navigation menu">
+            <span></span><span></span><span></span>
+          </button>
+          <a href="../..">Huy Nguyen Blog</a>
+        
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">NetShare</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="netshare">NetShare</h1>
+<header class="project-hero project--netshare">
+<p><img class="project-hero__icon" src="../../img/products/netshare-icon.webp" alt="" width="88" height="88"></p>
+<p class="project-hero__tagline">Fast, private file sharing on your local network. No cloud, no account, no internet required.</p>
+<ul aria-label="Platforms and license" class="project-tags">
+<li>Android</li>
+<li>iOS</li>
+<li>macOS</li>
+<li>Free &amp; open source</li>
+</ul>
+<p class="project-actions"><a href="https://netfshare.site/">Visit netfshare.site</a> <a href="https://apps.apple.com/app/id6758239332">App Store</a> <a href="https://play.google.com/store/apps/details?id=com.app.netshare">Google Play</a> <a href="https://netfshare.site/download-macos/">Download for Mac</a></p>
+</header>
+<figure class="site-preview">
+<a href="https://netfshare.site/">
+<span class="site-preview__bar" aria-hidden="true"><span class="site-preview__url">netfshare.site</span></span>
+<img src="../../img/products/netshare-landing.webp" alt="Open the netfshare.site landing page" width="1200" height="750" decoding="async">
+</a>
+<figcaption>A preview of netfshare.site. Click it to open the live landing page.</figcaption>
+</figure>
+
+<h2 id="what-it-is">What it is</h2>
+<p>NetShare moves files directly between devices on the same Wi-Fi or local network. Nothing goes through a cloud service, there is no account to create, and it keeps working when the network has no internet access at all.</p>
+<p>Use it between two computers, between a computer and a phone, or between two phones, across Android, iOS, and macOS.</p>
+<h2 id="highlights">Highlights</h2>
+<ul>
+<li><strong>Local-first and fast</strong>: files travel straight across your network instead of through a server.</li>
+<li><strong>Private by design</strong>: your files stay on your network. Transfers never touch an external server.</li>
+<li><strong>Works offline</strong>: made for offices, labs, factories, and internal networks where the internet is restricted or unavailable.</li>
+<li><strong>Cross-platform</strong>: one app on Android, iOS, and macOS.</li>
+<li><strong>Open source</strong>: the code is on <a href="https://github.com/NetShareOSS/netshare">GitHub</a> under the Apache-2.0 license.</li>
+</ul>
+<h2 id="screenshots">Screenshots</h2>
+<div class="app-shots" role="region" aria-label="NetShare screenshots" tabindex="0">
+<img src="../../img/products/netshare-screen-1.webp" alt="Home screen showing this device's address with Send files and Share text buttons and a list of recent files" width="360" height="779" loading="lazy" decoding="async">
+<img src="../../img/products/netshare-screen-2.webp" alt="Manual connect dialog for entering another device's IP address and port" width="360" height="779" loading="lazy" decoding="async">
+<img src="../../img/products/netshare-screen-3.webp" alt="Send screen with picked files ready to transfer" width="360" height="779" loading="lazy" decoding="async">
+</div>
+
+<h2 id="who-its-for">Who it's for</h2>
+<ul>
+<li><strong>Internal teams</strong>: share HR documents, source code, and design files when cloud tools are blocked.</li>
+<li><strong>Factories and industrial sites</strong>: reliable transfers on isolated networks with no internet access.</li>
+<li><strong>Schools, labs, and hospitals</strong>: keep sensitive data on-premises while still working together quickly.</li>
+<li><strong>Dev teams and studios</strong>: move large builds, exports, and media assets between machines without waiting on uploads.</li>
+</ul>
+<h2 id="under-the-hood">Under the hood</h2>
+<p>NetShare is built with <a href="https://flutter.dev/">Flutter</a>, so one codebase runs on every platform with a consistent UI. On Android it relies on <a href="../../packages/#netshare_saf">netshare_saf</a>, a plugin I wrote to reach the Storage Access Framework. On macOS it ships both through the Mac App Store and as a signed, notarized DMG.</p>
+<h2 id="behind-the-build">Behind the build</h2>
+<p>Posts I wrote while building and shipping NetShare:</p>
+<ul>
+<li><a href="../../posts/how-to-build-a-signed-and-notarized-macos-dmg-on-flutter/">How to build a signed and notarized macOS DMG on Flutter</a></li>
+<li><a href="../../posts/introduction-to-netshare-flutter-opensource-project/">Introduction to NetShare - Flutter opensource project</a></li>
+<li><a href="../../posts/releasing-flutter-projects-on-github/">Releasing Flutter projects on GitHub</a></li>
+<li><a href="../../posts/crafting-responsive-desktop-ui-for-overlayentry-in-flutter/">Crafting responsive Desktop UI for OverlayEntry in Flutter</a></li>
+<li><a href="../../posts/streamlining-exiting-your-flutter-desktop-app-with-shortcut-keys/">Streamlining exiting your Flutter desktop app with Shortcut keys</a></li>
+</ul>
+<h2 id="links">Links</h2>
+<ul>
+<li><strong>Website</strong>: <a href="https://netfshare.site/">netfshare.site</a></li>
+<li><strong>iPhone, iPad, and Mac</strong>: <a href="https://apps.apple.com/app/id6758239332">App Store</a></li>
+<li><strong>Android</strong>: <a href="https://play.google.com/store/apps/details?id=com.app.netshare">Google Play</a></li>
+<li><strong>macOS DMG</strong>: <a href="https://netfshare.site/download-macos/">Download for Mac</a></li>
+<li><strong>Source code</strong>: <a href="https://github.com/NetShareOSS/netshare">NetShareOSS/netshare</a></li>
+<li><strong>Updates</strong>: <a href="https://x.com/NetShareOSS">X</a> · <a href="https://www.youtube.com/@NetShareOSS">YouTube</a></li>
+<li><strong>Help</strong>: <a href="https://netfshare.site/support/">Support</a></li>
+</ul>
+<p><a href="../">← All indie products</a></p>
+              
+            </div>
+          </div>
+<footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+
+<p class="visitor-counter" hidden>This page: <span data-visits="page"></span> views · All pages: <span data-visits="site"></span> views</p>
+
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = "../..";</script>
+    <script src="../../javascripts/nav.js" defer></script>
+        <script src="../../javascripts/heading-links.js"></script>
+        <script src="../../javascripts/visitor-counter.js"></script>
+
+</body>
+</html>

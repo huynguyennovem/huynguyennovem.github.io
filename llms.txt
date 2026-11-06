@@ -19,7 +19,8 @@ Key facts:
 - [About](https://huynq.dev/about/): Short bio and GitHub profiles
 - [Posts](https://huynq.dev/posts/): Index of all technical blog posts
 - [Talks](https://huynq.dev/talks/): Conference and meetup talks
-- [Projects and packages](https://huynq.dev/projects_packages/): Open-source apps and Flutter packages
+- [Indie Products](https://huynq.dev/products/): Indie apps built and shipped with Flutter (NetShare, CompactKit)
+- [Packages](https://huynq.dev/packages/): Open-source Flutter packages and plugins
 - [Contributions](https://huynq.dev/contributions/): Flutter repo issues/PRs and community package work
 - [Community activities](https://huynq.dev/community_activities/): Mentoring, speaking, and community involvement
 
@@ -64,14 +65,19 @@ Key facts:
 
 ---
 
-## Projects and Packages
+## Indie Products
 
-- [NetShare](https://netfshare.site/): Open-source Flutter app for sharing data on a local network
-- [CompactKit](https://compactkit.cc/): Compress and optimize photos, videos, PDFs, documents, and code
+- [NetShare](https://huynq.dev/products/netshare/): Free, open-source app for fast, private file sharing on a local network (Android, iOS, macOS). Website: https://netfshare.site/
+- [CompactKit](https://huynq.dev/products/compactkit/): Compress images, videos, PDFs, documents, and code on-device (iOS, Android). Website: https://compactkit.cc/
+
+---
+
+## Packages
+
+- [cloudflare_worker_kv](https://pub.dev/packages/cloudflare_worker_kv): Flutter remote config backed by Cloudflare Workers KV
 - [open_dir](https://pub.dev/packages/open_dir): Flutter plugin to open a native directory on desktop
 - [uni_selected_button](https://pub.dev/packages/uni_selected_button): Flutter single-select button group widget
 - [netshare_saf](https://github.com/NetShareOSS/netshare_saf): Android Storage Access Framework APIs for NetShare-style apps
-- [cloudflare_worker_kv](https://pub.dev/packages/cloudflare_worker_kv): Flutter remote config backed by Cloudflare Workers KV
 
 ---
 
