@@ -144,7 +144,8 @@ Hi there! I'm Huy, an open-source engineer passionate about contributing to the 
 
 - [📚 All Posts](posts.md) - Browse all my blog posts
 - [🎯 Community Activities](community_activities.md) - My involvement in the tech community
-- [📦 Projects & Packages](projects_packages.md) - Open-source projects I've built
+- [🚀 Indie Products](products.md) - Apps I've designed, built, and shipped
+- [📦 Packages](packages.md) - Open-source Flutter packages and plugins
 - [🤝 Contributions](contributions.md) - My contributions to Flutter and other projects
 
 ---

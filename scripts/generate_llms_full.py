@@ -37,7 +37,8 @@ def is_built(path: Path) -> bool:
 # Order matters: identity first, then curated content.
 SECTIONS: list[tuple[str, str, Path]] = [
     ("About", f"{SITE_URL}/about/", DOCS / "about.md"),
-    ("Projects and packages", f"{SITE_URL}/projects_packages/", DOCS / "projects_packages.md"),
+    ("Indie products", f"{SITE_URL}/products/", DOCS / "products.md"),
+    ("Packages", f"{SITE_URL}/packages/", DOCS / "packages.md"),
     ("Contributions", f"{SITE_URL}/contributions/", DOCS / "contributions.md"),
     ("Community activities", f"{SITE_URL}/community_activities/", DOCS / "community_activities.md"),
     ("Talks index", f"{SITE_URL}/talks/", DOCS / "talks.md"),
@@ -49,6 +50,7 @@ def _post_sort_key(path: Path) -> str:
     return match.group(1).strip() if match else path.name
 
 
+PRODUCT_FILES = sorted(p for p in (DOCS / "products").glob("*.md") if is_built(p))
 TALK_FILES = sorted(p for p in (DOCS / "talks").glob("*.md") if is_built(p))
 POST_FILES = sorted(
     (p for p in (DOCS / "posts").glob("*.md") if is_built(p)),
@@ -88,24 +90,30 @@ def render_section(title: str, url: str, path: Path) -> str:
     return f"## {title}\n\nSource: {url}\n\n{body}\n"
 
 
+def heading_title(path: Path) -> str:
+    heading_match = re.search(
+        r"^#\s+(.+)$",
+        clean(path.read_text(encoding="utf-8")),
+        re.MULTILINE,
+    )
+    if heading_match:
+        return heading_match.group(1).strip()
+    return path.stem.replace("-", " ").title()
+
+
 def main() -> None:
     sections: list[str] = []
 
     for title, url, path in SECTIONS:
         sections.append(render_section(title, url, path))
 
-    for path in TALK_FILES:
-        title = path.stem.replace("-", " ").title()
-        heading_match = re.search(
-            r"^#\s+(.+)$",
-            clean(path.read_text(encoding="utf-8")),
-            re.MULTILINE,
-        )
-        if heading_match:
-            title = heading_match.group(1).strip()
-        sections.append(
-            render_section(f"Talk: {title}", page_url_from_docs_path(path), path)
-        )
+    for label, files in (("Product", PRODUCT_FILES), ("Talk", TALK_FILES)):
+        for path in files:
+            sections.append(
+                render_section(
+                    f"{label}: {heading_title(path)}", page_url_from_docs_path(path), path
+                )
+            )
 
     for path in POST_FILES:
         raw = path.read_text(encoding="utf-8")
@@ -118,7 +126,7 @@ def main() -> None:
     header = (
         "# Huy Nguyen — Full Context\n\n"
         "> Expanded LLM context for https://huynq.dev. "
-        "Includes about, projects, contributions, talks, and all blog posts.\n\n"
+        "Includes about, indie products, packages, contributions, talks, and all blog posts.\n\n"
         "Generated from the site markdown sources. "
         "For a curated index, see https://huynq.dev/llms.txt\n"
     )

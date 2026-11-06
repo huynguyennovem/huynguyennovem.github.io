@@ -10,6 +10,24 @@ from pathlib import Path
 
 FONT_FACE_RE = re.compile(r"@font-face\{.*?\}", re.DOTALL)
 
+# Moved pages: old path -> new path (both relative to the site root).
+REDIRECTS = {
+    "projects_packages/": "products/",
+}
+
+REDIRECT_HTML = """<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Redirecting…</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="{canonical}">
+<meta http-equiv="refresh" content="0; url=/{target}">
+</head>
+<body><a href="/{target}">This page has moved to /{target}</a></body>
+</html>
+"""
+
 
 def _copy_well_known(docs_dir: Path, site_dir: Path) -> None:
     """MkDocs skips dot-directories, so copy /.well-known (agents.json) manually."""
@@ -24,10 +42,20 @@ def _copy_well_known(docs_dir: Path, site_dir: Path) -> None:
             print(f"[llm] copied .well-known/{path.name}")
 
 
+def _write_redirects(site_dir: Path, site_url: str) -> None:
+    """GitHub Pages has no server-side redirects, so emit meta-refresh pages for moved URLs."""
+    for old, new in REDIRECTS.items():
+        dest = site_dir / old / "index.html"
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_text(REDIRECT_HTML.format(target=new, canonical=f"{site_url}{new}"), encoding="utf-8")
+        print(f"[redirect] /{old} -> /{new}")
+
+
 def on_post_build(config, **kwargs) -> None:
-    """Copy static LLM extras and slim theme assets after the site is built."""
+    """Copy static LLM extras, write redirects, and slim theme assets after the site is built."""
     site_dir = Path(config["site_dir"])
     _copy_well_known(Path(config["docs_dir"]), site_dir)
+    _write_redirects(site_dir, config["site_url"])
 
     theme_css = site_dir / "css" / "theme.css"
     if not theme_css.exists():

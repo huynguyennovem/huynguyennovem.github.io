@@ -5,7 +5,8 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {%- if page and page.is_homepage %}<meta name="description" content="{{ config.site_description }}" />{%- endif %}
+    {%- set description = config.site_description if page and page.is_homepage else (page.meta.seoDescription if page else none) %}
+    {%- if description %}<meta name="description" content="{{ description|e }}" />{%- endif %}
     {%- if config.site_author %}<meta name="author" content="{{ config.site_author }}" />{%- endif %}
     {%- if page and page.canonical_url %}<link rel="canonical" href="{{ page.canonical_url }}" />{%- endif %}
     <link rel="icon" href="{{ 'img/favicon-32.png'|url }}" type="image/png" sizes="32x32" />
@@ -71,7 +72,7 @@
           <link rel="preload" href="{{ path|url }}" as="style" onload="this.onload=null;this.rel='stylesheet'" />
           <noscript><link href="{{ path|url }}" rel="stylesheet" /></noscript>
         {%- endif %}
-      {%- else %}
+      {%- elif path != 'stylesheets/projects.css' or (page and page.url.startswith(('products/', 'packages/'))) %}
         <link href="{{ path|url }}" rel="stylesheet" />
       {%- endif %}
     {%- endfor %}

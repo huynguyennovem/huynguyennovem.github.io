@@ -10,7 +10,8 @@ nav:
   - Talks: talks.md
   - About: about.md
   - Community Activities: community_activities.md
-  - Projects and packages: projects_packages.md
+  - Indie Products: products.md
+  - Packages: packages.md
   - Contributions: contributions.md
 exclude_docs: |
   experiences.md
@@ -18,10 +19,13 @@ theme:
   name: readthedocs
   custom_dir: overrides
   highlightjs: false
+markdown_extensions:
+  - md_in_html
 extra_css:
   - stylesheets/perf.css
   - stylesheets/home-feedback.css
   - stylesheets/heading-links.css
+  - stylesheets/projects.css
 extra_javascript:
   - javascripts/home-feedback.js
   - javascripts/heading-links.js
