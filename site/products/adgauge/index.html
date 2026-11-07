@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="AdGauge is a free Flutter app for Android and iOS that shows your live AdMob earnings, ads performance, apps, and ad units on your phone, using read-only Google sign-in." /><meta name="author" content="Huy Nguyen" /><link rel="canonical" href="https://huynq.dev/products/adgauge/" />
+    <link rel="icon" href="../../img/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <title>AdGauge - Huy Nguyen Blog</title>
+    <link rel="preload" href="../../css/theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="preload" href="../../css/theme_extra.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet" href="../../css/theme.css" />
+      <link rel="stylesheet" href="../../css/theme_extra.css" />
+    </noscript>
+    <style>
+      /* Critical shell styles while theme.css loads asynchronously */
+      html { box-sizing: border-box; }
+      *, *::before, *::after { box-sizing: inherit; }
+      body {
+        margin: 0;
+        color: #404040;
+        background: #fcfcfc;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.5;
+      }
+      .wy-grid-for-nav { position: relative; width: 100%; }
+      .wy-nav-side {
+        position: fixed; top: 0; bottom: 0; left: 0; width: 300px;
+        background: #343131; z-index: 200; overflow-y: auto;
+      }
+      .wy-side-nav-search {
+        background: #2980b9; padding: 0.8rem 1rem; color: #fcfcfc; text-align: center;
+      }
+      .wy-side-nav-search a { color: #fcfcfc; text-decoration: none; font-weight: 700; }
+      .wy-nav-content-wrap { margin-left: 300px; background: #fcfcfc; min-height: 100vh; }
+      .wy-nav-content { padding: 1.6rem 3em; max-width: 800px; }
+      .wy-nav-top { display: none; background: #2980b9; color: #fcfcfc; padding: 0.4rem 0.8rem; }
+      .wy-menu-vertical a { color: #d9d9d9; text-decoration: none; display: block; padding: 0.4rem 1.5rem; }
+      .rst-content h1 { margin-top: 0; font-size: 2rem; }
+      @media screen and (max-width: 768px) {
+        .wy-nav-side { left: -300px; }
+        .wy-nav-side.shift { left: 0; }
+        .wy-nav-content-wrap { margin-left: 0; }
+        .wy-nav-content-wrap.shift { left: 300px; position: relative; }
+        .wy-nav-top { display: block; }
+        .wy-nav-content { padding: 1rem 1.2rem; }
+      }
+    </style>
+        <link href="../../stylesheets/perf.css" rel="stylesheet" />
+        <link href="../../stylesheets/heading-links.css" rel="stylesheet" />
+        <link href="../../stylesheets/projects.css" rel="stylesheet" />
+    
+      <script>
+        var mkdocs_page_name = "AdGauge";
+        var mkdocs_page_input_path = "products/adgauge.md";
+        var mkdocs_page_url = "/products/adgauge/";
+      </script>
+    
+ 
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  function loadGtag() {
+    if (window.__gtagLoaded) return;
+    window.__gtagLoaded = true;
+    var s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RJT4VPTE10';
+    s.async = true;
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-RJT4VPTE10', { anonymize_ip: true });
+  }
+  ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (evt) {
+    window.addEventListener(evt, loadGtag, { once: true, passive: true });
+  });
+  // Fallback for users who never interact
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(function () { setTimeout(loadGtag, 5000); }, { timeout: 10000 });
+  } else {
+    window.addEventListener('load', function () { setTimeout(loadGtag, 8000); });
+  }
+</script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="site-title"> Huy Nguyen Blog
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../posts/">Posts</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../talks/">Talks</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../community_activities/">Community Activities</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Indie Products</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../packages/">Packages</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../contributions/">Contributions</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <button type="button" data-toggle="wy-nav-top" class="mobile-nav-toggle" aria-label="Open navigation menu">
+            <span></span><span></span><span></span>
+          </button>
+          <a href="../..">Huy Nguyen Blog</a>
+        
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">AdGauge</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="adgauge">AdGauge</h1>
+<header class="project-hero project--adgauge">
+<p><img class="project-hero__icon" src="../../img/products/adgauge-icon.webp" alt="" width="88" height="88"></p>
+<p class="project-hero__tagline">Your AdMob revenue, live on your phone. Earnings, apps, and ad units at a glance, without opening the AdMob console.</p>
+<ul aria-label="Platforms and pricing" class="project-tags">
+<li>iOS</li>
+<li>Android</li>
+<li>Free download</li>
+<li>Read-only access</li>
+</ul>
+<p class="project-actions"><a href="https://admob-dashboard.site/">Visit admob-dashboard.site</a> <a href="https://apps.apple.com/app/id6809818957">App Store</a> <a href="https://play.google.com/store/apps/details?id=com.adgauge.admobdashboard">Google Play</a></p>
+</header>
+<figure class="site-preview">
+<a href="https://admob-dashboard.site/">
+<span class="site-preview__bar" aria-hidden="true"><span class="site-preview__url">admob-dashboard.site</span></span>
+<img src="../../img/products/adgauge-landing.webp" alt="Open the admob-dashboard.site landing page" width="1200" height="750" decoding="async">
+</a>
+<figcaption>A preview of admob-dashboard.site. Click it to open the live landing page.</figcaption>
+</figure>
+
+<h2 id="what-it-is">What it is</h2>
+<p>AdGauge is a personal AdMob dashboard for app publishers. Sign in with the Google account that has AdMob access, and it pulls mediated revenue and performance straight from Google's AdMob Reporting API into screens made for a phone. No more opening the AdMob console on a laptop just to see how today is going.</p>
+<h2 id="highlights">Highlights</h2>
+<ul>
+<li><strong>Estimated earnings</strong>: today so far, yesterday, this month, and last month, so you can check the pulse in seconds.</li>
+<li><strong>Ads activity</strong>: earnings, requests, impressions, match rate, eCPM, and show rate, compared against recent periods.</li>
+<li><strong>Your dashboard</strong>: hero revenue with flexible ranges, a revenue trend chart, and your top ad units ranked.</li>
+<li><strong>Per-app drill-down</strong>: format performance, revenue charts, top countries, and platform breakdown, including lifetime and custom ranges.</li>
+<li><strong>Read-only Google Sign-In</strong>: the app asks only for the AdMob read-only scope, and you can disconnect anytime.</li>
+<li><strong>Light and dark themes</strong>: plus default ranges you can customize.</li>
+</ul>
+<h2 id="how-it-works">How it works</h2>
+<ol>
+<li><strong>Connect Google</strong>: sign in with the account that has AdMob access.</li>
+<li><strong>Sync AdMob</strong>: pull live revenue, impressions, match rate, eCPM, apps, and ad units from the AdMob API.</li>
+<li><strong>Track daily</strong>: switch ranges, pull to refresh, and drill into any app when you want a closer look.</li>
+</ol>
+<h2 id="screenshots">Screenshots</h2>
+<div class="app-shots" role="region" aria-label="AdGauge screenshots" tabindex="0">
+<img src="../../img/products/adgauge-screen-1.webp" alt="Overview with today's earnings, yesterday's revenue, and a gauge for this month so far" width="360" height="779" loading="lazy" decoding="async">
+<img src="../../img/products/adgauge-screen-2.webp" alt="Reports screen with 7-day revenue, eCPM, impressions, CTR, and a revenue trend chart" width="360" height="779" loading="lazy" decoding="async">
+<img src="../../img/products/adgauge-screen-3.webp" alt="Apps to watch with rising and falling apps, and top ad units ranked by revenue" width="360" height="779" loading="lazy" decoding="async">
+<img src="../../img/products/adgauge-screen-4.webp" alt="App performance list ranking every app by earnings and impressions" width="360" height="779" loading="lazy" decoding="async">
+<img src="../../img/products/adgauge-screen-5.webp" alt="Per-app detail in dark mode with eCPM, impressions, match rate, and daily revenue" width="360" height="779" loading="lazy" decoding="async">
+</div>
+
+<h2 id="who-its-for">Who it's for</h2>
+<ul>
+<li><strong>Indie developers</strong> who want to know how their apps earned today without opening a laptop.</li>
+<li><strong>Small studios</strong> keeping an eye on a portfolio of apps and the ad units that matter most.</li>
+</ul>
+<h2 id="under-the-hood">Under the hood</h2>
+<p>AdGauge is built with <a href="https://flutter.dev/">Flutter</a> for Android and iOS. It signs in with Google using the <code>admob.readonly</code> scope and reads the AdMob Reporting API directly from your device. There is no AdGauge server in between storing your metrics.</p>
+<h2 id="links">Links</h2>
+<ul>
+<li><strong>Website</strong>: <a href="https://admob-dashboard.site/">admob-dashboard.site</a></li>
+<li><strong>iPhone and iPad</strong>: <a href="https://apps.apple.com/app/id6809818957">App Store</a></li>
+<li><strong>Android</strong>: <a href="https://play.google.com/store/apps/details?id=com.adgauge.admobdashboard">Google Play</a></li>
+<li><strong>Help</strong>: <a href="https://admob-dashboard.site/support/">Support</a></li>
+</ul>
+<p><a href="../">← All indie products</a></p>
+              
+            </div>
+          </div>
+<footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+
+<p class="visitor-counter" hidden>This page: <span data-visits="page"></span> views · All pages: <span data-visits="site"></span> views</p>
+
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = "../..";</script>
+    <script src="../../javascripts/nav.js" defer></script>
+        <script src="../../javascripts/heading-links.js"></script>
+        <script src="../../javascripts/visitor-counter.js"></script>
+
+</body>
+</html>

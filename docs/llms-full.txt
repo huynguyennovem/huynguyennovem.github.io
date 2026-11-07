@@ -24,7 +24,7 @@ Source: https://huynq.dev/products/
 
 # Indie Products
 
-Apps I design, build, and ship on my own with Flutter, from the first commit to the store listing. Open a product to see what it does, how it looks, and where to get it.
+Apps and tools I design, build, and ship on my own, from the first commit to the store listing. Open a product to see what it does, how it looks, and where to get it.
 
 ##  [NetShare](products/netshare.md)
 
@@ -47,6 +47,38 @@ Free download
 On-device
 
 [Explore CompactKit](products/compactkit.md) [compactkit.cc](https://compactkit.cc/)
+
+##  [AdGauge](products/adgauge.md)
+
+Your AdMob revenue, live on your phone. Earnings, apps, and ad units without opening the AdMob console.
+
+iOS
+Android
+Free download
+Read-only access
+
+[Explore AdGauge](products/adgauge.md) [admob-dashboard.site](https://admob-dashboard.site/)
+
+##  [MacHub](products/machub.md)
+
+14 developer tools in one Mac app: device logs, APK and AAB analysis, payload decoding, diffs, OCR, and git.
+
+macOS
+Apple Silicon & Intel
+Free
+No account
+
+[Explore MacHub](products/machub.md) [machub.space](https://machub.space/)
+
+##  [NitSearch](products/nitsearch.md)
+
+Find in page, the VS Code way: highlight all matches, match case, whole word, a results list, and search history.
+
+Chrome extension
+Free
+No data collected
+
+[Explore NitSearch](products/nitsearch.md) [Chrome Web Store](https://chromewebstore.google.com/detail/nitsearch/edipjijflaedhppheghdneaffbaeipdj)
 
 Curious how these get shipped? I wrote about [publishing a landing page with a custom domain for your product](posts/publish-a-landing-page-with-a-custom-domain-for-your-product.md). Looking for libraries instead of apps? See my open-source [Flutter packages](packages.md).
 
@@ -199,6 +231,66 @@ After Android 11 was released, I had the opportunity to share a topic about “A
 
 ---
 
+## Product: AdGauge
+
+Source: https://huynq.dev/products/adgauge/
+
+# AdGauge
+
+Your AdMob revenue, live on your phone. Earnings, apps, and ad units at a glance, without opening the AdMob console.
+
+iOS
+Android
+Free download
+Read-only access
+
+[Visit admob-dashboard.site](https://admob-dashboard.site/) [App Store](https://apps.apple.com/app/id6809818957) [Google Play](https://play.google.com/store/apps/details?id=com.adgauge.admobdashboard)
+
+admob-dashboard.site
+
+A preview of admob-dashboard.site. Click it to open the live landing page.
+
+## What it is
+
+AdGauge is a personal AdMob dashboard for app publishers. Sign in with the Google account that has AdMob access, and it pulls mediated revenue and performance straight from Google's AdMob Reporting API into screens made for a phone. No more opening the AdMob console on a laptop just to see how today is going.
+
+## Highlights
+
+- **Estimated earnings**: today so far, yesterday, this month, and last month, so you can check the pulse in seconds.
+- **Ads activity**: earnings, requests, impressions, match rate, eCPM, and show rate, compared against recent periods.
+- **Your dashboard**: hero revenue with flexible ranges, a revenue trend chart, and your top ad units ranked.
+- **Per-app drill-down**: format performance, revenue charts, top countries, and platform breakdown, including lifetime and custom ranges.
+- **Read-only Google Sign-In**: the app asks only for the AdMob read-only scope, and you can disconnect anytime.
+- **Light and dark themes**: plus default ranges you can customize.
+
+## How it works
+
+1. **Connect Google**: sign in with the account that has AdMob access.
+2. **Sync AdMob**: pull live revenue, impressions, match rate, eCPM, apps, and ad units from the AdMob API.
+3. **Track daily**: switch ranges, pull to refresh, and drill into any app when you want a closer look.
+
+## Screenshots
+
+## Who it's for
+
+- **Indie developers** who want to know how their apps earned today without opening a laptop.
+- **Small studios** keeping an eye on a portfolio of apps and the ad units that matter most.
+
+## Under the hood
+
+AdGauge is built with [Flutter](https://flutter.dev/) for Android and iOS. It signs in with Google using the `admob.readonly` scope and reads the AdMob Reporting API directly from your device. There is no AdGauge server in between storing your metrics.
+
+## Links
+
+- **Website**: [admob-dashboard.site](https://admob-dashboard.site/)
+- **iPhone and iPad**: [App Store](https://apps.apple.com/app/id6809818957)
+- **Android**: [Google Play](https://play.google.com/store/apps/details?id=com.adgauge.admobdashboard)
+- **Help**: [Support](https://admob-dashboard.site/support/)
+
+[← All indie products](../products.md)
+
+---
+
 ## Product: CompactKit
 
 Source: https://huynq.dev/products/compactkit/
@@ -258,6 +350,68 @@ Posts I wrote while building and shipping CompactKit:
 - **iPhone and iPad**: [App Store](https://apps.apple.com/app/id6761741587)
 - **Android**: [Google Play](https://play.google.com/store/apps/details?id=com.app.compactkit)
 - **Help**: [Support](https://compactkit.cc/support/)
+
+[← All indie products](../products.md)
+
+---
+
+## Product: MacHub
+
+Source: https://huynq.dev/products/machub/
+
+# MacHub
+
+14 developer tools, one Mac app. Device logs, APK and AAB analysis, payload decoding, diffs, OCR, and git in a single toolbox.
+
+macOS 12+
+Apple Silicon & Intel
+Free
+No account
+
+[Visit machub.space](https://machub.space/) [Download for Mac](https://machub.space/download/)
+
+machub.space
+
+A preview of machub.space. Click it to open the live landing page.
+
+## What it is
+
+MacHub gathers the small tools mobile and web developers reach for every day into one fast desktop app. Fourteen tools sit in four groups in a single sidebar, and each one keeps its state while you switch, so you never lose your place.
+
+It is local-first: there is no account and no ads, and anonymous usage statistics are sent only if you opt in.
+
+## The toolbox
+
+- **Files & Paths**: Path Checker, File Utilities, and Dir Utilities to check paths, bookmark the files you edit often, and open workspace folders in Finder, VS Code, Cursor, Android Studio, Xcode, and more.
+- **Text & Data**: Payload Decoder, Data Format, Text Diff, and Base64 Image for tokens, JSON, XML, YAML, CSV, SQL, side-by-side diffs, and base64 images.
+- **Devices & Packages**: Device Logs, Package Analyzer, Project Analyzer, and AAB to APK for logs, APK/AAB/IPA inspection, codebase stats, and installable builds.
+- **Utilities**: Screenshot OCR, Custom Commands, and Git Clone for reading text off the screen, running saved shell commands, and cloning with the right account.
+
+## Highlights
+
+- **Android release workflow**: drop an `.aab` to inspect it, convert it to a universal APK with bundletool, sign it, and install it on a connected phone without leaving the app.
+- **Layered payload decoding**: unwraps JWT, JSON, URL encoding, hex, Gzip, and Base64 up to eight layers deep, then shows the result as a JSON tree.
+- **Live device logs**: `adb logcat`, `flutter logs`, and iOS syslog for devices and simulators, with level, package, and text filters.
+- **On-device OCR**: select any region of the screen and read its text with Apple Vision, then translate it into 15 languages if you want.
+- **Multi-account git clone**: matches the URL to the `Host` aliases in your `~/.ssh/config`, so `origin` uses the correct key from the start.
+- **Works with your toolchain**: finds `adb`, `flutter`, `bundletool`, `git`, `java`, and `xcrun` in the usual places, and shows an install hint when one is missing.
+
+## Who it's for
+
+- **Android and Flutter developers** who live in logcat, bundletool, and APK builds.
+- **Mobile and web developers** who decode tokens, format payloads, and diff responses all day.
+- **Anyone juggling several git accounts** on one Mac.
+
+## Privacy and install
+
+Bookmarks, saved commands, and history stay in your Mac's local preferences, and network requests such as translation happen only when you ask for them. MacHub launches tools like `adb`, `git`, and `bundletool`, so it runs outside the App Sandbox. That is why it ships as a signed, notarized DMG from its website instead of the Mac App Store. It runs on macOS 12 Monterey or later, on both Apple Silicon and Intel.
+
+## Links
+
+- **Website**: [machub.space](https://machub.space/)
+- **macOS DMG**: [Download for Mac](https://machub.space/download/)
+- **What's new**: [Changelog](https://machub.space/changelog/)
+- **Help**: [Support and FAQ](https://machub.space/support/)
 
 [← All indie products](../products.md)
 
@@ -328,6 +482,58 @@ Posts I wrote while building and shipping NetShare:
 - **Source code**: [NetShareOSS/netshare](https://github.com/NetShareOSS/netshare)
 - **Updates**: [X](https://x.com/NetShareOSS) · [YouTube](https://www.youtube.com/@NetShareOSS)
 - **Help**: [Support](https://netfshare.site/support/)
+
+[← All indie products](../products.md)
+
+---
+
+## Product: NitSearch
+
+Source: https://huynq.dev/products/nitsearch/
+
+# NitSearch
+
+Find in page, the VS Code way. Match case, whole word, a results list, and search history for every site.
+
+Chrome extension
+Free
+Keyboard-first
+No data collected
+
+[Add to Chrome](https://chromewebstore.google.com/detail/nitsearch/edipjijflaedhppheghdneaffbaeipdj) [Privacy policy](https://sites.google.com/view/nitsearch/nitsearchprivacy)
+
+NitSearch on the Chrome Web Store. Click it to open the listing.
+
+## What it is
+
+The browser's built-in find bar counts and highlights matches, but it is easy to lose track of where the next result is hiding. NitSearch swaps it for a find widget modeled on the one in VS Code. Press Alt+Shift+F on any page, start typing, and every match lights up, with the current one marked and a list of results you can jump between.
+
+## Highlights
+
+- **Highlight all matches**: every hit is marked, the current one stands out, and a live counter shows where you are.
+- **Match Case and Whole Word**: tell `Search` apart from `search`, and skip `searching` or `researchers` when you only want the word itself.
+- **Results list**: see each match with its surrounding text and jump straight to the one you need.
+- **Scrollbar markers**: spot where matches cluster on a long page before you scroll.
+- **Find in Selection**: select a paragraph and keep the search inside it.
+- **Search history per site**: press the up and down arrows to bring back recent queries for the website you are on, like in a code editor.
+
+## Screenshots
+
+## Who it's for
+
+- **Developers** digging through long docs, specs, and changelogs.
+- **Students and researchers** hunting for exact terms in long articles.
+- **Anyone** who wishes the browser's find bar worked like their code editor.
+
+## Privacy
+
+NitSearch runs only in the tab where you click its icon or press the shortcut, and it reads that page inside your browser to find matches. There are no analytics, ads, trackers, or remote servers, and it never loads remote code. Your preferences and recent queries stay in the browser's local extension storage and are deleted when you remove the extension.
+
+## Links
+
+- **Install**: [Chrome Web Store](https://chromewebstore.google.com/detail/nitsearch/edipjijflaedhppheghdneaffbaeipdj)
+- **Privacy**: [Privacy policy](https://sites.google.com/view/nitsearch/nitsearchprivacy)
+- **Say thanks**: [Buy me a coffee](https://buymeacoffee.com/huynguyennovem)
 
 [← All indie products](../products.md)
 

@@ -20,6 +20,21 @@
   --accent-soft: #fff4e6;
 }
 
+.project--adgauge {
+  --accent: #c4320a;
+  --accent-soft: #fff0eb;
+}
+
+.project--machub {
+  --accent: #be123c;
+  --accent-soft: #fff1f3;
+}
+
+.project--nitsearch {
+  --accent: #0e639c;
+  --accent-soft: #e8f2f9;
+}
+
 /* Card grid */
 .rst-content .project-grid {
   display: grid;
@@ -282,6 +297,10 @@
   padding-bottom: 0.4rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+}
+
+.rst-content .app-shots--wide {
+  grid-auto-columns: minmax(min(85%, 24rem), 1fr);
 }
 
 .app-shots img {

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="MacHub is a free Mac app with 14 developer tools: device logs, APK/AAB/IPA analyzer, AAB to APK converter, payload decoder, diff, OCR, git clone and more. Local-first, no account." /><meta name="author" content="Huy Nguyen" /><link rel="canonical" href="https://huynq.dev/products/machub/" />
+    <link rel="icon" href="../../img/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <title>MacHub - Huy Nguyen Blog</title>
+    <link rel="preload" href="../../css/theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="preload" href="../../css/theme_extra.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet" href="../../css/theme.css" />
+      <link rel="stylesheet" href="../../css/theme_extra.css" />
+    </noscript>
+    <style>
+      /* Critical shell styles while theme.css loads asynchronously */
+      html { box-sizing: border-box; }
+      *, *::before, *::after { box-sizing: inherit; }
+      body {
+        margin: 0;
+        color: #404040;
+        background: #fcfcfc;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.5;
+      }
+      .wy-grid-for-nav { position: relative; width: 100%; }
+      .wy-nav-side {
+        position: fixed; top: 0; bottom: 0; left: 0; width: 300px;
+        background: #343131; z-index: 200; overflow-y: auto;
+      }
+      .wy-side-nav-search {
+        background: #2980b9; padding: 0.8rem 1rem; color: #fcfcfc; text-align: center;
+      }
+      .wy-side-nav-search a { color: #fcfcfc; text-decoration: none; font-weight: 700; }
+      .wy-nav-content-wrap { margin-left: 300px; background: #fcfcfc; min-height: 100vh; }
+      .wy-nav-content { padding: 1.6rem 3em; max-width: 800px; }
+      .wy-nav-top { display: none; background: #2980b9; color: #fcfcfc; padding: 0.4rem 0.8rem; }
+      .wy-menu-vertical a { color: #d9d9d9; text-decoration: none; display: block; padding: 0.4rem 1.5rem; }
+      .rst-content h1 { margin-top: 0; font-size: 2rem; }
+      @media screen and (max-width: 768px) {
+        .wy-nav-side { left: -300px; }
+        .wy-nav-side.shift { left: 0; }
+        .wy-nav-content-wrap { margin-left: 0; }
+        .wy-nav-content-wrap.shift { left: 300px; position: relative; }
+        .wy-nav-top { display: block; }
+        .wy-nav-content { padding: 1rem 1.2rem; }
+      }
+    </style>
+        <link href="../../stylesheets/perf.css" rel="stylesheet" />
+        <link href="../../stylesheets/heading-links.css" rel="stylesheet" />
+        <link href="../../stylesheets/projects.css" rel="stylesheet" />
+    
+      <script>
+        var mkdocs_page_name = "MacHub";
+        var mkdocs_page_input_path = "products/machub.md";
+        var mkdocs_page_url = "/products/machub/";
+      </script>
+    
+ 
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  function loadGtag() {
+    if (window.__gtagLoaded) return;
+    window.__gtagLoaded = true;
+    var s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RJT4VPTE10';
+    s.async = true;
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-RJT4VPTE10', { anonymize_ip: true });
+  }
+  ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (evt) {
+    window.addEventListener(evt, loadGtag, { once: true, passive: true });
+  });
+  // Fallback for users who never interact
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(function () { setTimeout(loadGtag, 5000); }, { timeout: 10000 });
+  } else {
+    window.addEventListener('load', function () { setTimeout(loadGtag, 8000); });
+  }
+</script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="site-title"> Huy Nguyen Blog
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../posts/">Posts</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../talks/">Talks</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../community_activities/">Community Activities</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Indie Products</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../packages/">Packages</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../contributions/">Contributions</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <button type="button" data-toggle="wy-nav-top" class="mobile-nav-toggle" aria-label="Open navigation menu">
+            <span></span><span></span><span></span>
+          </button>
+          <a href="../..">Huy Nguyen Blog</a>
+        
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">MacHub</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="machub">MacHub</h1>
+<header class="project-hero project--machub">
+<p><img class="project-hero__icon" src="../../img/products/machub-icon.webp" alt="" width="88" height="88"></p>
+<p class="project-hero__tagline">14 developer tools, one Mac app. Device logs, APK and AAB analysis, payload decoding, diffs, OCR, and git in a single toolbox.</p>
+<ul aria-label="Platform and pricing" class="project-tags">
+<li>macOS 12+</li>
+<li>Apple Silicon &amp; Intel</li>
+<li>Free</li>
+<li>No account</li>
+</ul>
+<p class="project-actions"><a href="https://machub.space/">Visit machub.space</a> <a href="https://machub.space/download/">Download for Mac</a></p>
+</header>
+<figure class="site-preview">
+<a href="https://machub.space/">
+<span class="site-preview__bar" aria-hidden="true"><span class="site-preview__url">machub.space</span></span>
+<img src="../../img/products/machub-landing.webp" alt="Open the machub.space landing page" width="1200" height="750" decoding="async">
+</a>
+<figcaption>A preview of machub.space. Click it to open the live landing page.</figcaption>
+</figure>
+
+<h2 id="what-it-is">What it is</h2>
+<p>MacHub gathers the small tools mobile and web developers reach for every day into one fast desktop app. Fourteen tools sit in four groups in a single sidebar, and each one keeps its state while you switch, so you never lose your place.</p>
+<p>It is local-first: there is no account and no ads, and anonymous usage statistics are sent only if you opt in.</p>
+<h2 id="the-toolbox">The toolbox</h2>
+<ul>
+<li><strong>Files &amp; Paths</strong>: Path Checker, File Utilities, and Dir Utilities to check paths, bookmark the files you edit often, and open workspace folders in Finder, VS Code, Cursor, Android Studio, Xcode, and more.</li>
+<li><strong>Text &amp; Data</strong>: Payload Decoder, Data Format, Text Diff, and Base64 Image for tokens, JSON, XML, YAML, CSV, SQL, side-by-side diffs, and base64 images.</li>
+<li><strong>Devices &amp; Packages</strong>: Device Logs, Package Analyzer, Project Analyzer, and AAB to APK for logs, APK/AAB/IPA inspection, codebase stats, and installable builds.</li>
+<li><strong>Utilities</strong>: Screenshot OCR, Custom Commands, and Git Clone for reading text off the screen, running saved shell commands, and cloning with the right account.</li>
+</ul>
+<h2 id="highlights">Highlights</h2>
+<ul>
+<li><strong>Android release workflow</strong>: drop an <code>.aab</code> to inspect it, convert it to a universal APK with bundletool, sign it, and install it on a connected phone without leaving the app.</li>
+<li><strong>Layered payload decoding</strong>: unwraps JWT, JSON, URL encoding, hex, Gzip, and Base64 up to eight layers deep, then shows the result as a JSON tree.</li>
+<li><strong>Live device logs</strong>: <code>adb logcat</code>, <code>flutter logs</code>, and iOS syslog for devices and simulators, with level, package, and text filters.</li>
+<li><strong>On-device OCR</strong>: select any region of the screen and read its text with Apple Vision, then translate it into 15 languages if you want.</li>
+<li><strong>Multi-account git clone</strong>: matches the URL to the <code>Host</code> aliases in your <code>~/.ssh/config</code>, so <code>origin</code> uses the correct key from the start.</li>
+<li><strong>Works with your toolchain</strong>: finds <code>adb</code>, <code>flutter</code>, <code>bundletool</code>, <code>git</code>, <code>java</code>, and <code>xcrun</code> in the usual places, and shows an install hint when one is missing.</li>
+</ul>
+<h2 id="who-its-for">Who it's for</h2>
+<ul>
+<li><strong>Android and Flutter developers</strong> who live in logcat, bundletool, and APK builds.</li>
+<li><strong>Mobile and web developers</strong> who decode tokens, format payloads, and diff responses all day.</li>
+<li><strong>Anyone juggling several git accounts</strong> on one Mac.</li>
+</ul>
+<h2 id="privacy-and-install">Privacy and install</h2>
+<p>Bookmarks, saved commands, and history stay in your Mac's local preferences, and network requests such as translation happen only when you ask for them. MacHub launches tools like <code>adb</code>, <code>git</code>, and <code>bundletool</code>, so it runs outside the App Sandbox. That is why it ships as a signed, notarized DMG from its website instead of the Mac App Store. It runs on macOS 12 Monterey or later, on both Apple Silicon and Intel.</p>
+<h2 id="links">Links</h2>
+<ul>
+<li><strong>Website</strong>: <a href="https://machub.space/">machub.space</a></li>
+<li><strong>macOS DMG</strong>: <a href="https://machub.space/download/">Download for Mac</a></li>
+<li><strong>What's new</strong>: <a href="https://machub.space/changelog/">Changelog</a></li>
+<li><strong>Help</strong>: <a href="https://machub.space/support/">Support and FAQ</a></li>
+</ul>
+<p><a href="../">← All indie products</a></p>
+              
+            </div>
+          </div>
+<footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+
+<p class="visitor-counter" hidden>This page: <span data-visits="page"></span> views · All pages: <span data-visits="site"></span> views</p>
+
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = "../..";</script>
+    <script src="../../javascripts/nav.js" defer></script>
+        <script src="../../javascripts/heading-links.js"></script>
+        <script src="../../javascripts/visitor-counter.js"></script>
+
+</body>
+</html>
