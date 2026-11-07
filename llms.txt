@@ -19,7 +19,7 @@ Key facts:
 - [About](https://huynq.dev/about/): Short bio and GitHub profiles
 - [Posts](https://huynq.dev/posts/): Index of all technical blog posts
 - [Talks](https://huynq.dev/talks/): Conference and meetup talks
-- [Indie Products](https://huynq.dev/products/): Indie apps built and shipped with Flutter (NetShare, CompactKit)
+- [Indie Products](https://huynq.dev/products/): Indie apps and tools I built and shipped (NetShare, CompactKit, AdGauge, MacHub, NitSearch)
 - [Packages](https://huynq.dev/packages/): Open-source Flutter packages and plugins
 - [Contributions](https://huynq.dev/contributions/): Flutter repo issues/PRs and community package work
 - [Community activities](https://huynq.dev/community_activities/): Mentoring, speaking, and community involvement
@@ -69,6 +69,9 @@ Key facts:
 
 - [NetShare](https://huynq.dev/products/netshare/): Free, open-source app for fast, private file sharing on a local network (Android, iOS, macOS). Website: https://netfshare.site/
 - [CompactKit](https://huynq.dev/products/compactkit/): Compress images, videos, PDFs, documents, and code on-device (iOS, Android). Website: https://compactkit.cc/
+- [AdGauge](https://huynq.dev/products/adgauge/): Live AdMob revenue dashboard on your phone with read-only Google sign-in (iOS, Android). Website: https://admob-dashboard.site/
+- [MacHub](https://huynq.dev/products/machub/): Free Mac app with 14 developer tools: device logs, APK/AAB/IPA analyzer, payload decoder, diff, OCR, git clone (macOS 12+). Website: https://machub.space/
+- [NitSearch](https://huynq.dev/products/nitsearch/): Chrome extension for VS Code style find in page: highlight all, match case, whole word, results list, search history. Chrome Web Store: https://chromewebstore.google.com/detail/nitsearch/edipjijflaedhppheghdneaffbaeipdj
 
 ---
 
