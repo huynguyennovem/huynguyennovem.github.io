@@ -19,7 +19,7 @@ Key facts:
 - [About](https://huynq.dev/about/): Short bio and GitHub profiles
 - [Posts](https://huynq.dev/posts/): Index of all technical blog posts
 - [Talks](https://huynq.dev/talks/): Conference and meetup talks
-- [Indie Products](https://huynq.dev/products/): Indie apps and tools I built and shipped (NetShare, CompactKit, AdGauge, MacHub, NitSearch)
+- [Indie Products](https://huynq.dev/products/): Indie apps and tools I built and shipped (NetShare, CompactKit, AdGauge, MacHub, NitSearch, Postfold), plus a link to the HugeTree store
 - [Packages](https://huynq.dev/packages/): Open-source Flutter packages and plugins
 - [Contributions](https://huynq.dev/contributions/): Flutter repo issues/PRs and community package work
 - [Community activities](https://huynq.dev/community_activities/): Mentoring, speaking, and community involvement
@@ -72,6 +72,7 @@ Key facts:
 - [AdGauge](https://huynq.dev/products/adgauge/): Live AdMob revenue dashboard on your phone with read-only Google sign-in (iOS, Android). Website: https://admob-dashboard.site/
 - [MacHub](https://huynq.dev/products/machub/): Free Mac app with 14 developer tools: device logs, APK/AAB/IPA analyzer, payload decoder, diff, OCR, git clone (macOS 12+). Website: https://machub.space/
 - [NitSearch](https://huynq.dev/products/nitsearch/): Chrome extension for VS Code style find in page: highlight all, match case, whole word, results list, search history. Chrome Web Store: https://chromewebstore.google.com/detail/nitsearch/edipjijflaedhppheghdneaffbaeipdj
+- [Postfold](https://huynq.dev/products/postfold/): Save posts from X into your own folders with titles, notes, sorting, and search; no login, synced through private iCloud (iPhone, iPad; coming soon to the App Store). Website: https://postfold.space/
 
 ---
 
@@ -88,6 +89,7 @@ Key facts:
 
 - [GitHub (Flutter contributions)](https://github.com/huycozy): Flutter framework issues and PRs
 - [GitHub (projects)](https://github.com/huynguyennovem): Open-source projects and plugins
+- [HugeTree](https://hugetree.store/): Store of free apps and games (QR Scanner, Video To Photo, AdGauge, puzzle games)
 - [LinkedIn](https://www.linkedin.com/in/huynguyennovem/): Professional profile
 - [Twitter/X](https://twitter.com/huynguyentw): Updates and sharing
 - [Email](mailto:huynguyennovem@gmail.com): Contact

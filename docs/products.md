@@ -1,5 +1,5 @@
 ---
-seoDescription: "Indie apps and tools designed, built, and shipped by Huy Nguyen: NetShare, CompactKit, AdGauge, MacHub, and the NitSearch Chrome extension."
+seoDescription: "Indie apps and tools designed, built, and shipped by Huy Nguyen: NetShare, CompactKit, AdGauge, MacHub, Postfold, and the NitSearch Chrome extension, plus more free apps and games on HugeTree."
 ---
 
 # Indie Products
@@ -102,6 +102,35 @@ Find in page, the VS Code way: highlight all matches, match case, whole word, a 
 
 </article>
 
+<article class="project-card project--postfold" markdown>
+
+<a class="project-card__preview" href="postfold/" tabindex="-1" aria-hidden="true"><img src="../img/products/postfold-landing.webp" alt="" width="1200" height="750" decoding="async"></a>
+
+## <img class="project-card__icon" src="../img/products/postfold-icon.webp" alt="" width="40" height="40"> [Postfold](products/postfold.md)
+
+Save posts from X into your own folders, with custom titles, notes, sorting, and search. No login, synced through iCloud.
+
+<ul class="project-tags" aria-label="Platforms and status">
+<li>iPhone & iPad</li>
+<li>iOS 18+</li>
+<li>No login</li>
+<li>Coming soon</li>
+</ul>
+
+<p class="project-actions" markdown="span">[Explore Postfold](products/postfold.md) [postfold.space](https://postfold.space/)</p>
+
+</article>
+
 </section>
+
+<aside class="store-callout project--hugetree" markdown>
+
+<h2 id="hugetree" data-toc-label="HugeTree" markdown="span">More apps and games on HugeTree</h2>
+
+HugeTree is my store of free apps and games, from handy tools like QR Scanner and Video To Photo to casual puzzle games such as Pixel Dunes and Block Puzzle Brick 1010.
+
+<p class="project-actions" markdown="span">[Visit hugetree.store](https://hugetree.store/) [Apps](https://hugetree.store/apps) [Games](https://hugetree.store/games)</p>
+
+</aside>
 
 Curious how these get shipped? I wrote about [publishing a landing page with a custom domain for your product](posts/publish-a-landing-page-with-a-custom-domain-for-your-product.md). Looking for libraries instead of apps? See my open-source [Flutter packages](packages.md).
