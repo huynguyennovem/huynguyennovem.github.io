@@ -35,6 +35,16 @@
   --accent-soft: #e8f2f9;
 }
 
+.project--postfold {
+  --accent: #18181b;
+  --accent-soft: #f4f4f5;
+}
+
+.project--hugetree {
+  --accent: #5b45c9;
+  --accent-soft: #f1efff;
+}
+
 /* Card grid */
 .rst-content .project-grid {
   display: grid;
@@ -183,17 +193,29 @@
   margin-left: 0.35rem;
 }
 
-/* Product page hero */
-.rst-content .project-hero {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  gap: 0.6rem 1.25rem;
+/* Product page hero and store callout */
+.rst-content .project-hero,
+.rst-content .store-callout {
   margin: 0 0 1.5rem;
   padding: 1.25rem;
   border: 1px solid var(--project-border);
   border-radius: 18px;
   background: linear-gradient(135deg, var(--accent-soft), #ffffff 70%);
+}
+
+.rst-content .project-hero {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.6rem 1.25rem;
+}
+
+.rst-content .store-callout h2 {
+  margin-top: 0;
+}
+
+.rst-content .store-callout > p:last-child {
+  margin-bottom: 0;
 }
 
 .rst-content .project-hero > p:first-child {
@@ -312,7 +334,8 @@
 }
 
 @media screen and (max-width: 480px) {
-  .rst-content .project-hero {
+  .rst-content .project-hero,
+  .rst-content .store-callout {
     padding: 1rem;
   }
 
