@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Huy Nguyen" /><link rel="canonical" href="https://huynq.dev/posts/setting-up-revenuecat-in-app-purchases-for-ios-and-android/" />
+    <link rel="icon" href="../../img/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <title>Setting up RevenueCat in-app purchases for iOS and Android - Huy Nguyen Blog</title>
+    <link rel="preload" href="../../css/theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="preload" href="../../css/theme_extra.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet" href="../../css/theme.css" />
+      <link rel="stylesheet" href="../../css/theme_extra.css" />
+    </noscript>
+    <style>
+      /* Critical shell styles while theme.css loads asynchronously */
+      html { box-sizing: border-box; }
+      *, *::before, *::after { box-sizing: inherit; }
+      body {
+        margin: 0;
+        color: #404040;
+        background: #fcfcfc;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.5;
+      }
+      .wy-grid-for-nav { position: relative; width: 100%; }
+      .wy-nav-side {
+        position: fixed; top: 0; bottom: 0; left: 0; width: 300px;
+        background: #343131; z-index: 200; overflow-y: auto;
+      }
+      .wy-side-nav-search {
+        background: #2980b9; padding: 0.8rem 1rem; color: #fcfcfc; text-align: center;
+      }
+      .wy-side-nav-search a { color: #fcfcfc; text-decoration: none; font-weight: 700; }
+      .wy-nav-content-wrap { margin-left: 300px; background: #fcfcfc; min-height: 100vh; }
+      .wy-nav-content { padding: 1.6rem 3em; max-width: 800px; }
+      .wy-nav-top { display: none; background: #2980b9; color: #fcfcfc; padding: 0.4rem 0.8rem; }
+      .wy-menu-vertical a { color: #d9d9d9; text-decoration: none; display: block; padding: 0.4rem 1.5rem; }
+      .rst-content h1 { margin-top: 0; font-size: 2rem; }
+      @media screen and (max-width: 768px) {
+        .wy-nav-side { left: -300px; }
+        .wy-nav-side.shift { left: 0; }
+        .wy-nav-content-wrap { margin-left: 0; }
+        .wy-nav-content-wrap.shift { left: 300px; position: relative; }
+        .wy-nav-top { display: block; }
+        .wy-nav-content { padding: 1rem 1.2rem; }
+      }
+    </style>
+        <link href="../../stylesheets/perf.css" rel="stylesheet" />
+        <link href="../../stylesheets/heading-links.css" rel="stylesheet" />
+    
+      <script>
+        var mkdocs_page_name = "Setting up RevenueCat in-app purchases for iOS and Android";
+        var mkdocs_page_input_path = "posts/setting-up-revenuecat-in-app-purchases-for-ios-and-android.md";
+        var mkdocs_page_url = "/posts/setting-up-revenuecat-in-app-purchases-for-ios-and-android/";
+      </script>
+    
+ 
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  function loadGtag() {
+    if (window.__gtagLoaded) return;
+    window.__gtagLoaded = true;
+    var s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RJT4VPTE10';
+    s.async = true;
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-RJT4VPTE10', { anonymize_ip: true });
+  }
+  ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (evt) {
+    window.addEventListener(evt, loadGtag, { once: true, passive: true });
+  });
+  // Fallback for users who never interact
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(function () { setTimeout(loadGtag, 5000); }, { timeout: 10000 });
+  } else {
+    window.addEventListener('load', function () { setTimeout(loadGtag, 8000); });
+  }
+</script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="site-title"> Huy Nguyen Blog
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Posts</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../talks/">Talks</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../community_activities/">Community Activities</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../products/">Indie Products</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../packages/">Packages</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../contributions/">Contributions</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <button type="button" data-toggle="wy-nav-top" class="mobile-nav-toggle" aria-label="Open navigation menu">
+            <span></span><span></span><span></span>
+          </button>
+          <a href="../..">Huy Nguyen Blog</a>
+        
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Setting up RevenueCat in-app purchases for iOS and Android</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p>Adding in-app purchases to an app sounds like a coding task, but most of the work happens outside the codebase. You have to connect RevenueCat to Google Play and App Store Connect, create the products in each store, map them to entitlements and offerings, and get a sandbox account working on a real device.</p>
+<p>This post is the checklist I follow every time I add RevenueCat to one of my apps. The most common case for me is a single <strong>"Remove ads"</strong> purchase, but the same steps work for subscriptions.</p>
+<h2 id="1-create-the-project-and-apps-in-revenuecat">1. Create the project and apps in RevenueCat</h2>
+<p>In the RevenueCat dashboard, create a new project. Then go to <strong>Apps</strong> and add the <strong>Android</strong> and <strong>iOS</strong> apps <strong>separately</strong>. Each platform has its own store credentials and its own public SDK API key.</p>
+<h2 id="2-connect-google-play">2. Connect Google Play</h2>
+<p>Go to <strong>Apps &amp; providers</strong> &gt; <strong>New Play Store configuration</strong>. RevenueCat needs a service account JSON key, which you create on Google Cloud.</p>
+<h3 id="create-the-service-account-on-gcp">Create the service account on GCP</h3>
+<ul>
+<li>In your GCP project, enable these APIs:<ul>
+<li><code>Google Play Android Developer API</code></li>
+<li><code>Google Play Developer Reporting API</code></li>
+</ul>
+</li>
+<li>Create a service account and grant it these roles:<ul>
+<li><code>Pub/Sub Admin</code> (the docs list <code>Pub/Sub Editor</code>; Admin is the fallback if creating the Pub/Sub topic fails)</li>
+<li><code>Monitoring Viewer</code></li>
+<li>I also added <code>Service Account Token Creator</code></li>
+</ul>
+</li>
+<li>In the service account's <strong>Principals with access</strong>, add the Google account you use for Google Play Console.</li>
+<li>Open the <strong>Keys</strong> tab &gt; <strong>Add key</strong> &gt; <strong>Create new key</strong> &gt; JSON. Download the file and copy the <code>client_email</code> value from it.</li>
+</ul>
+<h3 id="invite-the-service-account-in-play-console">Invite the service account in Play Console</h3>
+<p>Open Google Play Console &gt; <strong>Users and permissions</strong> &gt; <strong>Invite new user</strong>, paste the <code>client_email</code>, and grant these permissions:</p>
+<ul>
+<li><code>View app information and download bulk reports (read-only)</code></li>
+<li><code>View financial data, orders, and cancellation survey responses</code></li>
+<li><code>Manage orders and subscriptions</code></li>
+<li><code>Manage store presence</code></li>
+</ul>
+<p><code>Manage store presence</code> is what lets RevenueCat import your products from Play Console later, so don't skip it.</p>
+<h3 id="upload-the-json-key-to-revenuecat">Upload the JSON key to RevenueCat</h3>
+<p>Back in the RevenueCat dashboard, upload the JSON file to the Play Store configuration.</p>
+<p><strong>Don't panic if RevenueCat shows "Invalid Play Store credentials" right away.</strong> New Google credentials can take up to 36 hours to become valid. Usually it is less than a day.</p>
+<p>Reference: <a href="https://www.revenuecat.com/docs/service-credentials/creating-play-service-credentials">Creating Play Service Credentials</a></p>
+<h2 id="3-connect-the-app-store">3. Connect the App Store</h2>
+<p>Go to App Store Connect &gt; <a href="https://appstoreconnect.apple.com/access/integrations/api">Users and Access &gt; Integrations</a> and create two keys:</p>
+<ul>
+<li><strong>In-App Purchase key</strong> (file name <code>SubscriptionKey_XXXXXXXXXX.p8</code>)</li>
+<li><strong>App Store Connect API key</strong> with at least the <strong>App Manager</strong> role (file name <code>AuthKey_XXXXXXXXXX.p8</code>)</li>
+</ul>
+<p>Both <code>.p8</code> files can only be downloaded <strong>once</strong>, so keep them somewhere safe.</p>
+<p>Back in RevenueCat, open your iOS app and upload each key into its own field:</p>
+<ul>
+<li>The In-App Purchase key goes into the <strong>In-App Purchase Key</strong> field.</li>
+<li>The App Store Connect API key goes into the <strong>App Store Connect API</strong> tab, together with the <strong>Issuer ID</strong> (shown above the keys table) and your <strong>Vendor number</strong> (under <em>Payments and Financial Reports</em>).</li>
+</ul>
+<p>Keep Apple's original file names. RevenueCat reads the Key ID from the file name.</p>
+<p>Reference: <a href="https://www.revenuecat.com/docs/service-credentials/itunesconnect-app-specific-shared-secret/app-store-connect-api-key-configuration">App Store Connect API Key Configuration</a></p>
+<h2 id="4-create-the-iap-products-in-each-store">4. Create the IAP products in each store</h2>
+<p>Create the products in <strong>Google Play Console</strong> and in <strong>App Store Connect</strong>. Pick the product type based on what you sell:</p>
+<ul>
+<li><strong>Remove ads</strong> or any one-time unlock: a <strong>non-consumable</strong> product.</li>
+<li>Monthly or yearly access: <strong>auto-renewable subscriptions</strong>.</li>
+</ul>
+<p>Use the <strong>same product identifier</strong> on both stores. It keeps things clean when they land in RevenueCat.</p>
+<p>Then in RevenueCat, go to <strong>Product catalog</strong> &gt; <strong>Products</strong> and <strong>Import</strong> the products from each store. They should sync with the same names you just created.</p>
+<h2 id="5-wire-up-entitlements-and-offerings">5. Wire up entitlements and offerings</h2>
+<p>An <strong>entitlement</strong> is what the user unlocks (for example <code>remove_ads</code> or <code>pro</code>). An <strong>offering</strong> is what you show on the paywall.</p>
+<ul>
+<li>Go to <strong>Entitlements</strong>, open your entitlement, and attach the products from both stores.</li>
+<li>Go to <strong>Offerings</strong> &gt; <code>default</code> and edit its packages:<ul>
+<li>For a non-consumable product, attach it to the <strong>Lifetime</strong> package.</li>
+<li>For subscriptions, attach them to the matching <strong>Monthly</strong> / <strong>Yearly</strong> packages.</li>
+</ul>
+</li>
+</ul>
+<p>In the app, you only check whether the entitlement is active. You never hard-code product IDs per platform.</p>
+<h2 id="6-test-on-real-devices">6. Test on real devices</h2>
+<h3 id="ios">iOS</h3>
+<ol>
+<li>Go to <a href="https://appstoreconnect.apple.com/access/users/sandbox">App Store Connect &gt; Sandbox</a> and add a sandbox tester email.</li>
+<li>On the test device, enable <strong>Developer Mode</strong>. Then open the <strong>Settings</strong> app, search for "Sandbox", and sign in with the sandbox account from step 1.</li>
+<li>Install the build with IAP integrated and buy the product. You won't be charged.</li>
+</ol>
+<h3 id="android">Android</h3>
+<ol>
+<li>In Google Play Console, go to <strong>Testers</strong> and create a tester group. Add the Google account that is signed in to the Play Store app on your test device.</li>
+<li>Build a version with IAP integrated and upload it to <strong>Internal testing</strong>.</li>
+<li>Copy the internal testing link and open it on the test device to opt in and install the app.</li>
+</ol>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="app-store-product-shows-missing-metadata-in-revenuecat">App Store product shows "Missing Metadata" in RevenueCat</h3>
+<p>In the RevenueCat <strong>Products</strong> page, the App Store product status shows <strong>"Missing Metadata"</strong>.</p>
+<p>Fix: in App Store Connect, open the in-app purchase and fill out the <strong>Review Information</strong> section (screenshot and review notes). While you're there, make sure the price, localization, and availability are set too.</p>
+<h3 id="invalid-play-store-credentials">"Invalid Play Store credentials"</h3>
+<p>See the note in step 2. If it still fails after 36 hours, check that the four Play Console permissions are granted and that both GCP APIs are enabled.</p>
+<p>That's all! Happy monetizing!</p>
+              
+            </div>
+          </div>
+<footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+
+<p class="visitor-counter" hidden>This page: <span data-visits="page"></span> views · All pages: <span data-visits="site"></span> views</p>
+
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = "../..";</script>
+    <script src="../../javascripts/nav.js" defer></script>
+        <script src="../../javascripts/heading-links.js"></script>
+        <script src="../../javascripts/visitor-counter.js"></script>
+
+</body>
+</html>
