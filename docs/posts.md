@@ -1,6 +1,18 @@
 # Blog Posts
 
-*17 posts*
+*18 posts*
+
+## [Setting up RevenueCat in-app purchases for iOS and Android](posts/setting-up-revenuecat-in-app-purchases-for-ios-and-android.md)
+
+*November 19, 2026*
+ · `revenuecat` `in-app-purchase` `ios` `android` `monetization`
+
+
+Most of the work of adding in-app purchases happens outside the codebase. This is the checklist I follow to connect RevenueCat to Google Play and the App Store, set up products, entitlements and offerings, and test purchases on real devices.
+
+[Read more →](posts/setting-up-revenuecat-in-app-purchases-for-ios-and-android.md)
+
+---
 
 ## [How to build a signed and notarized macOS DMG on Flutter](posts/how-to-build-a-signed-and-notarized-macos-dmg-on-flutter.md)
 
