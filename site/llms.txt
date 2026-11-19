@@ -38,6 +38,7 @@ Key facts:
 
 ## All Posts
 
+- [Setting up RevenueCat in-app purchases for iOS and Android](https://huynq.dev/posts/setting-up-revenuecat-in-app-purchases-for-ios-and-android/): Store credentials, products, entitlements, offerings, and sandbox testing with RevenueCat
 - [How to prevent Jetsam/OOM crashes on iOS in Flutter media flows](https://huynq.dev/posts/how-to-prevent-jetsam-oom-crash-on-ios-in-flutter-media-flow/): Memory-pressure crashes after camera/media handoff on iOS
 - [Publishing your Flutter iOS app to the App Store with ASC CLI](https://huynq.dev/posts/publishing-your-flutter-ios-app-to-the-app-store-with-asc-cli/): Upload Flutter iOS builds to App Store Connect via ASC CLI
 - [Fix a Flutter framework issue from scratch](https://huynq.dev/posts/fix-a-flutter-framework-issue-from-scratch/): Contributing a Flutter framework fix from investigation to PR
